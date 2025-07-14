@@ -1,5 +1,5 @@
 ---
-title: Segments
+title: 'Overview: Segments'
 excerpt: >-
   How to create and manage user segments in Recurly Engage for targeted prompt
   delivery.
