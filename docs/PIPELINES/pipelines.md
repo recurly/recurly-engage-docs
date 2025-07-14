@@ -1,5 +1,5 @@
 ---
-title: Pipelines
+title: 'Overview: Pipelines'
 excerpt: >-
   Overview of Recurly Engage Pipelines for lifecycle staging and behavior-based
   user segmentation.
