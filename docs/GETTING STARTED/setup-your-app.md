@@ -50,4 +50,4 @@ An **application** in Recurly Engage is the container for your integration: it h
 
    <Image align="center" className="border" border={true} src="https://files.readme.io/172cd70-Screenshot_2024-05-24_at_6.21.22_PM.png" />
 
-Learn more about application settings <a href="http://docs.recurly.com/docs/application#/" target="_blank" rel="noopener">here</a>.
+Learn more about application settings <a href="http://docs.recurly.com/recurly-engage/docs/application#/" target="_blank" rel="noopener">here</a>.
