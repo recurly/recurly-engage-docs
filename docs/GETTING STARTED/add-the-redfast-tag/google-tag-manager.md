@@ -4,7 +4,7 @@ excerpt: >-
   Step-by-step instructions for deploying the Recurly Engage client SDK via
   Google Tag Manager.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''
