@@ -1,5 +1,5 @@
 ---
-title: SDK
+title: 'Overview: SDK'
 excerpt: >-
   Overview of the SDK section in Recurly Engage, providing quick access to
   platform-specific SDK guides and testing best practices.
