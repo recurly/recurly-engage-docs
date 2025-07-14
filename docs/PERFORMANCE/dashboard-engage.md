@@ -1,5 +1,5 @@
 ---
-title: Performance
+title: 'Overview: Performance'
 excerpt: >-
   Overview of the Performance tab for monitoring prompt and guide metrics in
   Recurly Engage.
