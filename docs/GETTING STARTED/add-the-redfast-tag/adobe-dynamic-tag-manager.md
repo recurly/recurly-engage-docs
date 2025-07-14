@@ -4,7 +4,7 @@ excerpt: >-
   Step-by-step instructions for integrating the Recurly Engage JavaScript client
   via Adobe Dynamic Tag Manager.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''
