@@ -1,5 +1,5 @@
 ---
-title: Platform settings
+title: 'Overview: Platform settings'
 excerpt: >-
   Overview of the Platform settings section in Recurly Engage, providing quick
   links to each configuration subpage.
