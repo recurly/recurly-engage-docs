@@ -10,8 +10,6 @@ metadata:
 ---
 # Overview
 
-# Definition
-
 An **overview** page that provides concise summaries of each major Recurly Engage task and links to the full documentation for rapid access.
 
 # Key benefits
