@@ -1,5 +1,5 @@
 ---
-title: Download Data
+title: Download data
 excerpt: >-
   Configuration guide for the Download Data feature, which allows you to export
   Segment, Prompt, Guide, and activity data from Recurly Engage.
