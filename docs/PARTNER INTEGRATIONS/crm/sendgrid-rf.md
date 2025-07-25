@@ -1,8 +1,6 @@
 ---
 title: Sendgrid
-excerpt: >-
-  Configuration guide for the Braze connector in Recurly Engage—API setup and
-  supported user management actions.
+excerpt: Connect Recurly Engage to SendGrid for dynamic emails and list management
 deprecated: false
 hidden: false
 metadata:
@@ -14,46 +12,42 @@ next:
 ---
 # Overview
 
-The **Sengrid** integration lets you create or update user records in your Braze instance directly from Recurly Engage prompts, enabling personalized messaging workflows based on user interactions.
+The **SendGrid** integration lets you send dynamic template emails and manage subscriber lists directly from Recurly Engage prompts—no custom code required.
 
 ### Required plan
 
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
-
-### Prerequisites & limitations
-
-* Company or App Administrator permissions in Recurly Engage.
-* A Sengrid account with REST API access enabled (App Group REST API Key).
-* Ensure your Sengrid instance’s Base URL and API Key are available.
+This feature is available to all customers on any Recurly Engage subscription plan.
 
 # Definition
 
-The **Braze** connector uses your Braze REST API credentials to add or update user records—mapping email addresses and optional aliases—when users interact with prompts.
+The SendGrid connector uses your SendGrid API key to perform two core actions—sending dynamic template emails to users and adding users to SendGrid contact lists—whenever they interact with a prompt in Recurly Engage.
 
 # Key benefits
 
-* **Synchronized user profiles**: Automatically enroll or update users in Braze for downstream messaging.
-* **Personalized engagement**: Use prompt events to trigger Braze campaigns and segmentation.
-* **Centralized setup**: Manage Braze credentials and actions within the Recurly Engage console.
+* **On-brand communications**: Leverage your SendGrid dynamic templates for polished, consistent emails.
+* **Automated list management**: Instantly add engaged users to segmented SendGrid lists.
+* **Single-pane setup**: Configure credentials and actions entirely within the Recurly Engage console.
 
 # Key details
 
 ## Required settings
 
-Under **Settings → Connectors → Braze**, provide:
+Under **Settings → Connectors → SendGrid**, provide:
 
-* **Base URL**: Your Braze REST API endpoint (e.g., `https://rest.iad-01.braze.com`).
-* **API Key**: Your App Group REST API Key (see [Braze API Reference](https://www.braze.com/docs/api/basics/#app-group-rest-api-keys)).
+* **API Key**: Generate and copy from the <a href="https://sendgrid.com/docs/ui/account-and-settings/api-keys/" target="_blank">SendGrid API Keys</a> page.
 
 ## Supported actions
 
-Use these actions within prompt configurations to manage Braze user profiles:
+Use these actions within prompt configurations to drive SendGrid workflows:
 
-| Action                            | Description                                                          | User Dependencies | Additional Instructions                    | Form Inputs |
-| --------------------------------- | -------------------------------------------------------------------- | ----------------- | ------------------------------------------ | ----------- |
-| **Add a user with email address** | Adds a user record with an email address and optional alias to Braze | None              | Enter the alias label in the prompt editor | required    |
+| Action                          | Description                                   | User Dependencies          | Additional Instructions                                                                                   | Form Inputs |
+| ------------------------------- | --------------------------------------------- | -------------------------- | --------------------------------------------------------------------------------------------------------- | ----------- |
+| **Send dynamic template email** | Sends a selected dynamic template to the user | `email_address` (optional) | Select your SendGrid dynamic template on the prompt editor. Templates must be pre-configured in SendGrid. | optional    |
+| **Add user to list**            | Adds the user to a specified SendGrid list    | `email_address`            | Choose the target SendGrid list on the prompt editor. Lists must be created in SendGrid ahead of time.    | n/a         |
 
-Attach this action to a prompt interaction (e.g., Accept) to automatically push the user’s email and alias to Braze when they engage with your message.
+## Additional information
+
+Learn more about SendGrid lists in the official docs: <a href="https://www.twilio.com/docs/sendgrid/api-reference/lists/create-list" target="_blank">SendGrid Lists API Reference</a>
 
 <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/b2d12bf-sendgrid-lists-1.png" />
 
