@@ -18,25 +18,25 @@ next:
 
 This feature or setting is available to all customers on any Recurly Engage subscription plans.
 
--export const PrerequisitesLimitations = (\{ header }) => \{
-&#x20; return (
-&#x20;   \<div className="flex justify-start">
-&#x20;     \<div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-&#x20;       \<p className="text-lg font-bold">\{header}\</p>
-&#x20;       \<p>
-&#x20;         \<i className="fa-solid fa-check mr-2" />
-&#x20;         You must have \<strong>Company\</strong> or \<strong>App Administrator\</strong> permissions in Recurly Engage.
-&#x20;       \</p>
-&#x20;       \<p>
-&#x20;         \<i className="fa-solid fa-exclamation-triangle mr-4" />
-&#x20;         At least one prompt must exist in \<strong>draft\</strong> or \<strong>review\</strong> status before creating an experiment.
-&#x20;       \</p>
-&#x20;     \</div>
-&#x20;   \</div>
-&#x20; );
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          You must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
+        </p>
+        <p>
+          <i className="fa-solid fa-exclamation-triangle mr-4" />
+          At least one prompt must exist in <strong>draft</strong> or <strong>review</strong> status before creating an experiment.
+        </p>
+      </div>
+    </div>
+  );
 };
 
-\<PrerequisitesLimitations header="Prerequisites & limitations" />
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
