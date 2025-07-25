@@ -24,9 +24,23 @@ Here is a video tutorial that shows how to set this up for your website and app.
 
 <Embed url="https://www.loom.com/embed/d1c5c4f59f7a4b23a5e99e92c1381b8b?sid=2ea41637-d7ec-4f32-b722-0c1bceb4d91b" href="https://www.loom.com/embed/d1c5c4f59f7a4b23a5e99e92c1381b8b?sid=2ea41637-d7ec-4f32-b722-0c1bceb4d91b" typeOfEmbed="iframe" height="480px" width="100%" iframe="true" />
 
-### Prerequisites & limitations
+<br />
 
-* You must have **Company**, **App Administrator**, or **App Member** permissions in Recurly Engage.
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
