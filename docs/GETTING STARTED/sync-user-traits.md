@@ -20,10 +20,25 @@ Learn how to select, format, and upload user traits to Recurly Engage so you can
 
 This feature or setting is available to all customers on any Recurly Engage subscription plan.
 
-### Prerequisites & limitations
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          You must have <strong>Administrator</strong> access in your Recurly Engage console.
+        </p>
+        <p>
+          <i className="fa-solid fa-exclamation-triangle mr-4" />
+          Trait imports occur on a daily schedule unless using real-time Segment events.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-* You must have **Administrator** access in your Recurly Engage console.
-* Trait imports occur on a daily schedule unless using real-time Segment events.
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
