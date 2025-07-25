@@ -12,9 +12,21 @@ metadata:
 
 This page lists internal demo apps for various platforms to help CSMs/TAMs and internal teams validate and demonstrate Recurly Engage SDK functionality.
 
-### Prerequisites & limitations
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-exclamation-triangle mr-4" />
+          Demo apps require access keys (see <strong>Key details</strong>).
+        </p>
+      </div>
+    </div>
+  );
+};
 
-* Demo apps require access keys (see Key details).
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
