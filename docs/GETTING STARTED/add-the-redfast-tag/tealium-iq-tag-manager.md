@@ -20,10 +20,25 @@ Use Tealium iQ Tag Manager to load the Recurly Engage SDK on your site without e
 
 This feature or setting is available to all customers on any Recurly Engage subscription plan.
 
-### Prerequisites & limitations
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-exclamation-triangle mr-4" />
+          You must have publish permissions in both your Recurly Engage and Tealium iQ accounts.
+        </p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          Access to <strong>Settings &gt; Usage Tracking</strong> in your Recurly Engage app.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-* You must have publish permissions in both your Recurly Engage and Tealium iQ accounts.
-* Access to **Settings > Usage Tracking** in your Recurly Engage app.
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
