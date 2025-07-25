@@ -16,11 +16,29 @@ The **Adobe Analytics** connector uses the existing Alloy.js instance on your si
 
 This feature or setting is available to all customers on any Recurly Engage subscription plan.
 
-### Prerequisites & limitations
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
+        </p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          An Adobe Experience Platform Web SDK (<a className="text-blue-500! dark:text-blue-300!" href="https://github.com/adobe/alloy?tab=readme-ov-file" target="_blank">Alloy.js</a>) setup on your web property.
+        </p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          Access to <strong>Recurly Engage → Settings → Integrations → External → Adobe Analytics</strong>.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-* Company or App Administrator permissions in Recurly Engage.
-* An Adobe Experience Platform Web SDK ([Alloy.js](https://github.com/adobe/alloy?tab=readme-ov-file)) setup on your web property.
-* Access to **Recurly Engage → Settings → Integrations → External → Adobe Analytics**.
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
