@@ -18,11 +18,29 @@ next:
 
 This feature or setting is available to all customers on any Recurly Engage subscription plan.
 
-### Prerequisites & limitations
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
+        </p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          Access to your Piano account with permissions to export subscription reports or use the Piano Export API.
+        </p>
+        <p>
+          <i className="fa-solid fa-exclamation-triangle mr-4" />
+          Recurly Engage users must have the <code>subscription_id</code> trait set from Piano for action targeting.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-* Company or App Administrator permissions in Recurly Engage.
-* Access to your Piano account with Permissions to export subscription reports or use the Piano Export API.
-* Recurly Engage users must have the `subscription_id` trait set from Piano for action targeting.
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
