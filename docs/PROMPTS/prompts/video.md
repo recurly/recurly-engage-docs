@@ -16,9 +16,23 @@ next:
 
 <Embed url="https://www.loom.com/embed/fe1d6051af2d417eb95dddb4702014f1?sid=9ccd4e6f-3e97-474d-8100-a4afc1561db2" href="https://www.loom.com/embed/fe1d6051af2d417eb95dddb4702014f1?sid=9ccd4e6f-3e97-474d-8100-a4afc1561db2" typeOfEmbed="iframe" height="400px" width="100%" iframe="true" />
 
-### Prerequisites & limitations
+<br />
 
-* You must have **Company**, **App Administrator** or **App member** permissions in Recurly Engage.
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
