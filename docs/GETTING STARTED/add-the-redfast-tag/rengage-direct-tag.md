@@ -20,10 +20,25 @@ This page shows you how to add the Recurly Engage SDK to your application by ins
 
 This feature or setting is available to all customers on any Recurly Engage subscription plan.
 
-### Prerequisites & limitations
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          You need <strong>Administrator</strong> access to your Recurly Engage console.
+        </p>
+        <p>
+          <i className="fa-solid fa-exclamation-triangle mr-4" />
+          Ensure you can edit and redeploy your site’s HTML files.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-* You need Administrator access to your Recurly Engage console.
-* Ensure you can edit and redeploy your site’s HTML files.
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
