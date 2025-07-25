@@ -16,9 +16,21 @@ next:
 
 From acquisition to churn prevention, Recurly Engage supports a variety of proven engagement patterns to drive conversions, increase retention, and maximize customer value.
 
-### Prerequisites & limitations
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-* You must have **Company**, **App Administrator**, or **App Member** permissions in Recurly Engage.
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
