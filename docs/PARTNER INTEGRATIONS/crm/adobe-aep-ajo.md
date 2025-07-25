@@ -25,11 +25,29 @@ The **Adobe** connector suite lets you forward Recurly Engage prompt interaction
 
 This feature is an add on and can be purchased for any Recurly Engage subscription plan.
 
-### Prerequisites & limitations
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          <strong>Company</strong> or <strong>App Administrator</strong> permissions.
+        </p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          Active Adobe Experience Platform, Journey Optimizer, or Analytics licenses.
+        </p>
+        <p>
+          <i className="fa-solid fa-exclamation-triangle mr-4" />
+          Schema and data stream configurations in AEP must be completed prior to ingestion.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-* Company or App Administrator permissions.
-* Active Adobe Experience Platform, Journey Optimizer, or Analytics licenses.
-* Schema and data stream configurations in AEP prior to ingestion.
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
