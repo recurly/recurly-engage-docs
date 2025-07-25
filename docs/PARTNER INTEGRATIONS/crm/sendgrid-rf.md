@@ -14,7 +14,7 @@ next:
 ---
 # Overview
 
-The **Braze** integration lets you create or update user records in your Braze instance directly from Recurly Engage prompts, enabling personalized messaging workflows based on user interactions.
+The **Sengrid** integration lets you create or update user records in your Braze instance directly from Recurly Engage prompts, enabling personalized messaging workflows based on user interactions.
 
 ### Required plan
 
@@ -23,8 +23,8 @@ This feature or setting is available to all customers on any Recurly Engage subs
 ### Prerequisites & limitations
 
 * Company or App Administrator permissions in Recurly Engage.
-* A Braze account with REST API access enabled (App Group REST API Key).
-* Ensure your Braze instance’s Base URL and API Key are available.
+* A Sengrid account with REST API access enabled (App Group REST API Key).
+* Ensure your Sengrid instance’s Base URL and API Key are available.
 
 # Definition
 
