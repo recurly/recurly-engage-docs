@@ -16,9 +16,21 @@ next:
 
 More than 95% of visitors to your website won’t convert on their first visit. The **Abandon Cart** use case recovers lost revenue by prompting returning visitors to resume their checkout process—recovering 40% or more of abandoned carts.
 
-### Prerequisites & limitations
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-* You must have **Company**, **App Administrator**, or **App Member** permissions in Recurly Engage.
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
