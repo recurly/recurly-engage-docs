@@ -16,9 +16,21 @@ next:
 
 This page walks you through setting up your application in the Recurly Engage console. You’ll learn how to give your app a clear name, register the domain where it’s hosted, and—if needed—manage multiple domain aliases for unified control.
 
-### Prerequisites & limitations
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          You need <strong>Administrator</strong> access to configure your Recurly Engage account.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-* You need **Administrator** access to configure your Recurly Engage account.
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
