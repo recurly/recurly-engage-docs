@@ -22,10 +22,25 @@ The **Cleeng** integration enables you to manage subscriber offers, coupons, and
 
 This feature or setting is available to all customers on any Recurly Engage subscription plan.
 
-### Prerequisites & limitations
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
+        </p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          A Cleeng Publisher account with a valid API Broadcaster Token.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-* Company or App Administrator permissions in Recurly Engage.
-* A Cleeng Publisher account with a valid API Broadcaster Token.
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
