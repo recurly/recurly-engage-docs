@@ -20,10 +20,25 @@ Recurly Engage Pipelines provide a unique way to manage users across various lif
 
 This feature or setting is available to all customers on any Recurly Engage subscription plan.
 
-### Prerequisites & limitations
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.
+        </p>
+        <p>
+          <i className="fa-solid fa-exclamation-triangle mr-4" />
+          Pipelines update automatically based on incoming trait and usage data; allow time for data refresh.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-* You must have **Company**, **App Administrator** or **App member** permissions in Recurly Engage.
-* Pipelines update automatically based on incoming trait and usage data; allow time for data refresh.
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
