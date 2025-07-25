@@ -22,10 +22,25 @@ next:
 
 This feature or setting is available to all customers on any Recurly Engage subscription plan.
 
-### Prerequisites & limitations
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-exclamation-triangle mr-4" />
+          You must have publish permissions in the GTM container for your site.
+        </p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          Ensure you already created a Recurly Engage application and have its Application ID.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-* You must have publish permissions in the GTM container for your site.
-* Ensure you already created a Recurly Engage application and have its Application ID.
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
