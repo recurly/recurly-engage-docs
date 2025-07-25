@@ -18,11 +18,29 @@ next:
 
 This feature or setting is available to all customers on any Recurly Engage subscription plan.
 
-### Prerequisites & limitations
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          An AWS account with permissions to create and configure Lambda functions and roles.
+        </p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          Access to your Segment workspace with permission to add destinations.
+        </p>
+        <p>
+          <i className="fa-solid fa-exclamation-triangle mr-4" />
+          Segment’s Lambda destination requires Node.js 14+ runtime.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-* An AWS account with permissions to create and configure Lambda functions and roles.
-* Access to your Segment workspace with permission to add destinations.
-* Segment’s Lambda destination requires Node.js 14+ runtime.
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
