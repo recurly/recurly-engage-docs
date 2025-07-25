@@ -16,10 +16,25 @@ next:
 
 Public reports ([Backlinko](https://backlinko.com/ad-blockers-users), [Statista](https://www.statista.com/topics/3201/ad-blocking/#topicOverview)) indicate up to 50% of web users employ ad blockers, which may block third-party JavaScript tags—including Recurly Engage’s—disabling engagement prompts.
 
-### Prerequisites & limitations
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.
+        </p>
+        <p>
+          <i className="fa-solid fa-exclamation-triangle mr-4" />
+          You must be on the Enterprise plan or have purchased the Ad Blocker Mitigation add-on.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-* You must have **Company**, **App Administrator**, or **App Member** permissions in Recurly Engage.
-* You must be on the Enterprise plan or have purchased the Ad Blocker Mitigation add-on.
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
