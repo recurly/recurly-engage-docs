@@ -22,12 +22,25 @@ next:
 
 This feature **may not be included** in the all plans. If you are interested, please contact [Recurly Sales](https://recurly.com/demo/contact-sales/) to discuss upgrade options.
 
-###
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.
+        </p>
+        <p>
+          <i className="fa-solid fa-exclamation-triangle mr-4" />
+          Guide type is fixed on creation and cannot be changed later.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-### Prerequisites & limitations
-
-* You must have **Company**, **App Administrator** or **App member** permissions in Recurly Engage.
-* Guide type is fixed on creation and cannot be changed later.
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
