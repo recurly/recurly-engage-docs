@@ -1,0 +1,75 @@
+openapi: 3.0.1
+info:
+  title: Redfast Session API
+  version: "1.0"
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+servers:
+  - url: https://partner.redfast.com
+paths:
+  /v1/jwt_session:
+    post:
+      summary: Provision user and create session
+      description: >
+        Creates a Redfast user session after verifying a partner-signed JWT.
+        If the user does not exist, they will be provisioned automatically.
+      tags:
+        - Sessions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - jwt_token
+              properties:
+                jwt_token:
+                  type: string
+                  description: JWT used to verify and create the session
+                  example: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...
+      responses:
+        "200":
+          description: Session created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  external_tenant_id:
+                    type: string
+                    example: "tenant-123"
+                  session_token:
+                    type: string
+                    example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+                  session_token_expires_at:
+                    type: string
+                    format: date-time
+                    example: "2025-02-18T17:02:26.000Z"
+        "422":
+          description: Unprocessable Entity - Error during session creation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: false
+                  status:
+                    type: string
+                    description: |
+                      - invalid_jwt_token (for jwt parsing/verification errors)
+                      - missing_or_invalid_info (for missing tenant, partner, app)
+                    enum:
+                      - invalid_jwt_token
+                      - missing_or_invalid_info
+                    example: invalid_jwt_token
+                  message:
+                    type: string
+                    description: Detailed error message
+                    example: jwt_token is missing

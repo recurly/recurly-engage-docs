@@ -1,0 +1,110 @@
+---
+openapi: 3.1.0
+info:
+  title: app-provisioning-api-for-partners
+  version: '100.7'
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+servers:
+- url: https://partner.redfast.com
+components:
+  securitySchemes:
+    sec0:
+      type: apiKey
+      in: header
+      name: rf-secret
+      x-default: getfromredfast
+security:
+- sec0: []
+paths:
+  "/v1/tenants/<external_tenant_id>":
+    get:
+      summary: List Apps
+      description: This API should be invoked to retrieve an existing tenant
+      operationId: get
+      parameters:
+      - name: partner_code
+        in: query
+        description: Ask your partner manager
+        schema:
+          type: string
+      - name: rf-secret
+        in: header
+        description: Provided by Redfast
+        schema:
+          type: string
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value:
+                    success: true
+                    external_tenant_id: "<external_tenant_id>"
+                    app_id: "<app_id>"
+                    tag_url: https://<app_id>.redfastlabs.com/assets/redfast.js
+                    user_first_name: John
+                    user_last_name: Smith
+                    user_email: jsmith@myemail.com
+                    app_name: My App
+                    company_name: My Company
+                    app_domain: myco.com
+                    test_mode: false
+                    jwt_public_key_updated_at: '2025-02-18T17:02:26.000Z'
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                    default: true
+                  external_tenant_id:
+                    type: string
+                    example: "<external_tenant_id>"
+                  app_id:
+                    type: string
+                    example: "<app_id>"
+                  tag_url:
+                    type: string
+                    example: https://<app_id>.redfastlabs.com/assets/redfast.js
+                  user_first_name:
+                    type: string
+                    example: John
+                  user_last_name:
+                    type: string
+                    example: Smith
+                  user_email:
+                    type: string
+                    example: jsmith@myemail.com
+                  app_name:
+                    type: string
+                    example: My App
+                  company_name:
+                    type: string
+                    example: My Company
+                  app_domain:
+                    type: string
+                    example: myco.com
+                  test_mode:
+                    type: boolean
+                    example: false
+                    default: true
+        '400':
+          description: '400'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{}"
+              schema:
+                type: object
+                properties: {}
+      deprecated: false
+x-readme:
+  headers: []
+  explorer-enabled: true
+  proxy-enabled: true
+x-readme-fauxas: true
