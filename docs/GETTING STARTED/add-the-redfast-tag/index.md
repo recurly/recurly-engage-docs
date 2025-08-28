@@ -61,4 +61,4 @@ In most cases, we recommend using the `defer` or `async` script element attribut
 * [Google tag manager](google-tag-manager)
 * [Adobe dynamic tag manager](adobe-dynamic-tag-manager)
 * [Tealium dynamic tag manager](tealium-iq-tag-manager)
-* [Direct](direct)
+* [Direct](rengage-direct-tag)
