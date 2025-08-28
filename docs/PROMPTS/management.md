@@ -21,7 +21,7 @@ The Prompts management section provides all the tools you need to create, config
 # Key details
 
 * **Prompts**: View and manage your entire list of prompts and their current status. ([Prompts](prompts))
-* **Prompt editor**: Create and edit prompt content, design, and configuration settings. ([Prompt editor](prompt-editor))
+* **Prompt editor**: Create and edit prompt content, design, and configuration settings. ([Prompt editor](editor))
 * **Triggers**: Define conditions and events that activate prompts for specific users. ([Triggers](triggers))
 * **Limits**: Set impression, frequency, and holdout constraints on individual prompts. ([Limits](limits))
 * **Schedule**: Specify start/end dates and time windows for prompt delivery. ([Schedule](schedule))
