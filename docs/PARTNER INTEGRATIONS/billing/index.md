@@ -33,4 +33,4 @@ next:
 * **App Stores**: Configure in-app purchase triggers for Roku, Apple, and Google Play Store devices via the Recurly Engage SDK. ([Learn more](app-stores-rf))
 * **Apple**: Import APNs credentials to schedule push notifications to iOS and tvOS devices. ([Learn more](apple-rf))
 * **Amazon**: Set up ADM credentials to send push notifications to Fire OS devices (Fire tablets, Fire TV). ([Learn more](amazon-1-rf))
-* **Google**: Upload Firebase service account JSON to enable push notifications on Android apps and web via FCM. ([Learn more](google))
+* **Google**: Upload Firebase service account JSON to enable push notifications on Android apps and web via FCM. ([Learn more](google-rf))
