@@ -65,7 +65,7 @@ The **Recurly** connector imports subscription traits nightly and provides actio
 3. Toggle **Use Account Code** to **On** if you map your own user IDs to Recurly Account Codes.
 4. Toggle **Active** to **On**.
 
-**API Key ([Instructions](https://docs.recurly.com/docs/api-keys) )**
+**API Key ([Instructions](https://docs.recurly.com/recurly-engage/docs/api-actions#/) )**
 
 ## Data integration
 
@@ -90,7 +90,7 @@ Once enabled, the following traits are imported nightly:
 
 ## Supported actions
 
-Once your connector is active and data is synced, you can attach these 1-Click actions to prompt interactions. The **account\_code** or **account\_number** trait must be present on users.
+Once your connector is active and data is synced, you can attach these 1-Click actions to prompt interactions. The **account_code** or **account_number** trait must be present on users.
 
 | Action                    | Description                                                 | API Integration         | Additional Instructions                     |
 | ------------------------- | ----------------------------------------------------------- | ----------------------- | ------------------------------------------- |
