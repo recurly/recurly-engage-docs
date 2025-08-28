@@ -74,7 +74,7 @@ Connector actions require that certain user attributes (e.g., account IDs, email
   * [SendGrid](sendgrid)
   * [ActiveCampaign](activecampaign)
   * [Freshdesk](freshdesk)
-  * [Zendesk](zendesk)
+  * [Zendesk](zendesk-rf)
   * [Adobe (AEP & AJO)](adobe-aep-ajo)
 
 * **Analytics & Events**
