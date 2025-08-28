@@ -24,7 +24,9 @@ The Prompts management section provides all the tools you need to create, config
 * **Prompt editor**: Create and edit prompt content, design, and configuration settings. ([Prompt editor](editor))
 * **Triggers**: Define conditions and events that activate prompts for specific users. ([Triggers](triggers))
 * **Limits**: Set impression, frequency, and holdout constraints on individual prompts. ([Limits](limits))
-* **Schedule**: Specify start/end dates and time windows for prompt delivery. ([Schedule](schedule))
+* **Schedule**: Specify start/end dates and time windows for prompt delivery. ([Schedule](schedule-1))
 * **Goals**: Configure engagement or conversion goals to measure prompt effectiveness. ([Goals](goals))
 * **Actions**: Attach API or tracking actions to prompt events (e.g., impressions, clicks). ([Actions](actions-1))
 * **Experiments**: Create A/B tests and experiments to compare prompt variations. ([Experiments](experiments-1))
+
+<br />
