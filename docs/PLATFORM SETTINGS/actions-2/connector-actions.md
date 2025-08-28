@@ -70,7 +70,7 @@ Connector actions require that certain user attributes (e.g., account IDs, email
 
   * [Salesforce Marketing Cloud](salesforce-marketing-cloud)
   * [Segment](segmentio-twilio)
-  * [Braze](braze)
+  * [Braze](braze-rf)
   * [SendGrid](sendgrid)
   * [ActiveCampaign](activecampaign)
   * [Freshdesk](freshdesk)
