@@ -26,5 +26,5 @@ The Prompts management section provides all the tools you need to create, config
 * **Limits**: Set impression, frequency, and holdout constraints on individual prompts. ([Limits](limits))
 * **Schedule**: Specify start/end dates and time windows for prompt delivery. ([Schedule](schedule))
 * **Goals**: Configure engagement or conversion goals to measure prompt effectiveness. ([Goals](goals))
-* **Actions**: Attach API or tracking actions to prompt events (e.g., impressions, clicks). ([Actions](actions))
-* **Experiments**: Create A/B tests and experiments to compare prompt variations. ([Experiments](experiments))
+* **Actions**: Attach API or tracking actions to prompt events (e.g., impressions, clicks). ([Actions](actions-1))
+* **Experiments**: Create A/B tests and experiments to compare prompt variations. ([Experiments](experiments-1))
