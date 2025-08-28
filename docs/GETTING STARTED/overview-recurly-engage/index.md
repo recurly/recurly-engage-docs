@@ -49,7 +49,7 @@ Real-time engine segments incoming events into cohorts using rule-based or ML-dr
 Broad ecosystem of 1‑click connectors across business domains:
 
 * **Billing & Subscription**: [Recurly](recurly-integration), [Zuora](zuora), [Stripe](stripe-rf), [Vindicia](vindicia-rf), [Braintree](braintree-rf), [Piano](piano)
-* **Support & CRM**: [Zendesk](zendesk-rf), [Freshdesk](freshdesk), [Salesforce](salesforce), [ActiveCampaign](activecampaign), [Braze](braze), [SendGrid](sendgrid), [Segment](segment)
+* **Support & CRM**: [Zendesk](zendesk-rf), [Freshdesk](freshdesk), [Salesforce](salesforce-marketing-cloud), [ActiveCampaign](activecampaign), [Braze](braze), [SendGrid](sendgrid), [Segment](segment)
 * **Marketing Automation**: [Salesforce Marketing Cloud](salesforce-marketing-cloud), [Iterable](iterable), [Adobe Campaign](adobe-aep-ajo)
 * **E‑commerce**: [Shopify](shopify), [Cleeng](cleeng), [Chargify](chargify)
 * **Analytics**: [Google Analytics](google-analytics), [Amplitude](amplitude), [Mixpanel](mixpanel), [mParticle](mparticle), [Heap](heap), [Adobe Analytics](adobe-analytics)
