@@ -53,7 +53,7 @@ Using this approach, your business can recover 40% or more of users with abandon
 ## Guide
 
 1. **Sync** visitor attributes related to cart abandonment and create an **Abandoned Cart** segment; otherwise use the built-in **Anonymous Users** segment.
-2. **Create** a **Popup Prompt** (Settings > Prompts) via [Create a Popup Prompt](create-a-pop-up) and customize the headline, message, and any dynamic variables.
+2. **Create** a **Popup Prompt** (Settings > Prompts) via [Create a Popup Prompt](create-a-pop-up-recurly-engage) and customize the headline, message, and any dynamic variables.
 3. Under **Add Action**, **configure** a redirect to your cart URL.
 4. **Target** the prompt to the **Test Users** segment.
 5. **Set** the trigger to fire on your checkout flow (e.g., URL pattern `/checkout/*`) and **enable** the **Exit Intent** advanced trigger.
