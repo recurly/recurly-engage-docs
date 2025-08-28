@@ -48,10 +48,10 @@ Real-time engine segments incoming events into cohorts using rule-based or ML-dr
 
 Broad ecosystem of 1‑click connectors across business domains:
 
-* **Billing & Subscription**: [Recurly](recurly), [Zuora](zuora), [Stripe](stripe), [Vindicia](vindicia), Braintree, Piano
-* **Support & CRM**: [Zendesk](zendesk), [Freshdesk](freshdesk), [Salesforce](salesforce), [ActiveCampaign](activecampaign), [Braze](braze), [SendGrid](sendgrid), [Segment](segment)
-* **Marketing Automation**: Salesforce Marketing Cloud, Iterable, Adobe Campaign
-* **E‑commerce**: [Shopify](shopify), Cleeng, Chargify
+* **Billing & Subscription**: [Recurly](recurly-integration), [Zuora](zuora), [Stripe](stripe-rf), [Vindicia](vindicia-rf), [Braintree](braintree-rf), [Piano](piano)
+* **Support & CRM**: [Zendesk](zendesk-rf), [Freshdesk](freshdesk), [Salesforce](salesforce), [ActiveCampaign](activecampaign), [Braze](braze), [SendGrid](sendgrid), [Segment](segment)
+* **Marketing Automation**: [Salesforce Marketing Cloud](salesforce-marketing-cloud), [Iterable](iterable), [Adobe Campaign](adobe-aep-ajo)
+* **E‑commerce**: [Shopify](shopify), [Cleeng](cleeng), [Chargify](chargify)
 * **Analytics**: [Google Analytics](google-analytics), [Amplitude](amplitude), [Mixpanel](mixpanel), [mParticle](mparticle), [Heap](heap), [Adobe Analytics](adobe-analytics)
 
 Leverage these integrations to sync user data, trigger 1‑click actions, and report prompt events—seamlessly embedding Recurly Engage into your tech stack.
