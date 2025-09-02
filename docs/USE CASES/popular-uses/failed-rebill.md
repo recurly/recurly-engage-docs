@@ -1,5 +1,5 @@
 ---
-title: Failed rebill
+title: Payment failure
 excerpt: >-
   How to use Configuration guide for the Failed Rebill use case, which reduces
   involuntary churn by prompting users to update their payment information after
