@@ -34,7 +34,7 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 # Definition
 
-**Popular use cases** are turnkey prompt patterns and templates that address common business goals—such as cart recovery, feature adoption, upsells, and churn mitigation—allowing you to deploy best practices with minimal configuration..
+**Popular use cases** are turnkey prompt patterns and templates that address common business goals—such as cart recovery, feature adoption, upsells, and churn mitigation—allowing you to deploy best practices with minimal configuration.
 
 # Key benefits
 
