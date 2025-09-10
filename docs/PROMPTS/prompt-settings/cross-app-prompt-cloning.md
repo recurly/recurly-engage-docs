@@ -18,6 +18,8 @@ Recurly Engage now provides the ability to clone prompts across applications. Th
 
 # Key details
 
+Steps to clone prompts
+
 1. Ensure you’re an active member of Recurly Engage. If not, [book a demo today](https://recurly.com/product/engage/) !
 2. Go to the Prompts section in **Pulse**, the Recurly Engage management console.
 
