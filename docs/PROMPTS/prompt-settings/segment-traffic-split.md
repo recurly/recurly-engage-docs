@@ -8,7 +8,7 @@ metadata:
 ---
 # Overview
 
-Recurly Engage now offers advanced traffic splitting functionality, empowering you to effectively A/B test different prompt experiences. This new feature allows you to distribute a segment's traffic across various prompts, enabling direct comparison of performance between different formats like a modal and an inline banner.
+Recurly Engage now offers advanced traffic splitting functionality, empowering you to effectively A/B test different prompt experiences. This new feature allows you to distribute a segment's traffic across various prompts, enabling direct comparison of performance between different formats like a modal and an inline banner..
 
 <br />
 
