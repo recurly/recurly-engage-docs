@@ -63,7 +63,9 @@ Follow these steps to configure and send push prompts:
 5. **Create** a Push prompt:
 
 * Create a new prompt. [Prompts](doc:prompts)
-* Select the **push\_notification** Device Type, then choose the **Push** prompt style.
+* Select the **push_notification** Device Type, then choose the **Push** prompt style.
 * Configure the segment, schedule, and notification creative.
 
 Once configured, **save** and **schedule** to deliver your push notifications to your audience.
+
+<br />
