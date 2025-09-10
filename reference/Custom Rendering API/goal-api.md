@@ -2,7 +2,7 @@
 title: Goal API
 excerpt: ''
 api:
-  file: custom-rendering-api.json
+  file: custom-rendering-api.yaml
   operationId: goal-api
 deprecated: false
 hidden: false

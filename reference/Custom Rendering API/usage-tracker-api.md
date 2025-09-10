@@ -2,7 +2,7 @@
 title: Usage Tracker API
 excerpt: ''
 api:
-  file: custom-rendering-api.json
+  file: custom-rendering-api.yaml
   operationId: usage-tracker-api
 deprecated: false
 hidden: false
