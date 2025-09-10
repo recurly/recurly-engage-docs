@@ -2,7 +2,7 @@
 title: Cross app prompt cloning
 excerpt: 'Clone prompts across applications. '
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
@@ -18,4 +18,4 @@ Recurly Engage now provides the ability to clone prompts across applications. Th
 
 # Key details
 
-1. <br />
+1. .
