@@ -3,9 +3,6 @@ openapi: 3.1.0
 info:
   title: custom-rendering-api
   version: '100.7'
-  license:
-    name: MIT
-    url: https://opensource.org/licenses/MIT
 servers:
 - url: https://conduit.redfast.com
 components:
