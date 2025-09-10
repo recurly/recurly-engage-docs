@@ -2,7 +2,7 @@
 title: Reset API
 excerpt: ''
 api:
-  file: custom-rendering-api.json
+  file: custom-rendering-api.yaml
   operationId: reset-api
 deprecated: false
 hidden: false
