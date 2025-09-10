@@ -3,9 +3,6 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: data-sync
-  license:
-    name: MIT
-    url: https://opensource.org/licenses/MIT
 servers:
 - url: https://conduit.redfast.com
 tags: []
