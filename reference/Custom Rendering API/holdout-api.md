@@ -2,7 +2,7 @@
 title: Holdout API
 excerpt: ''
 api:
-  file: custom-rendering-api.json
+  file: custom-rendering-api.yaml
   operationId: holdout-api
 deprecated: false
 hidden: false

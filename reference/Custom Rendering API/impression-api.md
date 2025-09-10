@@ -2,7 +2,7 @@
 title: Impression API
 excerpt: ''
 api:
-  file: custom-rendering-api.json
+  file: custom-rendering-api.yaml
   operationId: impression-api
 deprecated: false
 hidden: false
