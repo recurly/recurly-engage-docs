@@ -1,7 +1,7 @@
 ---
 title: Segment traffic split
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
