@@ -3,9 +3,6 @@ openapi: 3.1.0
 info:
   title: app-provisioning-api-for-partners
   version: '100.7'
-  license:
-    name: MIT
-    url: https://opensource.org/licenses/MIT
 servers:
 - url: https://partner.redfast.com
 components:
