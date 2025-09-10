@@ -21,8 +21,10 @@ proactively manage your content. By staying ahead of expirations, you can mainta
 
 # Key details
 
+Steps to enable email notifications for expiring prompts.
+
 1. Ensure you’re an active member of Recurly Engage. If not, [book a demo today](https://recurly.com/product/engage/)
-2. In the Recurly Engage management console, **Pulse**, navigate to **Settings > App Management > Notifications**. 
+2. In the Recurly Engage management console, **Pulse**, navigate to **Settings > App Management > Notifications**.
 3. Adjust your email notification preferences and recipients for Expiring Prompts and Guides.
 
 <Image align="center" src="https://files.readme.io/b475bbc61939704a1167465afa6ea954a7e3c0f092615f51868bcf67fe67c1b3-expiring_email_notifications.png" />
