@@ -12,16 +12,16 @@ Never miss a content expiration or performance change with Expiring Email Notifi
 
 # Key benefits
 
-* **Proactive Content Management:** Receive automatic email alerts when a Prompt or Guide is about to expire, helping you to stay ahead of content changes.
-* **Seamless User Experience**: Avoid unintended service interruptions or content gaps by knowing exactly when to update or replace your content.
-* **Prevent Performance Decline:** Be notified of expiring content that may be crucial for your user engagement, allowing you to take action and maintain performance.
+* **Proactive content management:** Receive automatic email alerts when a Prompt or Guide is about to expire, helping you to stay ahead of content changes.
+* **Seamless user experience**: Avoid unintended service interruptions or content gaps by knowing exactly when to update or replace your content.
+* **Prevent performance decline:** Be notified of expiring content that may be crucial for your user engagement, allowing you to take action and maintain performance.
 
 # Key details
 
 Steps to enable email notifications for expiring prompts.
 
-1. Ensure you’re an active member of Recurly Engage. If not, [book a demo today](https://recurly.com/product/engage/)
-2. In the Recurly Engage management console, **Pulse**, navigate to **Settings > App Management > Notifications**.
-3. Adjust your email notification preferences and recipients for Expiring Prompts and Guides.
+1. **Ensure** you’re an active member of Recurly Engage. If not, [book a demo today](https://recurly.com/product/engage/)
+2. In the Recurly Engage management console, **Pulse**, **navigate** to **Settings > App Management > Notifications**.
+3. **Adjust** your email notification preferences and recipients for Expiring Prompts and Guides.
 
 <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/b475bbc61939704a1167465afa6ea954a7e3c0f092615f51868bcf67fe67c1b3-expiring_email_notifications.png" />
