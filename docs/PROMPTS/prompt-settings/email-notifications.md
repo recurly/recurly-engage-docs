@@ -8,7 +8,7 @@ metadata:
 ---
 # Overview
 
-Never miss a content expiration or performance change with Expiring Email Notifications. This feature provides automatic email alerts when a Prompt or Guide is set to expire, allowing you to proactively manage your content. By staying ahead of expirations, you can maintain a seamless user experience and avoid unintended interruptions.
+This feature provides automatic email alerts when a Prompt or Guide is set to expire, allowing you to proactively manage your content. By staying ahead of expirations, you can maintain a seamless user experience and avoid unintended interruptions.
 
 # Key benefits
 
