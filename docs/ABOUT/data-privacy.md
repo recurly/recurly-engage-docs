@@ -60,4 +60,17 @@ You may provide a list of user IDs to suppress. Recurly Engage will immediately 
 
 ## Data retention
 
-Data is retained no longer than 90 days past the user’s last activity by default. Extended lookback (up to one
+On an ongoing basis, Redfast will retain end-user usage data no longer than ninety days past the latest activity encountered by that end user unless extended lookback has been enabled. For customers who request the extended lookback feature, data is retained for one year. For end users that have been added to the Suppression List, Redfast will not retain any history of the end user's usage.
+
+## API access
+
+Any direct integration with third party systems that you configure within Redfast should be secured with a developer specific API key assigned to Redfast. Redfast uses publicly or privately supplied documentation with these APIs to establish communications between the systems. An alternative to API access for 1-Click actions is redirecting the user to an existing screen within your app to perform the desired action. However this will come with an adverse impact to conversion rate.
+
+## Apple AppStore
+
+In December 2020, Apple introduced new requirements for app developers to outline their apps' data collection and usage policy. The following specifies data collected by Redfast.
+
+Data collected by default:
+
+* **Identifiers:** Redfast does not create a user identifier. A User ID created by your system is passed on to the Redfast SDK. Please note that your system may be using Apple's IDFV identifier and passing that to the Redfast SDK. Consult with your engineer for specific details.
+* **Usage Data:** Session related information. Optionally, additional user events that you elect to be tracked using Redfast.
