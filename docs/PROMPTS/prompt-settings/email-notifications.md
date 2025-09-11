@@ -1,6 +1,6 @@
 ---
 title: Email notifications
-excerpt: 'You can now receive notifications when prompts are set to expire. '
+excerpt: You can now receive notifications when prompts are set to expire.
 deprecated: false
 hidden: true
 metadata:
