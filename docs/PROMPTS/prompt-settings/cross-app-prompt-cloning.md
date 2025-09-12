@@ -4,6 +4,10 @@ excerpt: 'Clone prompts across applications. '
 deprecated: false
 hidden: true
 metadata:
+  description: >
+    A guide on how to clone prompts across different applications in Recurly
+    Engage. It explains how to copy prompts from a staging environment to a live
+    production app to maintain consistency and streamline workflows.
   robots: index
 ---
 # Overview
