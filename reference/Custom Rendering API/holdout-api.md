@@ -1,6 +1,9 @@
 ---
 title: Holdout API
-excerpt: ''
+excerpt: >-
+  An API for logging when a user is part of an experiment's holdout group. It
+  explains how to invoke the API when a prompt is not shown to a user in the
+  control group.
 api:
   file: custom-rendering-api.yaml
   operationId: holdout-api
