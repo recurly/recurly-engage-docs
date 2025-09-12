@@ -41,3 +41,9 @@ Steps to clone prompts
 5. From the Close Prompt modal, select the App you’d like to Clone the Prompt to. Remember to reset the Custom Goals, Actions, Triggers, Experiments, Segments after cloning.
 
 <Image align="center" className="border" border={true} src="https://files.readme.io/4ae585aeed23b8589aa4acec5c88ef0c2318ce6cdbe386412a03a571e3aaa6a7-clone_4.png" />
+
+<br />
+
+6. You can now clone existing prompts from one guide to another within the same application, eliminating the need for manual entry. To do this, navigate to a Guide, select the desired prompt, then choose Manage, and finally Clone. In the Clone Prompt modal, select the required App and the relevant Guide to which you'd like to clone.
+
+<Image align="center" src="https://files.readme.io/d4f123e998ac3176cec3303bd308d0c418015041a6b56267e2a42ba9dd7a5e07-Screenshot_2025-09-12_at_10.15.21_AM.png" />
