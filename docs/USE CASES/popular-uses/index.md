@@ -44,7 +44,7 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 # Key details
 
-The following outlines the most popular uses of Recurly Engage across the customer lifecycle. Churn-related use cases are often the starting point for many customers..
+The following outlines the most popular uses of Recurly Engage across the customer lifecycle. Churn-related use cases are often the starting point for many customers.
 
 | Acquisition                                                                                                           | Engagement                                                                                                              | Upsell                                                                                                               | Churn                                                                                          |
 | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
