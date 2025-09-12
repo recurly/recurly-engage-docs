@@ -37,11 +37,15 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 <PrerequisitesLimitations header="Prerequisites & limitations" />
 
+<Image align="center" width="200px" src="https://files.readme.io/f00d61d6a8654389878ce3c4e673366ed89c0e2737c9267a0e1e34ea29fc1b9e-Screenshot_2025-09-12_at_10.39.42_AM.png" />
+
+<br />
+
+<Image align="center" width="300px" src="https://files.readme.io/889186a4e41b9748da8d5504b1d6bcf7dd69e716510249b668073852f4c39c13-Screenshot_2025-09-12_at_10.39.52_AM.png" />
+
 # Definition
 
 Push Prompts send scheduled notifications directly to your users' devices, even when they aren't actively using your app. These messages are delivered via supported channels like Amazon Device Messaging (ADM), Apple Push Notifications service (APNs), and Firebase Cloud Messaging (FCM).
-
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/1cba839-Screenshot_2024-05-29_at_12.32.25_PM.png" />
 
 # Key benefits
 
@@ -56,7 +60,7 @@ Follow these steps to configure and send push prompts:
 ### Steps to enable push notifications
 
 1. Ensure you’re an active member of Recurly Engage with a plan that includes Push Prompts. If not, [book a demo today](https://recurly.com/product/engage/) !
-2. Setup credentials: 
+2. Setup credentials:
    1. In the Recurly Engage management console, Pulse, navigate to **Settings → Integrations → Push Notifications**
    2. Enter credentials for the desired [Push channels](https://docs.recurly.com/recurly-engage/docs/push).
 
