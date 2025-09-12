@@ -1,6 +1,8 @@
 ---
 title: Ping
-excerpt: The ping call is the starting point to interacting with the Redfast backend
+excerpt: >-
+  An API for loading user-specific prompts. It describes the request parameters,
+  response object, and an example of how to use it to retrieve updated prompts.
 api:
   file: custom-rendering-api.yaml
   operationId: ping-api
