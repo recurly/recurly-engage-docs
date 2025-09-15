@@ -26,7 +26,7 @@ Recurly Engage now supports Liquid, a powerful and flexible open-source template
 1. **Go to the Prompts** section in Pulse, the Recurly Engage management console.
 2. **Create a new prompt** or select an existing one you wish to edit.
 3. **Edit the prompt design** by clicking into the text field you want to personalize.
-4. **Insert Liquid variables** using the `{{ }}` delimiters. The system will automatically suggest available variables from your Recurly account data as you type.
+4. **Insert Liquid variables** using the `{{ }}` delimiters. The system will automatically suggest available variables from your Recurly account data as you type. All liquid functionality is supported including control flow, iterators (loops), and assignments.
 
 **Example:**
 
