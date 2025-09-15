@@ -33,14 +33,18 @@ Recurly Engage now supports Liquid, a powerful and flexible open-source template
 There are two primary types of Liquid variables you can use:
 
 * **User trait variables:** These variables come from user data you have imported. Use the `user.`prefix, such as `{{user.first_name}}`.
-* **Data source variables:**
+* **Data source variables:** These variables are available if you have connected your Recurly account as a data source.
+
+For more information on connecting data sources, refer to our [Data Sources documentation](https://docs.recurly.com/recurly-engage/docs/data-sources).
+
+**Example:** 
 
 You can create a prompt that displays a customer's name and current plan with the following code:
 
-Hello `{{ account.first_name }}`, your `{{ subscription.plan.name }}` plan is set to renew on `{{ subscription.renews_at }}`.
+Hello `{{ user.first_name }}`, your `{{ subscription.plan.name }}` plan is set to renew on `{{ subscription.renews_at }}`.
 
 This will render a personalized message for each user, such as:
 
 `Hello Jane, your Pro plan is set to renew on 09/30/2025.`
 
-Note: The system will only show variables available for the targeted user. If a variable, such as account.first_name, is not available for a specific user, the field will simply appear blank.
+**Note: **The system will only show variables available for the targeted user. If a variable, such as `user.first_name`, is not available for a specific user, the field will simply appear blank.
