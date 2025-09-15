@@ -35,9 +35,7 @@ Once your Recurly Engage account has been enabled by your Recurly Account Manage
 1. **Follow the Recurly Engage Integration Guide: **[Refer to the official guide](https://docs.recurly.com/recurly-subscriptions/docs/recurly-engage-integration)  to complete the initial setup of your Recurly Engage account.
 2. **Access Out-of-the-Box Functionality:** Upon completion of the integration guide, Recurly Engage will be automatically enabled on your Hosted Account Management pages, Recurly Checkout, and any pages where Recurly.js is installed. No additional engineering effort is required for these core use cases.
 3. **Manual Installation (Optional):** To extend Recurly Engage to additional site pages, such as your product catalog or marketing content, you must manually install the Recurly Engage Javascript tag (redfast.js) on those pages.
-4. **Manage Multiple Tags:** If you are using Recurly.js and choose to manually install the redfast.js tag, it is recommended that you disable the automatic redfast.js installation to prevent duplication. The system is designed to handle deduplication, but managing a single tag is the best practice. The system will always use the first tag it encounters.
-
-<br />
+4. **Manage Multiple Tags:** If you are using Recurly.js and choose to manually install the redfast.js tag, it is recommended that you disable the automatic redfast.js installation to prevent duplication. The system is designed to handle deduplication, but managing a single tag is the best practice. The system will always use the first tag it encounters. [Learn more about disabling Engage.](https://docs.recurly.com/recurly-subscriptions/v1.2/docs/engage#/)
 
 ```
 <head>
