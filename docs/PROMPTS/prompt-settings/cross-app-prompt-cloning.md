@@ -38,7 +38,7 @@ Steps to clone prompts
 
 <Image align="center" className="border" border={true} src="https://files.readme.io/aa8145c97624b1196784a36adcd0d6344c01ecc3a53dda75bcfcc46231264406-clone_2.png" />
 
-5. From the Close Prompt modal, select the App you’d like to Clone the Prompt to. Remember to reset the Custom Goals, Actions, Triggers, Experiments, Segments after cloning.
+5. From the Clone Prompt modal, select the App you’d like to Clone the Prompt to. **Remember** to reset the Custom Goals, Actions, Triggers, Experiments, Segments after cloning..
 
 <Image align="center" className="border" border={true} src="https://files.readme.io/4ae585aeed23b8589aa4acec5c88ef0c2318ce6cdbe386412a03a571e3aaa6a7-clone_4.png" />
 
