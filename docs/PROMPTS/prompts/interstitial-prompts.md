@@ -47,6 +47,4 @@ The new granular controls are configured programmatically within the SDK, simpli
 3. **Edit prompt design:** In the Prompt Details screen, open the Edit prompt design window. Configure your prompt to match the messaging, styles and interactions desired.
 4. **Update the user interactions:** Under the User Interaction section, update the buttons to have personalized height, width, font size, border radius, thickness and color, and positioning.
 
-<br />
-
-<Image align="center" src="https://files.readme.io/c4053c7a7cd7ffc1b80ad6272c39378b268284dd59e3f79515f178c01be24ac5-Interstitial_3.png" />
+<Image align="center" src="https://files.readme.io/82205e058c6dc7281a5d9ab6d534119ab7d8d75000ae391d631dc8b68a2a6eff-Interstitial_3.png" />
