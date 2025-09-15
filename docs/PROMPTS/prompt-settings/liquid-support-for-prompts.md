@@ -32,7 +32,7 @@ Recurly Engage now supports Liquid, a powerful and flexible open-source template
 
 There are two primary types of Liquid variables you can use:
 
-* **User trait variables:**
+* **User trait variables:** These variables come from user data you have imported. Use the `user.`prefix, such as `{{user.first_name}}`.
 * **Data source variables:**
 
 You can create a prompt that displays a customer's name and current plan with the following code:
