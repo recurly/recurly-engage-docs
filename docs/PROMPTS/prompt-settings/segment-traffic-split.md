@@ -36,9 +36,9 @@ Steps to implement a segment traffic split.
 <Image align="center" className="border" border={true} src="https://files.readme.io/244de544d0c37c8688ecf827078bc439d6c6c79baa10623d0a82eae334d87995-segment_split_2.png" />
 
 5. For the selected prompt, set the segmentation split amount. **Once a user is assigned to a group, they will always remain in that group based on a bucketing methodology.** Repeat this step for the second prompt you want to segment.
-   <br />
+
    Set the segmentation split amount for each prompt type.
-   <br />
+
    **Example:**
    For the first group, set the split to 0-50.
    For the second group, set the split to 51-100.
