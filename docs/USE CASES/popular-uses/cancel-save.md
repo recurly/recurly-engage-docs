@@ -136,11 +136,12 @@ Follow these steps to create a simple yet powerful Cancel/Save prompt.
 9. **Edit your Design**
 
    From the **Details** section, click “Edit prompt design” to open the prompt customization window.
+
    <br />
 
 <Image align="center" src="https://files.readme.io/b3336790a31fd879577c7cfedd6af3abdfd4093a9b5058995803abadffca8ea7-cancel_8.png" />
 
- Edit the prompt to customize the title, message, size, and styling to fit your messaging and styles. Make sure the message is clear and compelling. Be sure to configure your prompt on both Desktop & Mobile.
+**Edit the prompt** to customize the title, message, size, and styling to fit your messaging and styles. Make sure the message is clear and compelling. Be sure to configure your prompt on both **Desktop & Mobile.**
 
 <br />
 
