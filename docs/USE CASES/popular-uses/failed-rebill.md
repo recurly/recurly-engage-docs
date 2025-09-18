@@ -1,9 +1,9 @@
 ---
 title: Payment failure
 excerpt: >-
-  How to use Configuration guide for the Failed Rebill use case, which reduces
-  involuntary churn by prompting users to update their payment information after
-  a failed billing attempt.
+  Configuration guide for creating a payment failure flow. It details how to set
+  up targeted in-app prompts to help users update their payment information and
+  reduce involuntary churn.
 deprecated: false
 hidden: false
 metadata:
@@ -16,14 +16,6 @@ next:
       title: Popular Uses
       type: basic
 ---
-# Overview
-
-### Video
-
-Here is a video tutorial that shows how to set this up for your website and app.
-
-<Embed url="https://www.loom.com/embed/d1c5c4f59f7a4b23a5e99e92c1381b8b?sid=2ea41637-d7ec-4f32-b722-0c1bceb4d91b" href="https://www.loom.com/embed/d1c5c4f59f7a4b23a5e99e92c1381b8b?sid=2ea41637-d7ec-4f32-b722-0c1bceb4d91b" typeOfEmbed="iframe" height="480px" width="100%" iframe="true" />
-
 <br />
 
 export const PrerequisitesLimitations = ({ header }) => {
@@ -44,13 +36,13 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 # Definition
 
-A common problem for subscription businesses is when an attempt to bill the customer fails—due to expired cards, fraud flags, or spending limits. While your payment processor may offer automated retries, only a small percentage of failed charges succeed this way. Recurly Engage provides a guide to gently prompt users—over one or more visits—to update their payment details and recover revenue.
+Payment failures are a common issue for subscription businesses, often leading to involuntary churn. This guide will walk you through setting up a customer journey that gently prompts users to update their payment information, helping you recover failed charges and retain subscribers.
 
 # Key benefits
 
-* **Increased recovery**: Guide users to update payment info and recover failed charges.
-* **Customer-friendly**: Offer contextual reminders rather than silent retries.
-* **Actionable insights**: Track which prompts and copy drive the highest update rates.
+* **Increased recovery**: Guide users directly to a page where they can update their payment info, increasing the likelihood of recovering failed charges.
+* **Customer-friendly**: Remind customers about a failed payment through targeted prompts, which is more effective and user-friendly than silent, behind-the-scenes retries.
+* **Actionable insights**: Test different messages and designs to see which ones are most effective at getting users to update their payment details.
 
 # Key details
 
