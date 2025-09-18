@@ -59,42 +59,46 @@ Follow these steps to configure and send push prompts:
 
 ### Steps to enable push notifications
 
-1. Ensure you’re an active member of Recurly Engage with a plan that includes Push Prompts. If not, [book a demo today](https://recurly.com/product/engage/) !
+1. **Ensure** you are an active member of Recurly Engage with a plan that includes Push Prompts. If not, [book a demo today](https://recurly.com/product/engage/) !
 2. Setup credentials:
-   1. In the Recurly Engage management console, Pulse, navigate to **Settings → Integrations → Push Notifications**
-   2. Enter credentials for the desired [Push channels](https://docs.recurly.com/recurly-engage/docs/push).
 
-<Image align="center" src="https://files.readme.io/681e77099fc338612636e14d772a2eb93216ddac1bf90e5af3dc07c2a613adce-Push_1.png" />
+   1. In the Recurly Engage management console, Pulse, **navigate** to **Settings → Integrations → Push Notifications**
+   2. **Enter** credentials for the desired [Push channels](https://docs.recurly.com/recurly-engage/docs/push).
 
-3. Sync device tokens:
+   <br />
+
+   <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/dea5d335047a382b0ccca5259e5aa5e2df5a3d28cd4ea9373c278ad1275486af-image.png" />
+
+   <br />
+3. **Sync** device tokens:
    1. Configure and upload device tokens to allow Recurly Engage to target your users' registered devices.
-4. Create a [custom device](https://docs.recurly.com/recurly-engage/docs/custom-devices) :
-   1. In Pulse, navigate to **Settings → Custom Devices**
-   2. Select a **+ New Custom Device** profile for push targeting.
-5. Create a [Push Segment](https://docs.recurly.com/recurly-engage/docs/segments) :
-   1. In **Pulse** navigate to the **Segments** section and create a **+ New Segment**.
-   2. Select Push notification as the device type.
-   3. Configure your Segment with the appropriate settings, be sure to configure channel type.
+4. **Create** a [custom device](https://docs.recurly.com/recurly-engage/docs/custom-devices) :
+   1. In Pulse, **navigate** to **Settings → Custom Devices**
+   2. **Select** a **+ New Custom Device** profile for push targeting.
+5. **Create** a [Push Segment](https://docs.recurly.com/recurly-engage/docs/segments) :
+   1. In **Pulse** navigate to the **Segments** section and **create** a **+ New Segment**.
+   2. **Select** Push notification as the device type.
+   3. **Configure** your Segment with the appropriate settings, be sure to configure channel type.
 
-<Image align="center" src="https://files.readme.io/e6d0bd51758f313b517af9c708b667b1e90e2b44737178f8d7c1952f80d6a5e3-Push_2.png" />
+<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/e6d0bd51758f313b517af9c708b667b1e90e2b44737178f8d7c1952f80d6a5e3-Push_2.png" />
 
-6. Create a Push prompt:
-   1. In **Pulse**, navigate to the [Prompts](https://docs.recurly.com/recurly-engage/docs/prompts)  section.
-   2. Select **+ New Prompt**
-   3. First, select **Custom** for the Device Type and **Push Device** for the device type. Then, choose the **Push** prompt style.
+6. **Create** a Push prompt:
+   1. In **Pulse**, **navigate** to the [Prompts](https://docs.recurly.com/recurly-engage/docs/prompts)  section.
+   2. **Select** **+ New Prompt**
+   3. First, **select** **Custom** for the Device Type and **Push Device** for the device type. Then, **choose** the **Push** prompt style.
 
-<Image align="center" src="https://files.readme.io/b7baff81edc13a1eccf215d64894cb6ff4743a64a5d45f388bc9f8daeca6ab95-Push_3.png" />
+<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/b7baff81edc13a1eccf215d64894cb6ff4743a64a5d45f388bc9f8daeca6ab95-Push_3.png" />
 
-7. Configure the prompt:
-   1. **Segment:** Choose the Push Notification segment to target specific users.
-   2. **Schedule **the times and frequency your prompt will send:
+7. **Configure** the prompt:
+   1. **Segment:** **Choose** the Push Notification segment to target specific users.
+   2. **Schedule** the times and frequency your prompt will send:
       1. **Customizable Timing:** Set specific start and end dates and times for your scheduled push notification.
       2. **Quiet Times:** Establish periods during which notifications should not be sent, preventing disruptions.
       3. **Local Time Zones:** Configure the task to run according to the users local time zone, ensuring accurate timing regardless of location.
    3. **Design:** Edit the prompt design to customize messaging, imagery and actions.
 
-<Image align="center" src="https://files.readme.io/3240e7cf7e9fc9d27b5b10c7301fdcfcf7a1a3df6f11ea11144115478ce95e86-Push_4.png" />
+<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/3240e7cf7e9fc9d27b5b10c7301fdcfcf7a1a3df6f11ea11144115478ce95e86-Push_4.png" />
 
-7. Once configured, save and schedule to deliver your push notifications to your audience.
+7. Once configured, **save** and **schedule** to deliver your push notifications to your audience.
 
 <br />
