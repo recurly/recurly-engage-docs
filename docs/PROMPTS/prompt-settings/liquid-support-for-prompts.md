@@ -47,4 +47,4 @@ This will render a personalized message for each user, such as:
 
 `Hello Jane, your Pro plan is set to renew on 09/30/2025.`
 
-**Note:** The system will only show variables available for the targeted user. If a variable, such as `user.first_name`, is not available for a specific user, the field will simply appear blank.
+> **Note:** The system will only show variables available for the targeted user. If a variable, such as `user.first_name`, is not available for a specific user, the field will simply appear blank.
