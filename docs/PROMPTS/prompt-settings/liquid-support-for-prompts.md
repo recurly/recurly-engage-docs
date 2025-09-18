@@ -1,5 +1,9 @@
 ---
 title: Liquid support for prompts
+excerpt: >-
+  A guide on how to use Liquid, a template language, to personalize prompts in
+  Recurly Engage. It explains how to dynamically insert subscriber and account
+  data into your prompts to create a more relevant and engaging user experience.
 deprecated: false
 hidden: true
 metadata:
