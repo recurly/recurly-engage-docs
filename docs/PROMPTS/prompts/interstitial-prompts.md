@@ -9,7 +9,7 @@ metadata:
     TV, which allow for customized button layouts and positioning.
   robots: index
 ---
-# Definition
+# Overview
 
 Recurly Engage's enhanced SDK now provides granular button controls for interstitial prompts. This update allows developers to fully customize the appearance and layout of buttons within prompts displayed on HTML devices (including React Native), Roku, and Apple TV.
 
