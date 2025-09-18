@@ -23,7 +23,7 @@ Here is a video tutorial that shows how to set this up for your website and app.
 
 <Embed url="https://www.loom.com/embed/37d0ba60b71e4444be6ddcfe14e56add?sid=77dddded-5f13-4cd0-899b-9105cde9f286" href="https://www.loom.com/embed/37d0ba60b71e4444be6ddcfe14e56add?sid=77dddded-5f13-4cd0-899b-9105cde9f286" typeOfEmbed="iframe" height="480px" width="100%" iframe="true" />
 
-<Callout icon="🚧">
+<Callout icon="🚧" theme="warn">
   **Important:**
 
   Conversions are significantly lower when using a redirect URL instead of 1-Click Actions
@@ -63,7 +63,7 @@ One of the most popular uses of Recurly Engage is intercepting the cancel button
 
 > 📘 When combined with [1-Click Actions](actions-1), you can expect significant reductions in cancellations with improved customer satisfaction.
 
-## Guide
+## Step-by-step guide
 
 1. **Enable** [1-Click Actions](actions-1) by activating the connector to your [Billing](billing) platform.
 2. Alternatively, **specify** a redirect URL to an existing cancellation confirmation screen.
