@@ -2,7 +2,7 @@
 title: Email notifications
 excerpt: You can now receive notifications when prompts are set to expire.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
