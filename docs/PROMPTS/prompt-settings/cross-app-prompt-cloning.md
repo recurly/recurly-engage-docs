@@ -5,7 +5,7 @@ excerpt: >-
   Engage. It explains how to copy prompts from a staging environment to a live
   production app to maintain consistency and streamline workflows.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   description: >
     A guide on how to clone prompts across different applications in Recurly
