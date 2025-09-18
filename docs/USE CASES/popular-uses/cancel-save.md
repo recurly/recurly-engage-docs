@@ -1,8 +1,9 @@
 ---
 title: Cancel save
 excerpt: >-
-  Configuration guide for the “Cancel Save” use case, which intercepts
-  cancellation flows to offer retention prompts.
+  Configuration guide for implementing a "Cancel/Save" flow to prevent customer
+  churn. It outlines the process of creating and deploying a multi-step survey
+  with tailored offers to retain users.
 deprecated: false
 hidden: false
 metadata:
@@ -16,12 +17,6 @@ next:
       type: basic
 ---
 # Overview
-
-### Video
-
-Here is a video tutorial that shows how to set this up for your website and app.
-
-<Embed url="https://www.loom.com/embed/37d0ba60b71e4444be6ddcfe14e56add?sid=77dddded-5f13-4cd0-899b-9105cde9f286" href="https://www.loom.com/embed/37d0ba60b71e4444be6ddcfe14e56add?sid=77dddded-5f13-4cd0-899b-9105cde9f286" typeOfEmbed="iframe" height="480px" width="100%" iframe="true" />
 
 <Callout icon="🚧" theme="warn">
   **Important:**
@@ -47,19 +42,17 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 # Definition
 
-The **Cancel Save** use case intercepts the cancel button click and presents users with a personalized retention offer instead of immediately canceling.
+This guide outlines the implementation of a "Cancel/Save" flow, a highly effective strategy for mitigating customer churn. You can **save up to 40%** of your cancelled users with just this one flow. The fundamental principle involves intercepting a customer's attempt to cancel their subscription and subsequently presenting a tailored offer or resolution designed to retain their subscription. This application can range from a singular offer to a comprehensive exit survey that delivers varied solutions contingent upon the customer's stated reason for cancellation.
 
 # Key benefits
 
-* **Reduced churn**: Present targeted offers at the moment of intent to cancel.
-* **Improved satisfaction**: Allow users to choose alternatives rather than forcing cancellation.
-* **Data-driven insights**: Capture cancellation reasons to optimize retention strategies.
+* **Reduced churn**: Present targeted offers at the exact moment a customer intends to cancel.
+* **Improved satisfaction**: Give customers alternatives, like a different plan or a temporary discount, instead of just forcing them to cancel.
+* **Data-driven insights**: Capture valuable feedback on why customers are leaving, which you can use to optimize your retention strategies.
 
 # Key details
 
-One of the most popular uses of Recurly Engage is intercepting the cancel button click and presenting the user with a personalized offer.
-
-<Image align="center" className="border" border={true} src="https://files.readme.io/ba41c6a-Screenshot_2024-04-05_at_2.52.10_PM.png" />
+Follow these steps to create a simple yet powerful Cancel/Save prompt.
 
 > 📘 When combined with [1-Click Actions](actions-1), you can expect significant reductions in cancellations with improved customer satisfaction.
 
