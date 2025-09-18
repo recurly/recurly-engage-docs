@@ -1,5 +1,9 @@
 ---
 title: Interstitial prompts
+excerpt: >-
+  Information on Recurly Engage's enhanced SDK. It details the new granular
+  button controls for interstitial prompts on HTML devices, Roku, and Apple TV,
+  which allow for customized button layouts and positioning.
 deprecated: false
 hidden: true
 metadata:
