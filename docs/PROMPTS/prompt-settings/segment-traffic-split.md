@@ -1,13 +1,12 @@
 ---
 title: Segment traffic split
-excerpt: Optimize prompt performance with traffic splitting
+excerpt: >-
+  A guide on Recurly Engage's traffic splitting feature. It explains how to A/B
+  test different prompt experiences, like modals and banners, to optimize
+  performance and conversion rates.
 deprecated: false
 hidden: true
 metadata:
-  description: >-
-    A guide on Recurly Engage's traffic splitting feature. It explains how to
-    A/B test different prompt experiences, like modals and banners, to optimize
-    performance and conversion rates.
   robots: index
 ---
 # Overview
