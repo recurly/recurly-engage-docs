@@ -5,7 +5,7 @@ excerpt: >-
   test different prompt experiences, like modals and banners, to optimize
   performance and conversion rates.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
