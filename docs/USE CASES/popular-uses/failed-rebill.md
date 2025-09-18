@@ -65,6 +65,7 @@ Recurly Engage provides an additional tool to reduce involuntary churn by using 
 3. **Create a New Payment Failure Guide**
 
    This guide will be a multi-step journey to re-engage customers who have a failed payment.
+
    * Go to **Guides** in the main navigation.
    * Select the pre-configured Payment Failure Guide
 
@@ -77,6 +78,10 @@ Recurly Engage provides an additional tool to reduce involuntary churn by using 
    When you open up the pre-configured Guide, you’ll see a dashboard showing key data including, **Segments**, **Limits**, the **Status** of the guide, **Schedule** information and any **Daypart** settings. Edit this data based on the needs of your customized Guide.
 
    You’ll also see a chart displaying important **Users**, **Clicks** and **Conversion** **Rate** data.
+
+> 📘 Important
+>
+> If you connect Recurly Engage to Recurly, the **Failed Payment** segment is created automatically.
 
 <Image align="center" src="https://files.readme.io/04245a5220f32f7804ff6fdd33a76f762ae6f304e35ce0c23521a27ce9f1ca5d-payment_2.png" />
 
@@ -113,7 +118,6 @@ Recurly Engage provides an additional tool to reduce involuntary churn by using 
 From the **Details** screen, click “Edit prompt design” to open the prompt customization window.
 
 <Image align="center" src="https://files.readme.io/c1b27afc7ec5022d198cbc931970cbfa4bed25782c7fa789c64847a8f8649673-payment_6.png" />
-
 
 **Edit the prompt** to customize the title, message, size, and styling to fit your messaging and styles. Make sure the message is clear and compelling. Be sure to configure your prompt on both **Desktop & Mobile.**
 
@@ -169,6 +173,16 @@ For involuntary churn scenarios, a custom goal can be implemented where users ar
 
 <br />
 
-> 📘 Important
->
-> If you connect Recurly Engage to Recurly, the **Failed Payment** segment is created automatically.
+<br />
+
+## Estimate your savings
+
+Every Churn is Lost Revenue. We Can Help You Get It Back.
+
+Losing users isn't just a number- it's a direct hit to your bottom line. If you're losing 1,000 users a month, each worth $10, that’s **$10,000 in lost revenue** every single month.
+
+Imagine what recovering even a fraction of that could do for your business. By proactively re-engaging users, you can recover significant revenue and build a more sustainable future.
+
+Want to see how we can turn your churned users into recovered revenue?
+
+<a href="https://recurly.com/product/engage/">Book a quick demo today.</a>
