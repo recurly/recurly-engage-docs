@@ -54,16 +54,10 @@ Recurly Engage’s Journey guide lets you predefine a sequence of prompts linked
 
 ## Guide
 
-1. **Create** a new Guide (Settings > Guides) and **set** the type to **Journey**.
-2. **Configure** the first prompt as a **Popup** targeting first-time visitors.
-3. **Set** the CTA on that prompt to either trigger the feature directly (1-Click) or **redirect** to the relevant page.
-4. **Add** a second prompt in the guide and schedule it for the user’s next visit.
-5. **Add** a third prompt scheduled for a subsequent visit as needed.
-6. **Target** the guide to the **Test Users** segment.
-7. **Specify** the trigger conditions (e.g., specific page URLs or tracker events).
-8. **Start** the Guide.
-9. **Add** your User ID to **Test Users** (Settings > Users > Test Users).
-10. **Verify** that each prompt appears in the correct order across visits.
+1. Make sure you are an active user of Recurly Engage  with Company, App Administrator or App Member permissions.
+
+   <a href="https://recurly.com/product/engage/">If not, book a demo today!</a>
+2. <br />
 
 > 📘 Important
 >
