@@ -20,8 +20,6 @@ These enhancements offer precise control over various button attributes, includi
 * Font size
 * Absolute positioning
 
-<br />
-
 # Key benefits
 
 This enhanced functionality provides developers with the flexibility to design highly customized and effective interstitial prompts for a wide range of use cases. The ability to precisely control button layouts, including stacked or inline configurations, is particularly valuable for optimizing user experience and driving specific outcomes.
