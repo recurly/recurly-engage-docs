@@ -16,11 +16,15 @@ metadata:
 ---
 # Overview
 
-Single Sign-On (SSO) is a secure and streamlined authentication method that allows users to access multiple applications with a single set of login credentials. For enterprise clients, this provides a more efficient and secure way for employees to access the tools they need. Pulse offers SSO as part of its Enterprise tier, simplifying user access and management. For more information, please reach out to your customer success manager.
+Single Sign-On (SSO) is a secure and streamlined authentication method that allows users to access multiple applications with a single set of login credentials. For **enterprise clients**, this provides a more efficient and secure way for employees to access the tools they need. 
+
+Pulse offers SSO as part of its Enterprise tier, simplifying user access and management. For more information, please reach out to your customer success manager.
 
 # Definition
 
-Pulse has partnered with WorkOS, an enterprise-focused identity platform, to offer robust SSO authentication. This partnership allows us to support a wide range of Identity Providers (IDPs), including common ones like **Okta, Auth0, Google Workspace, Azure AD, and ADP**. The partnership with WorkOS ensures a smooth and secure integration, enabling your team to use your company’s existing identity provider to log in to Pulse. This eliminates the need for users to create and remember separate credentials for our platform, reducing password fatigue and increasing security.
+Pulse has partnered with WorkOS, an enterprise-focused identity platform, to offer robust SSO authentication. This partnership allows us to support a wide range of Identity Providers (IDPs), including common ones like **Okta, Auth0, Google Workspace, Azure AD, and ADP**. 
+
+The partnership with WorkOS ensures a smooth and secure integration, enabling your team to use your company’s existing identity provider to log in to Pulse. This eliminates the need for users to create and remember separate credentials for our platform, reducing password fatigue and increasing security.
 
 # Key benefits
 
