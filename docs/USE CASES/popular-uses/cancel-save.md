@@ -58,25 +58,32 @@ Follow these steps to create a simple yet powerful Cancel/Save prompt.
 
 ## Step-by-step guide
 
-1. **Enable** [1-Click Actions](actions-1) by activating the connector to your [Billing](billing) platform.
-2. Alternatively, **specify** a redirect URL to an existing cancellation confirmation screen.
-3. **Create** a Guide (Settings > Guides) and set the type to **survey**.
-4. **Define** the cancellation reasons options with corresponding CTAs:
+1. Make sure you are an active user of Recurly Engage with Company, App Administrator or App Member permissions.
 
-* Too expensive → CTA to a save offer
-* Not enough content → CTA to latest content or save offer
-* Technical issues → CTA to support
+   <a href="https://recurly.com/product/engage/">If not, book a demo today!</a>
+2. **Login to Recurly Engage**
 
-5. **Create** an A/B experiment on any prompt variation to test different offers or designs.
-6. **Set** the segment to **Test Users**.
-7. **Set** the trigger to fire on the cancel button click:
+   Access the Recurly Engage management console, known as Pulse, via <a href="https://pulsepp.redfast.com/login">Login</a>. This console serves as a central interface for configuring applications, user traits, segments, prompts, guides, and integrations.
+3. **Activate 1-Click Actions**
 
-* Use the Live Preview tool to detect and capture the cancel click event.
-* Or have your developers specify the click event via regex or custom JavaScript.
+   To use features like applying a coupon automatically, you need to enable the connector for your <a href="https://docs.recurly.com/recurly-engage/docs/billing">billing platform</a> (e.g. Recurly, Stripe)
 
-8. **Start** the **Guide**.
-9. **Add** your User ID to the Test Users segment (Settings > Users > Test Users).
-10. **Confirm** that the **Guide** launches when you click the cancel button.
+   Activate the connector to enable <a href="https://docs.recurly.com/recurly-engage/docs/actions-1">1-Click Actions.</a>
+
+   Alternatively, if you prefer to redirect users to an existing cancellation page on your site, you can specify that URL instead.
+
+   If your billing platform isn’t one of our out-of-the-box options, you can still integrate it with API actions. <a href="https://docs.recurly.com/recurly-engage/docs/billing">More details on platform integration are available.</a>
+
+<Image align="center" src="https://files.readme.io/0c70fd88cadbe4ded00ad4b2510717b33ad88f030081518231a48647520188e8-cancel_1.png" />
+
+4. **Create a new Cancel Survey with Offers**
+
+   This guide will be a multi-step journey to re-engage customers who are attempting to cancel their subscription.
+
+* Go to Guides in the main navigation
+* Select the pre-configured Cancel Survey with Offers.
+
+<br />
 
 ## Example
 
