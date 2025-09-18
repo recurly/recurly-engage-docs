@@ -5,7 +5,7 @@ excerpt: >-
   This guide explains key benefits, our partnership with WorkOS, and the steps
   for IT administrators to configure user access.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: Recurly Engage SSO Integration
   description: >
