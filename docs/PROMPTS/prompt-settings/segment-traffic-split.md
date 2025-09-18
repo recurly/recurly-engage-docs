@@ -39,7 +39,7 @@ Steps to implement a segment traffic split.
 
    Set the segmentation split amount for each prompt type.
 
->  **Example:**
+> **Example:**
 >
 > For the first group, set the split to 0-50.
 >
