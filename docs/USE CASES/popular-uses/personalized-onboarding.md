@@ -1,8 +1,6 @@
 ---
 title: Personalized onboarding
-excerpt: >-
-  Configuration guide for the Personalized Onboarding use case, leveraging
-  Journey guides to educate new users contextually.
+excerpt: '  A guide to setting up a personalized onboarding experience. It explains how to create multi-visit, contextual prompts that guide new users without using disruptive, traditional tours.'
 deprecated: false
 hidden: false
 metadata:
@@ -36,21 +34,19 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 # Definition
 
-Traditional onboarding tours interrupt the user flow with step-by-step callouts. The **Personalized Onboarding** Journey guide delivers prompts only for actions or sections the user hasn’t yet seen—and can span multiple visits—for a frictionless, contextual experience.
-
-# Key benefits
-
-* **Contextual guidance**: Show prompts only for features the user hasn’t accessed.
-* **Multi-visit flexibility**: Space your onboarding steps across sessions to avoid overload.
-* **Higher engagement**: Streamlined education that respects the user’s flow.
-
-# Key details
+A well-designed onboarding experience is crucial for user retention and engagement. This guide will show you how to set up a personalized, multi-visit onboarding journey that educates users contextually, without disrupting their flow. Unlike traditional tours, this approach delivers prompts only for features the user hasn’t yet seen.
 
 Traditional approaches to onboarding new users include a step-by-step homepage tour with highlighted callouts to various features. This method may work for B2B, but B2C users often find it disruptive.
 
 Recurly Engage’s Journey guide lets you predefine a sequence of prompts linked to key site elements. Each prompt fires only if the user hasn’t completed the associated action, and you can schedule them over multiple visits—resulting in a more user-friendly onboarding flow.
 
-<Image align="center" className="border" border={true} src="https://files.readme.io/8e77a00-Screenshot_2024-04-19_at_1.33.00_PM.png" />
+# Key benefits
+
+* **Contextual guidance**: Prompts appear only when a user interacts with a new feature, providing relevant guidance at the right moment.
+* **Multi-visit flexibility**: Onboarding steps are spread across multiple sessions, preventing user overload and respecting their learning pace.
+* **Higher engagement**: A streamlined, non-disruptive experience leads to higher engagement with your key features.
+
+# Key details
 
 > 📘 Important
 >
