@@ -118,7 +118,6 @@ Recurly Engage’s Journey guide lets you predefine a sequence of prompts linked
 
 <Image align="center" src="https://files.readme.io/3d85386b117cbed7fd6850b9bfc4300c1eb2279b0604f3a3c69a0872b0120911-personalized_7.png" />
 
-
 If desired, adjust the prompt visibility settings in the User Interaction section to display the prompt again after specific button clicks within your guide.
 
 <Image align="center" src="https://files.readme.io/41d42f9ca37606cfaef0a09727dbcdcb2eb2f67f87d170164bc6dd94445dc468-personalized_8.png" />
@@ -167,14 +166,18 @@ For involuntary churn scenarios, a custom goal can be implemented where users ar
 
 <br />
 
-<br />
+## Estimate your savings
+
+Every Churn is Lost Revenue. We Can Help You Get It Back.
+
+Losing users isn't just a number- it's a direct hit to your bottom line. If you're losing 1,000 users a month, each worth $10, that’s **$10,000 in lost revenue** every single month.
+
+Imagine what recovering even a fraction of that could do for your business. By proactively re-engaging users, you can recover significant revenue and build a more sustainable future.
+
+Want to see how we can turn your churned users into recovered revenue?
+
+<a href="https://recurly.com/product/engage/">Book a quick demo today.</a>
 
 <br />
-
-<br />
-
-> 📘 Important
->
-> To experiment with different onboarding sequences, run an A/B test on your guide prompts.
 
 <br />
