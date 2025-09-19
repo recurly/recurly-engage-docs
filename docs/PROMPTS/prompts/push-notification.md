@@ -91,7 +91,7 @@ Follow these steps to configure and send push prompts:
 
 7. **Configure** the prompt:
    1. **Segment:** **Choose** the Push Notification segment to target specific users.
-   2. **Schedule** the times and frequency your prompt will send:
+   2. **Schedule** the times your prompt will send:
       1. **Customizable Timing:** Set specific start and end dates and times for your scheduled push notification.
       2. **Quiet Times:** Establish periods during which notifications should not be sent, preventing disruptions.
       3. **Local Time Zones:** Configure the task to run according to the users local time zone, ensuring accurate timing regardless of location.
