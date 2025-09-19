@@ -113,7 +113,7 @@ Use AJO Custom HTTP Actions to call Recurly Engage endpoints directly from withi
 
 ### Adobe analytics
 
-By leveraging the Adobe Experience Platform Web SDK (alloy.js), you can forward Recurly Engage prompt interaction events directly to Adobe Analytics on your web properties. This allows you to analyze prompt metrics alongside your site analytics in a single location.
+By leveraging the Adobe Experience Platform Web SDK (`alloy.js`), you can forward Recurly Engage prompt interaction events directly to Adobe Analytics on your web properties. This allows you to analyze prompt metrics alongside your site analytics in a single location.
 
 #### How it works
 
