@@ -1,8 +1,9 @@
 ---
 title: Adobe
 excerpt: >-
-  How to integrate Recurly Engage with Adobe Experience Platform, Journey
-  Optimizer, and Analytics for event streaming and in-app triggers.
+  A guide to the Recurly Engage and Adobe integration. It details how to connect
+  Adobe Experience Cloud products to Recurly Engage to create a unified data
+  layer, enable cross-product orchestration, and enhance analytics.
 deprecated: false
 hidden: false
 metadata:
