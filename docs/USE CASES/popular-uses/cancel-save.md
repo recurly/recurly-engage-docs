@@ -111,7 +111,7 @@ Follow these steps to create a simple yet powerful Cancel/Save prompt.
 
    Because the Cancel Survey guide flow is based on the user interactions, you only need to apply a trigger to the first prompt.
 
-   _For example: _The Cancellation survey prompt would fire when the user clicks the “Cancel Subscription” button.
+   _For example:_ The Cancellation survey prompt would fire when the user clicks the “Cancel Subscription” button.
 
 <Image align="center" src="https://files.readme.io/44709757aef931a087945318a4063a6161b5c682448f7174ef6e9b716ace2da4-cancel_5.png" />
 
