@@ -52,64 +52,70 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 # Definition
 
-**Adobe integrations** enable bidirectional data flows: prompt events (impressions, clicks, custom goals) stream into AEP; AJO can call Recurly Engage APIs to trigger in-app prompts; and web events can be vaulted into Adobe Analytics.
+The Recurly Engage Adobe integration suite enables seamless data flow and enhanced marketing orchestration between Recurly Engage and your Adobe Experience Cloud products, including Adobe Experience Platform (AEP), Journey Optimizer (AJO), and Analytics. This integration allows you to leverage existing analytics workflows and unify your data to deliver more targeted and effective in-app experiences.
 
 # Key benefits
 
-* **Unified data layer**: Stream prompt interaction events into Adobe’s Data Lake in real time.
-* **Cross-product orchestration**: Use AJO journeys to trigger in-app messaging via Recurly Engage.
-* **Web analytics**: Capture prompt metrics alongside site analytics using the Experience Platform Web SDK.
+* **Unified data layer**: Stream real-time prompt interaction events (impressions, clicks, custom goals) into Adobe’s Data Lake via AEP, creating a single, unified view of customer behavior.
+* **Cross-product orchestration**: Trigger in-app prompts and update user traits in Recurly Engage directly from Adobe Journey Optimizer, enabling a powerful, automated, and personalized customer journey.
+* **Enhanced analytics**: Capture prompt metrics and analyze them alongside your existing site analytics using the Adobe Experience Platform Web SDK.
+* **Streamlined onboarding:** Quickly import and utilize existing Adobe Audience segments without additional development work, accelerating your time-to-value.
 
 # Key details
 
-## Adobe experience platform (AEP)
+## Connecting Adobe Audience Segments
 
-The **Recurly Engage AEP connector** pushes prompt interaction events—`impression`, `goal`, `decline`, `dismiss`, `timeout`, `custom_goal`, and `holdout`—to an Adobe [Data Stream](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview).
+The Segment Importer allows you to sync segments from Adobe Audience Manager or AEP directly to Recurly Engage. These imported segments are treated as user traits, which can then be used to create or refine Recurly Engage segments. This provides a fast, code-free way for customers using our JavaScript SDK to leverage their existing Adobe audience data for targeted messaging.
 
-**Configure these objects in AEP:**
+### How it works
 
-* **Identity Map**: Create or reuse an [Identity Map](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/map-identities).
-* **Schema**: Enable **Profile** toggle and add traits in a [Field Group](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/field-groups):
+1. Sync your Adobe Audience segments to Recurly Engage via the Segment Importer.
+2. The imported segments appear as user traits on your customers' profiles within Recurly Engage.
+3. Use these traits to build new Recurly Engage segments, allowing for further refinement and personalization of your campaigns.
 
-  * `activity` (String) — event type, e.g. "impression"
-  * `app_id` (String) — Recurly Engage instance ID
-  * `app_name` (String) — instance name
-  * `event_timestamp` (DateTime) — when the event occurred
-  * `promo_id`, `promo_name` — prompt identifiers
-  * `variation_id`, `variation_name` — experiment variation identifiers (if applicable)
-* **Data Stream**: Attach the schema to your data stream.
-* **Dataset**: Create a [Dataset](https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/overview) from the same schema and enable the **Profile** toggle.
+### Adobe Experience Platform (AEP)
 
-**In Recurly Engage:** Navigate to **Settings → Integrations → External → Adobe** and enter:
+The Recurly Engage AEP connector pushes prompt interaction events—including impression, goal, decline, dismiss, timeout, custom_goal, and holdout—to an <a href="https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview">Adobe Data Stream</a> in real time.
 
-* **Identity Map Symbol**
-* **Event Type** (use known [xdm:eventType](https://github.com/adobe/xdm/blob/master/docs/reference/classes/experienceevent.schema.md#xdmeventtype-known-values))
-* **Adobe Instance Name** (e.g., `_production`, visible in schema details)
-* **Data Stream ID**
+#### Configuration steps
+
+1. **Identity Map**: Create or reuse an <a href="https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/map-identities">Identity Map</a> in AEP.
+2. **Schema:**:Enable the Profile toggle and add a <a href="https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/field-groups">Field Group</a> to your schema with the following traits:
+   1. `activity` (String) — Event type (e.g., "impression").
+   2. `app_id` (String) — Recurly Engage instance ID.
+   3. `app_name` (String) — Recurly Engage instance name.
+   4. `event_timestamp` (DateTime) — When the event occurred.
+   5. `promo_id`, `promo_name` — Prompt identifiers.
+   6. `variation_id`, `variation_name` — Experiment variation identifiers.
+3. **Data Stream & Dataset:** Attach the schema to your Data Stream and create a <a href="https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/overview">Dataset</a> from the same schema, ensuring the Profile toggle is enabled.
+4. **Recurly Engage Configuration:** In Recurly Engage, navigate to Settings → Integrations → External → Adobe and enter your:
+   1. Identity Map Symbol
+   2. <a href="https://github.com/adobe/xdm/blob/master/docs/reference/classes/experienceevent.schema.md#xdmeventtype-known-values">Event Type</a> (e.g., xdm:eventType)
+   3. Adobe Instance Name
+   4. Data Stream ID
 
 <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/6fb869da2965a8f79d20ef00ec618c6537524de444351e992c8df3bcd0fbbe46-Screenshot_2025-03-06_at_9.56.33_AM.png" />
 
-## Adobe journey optimizer (AJO)
+### Adobe journey optimizer (AJO)
 
-Use AJO **Custom HTTP Actions** to call Recurly Engage endpoints from within customer journeys, updating user traits or triggering in-app prompts.
+Use AJO Custom HTTP Actions to call Recurly Engage endpoints directly from within customer journeys, enabling you to update user traits or trigger in-app prompts based on journey logic.
 
-1. In AJO, navigate to **Actions → Create Action**, choose **Custom HTTP Action**.
-2. Enter **Name** and **Description**.
-3. Under **Endpoint Configuration**:
+#### Configuration steps
 
-   * Set **HTTP Method** to **GET**.
-   * Enter your Recurly Engage API endpoint.
-   * Configure **Query Params** using `properties[<keyName>]=<value>`.
-   * Add the `USER-ID` HTTP header.
-4. **Test** the action with your Customer Success Manager.
-5. **Save** and **Deploy** the action in your journey.
+1. In AJO, navigate to Actions and create a new Custom HTTP Action.
+2. Enter a name and description for the action.
+3. Under Endpoint Configuration, set the HTTP Method to `GET` and enter your Recurly Engage API endpoint.
+4. Configure Query Params using the `properties[<keyName>]=<value>` format.
+5. Add the `USER-ID` HTTP header.
+6. Test the action with your Customer Success Manager and then deploy it within your AJO journey.
 
-Once live, AJO will send requests to Recurly Engage, syncing properties and enabling prompt triggering based on journey logic.
+<br />
 
-***
+### Adobe analytics
 
-## Adobe analytics
+By leveraging the Adobe Experience Platform Web SDK (alloy.js), you can forward Recurly Engage prompt interaction events directly to Adobe Analytics on your web properties. This allows you to analyze prompt metrics alongside your site analytics in a single location.
 
-Leverage the Experience Platform Web SDK (`alloy.js`) to forward prompt interaction events to Adobe Analytics on your web properties.
+#### How it works
 
-Contact your Customer Success Manager to enable Web SDK configuration and ensure events map to your Analytics data streams.
+* Contact your Recurly Engage Customer Success Manager to enable Web SDK configuration for your account.
+* Your Customer Success Manager will assist in ensuring that events map correctly to your Adobe Analytics data streams.
