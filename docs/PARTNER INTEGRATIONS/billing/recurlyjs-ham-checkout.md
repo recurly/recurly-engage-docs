@@ -1,7 +1,7 @@
 ---
 title: Recurly.js / HAM / Checkout
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   description: >
     Information on Recurly Engage's automatic integration with Recurly.js,
