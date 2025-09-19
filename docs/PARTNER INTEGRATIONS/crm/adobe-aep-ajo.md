@@ -73,6 +73,8 @@ The Segment Importer allows you to sync segments from Adobe Audience Manager or 
 2. The imported segments appear as user traits on your customers' profiles within Recurly Engage.
 3. Use these traits to build new Recurly Engage segments, allowing for further refinement and personalization of your campaigns.
 
+<br />
+
 ### Adobe Experience Platform (AEP)
 
 The Recurly Engage AEP connector pushes prompt interaction events—including impression, goal, decline, dismiss, timeout, custom_goal, and holdout—to an <a href="https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview">Adobe Data Stream</a> in real time.
@@ -96,6 +98,8 @@ The Recurly Engage AEP connector pushes prompt interaction events—including im
 
 <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/6fb869da2965a8f79d20ef00ec618c6537524de444351e992c8df3bcd0fbbe46-Screenshot_2025-03-06_at_9.56.33_AM.png" />
 
+<br />
+
 ### Adobe journey optimizer (AJO)
 
 Use AJO Custom HTTP Actions to call Recurly Engage endpoints directly from within customer journeys, enabling you to update user traits or trigger in-app prompts based on journey logic.
@@ -109,7 +113,6 @@ Use AJO Custom HTTP Actions to call Recurly Engage endpoints directly from withi
 5. Add the `USER-ID` HTTP header.
 6. Test the action with your Customer Success Manager and then deploy it within your AJO journey.
 
-<br />
 
 ### Adobe analytics
 
