@@ -121,4 +121,13 @@ Once statistical significance is reached, click **Use This** to end the experime
 
 10. When a variation demonstrates statistical significance, **click** **Use This** to end the experiment and promote that variation as your new baseline.
 
-Your experiment is now live—give it time to gather sufficient data before drawing conclusions. Good luck optimizing!
+<br />
+
+# Experiment reporting
+
+Experiment reporting allows users to download a CSV file containing detailed data from their experiments. This feature is designed to help users analyze and report on experiment results.
+
+Features include: 
+
+* **Data Availability:** Users can now export experiment data for a specific time frame directly from the Settings section of the application. The export includes data for both currently running experiments and any completed experiments that overlapped with the selected date range.
+* **Data Content:** The exported CSV file only includes experiment-specific data. It does not include general prompt data. For completed experiments, the export provides the total stats for the entire duration of the experiment run. For running experiments, the stats are scoped to the specified time frame.
