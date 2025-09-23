@@ -135,8 +135,6 @@ Once the experiment is live, you will be able to edit all editable variants, inc
 
 <br />
 
-<br />
-
 # Experiment reporting
 
 Experiment reporting allows users to download a CSV file containing detailed data from their experiments. This feature is designed to help users analyze and report on experiment results.
