@@ -36,32 +36,38 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 # Definition
 
-Custom API actions allow you to call external backend endpoints with dynamic user data and secure credentials directly from prompts.
+Website actions allow the Redfast tool to call custom client side code, optionally passing information from form inputs. This page describes how to set up and use website actions.
 
-# Key benefits
+### Add a simple action
 
-* **Leverage existing systems**: Integrate with your own APIs without additional development in Recurly Engage.
-* **Secure and dynamic**: Store credentials securely and inject user-specific data into API calls.
-* **Flexible configurations**: Define URLs, methods, headers, query strings, and payloads for diverse use cases.
+Several simple actions such as redirecting to a new URL or opening a URL in a new tab are readily available. For example, to add a website action that opens a new tab with the specified URL:
 
-# Key details
+1. From the prompt detail page, add a new website action
+2. Select ‘Open URL on New Tab’
+3. Click Add action
+4. Click on the edit / pencil icon
+5. Add a new argument with key=url and value equal to the link you want to take the user to
 
-You may define custom API actions to leverage existing backend endpoints, specifying to send dynamic user data and secure credentials as required.
+### Add custom Javascript code
 
-### Add credentials
+1. Visit Settings → Actions → Website Actions
 
-Credentials data is stored in a secure, encrypted location that is only accessible to components tasked with performing the action. The most common credentials are API keys or client secrets.
+<Image align="center" border={true} width="% " src="https://files.readme.io/9e361b2-Screenshot_2024-04-30_at_22.47.54.png" className="border" />
 
-Add a new credential and specify the name and the value.
+2. Create a website action. Specify the name of the action and write the code. See [form inputs](https://dash.readme.com/project/redfast/v100.7/docs/forms) for more information on accessing user input.
 
-<Image align="center" className="border" border={true} src="https://files.readme.io/faeced9-Screenshot_2024-05-02_at_15.50.02.png" />
+<Image align="center" border={true} src="https://files.readme.io/2272dcc-Screenshot_2024-04-30_at_22.51.56.png" className="border" />
 
-### Add actions
+3. Save the changes
 
-Define a custom API action—specify the URL, HTTP Method, request headers, query string, and request payload (if necessary).
+<Image align="center" border={true} src="https://files.readme.io/a30b0cb-Screenshot_2024-04-30_at_22.53.42.png" className="border" />
 
-Static and dynamic values are supported. Use the special character (%) and placeholders to inject dynamic user data. Placeholders like `%provider.api_key%` or `%provider.client_secret%`, user traits ingested via Redcurly Engage, and [form inputs](forms) can be referenced. Dynamic values are supported in URLs, payloads, headers, and query strings.
+4. Go to Prompts and select your prompt
 
-**Note**: Payloads do not support complex JSON structures—only a single level of key–value pairs.
+<Image align="center" border={true} src="https://files.readme.io/6354038-Screenshot_2024-04-30_at_22.55.04.png" className="border" />
 
-<Image align="center" className="border" border={true} src="https://files.readme.io/8a45296-Screenshot_2024-05-02_at_15.52.36.png" />
+5. Add the website action
+
+<Image align="center" border={true} src="https://files.readme.io/1928bd0-Screenshot_2024-05-01_at_21.30.27.png" className="border" />
+
+<Image align="center" border={true} src="https://files.readme.io/921f4c4-Screenshot_2024-05-01_at_21.31.29.png" className="border" />
