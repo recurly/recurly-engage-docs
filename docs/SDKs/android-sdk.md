@@ -173,17 +173,19 @@ PromotionManager.getTriggerablePrompts("ScreenName", "ClickId") { prompts ->
 
 ## Deep link to a media asset
 
-Configure deep links in Pulse. Access them via callbacks for `setScreenName`, `buttonClick`, or `getTriggerablePrompts`.
+You can insert deeplink key-value pairs in Pulse. When the user invokes the CTA, you can utilize these key-value pairs to send the user to a specific media asset within the app.
+
+The deeplink value is saved in the completion callback from your `setScreenName`, `buttonClick`, and `getInlines`
 
 ## Access custom metadata
 
-Decode custom metadata:
+Custom key-value pairs can be added to an item via Pulse. These values may be used to perform an action that is not the typical media asset deep link, like sending the user to a registration screen.
 
-```kotlin
-val meta = prompt.deviceMeta?.decodeValue(Meta::class.java)
-```
+The meta data json is saved in the completion callback from your `setScreenName`, `buttonClick`, and `getInlines`
 
 ## Send usage tracking event
+
+Use this to send custom events using the SDK. If configured as a tracker within Pulse, these custom events can be used to target prompts at specific sets of users.
 
 ```kotlin
 PromotionManager.customTrack("[customTrackId]")
@@ -191,42 +193,37 @@ PromotionManager.customTrack("[customTrackId]")
 
 ## Set UserId
 
-Update the user ID mid-session:
+You may change the userid after the SDK has been initialized, for example, when the user authenticates mid session. Note that it may take several seconds for the user's prompts to refresh.
 
 ```kotlin
-PromotionManager.setUserId("[New UserID]")
+PromotionManager.setUserId("[New userID]")
 ```
 
 ## Debug view
 
-Show the debug modal:
+The SDK provides a debug view modal, in which you can use the onscreen keyboard to either reset the current user or set a new user id.
 
-```kotlin
-PromotionManager.showDebugView(this)
-```
+To trigger the debug view for a specific screen, you can call the `PromotionManager.showDebugView` function.
 
 ## External libraries
 
-```text
-com.squareup.moshi:moshi-kotlin:1.9.2
-com.squareup.moshi:moshi-kotlin-codegen:1.9.2
-com.squareup.retrofit2:retrofit:2.6.2
-com.squareup.retrofit2:converter-moshi:2.6.2
-com.squareup.okhttp3:okhttp:4.2.2
-com.squareup.okhttp3:logging-interceptor:4.2.2
-org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1
-org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1
-com.github.bumptech.glide:glide:4.16.0
-com.google.code.gson:gson:2.8.9
-```
-```text
-Google IAP:
-  com.android.billingclient:billing:6.0.1
-  com.android.billingclient:billing-ktx:6.0.1
+Common
 
-Amazon IAP:
-  amazon/in-app-purchasing-2.0.76.jar
 ```
+    com.squareup.moshi:moshi-kotlin:1.9.2
+    com.squareup.moshi:moshi-kotlin-codegen:1.9.2
+    com.squareup.retrofit2:retrofit:2.6.2
+    com.squareup.retrofit2:converter-moshi:2.6.2
+    com.squareup.okhttp3:okhttp:4.2.2
+    com.squareup.okhttp3:logging-interceptor:4.2.2
+    org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1
+    org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1
+    com.github.bumptech.glide:glide:4.16.0
+    com.google.code.gson:gson:2.8.9
+```
+
+Conditional
+
 ```
 Google IAP: 
     com.android.billingclient:billing:6.0.1
@@ -234,4 +231,7 @@ Google IAP:
     
 Amazon IAP:
     amazon/in-app-purchasing-2.0.76.jar
+```
+
+
 ```
