@@ -207,7 +207,7 @@ To trigger the debug view for a specific screen, you can call the `PromotionMana
 
 ## External libraries
 
-Common
+**Common**
 
 ```
     com.squareup.moshi:moshi-kotlin:1.9.2
@@ -222,7 +222,7 @@ Common
     com.google.code.gson:gson:2.8.9
 ```
 
-Conditional
+**Conditional**
 
 ```
 Google IAP: 
@@ -231,7 +231,4 @@ Google IAP:
     
 Amazon IAP:
     amazon/in-app-purchasing-2.0.76.jar
-```
-
-
 ```
