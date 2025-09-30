@@ -96,8 +96,11 @@ In addition, you can customize the tracker to collect information on specific pa
 
 ## Concurrent logins
 
-The primary benefit of the Concurrent Logins segment is to track and potentially limit or take action against users sharing credentials or accessing an account from multiple distinct locations simultaneously. The system primarily uses different IP addresses (locations) to detect multiple concurrent logins. Multiple sessions originating from the same IP address are currently treated as a single concurrent login.
+The Concurrent Logins segment logic is used to identify when a single user account is actively logged in from multiple locations simultaneously.
 
+* **Detection:** Generally, our proprietary, privacy-preserving algorithm detects concurrent logins from different locations within a single session.
+* **Logic Basis:** The system primarily uses different IP addresses (locations) to detect multiple concurrent logins. Multiple sessions originating from the same IP address are currently treated as a single concurrent login.
+* **Segment Setup:** You can set up the number of concurrent logins you'd like to track in the Concurrent logins segment. This is one of our default segments, providing an out-of-the-box way to detect and prompt users who might be sharing their account credentials.
 * **Security and Compliance:** Helps flag potentially suspicious behavior, such as credential sharing or account takeover attempts, by monitoring access from geographically distinct locations.
 * **Usage Control:** Allows a merchant to enforce policies on where and how many times an account can be simultaneously active.
 
