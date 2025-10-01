@@ -26,9 +26,10 @@ The **Recurly Engage Roku SDK** provides the ability to monitor consumption and 
 
 ## Install the SDK
 
-Download the latest Roku SDK (v1.0.25) with Roku Pay support [here](https://assets.redfastlabs.com/sdk/roku-sdk-1.0.25.zip) or without Roku Pay support [here](https://assets.redfastlabs.com/sdk/roku-sdk-noiap-1.0.25.zip). A demo app featuring an example integration is available on request.
+Download the latest Roku SDK (v1.0.35) with Roku Pay support [here](https://assets.redfastlabs.com/sdk/roku-sdk-1.0.35.zip) and without Roku Pay support [here](https://assets.redfastlabs.com/sdk/roku-sdk-noiap-1.0.35.zip). A demo app featuring an example integration can be provided by request.
 
-To build your project with the Recurly Engage Roku SDK, ensure it’s using the Roku SceneGraph SDK, then unzip the SDK into your app’s `components` directory.
+To build a project using the RedFast SDK for Roku, your project must have been built with the Scenegraph SDK.
+Unzip the SDK into the app `components` directory.
 
 ## Initialize SDK
 
