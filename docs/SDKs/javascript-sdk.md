@@ -41,7 +41,7 @@ We recommend the following when integrating the JS SDK on CTV apps:
 
 While there are a number of built in integrations with Analytics services, you may want to generate a custom analytics payload to report all events relating to user interactions against Recurly Engage prompts. You may implement a callback function that is invoked whenever a user interaction occurs within Settings > Custom JS Snippet.
 
-**Example**
+**Example:**
 
 ```javascript
 /*
@@ -71,7 +71,7 @@ static onPromptInteraction(eventName, payload) {
 }
 ```
 
-**Google Analytics (GA4) Example**:
+Google Analytics (GA4) Example:
 
 ```javascript
 static onPromptInteraction(eventName, payload) {
@@ -119,7 +119,7 @@ static onPromptInteraction(eventName, payload) {
 
 ```
 
-**Segment example**
+**Segment example:**
 
 ```javascript
 static onPromptInteraction(eventName, payload) {
