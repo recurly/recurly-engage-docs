@@ -30,6 +30,8 @@ The following tables show which prompt styles are supported across various platf
 
 ### Inline prompt styles
 
+<a href="https://docs.recurly.com/recurly-engage/docs/inlines#/">Learn more about inline prompts.</a>
+
 | Platform                                                                                 | Horizontal | Vertical | Tile | Text Only | Slider |
 | ---------------------------------------------------------------------------------------- | ---------- | -------- | ---- | --------- | ------ |
 | Web (desktop browser)                                                                    | TRUE       | TRUE     | TRUE | TRUE      | TRUE   |
@@ -54,6 +56,8 @@ The following tables show which prompt styles are supported across various platf
 
 ### Overlay prompt sizes
 
+<a href="https://docs.recurly.com/recurly-engage/docs/overlays#/">Learn more about overlay prompts.</a>
+
 | Platform                                                                                 | Interstitial | Popup | Video | Bottom banner | Notification |
 | ---------------------------------------------------------------------------------------- | ------------ | ----- | ----- | ------------- | ------------ |
 | Web (desktop browser)                                                                    | TRUE         | TRUE  | TRUE  | TRUE          | TRUE         |
@@ -77,6 +81,8 @@ The following tables show which prompt styles are supported across various platf
 <br />
 
 ### Other prompt types
+
+<a href="https://docs.recurly.com/recurly-engage/docs/invisible#/">Learn more about invisible prompts.</a>
 
 | Platform                                                                                 | Invisible | Email |
 | ---------------------------------------------------------------------------------------- | --------- | ----- |
