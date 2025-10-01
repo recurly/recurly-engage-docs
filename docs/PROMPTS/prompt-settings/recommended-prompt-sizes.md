@@ -15,8 +15,6 @@ Recommended prompt sizes is a technical specification guide that outlines the su
 
 # Key benefits
 
-This guide is essential for creative and design departments to ensure technical compliance and efficiency when creating assets:
-
 * **Accuracy in Production:** Provides the exact pixel dimensions for every supported prompt, eliminating guesswork and preventing the creation of assets that are improperly sized or scaled.
 * **Streamlined Creative Workflow:** Confirms the required aspect ratios and accepted file formats (png, jpg, gif) upfront, allowing teams to set up design templates correctly from the start.
 
