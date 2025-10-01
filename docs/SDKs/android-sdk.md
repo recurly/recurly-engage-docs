@@ -28,7 +28,7 @@ The Recurly Engage Android SDK brings the ability to monitor consumption and sho
 
 ## Install the SDK
 
-The Redfast Android SDK includes support for mobile, tablet and TV devices. The latest SDK version as well as the source code of an example app is available [here](https://github.com/redfast/redfast-sdk-android/releases). Please reach out to your customer success manager if you would like the keys needed to run the example app.
+The Engage Android SDK includes support for mobile, tablet and TV devices. The latest SDK version as well as the source code of an example app is available [here](https://github.com/redfast/redfast-sdk-android/releases). Please reach out to your customer success manager if you would like the keys needed to run the example app.
 
 There are two options with installing the SDK: Add a dependency to an existing Gradle/Maven config, or add the local SDK packages.
 
@@ -122,7 +122,7 @@ PromotionManager.initPromotion([appID], [userID])
 
 ## Trigger popup via screen name
 
-Allow the Redfast SDK to display a popup on a specific Screen Name. Add the following line in the activity or fragment's onCreate function:
+Allow the Engage SDK to display a popup on a specific Screen Name. Add the following line in the activity or fragment's onCreate function:
 
 ```kotlin
 override fun onCreateView(
