@@ -17,10 +17,8 @@ Recommended prompt sizes is a technical specification guide that outlines the su
 
 This guide is essential for creative and design departments to ensure technical compliance and efficiency when creating assets:
 
-* Accuracy in Production: Provides the exact pixel dimensions for every supported prompt, eliminating guesswork and preventing the creation of assets that are improperly sized or scaled.
-* Reduced Revision Cycles: Clarifies platform-specific limitations and capabilities, such as which prompt styles are not supported on certain SDKs (e.g., Slider on native TV devices), reducing technical rejections and wasted design effort.
-* Optimal Display Across Devices: Enables designers to produce creatives that are tailored to the intended platform's display environment (desktop vs. mobile vs. TV), ensuring a consistent and high-quality user experience.
-* Streamlined Creative Workflow: Confirms the required aspect ratios and accepted file formats (png, jpg, gif) upfront, allowing teams to set up design templates correctly from the start.
+* **Accuracy in Production:** Provides the exact pixel dimensions for every supported prompt, eliminating guesswork and preventing the creation of assets that are improperly sized or scaled.
+* **Streamlined Creative Workflow:** Confirms the required aspect ratios and accepted file formats (png, jpg, gif) upfront, allowing teams to set up design templates correctly from the start.
 
 # Key details
 
@@ -102,7 +100,7 @@ The following tables show which prompt styles are supported across various platf
 
 ## Recommended prompt sizes
 
-The following tables show the recommended prompt sizes for all of the available Recurly Engage SDKs. 
+The following tables show the recommended prompt sizes for all of the available Recurly Engage SDKs.
 
 | SDK                  | Prompt Type | Prompt Style  | Supported Aspect Ratios  | Recommended Width × Height                 | Supported Image Types |
 | -------------------- | ----------- | ------------- | ------------------------ | ------------------------------------------ | --------------------- |
