@@ -9,7 +9,7 @@ hidden: false
 metadata:
   robots: index
 ---
-# Definition
+# Overview
 
 Recommended prompt sizes is a technical specification guide that outlines the supported parameters for creative assets. It details which prompt styles (e.g., Horizontal, Tile, Popup) and prompt types (Inline, Overlay) are available on specific platforms (Web, native iOS, Android TV, ROKU, etc.), and provides the recommended width and height (in pixels) and supported image file types (png, jpg, gif) required for production.
 
@@ -25,8 +25,6 @@ This guide is essential for creative and design departments to ensure technical 
 ## Supported prompt styles
 
 The following tables show which prompt styles are supported across various platforms for Inline, Overlay, and other prompt types.
-
-<br />
 
 ### Inline prompt styles
 
@@ -52,8 +50,6 @@ The following tables show which prompt styles are supported across various platf
 | hybrid Android (tablet)                                                                  | TRUE       | TRUE     | TRUE |           |        |
 | hybrid Android TV                                                                        | TRUE       | TRUE     | TRUE |           |        |
 
-<br />
-
 ### Overlay prompt sizes
 
 <a href="https://docs.recurly.com/recurly-engage/docs/overlays#/">Learn more about overlay prompts.</a>
@@ -78,8 +74,6 @@ The following tables show which prompt styles are supported across various platf
 | hybrid Android (tablet)                                                                  |              | TRUE  | TRUE  | TRUE          |              |
 | hybrid Android TV                                                                        | TRUE         | TRUE  | TRUE  | TRUE          |              |
 
-<br />
-
 ### Other prompt types
 
 <a href="https://docs.recurly.com/recurly-engage/docs/invisible#/">Learn more about invisible prompts.</a>
@@ -103,8 +97,6 @@ The following tables show which prompt styles are supported across various platf
 | hybrid Android (phone)                                                                   |           |       |
 | hybrid Android (tablet)                                                                  |           |       |
 | hybrid Android TV                                                                        |           |       |
-
-<br />
 
 ## Recommended prompt sizes
 
