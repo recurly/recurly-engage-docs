@@ -41,14 +41,14 @@ npmAuthToken: "AUTHTOKEN"
 
 ### Install the package
 
-**Using npm**
+Using npm
 
 ```shell
 npm install @redfast/redfast-core
 npm install @redfast/react-native-redfast
 ```
 
-**or yarn**
+or yarn
 
 ```shell
 yarn add @redfast/redfast-core
@@ -311,7 +311,7 @@ interface PromptResult {
 }
 ```
 
-### Analytics callback example
+### Analytics Callback Example
 
 ```javascript
 <RedfastInline
@@ -383,7 +383,7 @@ interface PromptResult {
 
 ### Deeplink
 
-You can add a Deeplink to a Prompt within Pulse. When the user invokes the CTA, you can utilize the Deeplink to send the user to a specific location within the app.
+You can add a Deeplink to a Prompt within Pulse.. When the user invokes the CTA, you can utilize the Deeplink to send the user to a specific location within the app.
 
 ```javascript
 {
