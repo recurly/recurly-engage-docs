@@ -15,8 +15,8 @@ Recommended prompt sizes is a technical specification guide that outlines the su
 
 # Key benefits
 
-* **Accuracy in Production:** Provides the exact pixel dimensions for every supported prompt, eliminating guesswork and preventing the creation of assets that are improperly sized or scaled.
-* **Streamlined Creative Workflow:** Confirms the required aspect ratios and accepted file formats (png, jpg, gif) upfront, allowing teams to set up design templates correctly from the start.
+* **Accuracy in production:** Provides the exact pixel dimensions for every supported prompt, eliminating guesswork and preventing the creation of assets that are improperly sized or scaled.
+* **Streamlined creative workflow:** Confirms the required aspect ratios and accepted file formats (png, jpg, gif) upfront, allowing teams to set up design templates correctly from the start.
 
 # Key details
 
