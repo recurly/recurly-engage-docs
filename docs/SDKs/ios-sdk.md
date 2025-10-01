@@ -28,100 +28,121 @@ The Recurly Engage Apple SDK brings the ability to monitor consumption and show 
 
 ## Install the SDK
 
-The Recurly Engage Apple SDK includes support for iOS and tvOS. The latest SDK version and example app source code are available [here](https://github.com/redfast/redfast-sdk-apple/releases). Contact your Customer Success Manager for access keys to run the example.
+The Redfast Apple SDK includes support for iOS as well as tvOS devices. The latest SDK version as well as the source code of an example app is available [here](https://github.com/redfast/redfast-sdk-apple/releases). Please reach out to your customer success manager if you would like the keys needed to run the example app.
 
-### Swift Package Manager
+### Swift package manager
 
-You may add the SDK from the public GitHub [repository](https://github.com/redfast/redfast-sdk-apple).
+You may add the Redfast SDK from the public Github [repository](https://github.com/redfast/redfast-sdk-apple).
 
 **Steps**:
 
-1. **Add** a new Package Dependency to your existing project.
+1. Add a new Package Dependency to your existing project.
 
-<Image align="center" border={true} src="https://files.readme.io/b69fc2ebde28f7ca810e40ffcc781d6eb0838fe6c859fe97c482ca0f1cd8cbac-Screenshot_2024-11-20_at_19.55.49.png" className="border" />
+<Image align="center" border={false} src="https://files.readme.io/b69fc2ebde28f7ca810e40ffcc781d6eb0838fe6c859fe97c482ca0f1cd8cbac-Screenshot_2024-11-20_at_19.55.49.png" />
 
-2. **Paste** the GitHub repo URL and select an appropriate Dependency Rule. Add to your project.
+2. Paste the Github repo URL and select appropriate Dependency Rule. Add to your existing project.
 
-<Image align="center" border={true} src="https://files.readme.io/fa893cbcac4f982e312da89be3b511bec8b321c4c8f4fc7f53f660f30157edd8-Screenshot_2024-11-20_at_19.58.25.png" className="border" />
+<Image align="center" border={false} src="https://files.readme.io/fa893cbcac4f982e312da89be3b511bec8b321c4c8f4fc7f53f660f30157edd8-Screenshot_2024-11-20_at_19.58.25.png" />
 
-3. **Complete** adding the package.
+3. Complete adding the package
 
-<Image align="center" border={true} src="https://files.readme.io/76fdc54ab8b032fd78e26a3b5e14d80593d14279d6707f81b9e69747926936cf-Screenshot_2024-11-20_at_19.59.52.png" className="border" />
+<Image align="center" border={false} src="https://files.readme.io/76fdc54ab8b032fd78e26a3b5e14d80593d14279d6707f81b9e69747926936cf-Screenshot_2024-11-20_at_19.59.52.png" />
 
-4. **Confirm** successful package installation.
+4. Confirm successful package installation
 
-<Image align="center" border={true} src="https://files.readme.io/9dcc3755e04a1a6daa30fd8f890f99fe420cc12675e2f918e70c2dce8fd88b6e-Screenshot_2024-11-20_at_20.02.19.png" className="border" />
+<Image align="center" border={false} src="https://files.readme.io/9dcc3755e04a1a6daa30fd8f890f99fe420cc12675e2f918e70c2dce8fd88b6e-Screenshot_2024-11-20_at_20.02.19.png" />
 
 ### Legacy installation via local SDK
 
-**Steps**:
+**Steps to utilize the local SDK:**
 
-1. In Xcode, **select** **Target > General > Frameworks, Libraries, and Embedded Content**, then **click** `+`.
+1. Within Xcode, select Target > General > Frameworks > Libraries > Embedded Content and click on `+`.
+2. Select "Add Other" on bottom left corner and choose "Add Files"
 
-2. **Choose** **Add Other > Add Files**, and **select** the `RecurlyEngage.xcframework`.
+   <Image align="left" border={false} width="400px" src="https://files.readme.io/0824267-Screenshot_2024-05-23_at_3.19.28_PM.png" />
+3. Open the `Redfast.xcframework` file
+4. Ensure the "Embed & Sign option is selected"
+5. Import the SDK into your project
 
-<Image align="center" border={true} width="50% " src="https://files.readme.io/0824267-Screenshot_2024-05-23_at_3.19.28_PM.png" className="border" />
+<Image align="left" border={false} src="https://files.readme.io/ff07460-Screenshot_2024-05-23_at_3.22.56_PM.png" />
 
-3. **Ensure** the **Embed & Sign** option is selected.
-4. **Import** the SDK into your project.
+6. Initialize the SDK per instructions below
 
-<Image align="center" border={true} width="70% " src="https://files.readme.io/ff07460-Screenshot_2024-05-23_at_3.22.56_PM.png" className="border" />
+## Initialize Engage
 
-5. **Initialize** the SDK per instructions below.
+In the `AppDelegate.swift` file, add the following line into the `application(_:didFinishLaunchingWithOptions:)` function. Replace with your appID and userID. The appID may be found on the Settings > Application screen within Pulse.
 
-## Initialize Recurly Engage
-
-In `AppDelegate.swift`, add to `application(_:didFinishLaunchingWithOptions:)`—replace with your AppID and UserID (found under **Settings > Application** in Pulse):
-
-````swift
+```swift
 func application(
    _ application: UIApplication,
-   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
-) -> Bool {
-   PromotionManager.initPromotion(
-     appId: "[Your AppID]",
-     userId: "[Your UserID]"
-   ) { result in
-     // handle result
-   }
-   return true
-}
+      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+  ) -> Bool {
+      PromotionManager.initPromotion(appId: "[Your AppID]", userId: "[Your UserID]") { result in
+          // ...
+      }
+      return true
+  }
+
+```
 
 ## Trigger popup via screen name
 
-Add inside your view controller’s `viewDidLoad()`:
+Allow the Redfast SDK to display a popup for a specified view controller. Add the following line in the view controller's viewDidLoad function:
 
 ```swift
 override func viewDidLoad() {
     super.viewDidLoad()
+    // ...
     PromotionManager.setScreenName(self, "ViewController") { result in
         switch result.code {
-        case .timerExpired, .declined, .abort, .accepted:
-            // handle each case
+        case .timerExpired:
+            break
+        case .declined:
+            break
+        case abort:
+            break
+        case .accepted:
             break
         default:
             break
         }
     }
 }
-````
+
+// If no matching prompts, returns
+// PromotionResult(code: RedFast.PromotionResultCode.notApplicable, value: nil, meta: nil, inAppProductId: nil)
+// Otherwise Popup is rendered
+```
 
 ## Trigger popup via button click
 
-Add in your button’s `touchUpInside` handler:
+This may be performed in addition to `PromotionManager.setScreenName()` if a trigger utilizes both Screen Name and Click ID. Add the following line in the button's `touchUpInside` handler:
 
 ```swift
 @IBAction func buttonClicked(_ sender: Any) {
-    PromotionManager.buttonClick(self, "unsubscribe") { [weak self] result in
+    PromotionManager.buttonClick(self, unsubscribe) { [weak self] result in
         switch result.code {
-        case .accepted, .declined, .timerExpired, .abort:
-            // handle each case
+        case .accepted:
+            // User accepted the promotion
+            break
+        case .declined:
+            // User declined the promotion
+            break
+        case .timerExpired:
+            // The promotion timer expired and was automatically removed from view
+            break
+        case .abort:
+            // User clicked the `X` button to dismiss the promotion
             break
         default:
             break
         }
     }
 }
+
+// If no matching prompts, returns
+// PromotionResult(code: RedFast.PromotionResultCode.notApplicable, value: nil, meta: nil, inAppProductId: nil)
+// Otherwise Ppopup is rendered
 ```
 
 ## Retrieve inline prompts
