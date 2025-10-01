@@ -28,73 +28,75 @@ The following tables show which prompt styles are supported across various platf
 
 ### Inline prompt styles
 
+<br />
+
 | Platform                                                                                 | Horizontal | Vertical | Tile | Text Only | Slider |
-| :--------------------------------------------------------------------------------------- | :--------- | :------- | :--- | :-------- | :----- |
-| Web (desktop browser)                                                                    | YES        | YES      | YES  | YES       | YES    |
-| Web (mobile browser)                                                                     | YES        | YES      | YES  | YES       | YES    |
-| HTML5 TV devices (Comcast, Cox, Vizio, Vidaa, Xbox, PS4, PS5, Xbox, Samsung, LG devices) | YES        | YES      | YES  | YES       |        |
-| native iOS (iPhone)                                                                      | YES        | YES      | YES  |           |        |
-| native iOS (iPad)                                                                        | YES        | YES      | YES  |           |        |
-| native Apple TV                                                                          | YES        | YES      | YES  |           |        |
-| native Android (phone)                                                                   | YES        | YES      | YES  |           |        |
-| native Android (tablet)                                                                  | YES        | YES      | YES  |           |        |
-| native Android TV                                                                        | YES        | YES      | YES  |           |        |
-| native Amazon Fire TV                                                                    | YES        | YES      | YES  |           |        |
-| ROKU                                                                                     | YES        | YES      | YES  |           |        |
-| hybrid iOS (iPhone)                                                                      | YES        | YES      | YES  |           |        |
-| hybrid iOS (iPad)                                                                        | YES        | YES      | YES  |           |        |
-| hybrid Apple TV                                                                          | YES        | YES      | YES  |           |        |
-| hybrid Android (phone)                                                                   | YES        | YES      | YES  |           |        |
-| hybrid Android (tablet)                                                                  | YES        | YES      | YES  |           |        |
-| hybrid Android TV                                                                        | YES        | YES      | YES  |           |        |
+| ---------------------------------------------------------------------------------------- | ---------- | -------- | ---- | --------- | ------ |
+| Web (desktop browser)                                                                    | TRUE       | TRUE     | TRUE | TRUE      | TRUE   |
+| Web (mobile browser)                                                                     | TRUE       | TRUE     | TRUE | TRUE      | TRUE   |
+| HTML5 TV devices (Comcast, Cox, Vizio, Vidaa, Xbox, PS4, PS5, Xbox, Samsung, LG devices) | TRUE       | TRUE     | TRUE | TRUE      |        |
+| native iOS (iPhone)                                                                      | TRUE       | TRUE     | TRUE |           |        |
+| native iOS (iPad)                                                                        | TRUE       | TRUE     | TRUE |           |        |
+| native Apple TV                                                                          | TRUE       | TRUE     | TRUE |           |        |
+| native Android (phone)                                                                   | TRUE       | TRUE     | TRUE |           |        |
+| native Android (tablet)                                                                  | TRUE       | TRUE     | TRUE |           |        |
+| native Android TV                                                                        | TRUE       | TRUE     | TRUE |           |        |
+| native Amazon Fire TV                                                                    | TRUE       | TRUE     | TRUE |           |        |
+| ROKU                                                                                     | TRUE       | TRUE     | TRUE |           |        |
+| hybrid iOS (iPhone)                                                                      | TRUE       | TRUE     | TRUE |           |        |
+| hybrid iOS (iPad)                                                                        | TRUE       | TRUE     | TRUE |           |        |
+| hybrid Apple TV                                                                          | TRUE       | TRUE     | TRUE |           |        |
+| hybrid Android (phone)                                                                   | TRUE       | TRUE     | TRUE |           |        |
+| hybrid Android (tablet)                                                                  | TRUE       | TRUE     | TRUE |           |        |
+| hybrid Android TV                                                                        | TRUE       | TRUE     | TRUE |           |        |
 
 <br />
 
 ### Overlay prompt sizes
 
-| Platform                                                                                 | Interstitial | Popup | Video | Bottom Banner | Notification |
-| :--------------------------------------------------------------------------------------- | :----------- | :---- | :---- | :------------ | :----------- |
-| Web (desktop browser)                                                                    | YES          | YES   | YES   | YES           | YES          |
-| Web (mobile browser)                                                                     | YES          | YES   | YES   | YES           | YES          |
-| HTML5 TV devices (Comcast, Cox, Vizio, Vidaa, Xbox, PS4, PS5, Xbox, Samsung, LG devices) |              | YES   |       | YES           |              |
-| native iOS (iPhone)                                                                      | YES          | YES   | YES   | YES           | YES          |
-| native iOS (iPad)                                                                        |              | YES   | YES   | YES           | YES          |
-| native Apple TV                                                                          | YES          | YES   | YES   | YES           | YES          |
-| native Android (phone)                                                                   | YES          | YES   | YES   | YES           | YES          |
-| native Android (tablet)                                                                  |              | YES   | YES   | YES           | YES          |
-| native Android TV                                                                        | YES          | YES   | YES   | YES           | YES          |
-| native Amazon Fire TV                                                                    | YES          | YES   | YES   | YES           | YES          |
-| ROKU                                                                                     | YES          | YES   | YES   | YES           | YES          |
-| hybrid iOS (iPhone)                                                                      | YES          | YES   | YES   | YES           | YES          |
-| hybrid iOS (iPad)                                                                        |              | YES   | YES   | YES           | YES          |
-| hybrid Apple TV                                                                          | YES          | YES   | YES   | YES           | YES          |
-| hybrid Android (phone)                                                                   | YES          | YES   | YES   | YES           | YES          |
-| hybrid Android (tablet)                                                                  |              | YES   | YES   | YES           | YES          |
-| hybrid Android TV                                                                        | YES          | YES   | YES   | YES           | YES          |
+| Platform                                                                                 | Interstitial | Popup | Video | Bottom banner | Notification |
+| ---------------------------------------------------------------------------------------- | ------------ | ----- | ----- | ------------- | ------------ |
+| Web (desktop browser)                                                                    | TRUE         | TRUE  | TRUE  | TRUE          | TRUE         |
+| Web (mobile browser)                                                                     | TRUE         | TRUE  | TRUE  | TRUE          | TRUE         |
+| HTML5 TV devices (Comcast, Cox, Vizio, Vidaa, Xbox, PS4, PS5, Xbox, Samsung, LG devices) |              | TRUE  |       | TRUE          |              |
+| native iOS (iPhone)                                                                      | TRUE         | TRUE  | TRUE  | TRUE          | TRUE         |
+| native iOS (iPad)                                                                        |              | TRUE  | TRUE  | TRUE          | TRUE         |
+| native Apple TV                                                                          | TRUE         | TRUE  | TRUE  | TRUE          | TRUE         |
+| native Android (phone)                                                                   | TRUE         | TRUE  | TRUE  | TRUE          | TRUE         |
+| native Android (tablet)                                                                  |              | TRUE  | TRUE  | TRUE          | TRUE         |
+| native Android TV                                                                        | TRUE         | TRUE  | TRUE  | TRUE          | TRUE         |
+| native Amazon Fire TV                                                                    | TRUE         | TRUE  | TRUE  | TRUE          | TRUE         |
+| ROKU                                                                                     | TRUE         | TRUE  | TRUE  | TRUE          |              |
+| hybrid iOS (iPhone)                                                                      | TRUE         | TRUE  | TRUE  | TRUE          |              |
+| hybrid iOS (iPad)                                                                        |              | TRUE  | TRUE  | TRUE          |              |
+| hybrid Apple TV                                                                          | TRUE         | TRUE  | TRUE  | TRUE          |              |
+| hybrid Android (phone)                                                                   | TRUE         | TRUE  | TRUE  | TRUE          |              |
+| hybrid Android (tablet)                                                                  |              | TRUE  | TRUE  | TRUE          |              |
+| hybrid Android TV                                                                        | TRUE         | TRUE  | TRUE  | TRUE          |              |
 
 <br />
 
 ### Other prompt types
 
-| Platform                                                                                 | Interstitial | Popup | Video | Bottom Banner | Notification |
-| :--------------------------------------------------------------------------------------- | :----------- | :---- | :---- | :------------ | :----------- |
-| Web (desktop browser)                                                                    | YES          | YES   | YES   | YES           | YES          |
-| Web (mobile browser)                                                                     | YES          | YES   | YES   | YES           | YES          |
-| HTML5 TV devices (Comcast, Cox, Vizio, Vidaa, Xbox, PS4, PS5, Xbox, Samsung, LG devices) |              |       |       |               |              |
-| native iOS (iPhone)                                                                      |              |       |       |               |              |
-| native iOS (iPad)                                                                        |              |       |       |               |              |
-| native Apple TV                                                                          |              |       |       |               |              |
-| native Android (phone)                                                                   |              |       |       |               |              |
-| native Android (tablet)                                                                  |              |       |       |               |              |
-| native Android TV                                                                        |              |       |       |               |              |
-| native Amazon Fire TV                                                                    |              |       |       |               |              |
-| ROKU                                                                                     |              |       |       |               |              |
-| hybrid iOS (iPhone)                                                                      |              |       |       |               |              |
-| hybrid iOS (iPad)                                                                        |              |       |       |               |              |
-| hybrid Apple TV                                                                          |              |       |       |               |              |
-| hybrid Android (phone)                                                                   |              |       |       |               |              |
-| hybrid Android (tablet)                                                                  |              |       |       |               |              |
-| hybrid Android TV                                                                        |              |       |       |               |              |
+| Platform                                                                                 | Invisible | Email |
+| ---------------------------------------------------------------------------------------- | --------- | ----- |
+| Web (desktop browser)                                                                    | TRUE      | TRUE  |
+| Web (mobile browser)                                                                     | TRUE      | TRUE  |
+| HTML5 TV devices (Comcast, Cox, Vizio, Vidaa, Xbox, PS4, PS5, Xbox, Samsung, LG devices) |           |       |
+| native iOS (iPhone)                                                                      |           |       |
+| native iOS (iPad)                                                                        |           |       |
+| native Apple TV                                                                          |           |       |
+| native Android (phone)                                                                   |           |       |
+| native Android (tablet)                                                                  |           |       |
+| native Android TV                                                                        |           |       |
+| native Amazon Fire TV                                                                    |           |       |
+| ROKU                                                                                     |           |       |
+| hybrid iOS (iPhone)                                                                      |           |       |
+| hybrid iOS (iPad)                                                                        |           |       |
+| hybrid Apple TV                                                                          |           |       |
+| hybrid Android (phone)                                                                   |           |       |
+| hybrid Android (tablet)                                                                  |           |       |
+| hybrid Android TV                                                                        |           |       |
 
 <br />
 
@@ -173,3 +175,9 @@ The following tables show the recommended prompt sizes for all of the available 
 | ROKU                 | Overlay     | Interstitial  |                          | 1920x1080 or 3840x2160 px                  | png, jpg              |
 | ROKU                 | Overlay     | Popup         |                          | 1400 x 790 px or 1920x1080 px              | png, jpg              |
 | ROKU                 | Overlay     | Bottom banner |                          | 1200x200px                                 | png, jpg              |
+
+<br />
+
+<br />
+
+<br />
