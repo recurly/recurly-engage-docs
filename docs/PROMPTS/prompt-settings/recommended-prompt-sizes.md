@@ -26,9 +26,9 @@ This guide is essential for creative and design departments to ensure technical 
 
 The following tables show which prompt styles are supported across various platforms for Inline, Overlay, and other prompt types.
 
-### Inline prompt styles
-
 <br />
+
+### Inline prompt styles
 
 | Platform                                                                                 | Horizontal | Vertical | Tile | Text Only | Slider |
 | ---------------------------------------------------------------------------------------- | ---------- | -------- | ---- | --------- | ------ |
