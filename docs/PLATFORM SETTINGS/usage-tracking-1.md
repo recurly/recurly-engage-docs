@@ -73,7 +73,7 @@ Time spent by the user in the app in MM:SS. Visit duration is recorded at the us
 
 The number of times a user visits your site/app. Visits are recorded on a daily, weekly, and monthly basis. The default visit length is 10 minutes, which is extended in 10-minute increments for as long as the user is using the app.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/6af03f8-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/6af03f8-image.png" className="border" />
 
 For day-over-day comparison purposes, Recurly Engage compares data from **midnight to midnight on one day versus the previous day**. For week-over-week comparison, Recurly Engage compares data from **midnight Sunday to midnight Sunday**.
 
@@ -94,23 +94,33 @@ See [privacy](/overview/privacy.html) for more information on how we process end
 
 In addition, you can customize the tracker to collect information on specific pages or button clicks.
 
+## Concurrent logins
+
+The Concurrent Logins segment logic is used to identify when a single user account is actively logged in from multiple locations simultaneously.
+
+* **Detection:** Generally, our proprietary, privacy-preserving algorithm detects concurrent logins from different locations within a single session.
+* **Logic Basis:** The system primarily uses different IP addresses (locations) to detect multiple concurrent logins. Multiple sessions originating from the same IP address are currently treated as a single concurrent login.
+* **Segment Setup:** You can set up the number of concurrent logins you'd like to track in the Concurrent logins segment. This is one of our default segments, providing an out-of-the-box way to detect and prompt users who might be sharing their account credentials.
+* **Security and Compliance:** Helps flag potentially suspicious behavior, such as credential sharing or account takeover attempts, by monitoring access from geographically distinct locations.
+* **Usage Control:** Allows a merchant to enforce policies on where and how many times an account can be simultaneously active.
+
 ## Page tracker
 
 A page tracker allows you to track specific pages or groups of pages (by using wild cards or regex). Here are two examples.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/166e7b8-Screenshot_2024-04-25_at_15.03.06.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/166e7b8-Screenshot_2024-04-25_at_15.03.06.png" className="border" />
 
 ## Button tracker (Web only)
 
 A button tracker allows you to track specific elements that a user clicks using CSS.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/ee7d53f-Screenshot_2024-04-25_at_15.06.07.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/ee7d53f-Screenshot_2024-04-25_at_15.06.07.png" className="border" />
 
 ## Custom tracker
 
 A custom tracker allows you to send tracking information from any external system to Recurly Engage via API or SDK (available on Roku, Apple TV, Android, and iOS). For example, if a user’s payment has failed, you can send an event from your backend, allowing you to target users to update their credit card via Recurly Engage.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/2db110e-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/2db110e-image.png" className="border" />
 
 ## Setup a tracker
 
@@ -120,7 +130,7 @@ This article will teach you to setup a new tracker.
 
 Start by heading over to **Settings > Usage Tracking > Add New Tracker**
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/4a51089-Screenshot_2024-04-25_at_15.40.54.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/4a51089-Screenshot_2024-04-25_at_15.40.54.png" className="border" />
 
 ## Web usage
 
@@ -135,19 +145,19 @@ To track a user’s visits to the Settings page, do the following:
 
 1. **Click** “Add a tracker” and change the value to match your app’s URL path. In addition to actual URLs, you may also use a regular expression to specify wildcard matches and other advanced URL configurations.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/1363ad0-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/1363ad0-image.png" className="border" />
 
 2. **Click** “Save Changes.”
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/78b62f2-Screenshot_2024-04-25_at_15.46.49.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/78b62f2-Screenshot_2024-04-25_at_15.46.49.png" className="border" />
 
 3. **Go** to add a new segment.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/4c6e5ea-Screenshot_2024-04-25_at_15.47.45.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/4c6e5ea-Screenshot_2024-04-25_at_15.47.45.png" className="border" />
 
 4. Under the **Usage** tab, you can see the newly added Recurly Engage trait you can target.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/dd7b0a2-Screenshot_2024-04-25_at_15.49.32.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/dd7b0a2-Screenshot_2024-04-25_at_15.49.32.png" className="border" />
 
 ### Track example
 
@@ -155,19 +165,19 @@ To track a user’s clicks of a particular button, do the following:
 
 1. **Click** “Add a tracker” and change the value to match your HTML button ID or button class.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/d35ff75-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/d35ff75-image.png" className="border" />
 
 2. **Click** “Save Changes.”
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/319b3dc-Screenshot_2024-04-25_at_15.52.46.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/319b3dc-Screenshot_2024-04-25_at_15.52.46.png" className="border" />
 
 3. **Go** to add a new segment.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/a953556-Screenshot_2024-04-25_at_15.47.45.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/a953556-Screenshot_2024-04-25_at_15.47.45.png" className="border" />
 
 4. Under the **Usage** tab, you can see the newly added Recurly Engage trait you can target.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/6d939dd-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/6d939dd-image.png" className="border" />
 
 ## Tracking web actions from other sites
 
@@ -189,61 +199,61 @@ if (RecurlyEngage.anonymousUserId) {
 
 2. **Go** to **Settings > Actions > Website Actions > Add New Action**
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/28e316d-Screenshot_2024-04-25_at_15.57.56.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/28e316d-Screenshot_2024-04-25_at_15.57.56.png" className="border" />
 
 3. **Add** the code from step 1, making sure to change the URL and parameters to your partner URL, but keep `rf_uid` intact.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/90e6242-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/90e6242-image.png" className="border" />
 
 4. **Save** the changes.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/cda656e-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/cda656e-image.png" className="border" />
 
 5. **Go** to the prompt that you wish to redirect from and click **Website Actions > Add Action**.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/f86eb59-Screenshot_2024-04-25_at_16.18.56.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/f86eb59-Screenshot_2024-04-25_at_16.18.56.png" className="border" />
 
 6. **Add** the custom website action.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/09e2cab-Screenshot_2024-04-25_at_16.21.49.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/09e2cab-Screenshot_2024-04-25_at_16.21.49.png" className="border" />
 
 ### Custom tracker
 
 1. **Go** to **Settings > Usage Tracking > Add New Tracker**
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/5ab5bc5-Screenshot_2024-04-25_at_15.40.54.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/5ab5bc5-Screenshot_2024-04-25_at_15.40.54.png" className="border" />
 
 2. **Add** a new custom tracker.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/b5a1e44-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/b5a1e44-image.png" className="border" />
 
 3. **Click** **Save Changes**.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/60b07dd-Screenshot_2024-04-25_at_17.08.08.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/60b07dd-Screenshot_2024-04-25_at_17.08.08.png" className="border" />
 
 4. **Click** the code icon `< >`.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/b2d3783-Screenshot_2024-04-25_at_17.09.47.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/b2d3783-Screenshot_2024-04-25_at_17.09.47.png" className="border" />
 
 5. **Click** **External Web Tracker**.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/435b19a-Screenshot_2024-04-25_at_17.10.47.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/435b19a-Screenshot_2024-04-25_at_17.10.47.png" className="border" />
 
 6. Your partner should add the first code block onto their landing page to save the referred user ID. **Usage → External**
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/f3193d3-Screenshot_2024-04-25_at_17.12.33.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/f3193d3-Screenshot_2024-04-25_at_17.12.33.png" className="border" />
 
 7. Your partner should add the second code block onto their conversion page to notify Recurly Engage of a successful conversion.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/d61c1ac-Screenshot_2024-04-25_at_17.53.16.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/d61c1ac-Screenshot_2024-04-25_at_17.53.16.png" className="border" />
 
 8. **Add** the tracker as a Custom Goal to your prompt (no need to wait for steps 6 and 7). This will allow you to see how your prompt is performing.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/529a107-Screenshot_2024-04-25_at_17.14.04.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/529a107-Screenshot_2024-04-25_at_17.14.04.png" className="border" />
 
 9. **Save** the prompt.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/e76c311-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/e76c311-image.png" className="border" />
 
 10. Once your partner has implemented steps 6 and 7, **start** the prompt to see results.
 
@@ -259,15 +269,15 @@ This example will show you how to add a custom tracker. You can use it to track 
 
 1. **Click** “Add a tracker” and name your tracker.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/94cdc46-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/94cdc46-image.png" className="border" />
 
 2. **Click** “Save Changes” (Settings → Integrations).
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/06d104c-Screenshot_2024-04-25_at_17.18.20.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/06d104c-Screenshot_2024-04-25_at_17.18.20.png" className="border" />
 
 3. Now **click** the symbol `< >` to see the devices you can integrate on and pick yours.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/cc791c2-Screenshot_2024-04-25_at_17.19.13.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/cc791c2-Screenshot_2024-04-25_at_17.19.13.png" className="border" />
 
 4. **Select** the programming language for your device. Here are reference examples. You may want your developer to read this section.
 
@@ -323,15 +333,15 @@ This example will show you how to add a custom tracker. You can use it to track 
    m.promoMgr.callFunc("customTrack", { custom_field_id: "fc4ccd34-7876-430b-8b64-65ac7c19a505" })
    ```
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/820a739-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/820a739-image.png" className="border" />
 
 5. **Go** to add a new segment.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/36a5782-Screenshot_2024-04-25_at_15.47.45.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/36a5782-Screenshot_2024-04-25_at_15.47.45.png" className="border" />
 
 6. Under the **Usage** tab, you can see the newly added Recurly Engage trait you can target. Once the custom tracker from step 4 is integrated, users will automatically be segmented according to your needs.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/0cdc7c3-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/0cdc7c3-image.png" className="border" />
 
 ## Using events in Google Tag Manager
 
@@ -341,11 +351,11 @@ There may be cases in which GTM events can be used to perform certain actions wi
 
 * Setup a new Trigger that responds to an event named `test`.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/830c245-Screenshot_2024-04-29_at_2.51.28_PM.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/830c245-Screenshot_2024-04-29_at_2.51.28_PM.png" className="border" />
 
 * Associate a Tag with the Trigger.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/5004849-Screenshot_2024-04-29_at_2.52.26_PM.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/5004849-Screenshot_2024-04-29_at_2.52.26_PM.png" className="border" />
 
 * Publish changes to production.
 
