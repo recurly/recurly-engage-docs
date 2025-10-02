@@ -32,7 +32,6 @@ Recurly Engage now supports Liquid, a powerful and flexible open-source template
 3. **Edit the prompt design** by clicking into the text field you want to personalize.
 4. **Insert Liquid variables** using the `{{ }}` delimiters. The system will automatically suggest available variables from your Recurly account data as you type. All liquid functionality is supported including control flow, iterators (loops), and assignments.
 
-
 There are two primary types of Liquid variables you can use:
 
 * **User trait variables:** These variables come from user data you have imported. Use the `user.`prefix, such as `{{user.first_name}}`.
@@ -51,3 +50,15 @@ This will render a personalized message for each user, such as:
 `Hello Jane, your Pro plan is set to renew on 09/30/2025.`
 
 > **Note:** The system will only show variables available for the targeted user. If a variable, such as `user.first_name`, is not available for a specific user, the field will simply appear blank.
+
+<br />
+
+## Setting default values
+
+When using Liquid variables, it's possible that the data field you are referencing (e.g., a customer's plan type) is not available for a specific user. By default, the field will simply appear blank.
+
+To ensure your messages always look clean and professional, you can use the default filter to specify a fallback value. This filter is applied using a vertical pipe (|) followed by default: 'Your Fallback Value'.
+
+**Example:**
+
+`Hello {{ user.first_name | default: 'there' }}, your {{ subscription.plan.name }} plan is set to renew on {{ subscription.renews_at }}.`
