@@ -10,7 +10,7 @@ hidden: false
 metadata:
   robots: index
 ---
-# Definition
+# Overview
 
 A Recurly Webhook is an automatic HTTP POST notification sent by Recurly to a specified URL (Ingestion Endpoint) in real-time when a subscription-related event occurs (e.g., a subscription is activated, updated, canceled, or expires). The payload of this request is a JSON object containing the details of the event, adhering to the Recurly subscription notification format.
 
