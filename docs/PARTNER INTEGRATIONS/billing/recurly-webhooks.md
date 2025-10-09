@@ -6,7 +6,7 @@ excerpt: >-
   The integration utilizes a dedicated ingestion endpoint secured via HTTP Basic
   Authentication.
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
