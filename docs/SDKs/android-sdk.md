@@ -130,16 +130,33 @@ override fun onCreateView(
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-    ...
-    PromotionManager.setScreenName(binding.root, "ViewController") {
-        when (it.code) {
-            PromotionResult.timerExpired,
-            PromotionResult.declined,
-            PromotionResult.abort,
-            PromotionResult.accepted...
+  ...
+  PromotionManager.setScreenName(binding.root, "ViewController") {
+        when (it.code) { // PromotionResult
+					...
         }
     }
 }
+
+// PromotionResult:
+//   val code: PromotionResultCode,
+//   val value: deeplink,
+//   val meta: metadata
+
+// PromotionResultCode:
+//   timeout,
+//   declined,
+//   abort,
+//   accepted,
+//   notApplicable,
+//   notSupported,
+//   disabled,
+//   holdout,
+//   button1, // User clicked button 1 (primary button, used in both modal and inline)
+//   button2, // User clicked button 2 (secondary button, modal only)
+//   button3, // User clicked button 3 (tertiary button, modal only)
+//   dismiss // User dismissed the modal/inline (available for both modal and inline)
+
 ```
 
 ## Trigger popup via button click
