@@ -30,10 +30,6 @@ export const PrerequisitesLimitations = ({ header }) => {
           <i className="fa-solid fa-check mr-2" />
           You must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
         </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          For IP‑based metrics (fraud score, location), IP‑processing must be enabled in your agreement.
-        </p>
       </div>
     </div>
   );
@@ -86,7 +82,7 @@ In addition to visits and minutes, Recurly Engage automatically tracks or create
 * **Device Manufacturer** – Apple iPhone, Apple iPad, Nexus, Samsung, other. Also includes full user agent string.
 * **Device SDK** – Android Phone, Android Tablet, Google TV, Roku, other. Also includes full user agent string.
 
-The following optional items require the processing of the end user’s IP address. IP addresses are never stored by Recurly Engage. Your agreement specifies whether these additional items have been enabled for your app. Please contact your application administrator for details.
+The following optional items require the processing of the end user’s IP address. IP addresses are never stored by Recurly Engage. These additional items are included by default. 
 
 * **Fraud score** – A number between 0–10 ranking the user’s likelihood of being a fraudulent user, derived using machine learning.
 
