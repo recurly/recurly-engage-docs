@@ -86,8 +86,16 @@ Below is an example for creating a segment of **Engaged, US-based iOS Premium pl
    * **Premium plan**: Under **Custom** → **Plan** → **Include** → **Premium**.
 
      > **Note:** “Custom” covers any traits you’ve imported—learn more about importing custom traits [here](user-traits).
-   * **Not redeemed iOS prompt**: Select **Interactions → User has not → accepted (primary) → \[iOS popup]**. Choose your created prompt from the dropdown.
+   * **Not redeemed iOS prompt**: Select **Interactions → User has not → accepted (primary) → [iOS popup]**. Choose your created prompt from the dropdown.
 4. **Click** **Save** to create the segment.
 5. **Toggle** **Enable** to activate the segment and begin real-time monitoring.
 
 Recurly Engage will start processing incoming data and populate your segment within a few hours. Monitor the segment’s metrics by clicking into its detail view and adjusting the date range as needed.
+
+<br />
+
+## Segment priority
+
+When a single prompt is assigned multiple segments, and a user qualifies for more than one of those segments, the system determines prompt visibility based on the first segment the user qualified for.
+
+This logic ensures that if a user fits into two or more defined groups for a single prompt, they will see that prompt as long as they meet the criteria for at least one of the assigned segments.
