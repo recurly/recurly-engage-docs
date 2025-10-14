@@ -16,7 +16,7 @@ A Recurly Webhook is an automatic HTTP POST notification sent by Recurly to a sp
 
 The designated Ingestion Endpoint for subscription change events is:
 
-`https://conduit.redfast.com/ingest/${APP_ID}/update_user_subscription?source=recurly&action=update_traits`
+`https://conduit.redfast.com/ingest/${APP_ID}/update_user_subscription?source=recurly&action_type=update_traits`
 
 The `APP_ID` is a unique identifier (UUID) for your application.
 
@@ -45,7 +45,7 @@ You will need the following credentials for authentication:
 
 **Navigate** to the Webhook Endpoint configuration screen within your Recurly application's settings and **perform** the following actions:
 
-1. **Enter** the Ingestion Endpoint URL: Input the complete URL, replacing APP_ID with your specific application UUID: `https://conduit.redfast.com/ingest/$\{APP_ID}/update_user_subscription?source=recurly&action=update_traits}`.
+1. **Enter** the Ingestion Endpoint URL: Input the complete URL, replacing APP_ID with your specific application UUID: `https://conduit.redfast.com/ingest/$\{APP_ID}/update_user_subscription?source=recurly&action_type=update_traits}`.
 2. **Configure** Authentication: **Enable** HTTP Basic Authentication for the endpoint.
    1. **Enter** your **Application ID** as the Username.
    2. **Enter** your **Application API Key** as the Password.
