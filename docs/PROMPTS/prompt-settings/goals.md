@@ -47,7 +47,7 @@ A **custom goal** is a user-defined conversion event—tracked via a usage track
 * **Flexible measurement**: Define conversions like page visits, payment completions, or external API events.
 * **Accurate attribution**: Attribute custom goals to prompt interactions with configurable time windows.
 * **Deeper insights**: Compare prompt acceptance versus actual business outcomes for better optimization.
-* **Near real time updates**: Our enhanced integration with Recurly Subscription Management now provides near real-time subscription status information, enabling quicker, more effective targeting and custom event tracking within Recurly Engage. <a href="https://docs.recurly.com/recurly-engage/docs/recurly-webhooks#/">Learn more.</a>
+* **Near real time updates for Recurly Subscription Management users**: Our enhanced integration with Recurly Subscription Management now provides near real-time subscription status information, enabling quicker, more effective targeting and custom event tracking within Recurly Engage. <a href="https://docs.recurly.com/recurly-engage/docs/recurly-webhooks#/">Learn more.</a>
 
 # Key details
 
