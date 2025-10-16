@@ -52,7 +52,20 @@ You will need the following credentials for authentication:
 3. **Subscribe** to Events: **Select** the specific subscription-related events you wish to track in real-time. For a comprehensive update, it is recommended to subscribe to all relevant subscription change events, such as:
    1. `subscription.created`
    2. `subscription.updated`
-   3. `subscription.cancelled`
+   3. `subscription.canceled`
    4. `subscription.renewed`
    5. `subscription.paused`
    6. `subscription.resumed`
+
+## Step 3: Enabling Recurly events as custom goals
+
+Engage supports the use of specific Recurly Webhook events to increment Custom Goals for end users. A Recurly Subscription Management user can configure the webhook to fire on these events and track them as custom goal completions.
+
+Engage is configured to automatically support the following two Recurly webhook events as Custom Goals:
+
+* `subscription.canceled`
+* `billing_info.updated`
+
+To enable tracking for these custom goals: Ensure that you have subscribed to the relevant events (`subscription.canceled` and `billing_info.updated`) in the Recurly Webhook Endpoint configuration (Step 2.3).
+
+**For advanced usage**: If you wish to implement additional Recurly events as custom goals beyond the default two, you will need to create trackers within Engage with the proper label attributes. These labels must match the Recurly webhook payload using the convention `object_type.event_type`.
