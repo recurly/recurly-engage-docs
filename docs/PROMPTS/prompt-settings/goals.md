@@ -47,6 +47,7 @@ A **custom goal** is a user-defined conversion event—tracked via a usage track
 * **Flexible measurement**: Define conversions like page visits, payment completions, or external API events.
 * **Accurate attribution**: Attribute custom goals to prompt interactions with configurable time windows.
 * **Deeper insights**: Compare prompt acceptance versus actual business outcomes for better optimization.
+* **Near real time updates**: Our enhanced integration with Recurly now provides near real-time subscription status information, enabling quicker, more effective targeting and custom event tracking within Recurly Engage. <a href="https://docs.recurly.com/recurly-engage/docs/recurly-webhooks#/">Learn more.</a>
 
 # Key details
 
@@ -56,6 +57,7 @@ A **custom goal** is a user-defined conversion event—tracked via a usage track
 * Arrival on a particular app screen (mobile or TV)
 * Backend events (payment processed, subscription changed)
 * External system activities accessible via your usage tracker
+* We've integrated with Recurly Subscription Management Webhooks to deliver near real-time subscription status updates (e.g., plan changes, payment failures, cancellations). This allows for instant targeting and custom goal events using Recurly Engage. <a href="https://docs.recurly.com/recurly-engage/docs/recurly-webhooks#/">Learn more.</a>
 
 To use a custom goal, first create a [Usage Tracker](usage-tracking-1). Then follow the steps below to attach it to a prompt.
 
@@ -63,18 +65,18 @@ To use a custom goal, first create a [Usage Tracker](usage-tracking-1). Then fol
 
 1. **Locate** the usage tracker you want to use. In this example, we track when a user updates their payment method and lands on `/payment-updated`.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/c80c651-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/c80c651-image.png" className="border" />
 
 2. **Open** the prompt you wish to measure and click **Edit prompt details**.
 3. **Scroll** to the **Custom Goal** section and click **Add custom goal**.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/ea36176-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/ea36176-image.png" className="border" />
 
 2. In the popup, **select** your usage tracker, **set** the attribution window (e.g., 24 hours), and **click** **Save**.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/075d4bd-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/075d4bd-image.png" className="border" />
 
 2. **Publish** your prompt to start recording custom goal completions.
 3. Under **Performance**, a **Custom goal** bar displays the number of users who completed the tracked action after interacting with the prompt.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/f478e3a-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/f478e3a-image.png" className="border" />
