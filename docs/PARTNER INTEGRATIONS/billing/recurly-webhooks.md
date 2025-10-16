@@ -39,7 +39,7 @@ You will need the following credentials for authentication:
 * **Username:** Your Application ID (APP_ID), which is the UUID found in the Ingestion Endpoint URL.
 * **Password:** Your Application API Key, accessible in the Pulse system under Settings → Application.
 
-<Image align="center" border={false} src="https://files.readme.io/0d5580995d67cf630f9151f8ad0acb1e69bd4fb1fe9a7b3062c2f93e5772182f-webhooks1.png" />
+<Image align="center" border={false} src="https://files.readme.io/a706f0863987825de8a1601eaceaf60f424d87555296f3ee3690a918d9ccc086-Screenshot_2025-10-03_at_11.21.59_AM.png" />
 
 ## Step 2: Configure the Recurly webhooks endpoint
 
