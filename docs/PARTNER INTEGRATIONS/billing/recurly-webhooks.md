@@ -68,4 +68,11 @@ Engage is configured to automatically support the following two Recurly webhook 
 
 To enable tracking for these custom goals: Ensure that you have subscribed to the relevant events (`subscription.canceled` and `billing_info.updated`) in the Recurly Webhook Endpoint configuration (Step 2.3).
 
-**For advanced usage**: If you wish to implement additional Recurly events as custom goals beyond the default two, you will need to create trackers within Engage with the proper label attributes. These labels must match the Recurly webhook payload using the convention `object_type.event_type`.
+### Advanced usage and custom goals
+
+If you wish to implement additional Recurly events as custom goals beyond the default two, you will need to create useage trackers within Engage with the proper label attributes. These labels must match the Recurly webhook payload using the convention `object_type.event_type`. Learn more about <a href="https://docs.recurly.com/recurly-engage/docs/usage-tracking-1#/">usage tracking</a>.
+
+1. Navigate to Settings > Usage Tracking > **+Add New Tracker**
+2. Create a new Custom Tracker by adding the name, label (be sure to match the Recurly Webhook Payload), and description of the tracker. Ensure the tracker type is set to "Custom" 
+
+<Image align="center" border={false} src="https://files.readme.io/c0a9d08cc7a0f407ce69c81b6426b05956a2fd8d6485bc1398aab980c28564c6-Screenshot_2025-10-16_at_9.45.37_AM.png" />
