@@ -188,14 +188,17 @@ end if
 
 ```
 
-<br />
-
 ## Retrieve inline prompts
 
-The SDK provides a method to retrieve inline prompts within the specified Zone ID that are eligible for the current userId. You may access the properties of the inline prompts to render in the appropriate locations within the app.
+For custom rendering, the SDK provides a method to retrieve inline prompts within the specified Zone ID that are eligible for the current userId. You may access the properties of the inline prompts to render in the appropriate locations within the app.
 
 ```
+inline = inlineRow.createChild("ContentNode")
+inline.size = [1920, 200]
 inlineItems = m.promoMgr.callFunc("getInlines", {type: "myZoneId"})
+if inlineItems.count() > 0
+  inline.HDPOSTERURL = inlineItems[0].actions.rf_settings_bg_image_roku_os_tv_composite
+end if
 ```
 
 The following is example code demonstrating accessing attributes of the prompt for rendering. A full list of attributes can be found [here](/reference/prompt-attributes#/).
