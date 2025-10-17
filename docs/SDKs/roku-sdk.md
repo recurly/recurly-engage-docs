@@ -193,15 +193,10 @@ end if
 For custom rendering, the SDK provides a method to retrieve inline prompts within the specified Zone ID that are eligible for the current userId. You may access the properties of the inline prompts to render in the appropriate locations within the app.
 
 ```
-inline = inlineRow.createChild("ContentNode")
-inline.size = [1920, 200]
 inlineItems = m.promoMgr.callFunc("getInlines", {type: "myZoneId"})
-if inlineItems.count() > 0
-  inline.HDPOSTERURL = inlineItems[0].actions.rf_settings_bg_image_roku_os_tv_composite
-end if
 ```
 
-The following is example code demonstrating accessing attributes of the prompt for rendering. A full list of attributes can be found [here](/reference/prompt-attributes#/).
+The following is example code demonstrating accessing attributes of the prompt for rendering within a new child node. A full list of attributes can be found [here](/reference/prompt-attributes#/).
 
 ```
 featured = createObject("RoSGNode", "ContentNode")
@@ -217,10 +212,6 @@ for ii = 0 To inlineItems.count() - 1
         heightSuffix = "&screen_size=720"
     end if
     item.HDPOSTERURL = inlineItem.actions.rf_settings_bg_image_roku_os_tv_composite + heightSuffix
-    item.Title = inlineItem.actions.rf_retention_title
-    item.Message = inlineItem.actions.rf_retention_message
-    item.Description = inlineItem.actions.rf_settings_roku_product_operation
-    item.ButtonText = inlineItem.actions.rf_retention_confirm_button_text
 end for
 featured.title = "Featured"
 contentNode.insertChild(featured, 2)
