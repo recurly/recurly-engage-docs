@@ -165,6 +165,31 @@ prompt = m.promoMgr.callFunc("getPrompt", {pathId: "myPathId"})
 m.promoMgr.callFunc("showPrompt", {root: m.viewRoot, prompt: prompt})
 ```
 
+## Show inline prompt
+
+An eligible inline prompt can be rendered within a node. Recommendations are to define a Rectangle or Poster node as a container for the inline prompt. The `scale` argument determines how the inline prompt will scale to fit within the allocated space of the specified node.
+
+```
+' -- Scenegraph component file (.xml) --
+<Rectangle id="myBanner" width="1920" height="420" />
+  
+' -- Brightscript file (.brs) --
+
+' showInline Args:
+'   root: parent node
+'   type: Zone ID
+'   scale: "scaleToFit", "scaleToFill", "scaleToZoom", "noScale"
+m.inline = m.promoMgr.callFunc("showInline", {root: m.myBanner, type: "myZoneId", scale: "scaleToFill"
+})
+' Observe Prompt Interactions
+if m.inline <> invalid
+  m.inline.observeField("result", "onInlineResult")
+end if
+
+```
+
+<br />
+
 ## Retrieve inline prompts
 
 The SDK provides a method to retrieve inline prompts within the specified Zone ID that are eligible for the current userId. You may access the properties of the inline prompts to render in the appropriate locations within the app.
