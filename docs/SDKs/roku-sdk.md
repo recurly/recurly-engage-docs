@@ -167,7 +167,7 @@ m.promoMgr.callFunc("showPrompt", {root: m.viewRoot, prompt: prompt})
 
 ## Show inline prompt
 
-An eligible inline prompt can be rendered within a node. Recommendations are to define a Rectangle or Poster node as a container for the inline prompt. The `scale` argument determines how the inline prompt will scale to fit within the allocated space of the specified node.
+An eligible inline prompt can be rendered within a Scenegraph node. We recommend defining a Rectangle or Poster node as a container for the inline prompt. The `scale` argument determines how the inline prompt will scale to fit within the allocated space of the specified node.
 
 ```
 ' -- Scenegraph component file (.xml) --
