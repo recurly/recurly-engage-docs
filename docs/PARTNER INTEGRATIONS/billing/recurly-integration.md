@@ -48,7 +48,11 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 # Definition
 
-The **Recurly** connector imports subscription traits nightly and provides actions for managing subscriptions—coupon application, plan changes, pauses, resumes—via prompts. To receive near real time data from Recurly Subscription Management, learn more about integrating with <a href="https://docs.recurly.com/recurly-engage/docs/recurly-webhooks#/">Recurly Webhooks.</a>
+The **Recurly** connector imports subscription traits nightly and provides actions for managing subscriptions—coupon application, plan changes, pauses, resumes—via prompts. 
+
+Learn more about <a href="https://docs.recurly.com/recurly-subscriptions/docs/recurly-engage-integration#/step-4-import-user-traits-using-both-recurly-and-recurly-engage-sites">integrating user traits</a> with Recurly. 
+
+To receive near real time data from Recurly Subscription Management, learn more about integrating with <a href="https://docs.recurly.com/recurly-engage/docs/recurly-webhooks#/">Recurly Webhooks.</a>
 
 # Key benefits
 
