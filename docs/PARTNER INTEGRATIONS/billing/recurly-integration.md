@@ -69,9 +69,7 @@ The **Recurly** connector imports subscription traits nightly and provides actio
 
 ## Data integration
 
-to enable the automated sync.
-
-Once enabled, the following traits are imported nightly:
+Automated exports from Recurly may be configured to automatically sync on a nightly basis.
 
 | Trait Name                  | Description                                                                      |
 | --------------------------- | -------------------------------------------------------------------------------- |
