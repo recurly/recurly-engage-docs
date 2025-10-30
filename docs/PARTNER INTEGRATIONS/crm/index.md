@@ -28,7 +28,7 @@ Recurly Engage integrates with a variety of CRM, marketing automation, and suppo
 
 * **ActiveCampaign**: Add or update contacts, subscribe to lists, and enroll users in automations. ([Learn more](activecampaign))
 * **Adobe**: Stream prompt events into Experience Platform, trigger Journey Optimizer actions, and send web events to Analytics. ([Learn more](adobe-aep-ajo))
-* **Iterable**: (Coming soon) Sync user events and trigger Iterable campaigns directly from prompts.
+* **Iterable**: Sync user events and trigger Iterable campaigns directly from prompts.
 * **Naviga**: Check subscription status and manage subscriptions for news/publishing platforms via Naviga Subscribe API. ([Learn more](naviga))
 * **Freshdesk**: Create and bulk-update support tickets and manage contacts in Zendesk Support. ([Learn more](freshdesk))
 * **Salesforce**: Integrate with Support Cloud for case management and Marketing Cloud for email sends and subscriber lists. ([Learn more](salesforce-marketing-cloud))
