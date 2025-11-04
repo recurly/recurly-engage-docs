@@ -20,7 +20,7 @@ An **overview** page that provides concise summaries of each major Recurly Engag
 
 # Key details
 
-* **Setup your application**: Configure your app’s name, primary domain, and any domain aliases in the Recurly Engage console. <a href="https://docs.recurly.com/docs/setup-your-app#/ " target="_blank" rel="noopener">Learn more</a>
+* **Setup your application**: Configure your app’s name, primary domain, and any domain aliases in the Recurly Engage console. <a href="https://docs.recurly.com/recurly-engage/docs/setup-your-app#/ " target="_blank" rel="noopener">Learn more</a>
 * **Invite users**: Grant team members access to one or more apps and assign appropriate permission levels. <a href="https://docs.recurly.com/recurly-engage/docs/invite-users#/" target="_blank" rel="noopener">Learn more</a>
 * **Add the Recurly Engage tag**: Integrate the JS SDK via popular tag managers (GTM, Adobe DTM, Tealium) or embed directly to enable Engage features. <a href="https://docs.recurly.com/recurly-engage/docs/add-the-redfast-tag#/" target="_blank" rel="noopener">Learn more</a>
 * **Sync user traits**: Import customer attributes (via CSV or real-time events) to power targeted segments and personalized campaigns. <a href="https://docs.recurly.com/recurly-engage/docs/sync-user-traits#/" target="_blank" rel="noopener">Learn more</a>
