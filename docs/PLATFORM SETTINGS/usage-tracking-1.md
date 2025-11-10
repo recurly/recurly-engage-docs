@@ -90,7 +90,7 @@ See [privacy](/overview/privacy.html) for more information on how we process end
 
 In addition, you can customize the tracker to collect information on specific pages or button clicks.
 
-## Concurrent logins
+## Concurrent logins & password sharing
 
 The Concurrent Logins segment logic is used to identify when a single user account is actively logged in from multiple locations simultaneously.
 
