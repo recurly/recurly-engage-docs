@@ -169,7 +169,10 @@ if (path) {
 //   - result: a callback returning PromptResult
 displayPrompt(showModal, path, (result) => {
   console.log(JSON.stringify({ ...result, source: 'modal' }, null, 2));
-  setShowModal(false);
+  const { code } = result;
+  if (code !== PromptResultCode.IMPRESSION) {
+    setShowModal(false);
+  }
 })
 ```
 
