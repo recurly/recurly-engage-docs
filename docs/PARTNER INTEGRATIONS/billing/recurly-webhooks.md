@@ -45,7 +45,7 @@ You will need the following credentials for authentication:
 
 **Navigate** to the Webhook Endpoint configuration screen within your Recurly application's settings and **perform** the following actions:
 
-1. **Enter** the Ingestion Endpoint URL: Input the complete URL, replacing APP_ID with your specific application UUID: `https://conduit.redfast.com/ingest/APP_ID/update_user_subscription?source=recurly`.  
+1. **Enter** the Ingestion Endpoint URL: Input the complete URL, replacing APP_ID with your specific application UUID: `https://conduit.redfast.com/ingest/APP_ID/update_user_subscription?source=recurly`.
 
    The `APP_ID` is a unique identifier (UUID) for your application.
 2. **Configure** Authentication: **Enable** HTTP Basic Authentication for the endpoint.
@@ -58,6 +58,8 @@ You will need the following credentials for authentication:
    4. `subscription.renewed`
    5. `subscription.paused`
    6. `subscription.resumed`
+   7. `charge_invoice.paid`
+   8. `charge_invoice.past_due`
 
 ## Step 3: Enabling Recurly events as custom goals
 
