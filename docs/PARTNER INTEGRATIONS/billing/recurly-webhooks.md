@@ -43,6 +43,8 @@ You will need the following credentials for authentication:
 
 ## Step 2: Configure the Recurly webhooks endpoint
 
+Ensure the endpoint's payload format **is set to JSON.**
+
 **Navigate** to the Webhook Endpoint configuration screen within your Recurly application's settings and **perform** the following actions:
 
 1. **Enter** the Ingestion Endpoint URL: Input the complete URL, replacing APP_ID with your specific application UUID: `https://conduit.redfast.com/ingest/APP_ID/update_user_subscription?source=recurly`.
