@@ -316,6 +316,22 @@ sub onPromotionEvent()
 end sub
 ```
 
+## Prompt type enum values
+
+<br />
+
+| Enum prompt type | Integer value |
+| :--------------- | :------------ |
+| all              | -1            |
+| invisible        | 1             |
+| modal            | 2             |
+| horizontal       | 5             |
+| video            | 6             |
+| interstitial     | 10            |
+| bottom banner    | 13            |
+
+<br />
+
 ## Disable SDK
 
 There may be cases in which the Redfast SDK should be temporarily disabled for the current session. When disabled, popups are not triggered, and API communication between the SDK and Redfast servers are paused.
