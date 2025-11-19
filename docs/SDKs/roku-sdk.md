@@ -316,9 +316,9 @@ sub onPromotionEvent()
 end sub
 ```
 
-## Prompt type enum values
-
 <br />
+
+## Prompt type enum values
 
 | Enum prompt type | Integer value |
 | :--------------- | :------------ |
