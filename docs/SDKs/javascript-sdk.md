@@ -167,3 +167,69 @@ static onPromptInteraction(eventName, payload) {
 ```
 
 <br />
+
+## JS tag best practices
+
+Implementation strategies to ensure the Recurly Engage JavaScript snippet begins execution as quickly as possible, minimizing delay on your site as needed.
+
+### Load type comparison
+
+The choice of implementation method directly impacts the execution speed and subsequent availability on the page.
+
+<br />
+
+| Implementation Method | Load Type      | Primary Benefit                                                                                | Use Case                                                                                                                                                            |
+| --------------------- | -------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Minimal Latency       | Synchronous    | Fastest execution time. The script starts loading and executing immediately, minimizing delay. | Critical: Required when the Engage script must execute before or during initial page rendering (e.g., to prevent content flicker or ensure immediate availability). |
+| Standard              | Deferred/Async | Minimal impact on initial page rendering time (Time to First Paint).                           | Non-Critical: Acceptable when the Engage script can wait for the page content to load before running.                                                               |
+
+<br />
+
+### Minimal latency implementation 
+
+To achieve the fastest script execution time, we recommend a three-step approach that prioritizes immediate script loading and execution by the browser.
+
+#### Step 1: Synchronous script loading
+
+Synchronous loading means scripts are loaded sequentially, one after another, starting with the `<head>` tag. The script tag should not  include the `async` or `defer` attributes. This forces the browser to pause HTML parsing, fetch the resource, and execute the Recurly Engage script immediately, which is essential for rapid feature initiation.
+
+#### Step 2: Snippet placement in the `<head>`
+
+The synchronous snippet **should** be placed in the `<head>` of the HTML document, immediately following critical meta and CSS elements. Placing it high up ensures it is discovered and executed early in the parsing process.
+
+#### Step 3: Use preload and preconnect resource hints
+
+To further accelerate the network phase, include the following resource hints at the very top of your `<head>`:
+
+* **preconnect:** Initiates an early connection handshake with the Recurly Engage
+* **preload:** Instructs the browser to fetch the script resource immediately with high priority
+
+  
+
+#### Example
+
+Replace `YOUR_TAG_URL` with your specific Recurly Engage script URL.
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 1. Resource Hints (preconnect and preload) -->
+    <link rel="preconnect" href="YOUR_TAG_URL">
+    <link rel="preload" href="YOUR_TAG_URL/redfast.js" as="script">
+    <!-- Other meta tags and stylesheets here -->
+    <!-- 2. Synchronous Recurly Engage Script (placed high in <head>) -->
+    <script src="YOUR_TAG_URL/redfast.js"></script>
+
+    <title>Your Website Title</title>
+</head>
+<body>
+    <!-- Page Content -->
+</body>
+</html>
+
+```
+
+<br />
