@@ -168,9 +168,9 @@ static onPromptInteraction(eventName, payload) {
 
 <br />
 
-## JS tag best practices
+## Implementation Best Practices
 
-Implementation strategies to ensure the Recurly Engage JavaScript snippet begins execution as quickly as possible, minimizing delay on your site as needed.
+Below are implementation strategies to ensure the Recurly Engage JavaScript snippet begins execution as quickly as possible, minimizing delay on your site as needed.
 
 ### Load type comparison
 
@@ -183,9 +183,7 @@ The choice of implementation method directly impacts the execution speed and sub
 | Minimal Latency       | Synchronous    | Fastest execution time. The script starts loading and executing immediately, minimizing delay. | Critical: Required when the Engage script must execute before or during initial page rendering (e.g., to prevent content flicker or ensure immediate availability). |
 | Standard              | Deferred/Async | Minimal impact on initial page rendering time (Time to First Paint).                           | Non-Critical: Acceptable when the Engage script can wait for the page content to load before running.                                                               |
 
-<br />
-
-### Minimal latency implementation 
+### Minimal latency implementation
 
 To achieve the fastest script execution time, we recommend a three-step approach that prioritizes immediate script loading and execution by the browser.
 
@@ -202,9 +200,8 @@ The synchronous snippet **should** be placed in the `<head>` of the HTML documen
 To further accelerate the network phase, include the following resource hints at the very top of your `<head>`:
 
 * **preconnect:** Initiates an early connection handshake with the Recurly Engage
-* **preload:** Instructs the browser to fetch the script resource immediately with high priority
 
-  
+* **preload:** Instructs the browser to fetch the script resource immediately with high priority
 
 #### Example
 
