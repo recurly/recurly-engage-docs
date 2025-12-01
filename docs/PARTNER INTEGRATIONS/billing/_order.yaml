@@ -1,4 +1,5 @@
 - recurly-integration
+- recurly-webhooks
 - amazon-1
 - apple
 - app-stores
@@ -14,5 +15,4 @@
 - zuora
 - google-rf
 - recurlyjs-ham-checkout
-- recurly-webhooks
 - ordergroove
