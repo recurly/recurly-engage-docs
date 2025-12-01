@@ -1,3 +1,4 @@
+- recurly-integration
 - amazon-1
 - apple
 - app-stores
@@ -11,7 +12,6 @@
 - stripe
 - vindicia
 - zuora
-- recurly-integration
 - google-rf
 - recurlyjs-ham-checkout
 - recurly-webhooks
