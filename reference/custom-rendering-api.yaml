@@ -1,4 +1,3 @@
----
 openapi: 3.1.0
 info:
   title: custom-rendering-api
@@ -7,7 +6,7 @@ info:
     name: MIT
     url: https://opensource.org/licenses/MIT
 servers:
-- url: https://conduit.redfast.com
+  - url: https://conduit.redfast.com
 components:
   securitySchemes:
     sec0:
@@ -15,40 +14,44 @@ components:
       in: header
       name: rf-app
 security:
-- sec0: []
+  - sec0: []
 paths:
-  "/ping":
+  /ping:
     get:
       summary: Ping
-      description: The ping call is the starting point to interacting with the Redfast
+      description: >-
+        The ping call is the starting point to interacting with the Redfast
         backend
       operationId: ping-api
       parameters:
-      - name: id
-        in: query
-        description: App ID - this may be used instead of the `rf-app` authorization
-          header
-        schema:
-          type: string
-      - name: device_type
-        in: query
-        description: Accepted values are web, roku_os, ios, tv_os, android_os (additional
-          values for custom devices may be specified). Defaults to web if not specified.
-        schema:
-          type: string
-          default: web
-      - name: user-id
-        in: header
-        description: Unique identifier for the unauthenticated user
-        schema:
-          type: string
-          default: test-user
-      - name: anonymous-user-id
-        in: header
-        description: Unique authenticated identifier for the user
-        schema:
-          type: string
-          default: anon-123
+        - name: id
+          in: query
+          description: >-
+            App ID - this may be used instead of the `rf-app` authorization
+            header
+          schema:
+            type: string
+        - name: device_type
+          in: query
+          description: >-
+            Accepted values are web, roku_os, ios, tv_os, android_os (additional
+            values for custom devices may be specified). Defaults to web if not
+            specified.
+          schema:
+            type: string
+            default: web
+        - name: user-id
+          in: header
+          description: Unique authenticated identifier for the user
+          schema:
+            type: string
+            default: test-user
+        - name: anonymous-user-id
+          in: header
+          description: Unique identifier for the unauthenticated user
+          schema:
+            type: string
+            default: anon-123
       responses:
         '200':
           description: '200'
@@ -184,7 +187,7 @@ paths:
                                 example: web
                               url_path:
                                 type: string
-                                example: "*"
+                                example: '*'
                               click_id: {}
                               inject:
                                 type: array
@@ -203,7 +206,7 @@ paths:
                           example: d201bc9f-2bd6-4ae3-a1b2-990f0e6d2203
                         id:
                           type: string
-                          example: '0493d247-c1b2-40e4-8682-819825cbb822'
+                          example: 0493d247-c1b2-40e4-8682-819825cbb822
                         actions:
                           type: object
                           properties:
@@ -212,8 +215,10 @@ paths:
                               example: Movies without limits
                             rf_retention_message:
                               type: string
-                              example: Download New Episodes. Brand new full length
-                                episodes you can watch while offline. Free for 1 month.
+                              example: >-
+                                Download New Episodes. Brand new full length
+                                episodes you can watch while offline. Free for 1
+                                month.
                             rf_settings_bg_image_web_desktop_preview_dims:
                               type: string
                               example: 960x300
@@ -255,51 +260,54 @@ paths:
                         type: array
                   anonymous_user_id:
                     type: string
-                    example: 92276d8c7723448f219ae70fda3a29cc1b6eccd4d36b985f9d533ef3f21125f4
+                    example: >-
+                      92276d8c7723448f219ae70fda3a29cc1b6eccd4d36b985f9d533ef3f21125f4
                   visitor_id:
                     type: string
                     example: test123
       deprecated: false
-  "/paths/{path_id}/impression":
+  /paths/{path_id}/impression:
     get:
       summary: Impression API
       description: ''
       operationId: impression-api
       parameters:
-      - name: user-id
-        in: header
-        description: Unique identifier for the unauthenticated user
-        schema:
-          type: string
-          default: test-user
-      - name: anonymous-user-id
-        in: header
-        description: Unique authenticated identifier for the user
-        schema:
-          type: string
-          default: anon-123
-      - name: device_type
-        in: query
-        description: Accepted values are web, roku_os, ios, tv_os, android_os (additional
-          values for custom devices may be specified). Defaults to web if not specified.
-        schema:
-          type: string
-      - name: action_group_id
-        in: query
-        description: Value from Path object returned from Ping API
-        schema:
-          type: string
-      - name: trigger_id
-        in: query
-        description: "(optional) ID of the trigger utilized to invoke the impression"
-        schema:
-          type: string
-      - name: path_id
-        in: path
-        description: ID from Path object returned from Ping API
-        schema:
-          type: string
-        required: true
+        - name: user-id
+          in: header
+          description: Unique identifier for the unauthenticated user
+          schema:
+            type: string
+            default: test-user
+        - name: anonymous-user-id
+          in: header
+          description: Unique authenticated identifier for the user
+          schema:
+            type: string
+            default: anon-123
+        - name: device_type
+          in: query
+          description: >-
+            Accepted values are web, roku_os, ios, tv_os, android_os (additional
+            values for custom devices may be specified). Defaults to web if not
+            specified.
+          schema:
+            type: string
+        - name: action_group_id
+          in: query
+          description: Value from Path object returned from Ping API
+          schema:
+            type: string
+        - name: trigger_id
+          in: query
+          description: (optional) ID of the trigger utilized to invoke the impression
+          schema:
+            type: string
+        - name: path_id
+          in: path
+          description: ID from Path object returned from Ping API
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           description: '200'
@@ -328,44 +336,46 @@ paths:
                         default: 0
       deprecated: false
       security: []
-  "/paths/{path_id}/dismiss":
+  /paths/{path_id}/dismiss:
     get:
       summary: Dismiss API
       description: ''
       operationId: dismiss-api
       parameters:
-      - name: path_id
-        in: path
-        description: ID from Path object returned from Ping API
-        schema:
-          type: string
-        required: true
-      - name: click
-        in: query
-        description: Accepted values are dismiss, timeout, decline
-        schema:
-          type: string
-      - name: device_type
-        in: query
-        description: Accepted values are web, roku_os, ios, tv_os, android_os (additional
-          values for custom devices may be specified). Defaults to web if not specified.
-        schema:
-          type: string
-      - name: action_group_id
-        in: query
-        description: Value from Path object returned from Ping API
-        schema:
-          type: string
-      - name: user-id
-        in: header
-        description: Unique identifier for the unauthenticated user
-        schema:
-          type: string
-      - name: anonymous-user-id
-        in: header
-        description: Unique authenticated identifier for the user
-        schema:
-          type: string
+        - name: path_id
+          in: path
+          description: ID from Path object returned from Ping API
+          schema:
+            type: string
+          required: true
+        - name: click
+          in: query
+          description: Accepted values are dismiss, timeout, decline
+          schema:
+            type: string
+        - name: device_type
+          in: query
+          description: >-
+            Accepted values are web, roku_os, ios, tv_os, android_os (additional
+            values for custom devices may be specified). Defaults to web if not
+            specified.
+          schema:
+            type: string
+        - name: action_group_id
+          in: query
+          description: Value from Path object returned from Ping API
+          schema:
+            type: string
+        - name: user-id
+          in: header
+          description: Unique identifier for the unauthenticated user
+          schema:
+            type: string
+        - name: anonymous-user-id
+          in: header
+          description: Unique authenticated identifier for the user
+          schema:
+            type: string
       responses:
         '200':
           description: '200'
@@ -394,45 +404,48 @@ paths:
                         default: 0
       deprecated: false
       security: []
-  "/paths/{path_id}/goal":
+  /paths/{path_id}/goal:
     get:
       summary: Goal API
       description: ''
       operationId: goal-api
       parameters:
-      - name: user-id
-        in: header
-        description: Unique identifier for the unauthenticated user
-        schema:
-          type: string
-      - name: anonymous-user-id
-        in: header
-        description: Unique authenticated identifier for the user
-        schema:
-          type: string
-      - name: device_type
-        in: query
-        description: Accepted values are web, roku_os, ios, tv_os, android_os (additional
-          values for custom devices may be specified). Defaults to web if not specified.
-        schema:
-          type: string
-      - name: action_group_id
-        in: query
-        description: Value from Path object returned from Ping API
-        schema:
-          type: string
-      - name: accept_type
-        in: query
-        description: "(optional) Should be set to accept2 if the user clicks on the
-          secondary button"
-        schema:
-          type: string
-      - name: path_id
-        in: path
-        description: ID from Path object returned from Ping API
-        schema:
-          type: string
-        required: true
+        - name: user-id
+          in: header
+          description: Unique identifier for the unauthenticated user
+          schema:
+            type: string
+        - name: anonymous-user-id
+          in: header
+          description: Unique authenticated identifier for the user
+          schema:
+            type: string
+        - name: device_type
+          in: query
+          description: >-
+            Accepted values are web, roku_os, ios, tv_os, android_os (additional
+            values for custom devices may be specified). Defaults to web if not
+            specified.
+          schema:
+            type: string
+        - name: action_group_id
+          in: query
+          description: Value from Path object returned from Ping API
+          schema:
+            type: string
+        - name: accept_type
+          in: query
+          description: >-
+            (optional) Should be set to accept2 if the user clicks on the
+            secondary button
+          schema:
+            type: string
+        - name: path_id
+          in: path
+          description: ID from Path object returned from Ping API
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           description: '200'
@@ -461,39 +474,41 @@ paths:
                         default: 0
       deprecated: false
       security: []
-  "/paths/{path_id}/holdout":
+  /paths/{path_id}/holdout:
     get:
       summary: Holdout API
       description: ''
       operationId: holdout-api
       parameters:
-      - name: path_id
-        in: path
-        description: ID from Path object returned from Ping API
-        schema:
-          type: string
-        required: true
-      - name: device_type
-        in: query
-        description: Accepted values are web, roku_os, ios, tv_os, android_os (additional
-          values for custom devices may be specified). Defaults to web if not specified.
-        schema:
-          type: string
-      - name: action_group_id
-        in: query
-        description: Value from Path object returned from Ping API
-        schema:
-          type: string
-      - name: user-id
-        in: header
-        description: Unique identifier for the unauthenticated user
-        schema:
-          type: string
-      - name: anonymous-user-id
-        in: header
-        description: Unique authenticated identifier for the user
-        schema:
-          type: string
+        - name: path_id
+          in: path
+          description: ID from Path object returned from Ping API
+          schema:
+            type: string
+          required: true
+        - name: device_type
+          in: query
+          description: >-
+            Accepted values are web, roku_os, ios, tv_os, android_os (additional
+            values for custom devices may be specified). Defaults to web if not
+            specified.
+          schema:
+            type: string
+        - name: action_group_id
+          in: query
+          description: Value from Path object returned from Ping API
+          schema:
+            type: string
+        - name: user-id
+          in: header
+          description: Unique identifier for the unauthenticated user
+          schema:
+            type: string
+        - name: anonymous-user-id
+          in: header
+          description: Unique authenticated identifier for the user
+          schema:
+            type: string
       responses:
         '200':
           description: '200'
@@ -522,49 +537,53 @@ paths:
                         default: 0
       deprecated: false
       security: []
-  "/ping?type=custom":
+  /ping?type=custom:
     get:
       summary: Usage Tracker API
       description: ''
       operationId: usage-tracker-api
       parameters:
-      - name: id
-        in: query
-        description: App ID - this may be used instead of the `rf-app` authorization
-          header
-        schema:
-          type: string
-      - name: device_type
-        in: query
-        description: Accepted values are web, roku_os, ios, tv_os, android_os (additional
-          values for custom devices may be specified). Defaults to web if not specified.
-        schema:
-          type: string
-          default: web
-      - name: user-id
-        in: header
-        description: Unique identifier for the unauthenticated user
-        schema:
-          type: string
-          default: test-user
-      - name: anonymous-user-id
-        in: header
-        description: Unique authenticated identifier for the user
-        schema:
-          type: string
-          default: anon-123
-      - name: type
-        in: query
-        description: Set to `custom`
-        schema:
-          type: string
-          default: custom
-      - name: custom_field_id
-        in: query
-        description: Set to the value of the custom tracker that has been created
-          within Pulse
-        schema:
-          type: string
+        - name: id
+          in: query
+          description: >-
+            App ID - this may be used instead of the `rf-app` authorization
+            header
+          schema:
+            type: string
+        - name: device_type
+          in: query
+          description: >-
+            Accepted values are web, roku_os, ios, tv_os, android_os (additional
+            values for custom devices may be specified). Defaults to web if not
+            specified.
+          schema:
+            type: string
+            default: web
+        - name: user-id
+          in: header
+          description: Unique identifier for the unauthenticated user
+          schema:
+            type: string
+            default: test-user
+        - name: anonymous-user-id
+          in: header
+          description: Unique authenticated identifier for the user
+          schema:
+            type: string
+            default: anon-123
+        - name: type
+          in: query
+          description: Set to `custom`
+          schema:
+            type: string
+            default: custom
+        - name: custom_field_id
+          in: query
+          description: >-
+            Set to the value of the custom tracker that has been created within
+            Pulse
+          schema:
+            type: string
       responses:
         '200':
           description: '200'
@@ -700,7 +719,7 @@ paths:
                                 example: web
                               url_path:
                                 type: string
-                                example: "*"
+                                example: '*'
                               click_id: {}
                               inject:
                                 type: array
@@ -719,7 +738,7 @@ paths:
                           example: d201bc9f-2bd6-4ae3-a1b2-990f0e6d2203
                         id:
                           type: string
-                          example: '0493d247-c1b2-40e4-8682-819825cbb822'
+                          example: 0493d247-c1b2-40e4-8682-819825cbb822
                         actions:
                           type: object
                           properties:
@@ -728,8 +747,10 @@ paths:
                               example: Movies without limits
                             rf_retention_message:
                               type: string
-                              example: Download New Episodes. Brand new full length
-                                episodes you can watch while offline. Free for 1 month.
+                              example: >-
+                                Download New Episodes. Brand new full length
+                                episodes you can watch while offline. Free for 1
+                                month.
                             rf_settings_bg_image_web_desktop_preview_dims:
                               type: string
                               example: 960x300
@@ -771,45 +792,49 @@ paths:
                         type: array
                   anonymous_user_id:
                     type: string
-                    example: 92276d8c7723448f219ae70fda3a29cc1b6eccd4d36b985f9d533ef3f21125f4
+                    example: >-
+                      92276d8c7723448f219ae70fda3a29cc1b6eccd4d36b985f9d533ef3f21125f4
                   visitor_id:
                     type: string
                     example: test123
       deprecated: false
-  "/paths/goal_reset_all":
+  /paths/goal_reset_all:
     get:
       summary: Reset API
       description: ''
       operationId: reset-api
       parameters:
-      - name: id
-        in: query
-        description: App ID
-        schema:
-          type: string
-      - name: device_type
-        in: query
-        description: Accepted values are web, roku_os, ios, tv_os, android_os (additional
-          values for custom devices may be specified). Defaults to web if not specified.
-        schema:
-          type: string
-      - name: client_reset_complete
-        in: query
-        description: Should default to `true`. Client should also clear any cached
-          states of previous prompts.
-        schema:
-          type: string
-          default: 'true'
-      - name: user-id
-        in: header
-        description: Unique identifier for the unauthenticated user
-        schema:
-          type: string
-      - name: anonymous-user-id
-        in: header
-        description: Unique authenticated identifier for the user
-        schema:
-          type: string
+        - name: id
+          in: query
+          description: App ID
+          schema:
+            type: string
+        - name: device_type
+          in: query
+          description: >-
+            Accepted values are web, roku_os, ios, tv_os, android_os (additional
+            values for custom devices may be specified). Defaults to web if not
+            specified.
+          schema:
+            type: string
+        - name: client_reset_complete
+          in: query
+          description: >-
+            Should default to `true`. Client should also clear any cached states
+            of previous prompts.
+          schema:
+            type: string
+            default: 'true'
+        - name: user-id
+          in: header
+          description: Unique identifier for the unauthenticated user
+          schema:
+            type: string
+        - name: anonymous-user-id
+          in: header
+          description: Unique authenticated identifier for the user
+          schema:
+            type: string
       responses:
         '200':
           description: '200'
