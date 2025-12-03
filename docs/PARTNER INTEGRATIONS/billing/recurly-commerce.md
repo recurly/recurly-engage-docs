@@ -5,7 +5,7 @@ excerpt: >-
   real-time, one-click actions (like pausing or applying discounts) within
   Engage prompts for active subscriptions.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
