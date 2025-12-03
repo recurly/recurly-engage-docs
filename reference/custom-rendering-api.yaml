@@ -827,12 +827,12 @@ paths:
             default: 'true'
         - name: user-id
           in: header
-          description: Unique identifier for the unauthenticated user
+          description: Unique authenticated identifier for the user
           schema:
             type: string
         - name: anonymous-user-id
           in: header
-          description: Unique authenticated identifier for the user
+          description: Unique identifier for the unauthenticated user
           schema:
             type: string
       responses:
