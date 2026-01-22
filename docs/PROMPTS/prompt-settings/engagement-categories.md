@@ -30,3 +30,23 @@ When configuring a new prompt, you will see a required dropdown menu labeled **P
 * **Engagement:** General interaction and usage promotion.
 
 _Note: Default generated guides and prompts have these categories automatically attributed._
+
+## Step 2: Updating existing prompts & guides
+
+For prompts and guides created prior to this update, assigning an engagement category is optional. You are not required to go back and tag your entire library immediately.
+
+However, to ensure your reporting data is as accurate as possible, you can manually assign categories to existing content at any time:
+
+* Navigate to the Detail Screen of the specific prompt or guide.
+* Select the appropriate engagement  category from the dropdown menu.
+* Save your changes to begin tracking that item’s intent in your success rate metrics.
+
+## Step 3: Behavior with guides
+
+If a prompt is associated with a Guide, the categorization logic follows strict inheritance rules to ensure consistency:
+
+* **Adding to a Guide:** If you add a prompt to a Guide, the prompt will automatically inherit the Guide's category, overriding any previous selection.
+* **Inherited Status:** While a prompt is part of a Guide, its category is inherited and cannot be manually changed. It must match the Guide.
+* **Removing from a Guide:** If a prompt is removed from a Guide, it retains the category it inherited from that Guide. You can then manually update it if necessary.
+
+<br />
