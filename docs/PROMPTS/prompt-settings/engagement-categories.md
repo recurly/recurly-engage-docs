@@ -14,8 +14,8 @@ The Prompt Classification system allows you to explicitly define the intended us
 
 # Key benefits
 
-* **Accurate Success Rate Tracking:** By classifying prompts at the configuration stage, we can calculate the "Prompt Success Rate" for specific types of campaigns (e.g., Acquisition vs. Upgrade). This eliminates the data gap where only successful revenue-generating prompts were categorized.
-* **Enhanced Revenue Analysis**: Defining the prompt’s intent allows for more precise Recovered Revenue analysis. Business Intelligence teams can better attribute revenue to specific strategies, providing a clearer picture of ROI for sales and strategy conversations.
+* **Accurate success rate tracking:** By classifying prompts at the configuration stage, we can calculate the "Prompt Success Rate" for specific types of campaigns (e.g., Acquisition vs. Upgrade). This eliminates the data gap where only successful revenue-generating prompts were categorized.
+* **Enhanced revenue analysis**: Defining the prompt’s intent allows for more precise Recovered Revenue analysis. Business Intelligence teams can better attribute revenue to specific strategies, providing a clearer picture of ROI for sales and strategy conversations.
 
 # Key steps
 
@@ -45,8 +45,8 @@ However, to ensure your reporting data is as accurate as possible, you can manua
 
 If a prompt is associated with a Guide, the categorization logic follows strict inheritance rules to ensure consistency:
 
-* **Adding to a Guide:** If you add a prompt to a Guide, the prompt will automatically inherit the Guide's category, overriding any previous selection.
-* **Inherited Status:** While a prompt is part of a Guide, its category is inherited and cannot be manually changed. It must match the Guide.
-* **Removing from a Guide:** If a prompt is removed from a Guide, it retains the category it inherited from that Guide. You can then manually update it if necessary.
+* **Adding to a guide:** If you add a prompt to a Guide, the prompt will automatically inherit the Guide's category, overriding any previous selection.
+* **Inherited status:** While a prompt is part of a Guide, its category is inherited and cannot be manually changed. It must match the Guide.
+* **Removing from a guide:** If a prompt is removed from a Guide, it retains the category it inherited from that Guide. You can then manually update it if necessary.
 
 <br />
