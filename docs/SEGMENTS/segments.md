@@ -58,12 +58,20 @@ A **segment** uses trait filters—built-in usage, device, location, or imported
 
 * **Built-in traits**: Usage metrics (visits, minutes), device type, location, prompt interactions.
 * **Custom traits**: Import via AWS S3, CSV upload in Pulse, or real-time event data from your application.
+* **Complex Collections**: Such as a user having multiple active or expired subscriptions.
 
 ## Common segment examples
 
 * Monthly plan members with declining visits.
 * Trial users.
 * Users with failed payments.
+
+## Advanced filtering logic
+
+* **Multi-Value Support**: You can now add multiple rows for the same custom trait within a single segment. For example, you can set a filter to include "Renewal Start Date" greater than 30 days AND exclude "Renewal Start Date" greater than 60 days.
+* **Within a single "Subscription" collection**: Currently, filters within the subscription object function independently. A user qualifies if they have any subscription matching criterion A and any subscription matching criterion B (they do not necessarily have to be the same subscription).
+
+<Image align="center" border={false} src="https://files.readme.io/3d0176cb8376d1f61829a3d2bf950e182dac28a7f2651906a5ec6995d624027c-segments.png" />
 
 ## Usage-based segments
 
@@ -87,6 +95,11 @@ Below is an example for creating a segment of **Engaged, US-based iOS Premium pl
 
      > **Note:** “Custom” covers any traits you’ve imported—learn more about importing custom traits [here](user-traits).
    * **Not redeemed iOS prompt**: Select **Interactions → User has not → accepted (primary) → [iOS popup]**. Choose your created prompt from the dropdown.
+   * **Add complex subscription traits:** 
+     * Select Subscriptions from the trait dropdown.
+     * Sub-attribute: Choose a dimension.
+     * Match Type: Set your criteria.
+     * Note: You can add multiple sub-attributes to further refine the collection.
 4. **Click** **Save** to create the segment.
 5. **Toggle** **Enable** to activate the segment and begin real-time monitoring.
 
