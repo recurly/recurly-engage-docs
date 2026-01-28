@@ -15,7 +15,7 @@ The Prompt Classification system allows you to explicitly define the intended us
 # Key benefits
 
 * **Accurate success rate tracking:** By classifying prompts at the configuration stage, we can calculate the "Prompt Success Rate" for specific types of campaigns (e.g., Acquisition vs. Upgrade). This eliminates the data gap where only successful revenue-generating prompts were categorized.
-* **Enhanced revenue analysis**: Defining the prompt’s intent allows for more precise Recovered Revenue analysis. Business Intelligence teams can better attribute revenue to specific strategies, providing a clearer picture of ROI for sales and strategy conversations.
+* **Enhanced revenue analysis**: Defining the prompt’s intent allows for more precise Recovered Revenue analysis for RSM merchants. Business Intelligence teams can better attribute revenue to specific strategies, providing a clearer picture of ROI for sales and strategy conversations.
 
 # Key steps
 
