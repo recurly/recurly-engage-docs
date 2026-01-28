@@ -14,7 +14,7 @@ next:
 ---
 # Overview
 
-Recurly Engage is an always-on, low-code platform that empowers business teams to deliver targeted in-app and web prompts, guides, and notifications—driving user actions they might not otherwise take. Use cases range from trial-to-paid conversions and feature adoption to churn prevention and cross-sell campaigns. Explore our [Popular Use Cases](popular-uses).
+Recurly Engage is an always-on, low-code platform that empowers business teams to deliver targeted in-app and web prompts, guides, and notifications—driving user actions they might not otherwise take. Use cases range from trial-to-paid conversions and feature adoption to churn prevention and cross-sell campaigns. Explore our [Popular Use Cases](popular-uses)
 
 # Key benefits
 
@@ -60,7 +60,7 @@ Leverage these integrations to sync user data, trigger 1‑click actions, and re
 
 Ready to uplevel your subscriber lifecycle engagement? Reach out to [support@recurly.com](mailto:support@recurly.com) for detailed pricing. Our team of experts will evaluate your specific use cases and see if the Recurly Engage platform is a fit. Harness the power of our Standalone features to unlock acquisition, engagement, retention, upsells, cross sells and more for your entire subscriber base.
 
-## Security and compliance 
+## Security and compliance
 
 The Recurly Engage management console, Pulse, is HIPAA Compliant. In order to be compliant with regulations and standards such as PCI-DSS and HIPAA, we strongly suggest not including any sensitive information (e.g., protected health information, credit card numbers) in any forms or templates processed by Recurly Engage.
 
