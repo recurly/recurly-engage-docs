@@ -9,7 +9,7 @@ metadata:
 
 The Recurly Engage Dynamic Paywall & hardwall prompt types are specifically designed for publishers and content providers seeking to manage and monetize access to their digital assets. This solution effectively controls reader access, encouraging user sign-ups and subscriptions.
 
-The solution allows a user to view a limited number of complimentary articles or paragraphs before requiring paid access. The content is typically visually obscured and interaction-blocked by an intrusive prompt that prevents scrolling past the designated limit.  
+The solution allows a user to view a limited number of complimentary articles or paragraphs before requiring paid access. The content is typically visually obscured and interaction-blocked by an intrusive prompt that prevents scrolling past the designated limit.
 
 # Key benefits
 
@@ -29,7 +29,9 @@ The solution allows a user to view a limited number of complimentary articles or
   * Fill out the required fields for Name, Label, Description. Select the Page tracker type, enter the relevant url path. Adding an * after the last backslash will enable tracking for any url path after the entered input.
 * Check the “Use as paywall tracker” select button.
 
-## Step 2: Create a zone  
+<Image align="center" border={false} src="https://files.readme.io/561bbcb28f9202306e6c0e2a1b687e67798a766f508e25df00b1b35c85fd0681-paywall_tracker.png" />
+
+## Step 2: Create a zone
 
 You will need to create a zone to define where the content is getting blocked, and where the prompt will appear.
 
@@ -56,3 +58,5 @@ You will need to create a zone to define where the content is getting blocked, a
 * Apply to elements: The types of elements on your page that will be targeted for hiding or removal.
 * Elements to allow: How many paragraphs or pieces of content the user is allowed to read before the paywall blocks the rest.
 * Save and Activate Once your limits are set and your copy is finalized, save your prompt to apply the paywall logic to your site.
+
+<Image align="center" border={false} src="https://files.readme.io/302f616bd65719d846476778ae5d4ab3ee543349ef49b89b1755c179c7bf2b8a-paywall_config.png" />
