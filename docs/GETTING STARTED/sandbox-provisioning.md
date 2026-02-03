@@ -23,4 +23,5 @@ The new Sandbox ensures that all configuration, testing, and integration are don
 2. **Sandbox Provisioning:** **Get** your free Recurly Engage sandbox through one of two integrated pathways:
    1. **Navigate** directly to Integrations > Recurly Engage to access the self-serve provisioning page.
    2. **Open** the Recurly Compass chatbot and request to "set up an Engage sandbox."
-3. **Guided Setup:** **Follow** the Onboarding Wizard to configure your first use case (e.g., involuntary churn), install the required JavaScript tag, and launch a test campaign in your secure sandbox.
+3. **Account Activation & Team Access:** Check your inbox for an automated email from Recurly Engage. Click the login link provided to activate your sandbox. Once logged in, navigate to Settings > Users to invite additional team members to the environment.
+4. Enjoy your Recurly Engage Sandbox!
