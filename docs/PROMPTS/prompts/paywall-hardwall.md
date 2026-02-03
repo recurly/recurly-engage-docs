@@ -1,5 +1,8 @@
 ---
 title: Paywall & hardwall
+excerpt: >-
+  Set up an Engage dynamic paywall to limit free content and convert readers
+  into subscribers.
 deprecated: false
 hidden: false
 metadata:
