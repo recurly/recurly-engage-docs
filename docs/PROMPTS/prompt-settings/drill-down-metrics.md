@@ -19,7 +19,7 @@ By implementing granular tracking, you can now view how specific audience subset
 
 * **Multi-Dimensional Insights:** Gain a holistic view of how different user groups engage with the same prompt.
 * **Optimized Localization Tracking:** Instead of running separate prompts for every region, use a single localized prompt and filter performance by specific languages (e.g., distinguishing between EN-GB and EN-US).
-* **Targeted Performance Visibility: **Attribute interactions to specific segments, allowing you to see how "Premium Subscribers" vs. "Trial Users" respond to the same call-to-action.
+* **Targeted Performance Visibility:** Attribute interactions to specific segments, allowing you to see how "Premium Subscribers" vs. "Trial Users" respond to the same call-to-action.
 * **Device-Specific Analysis:** Understand engagement patterns across different platforms, including Phone, Tablet, and TV.
 * **Operational Efficiency:** Reduce dashboard clutter by consolidating regional campaigns into single, multi-segment prompts while maintaining full reporting granularity.
 
