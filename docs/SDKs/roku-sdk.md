@@ -88,8 +88,6 @@ m.promoMgr.callFunc("setAnonymousUserId", {userId: "[new anon user id]"})
 
 ## Supported prompt types
 
-<br />
-
 | Prompt type   | Enum value |
 | :------------ | :--------- |
 | Modal         | 2          |
