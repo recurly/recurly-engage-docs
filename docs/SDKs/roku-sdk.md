@@ -86,6 +86,18 @@ The anonymousUserId may be updated after the SDK has been initialized. If not se
 m.promoMgr.callFunc("setAnonymousUserId", {userId: "[new anon user id]"})
 ```
 
+## Supported prompt types
+
+<br />
+
+| Prompt type   | Enum value |
+| :------------ | :--------- |
+| Modal         | 2          |
+| Horizontal    | 5          |
+| Video         | 6          |
+| Interstitial  | 10         |
+| Bottom banner | 13         |
+
 ## Trigger modal via screen name
 
 You may utilize the Redfast SDK to display a modal on a specified screen. If the prompt also requires a button click, the trigger will not occur until the associated `onButtonClicked` function is called.
