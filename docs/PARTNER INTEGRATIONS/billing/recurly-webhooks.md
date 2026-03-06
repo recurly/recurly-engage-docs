@@ -39,7 +39,7 @@ You will need the following credentials for authentication:
 * **Username:** Your Application ID (APP_ID), which is the UUID found in the Ingestion Endpoint URL.
 * **Password:** Your Application API Key, accessible in the Pulse system under Settings → Application.
 
-<Image align="center" border={false} src="https://files.readme.io/a706f0863987825de8a1601eaceaf60f424d87555296f3ee3690a918d9ccc086-Screenshot_2025-10-03_at_11.21.59_AM.png" />
+<Image align="center" src="https://files.readme.io/a706f0863987825de8a1601eaceaf60f424d87555296f3ee3690a918d9ccc086-Screenshot_2025-10-03_at_11.21.59_AM.png" />
 
 ## Step 2: Configure the Recurly webhooks endpoint
 
@@ -60,8 +60,9 @@ Ensure the endpoint's payload format **is set to JSON.**
    4. `subscription.renewed`
    5. `subscription.paused`
    6. `subscription.resumed`
-   7. `charge_invoice.paid`
-   8. `charge_invoice.past_due`
+   7. `subscription.expired`
+   8. `charge_invoice.paid`
+   9. `charge_invoice.past_due`
 
 ## Step 3: Enabling Recurly events as custom goals
 
@@ -81,4 +82,4 @@ If you wish to implement additional Recurly events as custom goals beyond the de
 1. Navigate to Settings > Usage Tracking > **+Add New Tracker**
 2. Create a new Custom Tracker by adding the name, label (be sure to match the Recurly Webhook Payload), and description of the tracker. Ensure the tracker type is set to "Custom"
 
-<Image align="center" border={false} src="https://files.readme.io/c0a9d08cc7a0f407ce69c81b6426b05956a2fd8d6485bc1398aab980c28564c6-Screenshot_2025-10-16_at_9.45.37_AM.png" />
+<Image align="center" src="https://files.readme.io/c0a9d08cc7a0f407ce69c81b6426b05956a2fd8d6485bc1398aab980c28564c6-Screenshot_2025-10-16_at_9.45.37_AM.png" />
