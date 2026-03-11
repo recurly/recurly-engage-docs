@@ -40,15 +40,21 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 # Definition
 
-By routing Segment events through an AWS Lambda function, Recurly Engage ingests those events as custom usage traits (e.g., page views, button clicks), enabling you to target prompts based on real user behavior tracked in Segment.
+By setting up an integration to Segment Unify or by routing Segment events to an AWS Lambda Destination, Recurly Engage syncs each user's traits as they arrive on you site, enabling you to target prompts based on all profile data available within your Segment account.
 
 # Key benefits
 
 * **No additional instrumentation**: Leverage your existing Segment calls—no new SDKs or code changes required.
 * **Real-time targeting**: Segment events can be available in Recurly Engage within minutes for immediate prompt personalization.
-* **Flexible event mapping**: Track any Page, Screen, or custom Track call as a usage trait without rebuilding your analytics stack.
+* **Flexible trait mapping**: Sync any profile trait without rebuilding your analytics stack.
 
 # Key details
+
+## Setup Segment Unify Sync
+
+If you utilize Segment Unify (formerly known as Profiles), Recurly Engage can automatically sync traits when a user starts a new session on your site or app. Make sure to configure the **Unify Access Token** and **Unify Space ID** within the Pulse Settings > Integrations > Segment modal and reach out to support to activate this functionality.
+
+Newly synced traits will appear on the Settings > User Traits screen 5-10 minutes after syncing has commenced.
 
 ## Setup Amazon Lambda Destination
 
@@ -88,32 +94,4 @@ Recurly Engage allows you to ingest Segment.com events and target your users acc
 
 > **Note:** Segment data can take up to one hour before it appears in Recurly Engage.
 
-## Setup Segment Unify Sync
-
-If you utilize Segment Unify (formerly known as Profiles), Recurly Engage can automatically sync traits when a user starts a new session on your site or app. Make sure to configure the **Unify Access Token** and **Unify Space ID** within the Pulse Settings > Integrations > Segment modal and reach out to support to activate this functionality.
-
-Newly synced traits will appear on the Settings > User Traits screen 5-10 minutes after syncing has commenced.
-
-## Adding a new tracker
-
-1. **Go** to **Settings > Usage Tracking > Segment > Add New Tracker**.
-
-   <Image align="center" border={true} width="80% " src="https://files.readme.io/47e233c-Segment_configure_9.png" className="border" />
-
-2. **Select** a Segment event.
-
-   <Image align="center" border={true} width="80% " src="https://files.readme.io/0caf0ba-Segment_configure_10.png" className="border" />
-
-3. **Click** **Submit**.
-
-   <Image align="center" border={true} width="80% " src="https://files.readme.io/8c96b24-Segment_Configure_11.png" className="border" />
-
-   <Image align="center" border={true} width="80% " src="https://files.readme.io/f74c2d1-Segment_Configure_12.png" className="border" />
-
-4. **Go** to **Segments > New Segment** and **choose** the **Usage** tab.
-
-   <Image align="center" border={true} width="80% " src="https://files.readme.io/8ec2610-Segment_Configure_13.png" className="border" />
-
-5. Under **Usage**, **select** your newly ingested Segment trait to target prompts based on those events.
-
-   <Image align="center" border={true} width="80% " src="https://files.readme.io/0af69fd-Redfast_usage_4.png" className="border" />
+<br />
