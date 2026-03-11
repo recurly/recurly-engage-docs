@@ -92,6 +92,8 @@ Recurly Engage allows you to ingest Segment.com events and target your users acc
 
 If you utilize Segment Unify (formerly known as Profiles), Recurly Engage can automatically sync traits when a user starts a new session on your site or app. Make sure to configure the **Unify Access Token** and **Unify Space ID** within the Pulse Settings > Integrations > Segment modal and reach out to support to activate this functionality.
 
+Newly synced traits will appear on the Settings > User Traits screen 5-10 minutes after syncing has commenced.
+
 ## Adding a new tracker
 
 1. **Go** to **Settings > Usage Tracking > Segment > Add New Tracker**.
