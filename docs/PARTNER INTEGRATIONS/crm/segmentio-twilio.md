@@ -52,7 +52,7 @@ By setting up an integration to Segment Unify or by routing Segment events to an
 
 ## Setup Segment Unify Sync
 
-If you utilize Segment Unify (formerly known as Profiles), Recurly Engage can automatically sync traits when a user starts a new session on your site or app. 
+If you utilize Segment Unify (formerly known as Profiles), Recurly Engage can automatically sync traits when a user starts a new session on your site or app.
 
 Within your Segment console:
 
@@ -68,7 +68,9 @@ Newly synced traits will appear on the Settings > User Traits screen 5-10 minute
 
 ## Setup Amazon Lambda Destination
 
-Recurly Engage allows you to ingest Segment.com events and target your users according to your existing Page (web), Screen (mobile), and Track calls. This article explains how to add us as a destination via Amazon Lambda.
+As an alternative to integrating with Segment Unify, you may setup an Amazon Lambda destination for events processed by Segment. "Identify" events will trigger a real-time sync of the associated user traits to Recurly Engage.
+
+Setup instructions:
 
 1. **Login** to Segment.
 
@@ -102,6 +104,6 @@ Recurly Engage allows you to ingest Segment.com events and target your users acc
 
    <Image align="center" border={true} width="80% " src="https://files.readme.io/a6f4a75-Segment_Configure_8.png" className="border" />
 
-> **Note:** Segment data can take up to one hour before it appears in Recurly Engage.
+> **Note:** New traits may take up to 10 minutes before they appear in Recurly Engage.
 
 <br />
