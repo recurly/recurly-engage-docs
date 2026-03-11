@@ -71,7 +71,7 @@ static onPromptInteraction(eventName, payload) {
 }
 ```
 
-Google Analytics (GA4) Example:
+### Google Analytics (GA4) Example:
 
 ```javascript
 static onPromptInteraction(eventName, payload) {
@@ -119,7 +119,7 @@ static onPromptInteraction(eventName, payload) {
 
 ```
 
-**Segment example:**
+### **Segment example:**
 
 ```javascript
 static onPromptInteraction(eventName, payload) {
