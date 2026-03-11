@@ -1,10 +1,10 @@
 ---
-title: Copy of Segment
+title: Segment (archive)
 excerpt: >-
   Configuration guide for ingesting Segment.com events into Recurly Engage via
   AWS Lambda or via the Segment Unify
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
