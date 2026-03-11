@@ -52,7 +52,17 @@ By setting up an integration to Segment Unify or by routing Segment events to an
 
 ## Setup Segment Unify Sync
 
-If you utilize Segment Unify (formerly known as Profiles), Recurly Engage can automatically sync traits when a user starts a new session on your site or app. Make sure to configure the **Unify Access Token** and **Unify Space ID** within the Pulse Settings > Integrations > Segment modal and reach out to support to activate this functionality.
+If you utilize Segment Unify (formerly known as Profiles), Recurly Engage can automatically sync traits when a user starts a new session on your site or app. 
+
+Within your Segment console:
+
+1. Click on the **Unify** tab in the left nav
+2. Select the space that should be synced (i.e. production or staging)
+3. Click on **Unify Settings** in the subnav
+4. Select **API Access**
+5. Note the **Space ID**
+6. If an access token has not yet been created, click on **Generate Token** and assign a name (i.e. Recurly Engage Token). Save the token as it will be displayed only once
+7. Copy over the  **Unify Access Token** and **Unify Space ID** within the Pulse Settings > Integrations > Segment modal and reach out to your CSM to activate this functionality.
 
 Newly synced traits will appear on the Settings > User Traits screen 5-10 minutes after syncing has commenced.
 
