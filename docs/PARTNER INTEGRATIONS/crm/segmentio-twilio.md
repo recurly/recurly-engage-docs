@@ -40,7 +40,7 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 # Definition
 
-By setting up an integration to Segment Unify or by routing Segment events to an AWS Lambda Destination, Recurly Engage syncs each user's traits as they arrive on you site, enabling you to target prompts based on all profile data available within your Segment account.
+By setting up an integration to Segment Unify or by routing Segment events to an AWS Lambda Destination, Recurly Engage syncs each user's traits as they arrive on your site, enabling you to target prompts based on all profile data available within your Segment account.
 
 # Key benefits
 
