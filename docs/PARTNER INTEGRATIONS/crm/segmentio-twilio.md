@@ -1,8 +1,8 @@
 ---
 title: Segment
 excerpt: >-
-  Configuration guide for ingesting Segment.com events into Recurly Engage via
-  AWS Lambda or via the Segment Unify
+  Configuration guide for syncing Segment traits into Recurly Engage via Segment
+  Unify or Amazon Lambda
 deprecated: false
 hidden: false
 metadata:
