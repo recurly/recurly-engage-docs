@@ -77,7 +77,7 @@ To enable tracking for these custom goals: Ensure that you have subscribed to th
 
 ### Advanced usage and custom goals
 
-If you wish to implement additional Recurly events as custom goals beyond the default two, you will need to create useage trackers within Engage with the proper label attributes. These labels must match the Recurly webhook payload using the convention `object_type.event_type`. Learn more about <a href="https://docs.recurly.com/recurly-engage/docs/usage-tracking-1#/">usage tracking</a>.
+If you wish to implement additional Recurly events as custom goals beyond the default two, you will need to create usage trackers within Engage with the proper label attributes. These labels must match the Recurly webhook payload using the convention `object_type.event_type`. Learn more about <a href="https://docs.recurly.com/recurly-engage/docs/usage-tracking-1#/">usage tracking</a>.
 
 1. Navigate to Settings > Usage Tracking > **+Add New Tracker**
 2. Create a new Custom Tracker by adding the name, label (be sure to match the Recurly Webhook Payload), and description of the tracker. Ensure the tracker type is set to "Custom"
