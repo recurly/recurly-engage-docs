@@ -1,5 +1,5 @@
 ---
-title: Creating Test Account Credentials
+title: Creating test account credentials
 excerpt: >-
   Learn how to quickly create test account credentials in Recurly Engage.
   Setting up these credentials allows your Recurly Account Manager or Support
