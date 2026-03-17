@@ -1,6 +1,8 @@
 ---
 title: Cleeng
-excerpt: ''
+excerpt: >-
+  Configuration and usage guide for the Cleeng connector in Recurly Engage,
+  including API setup, supported actions, and subscription data syncing.
 deprecated: false
 hidden: false
 metadata:
@@ -10,10 +12,6 @@ metadata:
 next:
   description: ''
 ---
-#### Metadata description
-
-Configuration and usage guide for the Cleeng connector in Recurly Engage, including API setup, supported actions, and subscription data syncing.
-
 # Overview
 
 The **Cleeng** integration enables you to manage subscriber offers, coupons, and reactivations directly from prompts within Recurly Engage by connecting to your Cleeng account.
@@ -74,7 +72,7 @@ Available billing actions you can attach to prompt interactions:
 
 Schedule periodic export of subscription data from Cleeng into Recurly Engage using CSV via S3.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/217df5b-Screenshot_2024-06-02_at_10.08.45_PM.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/217df5b-Screenshot_2024-06-02_at_10.08.45_PM.png" className="border" />
 
 ## Setup
 
