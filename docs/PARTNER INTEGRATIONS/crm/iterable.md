@@ -4,7 +4,7 @@ excerpt: >-
   Configuration guide for the Iterable connector in Recurly Engage—setup and
   supported messaging and lifecycle actions for cross-channel marketing.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''
