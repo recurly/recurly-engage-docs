@@ -77,7 +77,7 @@ Use these actions within prompt configurations (accept, secondary accept, etc.) 
 
       <td>
         `POST /api/lists/subscribe
-        `
+                `
       </td>
     </tr>
 
@@ -124,5 +124,11 @@ Use these actions within prompt configurations (accept, secondary accept, etc.) 
     </tr>
   </tbody>
 </Table>
+
+## Integration 
+
+To integrate Recurly Engage to Iterable, navigate to Settings > Integrations > Iterable. Use your iterable API key to connect to Recurly Engage. 
+
+![](https://files.readme.io/779767b48a8ef353dfd317d14e6d942971ce1a19b769f97024bee940ada28cc9-image.png)
 
 <br />
