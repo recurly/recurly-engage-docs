@@ -4,8 +4,8 @@ excerpt: >-
   Begin a fully self-serve, free sandbox of Recurly Engage to run internal
   customer engagement campaigns, starting with involuntary churn, using a
   secure, streamlined sandbox environment.
-deprecated: false
-hidden: false
+deprecated: true
+hidden: true
 metadata:
   robots: index
 ---
