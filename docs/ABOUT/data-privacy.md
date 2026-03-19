@@ -23,7 +23,7 @@ The **Data Privacy & Security** section outlines how Recurly Engage handles end-
 # Key benefits
 
 * **Privacy-by-design**: Minimal default data collection with configurable tracking to meet your privacy requirements.
-* **Regulatory compliance**: Built-in support for SOC 2 Type II, GDPR, and CCPA controls to safeguard user data.
+* **Regulatory compliance**: Built-in support for HIPAA, SOC 2 Type II, GDPR, and CCPA controls to safeguard user data.
 * **Flexible retention**: Default 90-day lookback window with optional extended retention or suppression lists.
 
 # Key details
