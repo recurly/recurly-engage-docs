@@ -21,8 +21,7 @@ This guide provides a step-by-step walkthrough for syncing your customer data fr
 
 # Key steps
 
-## Step one: Create a New Destination 
-
+## Step one: Create a New Destination
 
 In your Hightouch dashboard, navigate to the Destinations page and click Add Destination. Search for and select HTTP Request.
 
@@ -38,7 +37,7 @@ To establish the connection, enter the following configuration details:
 * **Base URL:**`https://conduit.redfast.com/ingest/property`
 * **HTTP Headers:** Add a header for your App ID:
   * **Key:** `Rf-App`
-  * **Value:** `<YOUR_APP_ID>` (Replace this with your specific Recurly Engage App ID).  
+  * **Value:** `<YOUR_APP_ID>` (Replace this with your specific Recurly Engage App ID).
 
 <Image align="center" src="https://files.readme.io/564f1cf153749242eee8b3872cfa0651b991adb13041a7bca71e69b6abe90eb6-3.png" />
 
@@ -78,16 +77,14 @@ Ensure your JSON payload matches the Recurly Engage requirements. Your mapping s
   "id": "123-456-789-012-",
   "user_id": "test-user-001",
   "properties": {
-    "email": "user@example.com",
     "first_name": "Jane",
-    "last_name": "Doe",
     "plan": "premium"
   }
 }
 
 ```
 
-**Example response** 
+**Example response**
 
 ```
 {
