@@ -35,9 +35,6 @@ To establish the connection, enter the following configuration details:
 
 * **Authentication Method:** Select Basic Auth.
 * **Base URL:**`https://conduit.redfast.com/ingest/property`
-* **HTTP Headers:** Add a header for your App ID:
-  * **Key:** `Rf-App`
-  * **Value:** `<YOUR_APP_ID>` (Replace this with your specific Recurly Engage App ID).
 
 <Image align="center" src="https://files.readme.io/564f1cf153749242eee8b3872cfa0651b991adb13041a7bca71e69b6abe90eb6-3.png" />
 
@@ -57,14 +54,12 @@ Choose the HTTP Request destination you configured in Step 2.
 
 While specific mapping depends on your data model, use these standard configurations for the payload:
 
-<br />
-
-| Setting      | Configuration                                   |
-| :----------- | :---------------------------------------------- |
-| Batching     | A single row                                    |
-| HTTP Method  | POST                                            |
-| URL          | Leave blank (it will inherit from the Base URL) |
-| Payload Type | JSON                                            |
+| Setting      | Configuration                              |
+| :----------- | :----------------------------------------- |
+| Batching     | A single row                               |
+| HTTP Method  | POST                                       |
+| URL          | Add your API key as query string parameter |
+| Payload Type | JSON                                       |
 
 <br />
 
@@ -94,8 +89,6 @@ Ensure your JSON payload matches the Recurly Engage requirements. Your mapping s
 ```
 
 <br />
-
-Note: The id field in the JSON body must match the App ID used in your HTTP headers.
 
 <Image align="center" src="https://files.readme.io/4189f595130811d944706d105c1364987eb2972d93b30102111769e78d015760-6.png" />
 
