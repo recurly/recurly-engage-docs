@@ -61,7 +61,7 @@ While specific mapping depends on your data model, use these standard configurat
 | URL          | Add your API key as query string parameter |
 | Payload Type | JSON                                       |
 
-<br />
+Note: to find your API Key navigate to **Settings > Application > API Key**
 
 ## Step six: Map the Request Body
 
