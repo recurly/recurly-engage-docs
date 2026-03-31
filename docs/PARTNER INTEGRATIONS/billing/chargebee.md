@@ -10,7 +10,7 @@ metadata:
 ---
 # Overview
 
-The Chargebee integration allows you to sync your subscription data and execute billing actions directly from prompts in Recurly Engage, leveraging your existing Chargebee account.  
+The Chargebee integration allows you to sync your subscription data and execute billing actions directly from prompts in Recurly Engage, leveraging your existing Chargebee account.
 
 # Definition
 
@@ -21,8 +21,6 @@ The Chargebee connector imports subscription traits nightly across three data so
 * **Seamless billing workflows** — Manage subscriptions, trials, coupons, and payment recovery without leaving the prompt interface.
 * **Comprehensive data sync** — Nightly imports pull subscription state, invoice/dunning status, and card expiration data to keep your segments and prompts accurate.
 * **Flexible subscription actions** — Support for the full subscription lifecycle, from onboarding through cancellation and reactivation.
-
-<br />
 
 # Key steps
 
