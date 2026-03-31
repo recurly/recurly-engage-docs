@@ -5,7 +5,7 @@ excerpt: >-
   HTTP Request destination to automate user property updates and
   personalizations.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
