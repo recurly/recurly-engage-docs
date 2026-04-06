@@ -15,7 +15,7 @@ In-Prompt Billing is a feature of Recurly Engage that lets your customers update
 
 Under the hood, In-Prompt Billing uses Recurly.js to tokenize sensitive payment data client-side, keeping your integration PCI DSS compliant without additional overhead on your end. It's designed to fit naturally into your existing prompt workflows and can be triggered by events like a failed payment or an upcoming renewal.
 
-# Key Benefits
+# Key benefits
 
 * **Fewer drop-offs.** Keeping customers in-context during a payment update removes friction and reduces the chance they abandon the process mid-flow.
 * **Faster updates.** Billing fields are surfaced inline — customers can update their card in seconds, without a page redirect.
@@ -23,9 +23,9 @@ Under the hood, In-Prompt Billing uses Recurly.js to tokenize sensitive payment 
 * **Fits your existing UI.** The payment form supports your prompt's Custom CSS configuration, so it inherits your existing styles with no extra work.
 * **Prefilled for convenience.** Where possible, existing billing name and address details are pre-populated so customers only need to enter updated card information.
 
-# How It Works
+# How it works
 
-## 1. Configure a Billing Info Update prompt
+## 1. Configure a billing info update prompt
 
 Create a new prompt and open the Recurly Engage creative editor. Set the **Form Type** to **Billing Info Update**. This option is available for merchants who have already integrated with Recurly Subscriptions.
 
@@ -47,6 +47,4 @@ When the prompt appears, the customer is shown a secure payment form powered by 
 
 Once they submit, the new payment information is tokenized client-side and sent to Recurly's API to update their billing profile. The customer sees your configured confirmation message and the prompt closes automatically.
 
-<br />
-
-<Image align="center" src="https://files.readme.io/f58bf86f250282509146243103e7556df8ef0e3d7f0a981ea2857794ffd16560-Screenshot_2026-04-02_at_8.48.16_AM.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/f58bf86f250282509146243103e7556df8ef0e3d7f0a981ea2857794ffd16560-Screenshot_2026-04-02_at_8.48.16_AM.png" className="border" />
