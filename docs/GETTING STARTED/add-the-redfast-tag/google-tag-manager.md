@@ -46,7 +46,9 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 The **Google Tag Manager integration** leverages a custom GTM template to inject the Recurly Engage SDK onto every page you specify, enabling tracking and branded checkout across your site.
 
-Please visit this page to find our [Google Tag](https://tagmanager.google.com/gallery/#/owners/redfast/templates/redfast-gtm).
+> 📘 Please visit this page to find our 
+>
+> [Google Tag](https://tagmanager.google.com/gallery/#/owners/redfast/templates/redfast-gtm).
 
 # Key benefits
 
