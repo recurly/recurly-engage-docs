@@ -46,6 +46,8 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 The **Google Tag Manager integration** leverages a custom GTM template to inject the Recurly Engage SDK onto every page you specify, enabling tracking and branded checkout across your site.
 
+Please visit this page to find our [Google Tag](https://tagmanager.google.com/gallery/#/owners/redfast/templates/redfast-gtm).
+
 # Key benefits
 
 * **One-click setup**: Install the SDK entirely within GTM—no manual code edits.
@@ -60,19 +62,19 @@ The **Google Tag Manager integration** leverages a custom GTM template to inject
 
 2. **Select your container**: **Ensure** it matches the domain you registered in [app setup](setup-your-app).
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/2fe6657-Screenshot_2024-05-22_at_18.16.19.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/2fe6657-Screenshot_2024-05-22_at_18.16.19.png" className="border" />
 
 3. **Add a new tag**: In the left navigation, **click** **Tags** → **New**.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/ac79c42-Screenshot_2024-05-22_at_18.17.19.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/ac79c42-Screenshot_2024-05-22_at_18.17.19.png" className="border" />
 
 4. **Search for the Recurly Engage template**: In the **Choose tag type** pane, **use** the search bar (top right) and **enter** **Recurly Engage**.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/d98bcf3-image.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/d98bcf3-image.png" className="border" />
 
 5. **Get your Application ID**: Log in to your Recurly Engage console and navigate to **Settings > Application** to copy the ID.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/f048f16-Screenshot_2024-05-22_at_18.30.09.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/f048f16-Screenshot_2024-05-22_at_18.30.09.png" className="border" />
 
 6. **Configure the tag**
 
@@ -81,10 +83,10 @@ The **Google Tag Manager integration** leverages a custom GTM template to inject
 * Under **Triggering**, **choose** **All Pages**
 * **Click** **Save**
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/1056d86-Screenshot_2024-05-22_at_18.33.53.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/1056d86-Screenshot_2024-05-22_at_18.33.53.png" className="border" />
 
 7. **Publish your container**: **Click** **Submit** in the top right of GTM, **add** a descriptive version name (e.g., “Add Recurly Engage SDK”), and **hit** **Publish**.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/a0de186-Screenshot_2024-05-22_at_18.35.42.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/a0de186-Screenshot_2024-05-22_at_18.35.42.png" className="border" />
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/a0de186-Screenshot_2024-05-22_at_18.35.42.png" />
+<Image align="center" border={true} width="80% " src="https://files.readme.io/a0de186-Screenshot_2024-05-22_at_18.35.42.png" className="border" />
