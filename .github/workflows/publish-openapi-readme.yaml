@@ -10,6 +10,7 @@ on:
 
 jobs:
   publish:
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
@@ -22,9 +23,15 @@ jobs:
           - reference/oas_redirect.yaml
           - reference/oas_session.yaml
           - reference/oas_update_tenant.yaml
-    uses: recurly/pipeline-configs/.github/workflows/publish-openapi-readme.yaml@master
-    with:
-      spec-path: ${{ matrix.spec }}
-      readme-version: v1.0
-    secrets:
-      readme-api-key: ${{ secrets.ENGAGE_RDME_API_TOKEN }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Upload OpenAPI spec to ReadMe
+        uses: readmeio/rdme@v10
+        with:
+          rdme: >-
+            openapi upload ${{ matrix.spec }}
+            --key=${{ secrets.ENGAGE_RDME_API_TOKEN }}
+            --branch=v1.0
+            --confirm-overwrite
