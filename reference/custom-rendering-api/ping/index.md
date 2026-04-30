@@ -1,0 +1,4 @@
+---
+title: /ping
+hidden: false
+---
