@@ -1,0 +1,30 @@
+name: Publish OpenAPI to ReadMe
+
+on:
+  push:
+    branches: [v1.0]
+    paths:
+      - 'reference/*.yaml'
+      - '!reference/_order.yaml'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    strategy:
+      fail-fast: false
+      matrix:
+        spec:
+          - reference/app-provisioning-api-for-partners.yaml
+          - reference/custom-rendering-api.yaml
+          - reference/data-sync.yaml
+          - reference/oas_create_tenant.yaml
+          - reference/oas_get_tenant.yaml
+          - reference/oas_redirect.yaml
+          - reference/oas_session.yaml
+          - reference/oas_update_tenant.yaml
+    uses: recurly/pipeline-configs/.github/workflows/publish-openapi-readme.yaml@master
+    with:
+      spec-path: ${{ matrix.spec }}
+      readme-version: v1.0
+    secrets:
+      readme-api-key: ${{ secrets.ENGAGE_RDME_API_TOKEN }}
