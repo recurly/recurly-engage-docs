@@ -14,15 +14,23 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        spec:
-          - reference/app-provisioning-api-for-partners.yaml
-          - reference/custom-rendering-api.yaml
-          - reference/data-sync.yaml
-          - reference/oas_create_tenant.yaml
-          - reference/oas_get_tenant.yaml
-          - reference/oas_redirect.yaml
-          - reference/oas_session.yaml
-          - reference/oas_update_tenant.yaml
+        include:
+          - spec: reference/app-provisioning-api-for-partners.yaml
+            slug: app-provisioning-api-for-partners.yaml
+          - spec: reference/custom-rendering-api.yaml
+            slug: custom-rendering-api.yaml
+          - spec: reference/data-sync.yaml
+            slug: data-sync.yaml
+          - spec: reference/oas_create_tenant.yaml
+            slug: oas_create_tenant.yaml
+          - spec: reference/oas_get_tenant.yaml
+            slug: oas_get_tenant.yaml
+          - spec: reference/oas_redirect.yaml
+            slug: oas_redirect.yaml
+          - spec: reference/oas_session.yaml
+            slug: oas_session.yaml
+          - spec: reference/oas_update_tenant.yaml
+            slug: oas_update_tenant.yaml
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -34,4 +42,5 @@ jobs:
             openapi upload ${{ matrix.spec }}
             --key=${{ secrets.ENGAGE_RDME_API_TOKEN }}
             --branch=v1.0
+            --slug=${{ matrix.slug }}
             --confirm-overwrite
