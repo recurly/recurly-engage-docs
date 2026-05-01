@@ -1,9 +1,4 @@
 ---
-title: Reset API
-excerpt: >-
-  An API for testing purposes that resets the state of all prompts for a user.
-  It details how to use the API to make previously hidden prompts available
-  again on the next Ping.
 api:
   file: custom-rendering-api.yaml
   operationId: reset-api

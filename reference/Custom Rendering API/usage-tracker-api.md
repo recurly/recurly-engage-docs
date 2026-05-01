@@ -1,9 +1,4 @@
 ---
-title: Usage Tracker API
-excerpt: >-
-  An API for logging custom usage events. It details how to use the Ping API to
-  track specific user actions, such as a completed purchase, registration, or
-  content consumption.
 api:
   file: custom-rendering-api.yaml
   operationId: usage-tracker-api

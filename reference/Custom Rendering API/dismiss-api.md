@@ -1,9 +1,4 @@
 ---
-title: Dismiss API
-excerpt: >-
-  An API for tracking prompt dismissals, declines, or timeouts. It provides
-  details on the API call and definitions for each user action that removes a
-  prompt from view.
 api:
   file: custom-rendering-api.yaml
   operationId: dismiss-api

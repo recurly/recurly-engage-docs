@@ -1,8 +1,4 @@
 ---
-title: Ping
-excerpt: >-
-  An API for loading user-specific prompts. It describes the request parameters,
-  response object, and an example of how to use it to retrieve updated prompts.
 api:
   file: custom-rendering-api.yaml
   operationId: ping-api
