@@ -1,4 +1,3 @@
----
 openapi: 3.1.0
 info:
   title: app-provisioning-api-for-partners
@@ -7,7 +6,7 @@ info:
     name: MIT
     url: https://opensource.org/licenses/MIT
 servers:
-- url: https://partner.redfast.com
+  - url: https://partner.redfast.com
 components:
   securitySchemes:
     sec0:
@@ -16,24 +15,24 @@ components:
       name: rf-secret
       x-default: getfromredfast
 security:
-- sec0: []
+  - sec0: []
 paths:
-  "/v1/tenants/<external_tenant_id>":
+  /v1/tenants/<external_tenant_id>:
     get:
       summary: List Apps
       description: This API should be invoked to retrieve an existing tenant
       operationId: get
       parameters:
-      - name: partner_code
-        in: query
-        description: Ask your partner manager
-        schema:
-          type: string
-      - name: rf-secret
-        in: header
-        description: Provided by Redfast
-        schema:
-          type: string
+        - name: partner_code
+          in: query
+          description: Ask your partner manager
+          schema:
+            type: string
+        - name: rf-secret
+          in: header
+          description: Provided by Redfast
+          schema:
+            type: string
       responses:
         '200':
           description: '200'
@@ -43,8 +42,8 @@ paths:
                 Result:
                   value:
                     success: true
-                    external_tenant_id: "<external_tenant_id>"
-                    app_id: "<app_id>"
+                    external_tenant_id: <external_tenant_id>
+                    app_id: <app_id>
                     tag_url: https://<app_id>.redfastlabs.com/assets/redfast.js
                     user_first_name: John
                     user_last_name: Smith
@@ -63,10 +62,10 @@ paths:
                     default: true
                   external_tenant_id:
                     type: string
-                    example: "<external_tenant_id>"
+                    example: <external_tenant_id>
                   app_id:
                     type: string
-                    example: "<app_id>"
+                    example: <app_id>
                   tag_url:
                     type: string
                     example: https://<app_id>.redfastlabs.com/assets/redfast.js
@@ -98,7 +97,7 @@ paths:
             application/json:
               examples:
                 Result:
-                  value: "{}"
+                  value: '{}'
               schema:
                 type: object
                 properties: {}
