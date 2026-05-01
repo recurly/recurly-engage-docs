@@ -1,8 +1,4 @@
 ---
-title: Ingest Property
-excerpt: >-
-  This API allows syncing of specific properties (also referred to as Traits)
-  for a specific userId and/or anonymousUserId.
 api:
   file: data-sync.yaml
   operationId: get_new-endpoint
