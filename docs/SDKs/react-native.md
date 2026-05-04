@@ -3,7 +3,7 @@ title: React Native
 excerpt: >-
   Configuration guide for the Recurly Engage React Native SDK, enabling prompt
   rendering and event tracking in your React Native applications.
-deprecated: false
+deprecated: true
 hidden: false
 metadata:
   robots: index

@@ -3,7 +3,7 @@ title: iOS
 excerpt: >-
   Configuration guide for the Recurly Engage iOS and tvOS SDK, enabling native
   prompt display and usage tracking in your mobile apps.
-deprecated: false
+deprecated: true
 hidden: false
 metadata:
   title: ''
