@@ -12,7 +12,7 @@ metadata:
 next:
   description: ''
 ---
-# Android SDK (v3) <span style="color:red;font-size:1rem">[new]</span>
+# Android SDK (v3)
 Configuration guide for the **Recurly Engage Android SDK v3**, a fully Jetpack Compose-based SDK that renders native prompts and tracks user engagement in modern Android, Android TV, and Fire TV apps.
 
 > This document covers the **v3 architecture** (`core` + `ui` modules). If you are still on v2.x, see the [legacy Android SDK docs](https://docs.recurly.com/recurly-engage/docs/android-sdk).

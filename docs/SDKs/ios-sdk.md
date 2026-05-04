@@ -12,7 +12,7 @@ metadata:
 next:
   description: ''
 ---
-# Overview <span style="color:red;font-size:1rem">[deprecating soon]</span>
+# Overview
 
 The **Recurly Engage Apple SDK** provides native support for iOS and tvOS apps, automatically handling modal, banner, video popups, and inline prompt rendering, as well as tracking user-triggered events.
 

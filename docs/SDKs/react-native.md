@@ -8,7 +8,7 @@ hidden: false
 metadata:
   robots: index
 ---
-# Overview <span style="color:red;font-size:1rem">[deprecating soon]</span>
+# Overview
 
 The **Recurly Engage React Native SDK** provides components and APIs to render configured prompts—modals (popups, bottom banners, interstitials) and inline views—and handle related user interaction events in React Native apps.
 

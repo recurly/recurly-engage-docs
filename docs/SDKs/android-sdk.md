@@ -12,7 +12,7 @@ metadata:
 next:
   description: ''
 ---
-# Overview <span style="color:red;font-size:1rem">[deprecating soon]</span>
+# Overview
 
 The **Recurly Engage Android SDK** provides support for Android phones, tablets, TVs, Fire Tablets, and Fire TV. The SDK automatically handles display of modals (popups, video popups, and banners) and related user-triggered events. Inline prompts are accessible via helper functions with the necessary metadata for rendering within chosen areas of the app.
 

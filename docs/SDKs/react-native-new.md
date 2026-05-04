@@ -8,7 +8,7 @@ hidden: false
 metadata:
   robots: index
 ---
-# React Native <span style="color:red;font-size:1rem">[new]</span>
+# React Native (V2)
 
 Configuration guide for the Recurly Engage React Native SDK, enabling prompt rendering and event tracking in your React Native applications.
 

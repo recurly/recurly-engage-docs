@@ -12,7 +12,7 @@ metadata:
 next:
   description: ''
 ---
-# iOS & tvOS SDK <span style="color:red;font-size:1rem">[new]</span>
+# iOS & tvOS SDK (V3)
 
 Configuration guide for the Recurly Engage iOS and tvOS SDK, enabling native prompt display and usage tracking in your mobile apps.
 
