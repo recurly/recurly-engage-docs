@@ -3,7 +3,7 @@ title: Android
 excerpt: >-
   Configuration guide for the Recurly Engage Android SDK, enabling native prompt
   display and usage tracking in your mobile and TV apps.
-deprecated: false
+deprecated: true
 hidden: false
 metadata:
   title: ''
@@ -12,7 +12,7 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+# Overview <span style="color:red;font-size:1rem">[deprecating soon]</span>
 
 The **Recurly Engage Android SDK** provides support for Android phones, tablets, TVs, Fire Tablets, and Fire TV. The SDK automatically handles display of modals (popups, video popups, and banners) and related user-triggered events. Inline prompts are accessible via helper functions with the necessary metadata for rendering within chosen areas of the app.
 

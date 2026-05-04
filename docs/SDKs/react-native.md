@@ -3,12 +3,12 @@ title: React Native
 excerpt: >-
   Configuration guide for the Recurly Engage React Native SDK, enabling prompt
   rendering and event tracking in your React Native applications.
-deprecated: false
+deprecated: true
 hidden: false
 metadata:
   robots: index
 ---
-# Overview
+# Overview <span style="color:red;font-size:1rem">[deprecating soon]</span>
 
 The **Recurly Engage React Native SDK** provides components and APIs to render configured prompts—modals (popups, bottom banners, interstitials) and inline views—and handle related user interaction events in React Native apps.
 

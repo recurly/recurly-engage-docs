@@ -3,7 +3,7 @@ title: iOS
 excerpt: >-
   Configuration guide for the Recurly Engage iOS and tvOS SDK, enabling native
   prompt display and usage tracking in your mobile apps.
-deprecated: false
+deprecated: true
 hidden: false
 metadata:
   title: ''
@@ -12,7 +12,7 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+# Overview <span style="color:red;font-size:1rem">[deprecating soon]</span>
 
 The **Recurly Engage Apple SDK** provides native support for iOS and tvOS apps, automatically handling modal, banner, video popups, and inline prompt rendering, as well as tracking user-triggered events.
 
