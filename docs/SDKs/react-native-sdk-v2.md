@@ -11,10 +11,6 @@ metadata:
 ---
 # Overview
 
-### Video
-
-**Hi, Commerce expert! Please add the embed code here.**
-
 ### Prerequisites
 
 * A Recurly Engage account with a valid App ID
