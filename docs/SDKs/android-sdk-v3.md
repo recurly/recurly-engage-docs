@@ -1,56 +1,65 @@
 ---
-title: Android - new
+title: Android (V3)
 excerpt: >-
-  Configuration guide for the Recurly Engage Android SDK, enabling native prompt
-  display and usage tracking in your mobile and TV apps.
+  How to install, initialize, and integrate the Recurly Engage Android SDK v3
+  into native Android applications, including prompt display, event tracking,
+  inline components, push notifications, and in-app purchases.
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
   robots: index
-next:
-  description: ''
 ---
-# Android SDK (v3)
-Configuration guide for the **Recurly Engage Android SDK v3**, a fully Jetpack Compose-based SDK that renders native prompts and tracks user engagement in modern Android, Android TV, and Fire TV apps.
+# Overview
 
-> This document covers the **v3 architecture** (`core` + `ui` modules). If you are still on v2.x, see the [legacy Android SDK docs](https://docs.recurly.com/recurly-engage/docs/android-sdk).
+This document covers the **v3 architecture** (`core` + `ui` modules). If you are still on v2.x, see the [legacy Android SDK docs](https://docs.recurly.com/recurly-engage/docs/android-sdk) .
 
----
+### Prerequisites
 
-## Overview
+* A Recurly Engage account with a valid App ID (found in **Pulse → Settings → Application**)
+* Android min SDK 24, compile/target SDK 36
+* Kotlin 2.0.x
+* Jetpack Compose BOM 2024.09.00 or later
+* Java 11
+* JitPack repository access (for Gradle/Maven installation)
 
-The Recurly Engage Android SDK v3 provides native support for Android phones, tablets, Android TV, Fire Tablets, and Fire TV. The SDK ships **drop-in Compose components** that automatically handle display of modals, interstitials, bottom banners and inline prompts, while still exposing the underlying prompt data and tracking primitives for apps that need full control over the render tree.
+### Limitations
 
-### Key benefits
+* `PromptManager` is a singleton — additional calls to `initialize()` are ignored; use `setUserId()` to switch users
+* In-app purchase support requires the `google` or `amazon` store flavor of the `ui` module
+* Push notification support requires the `fcm` or `adm` push flavor of the `ui` module
+* Invalid flavor combinations (`google` + `adm`, `amazon` + `fcm`) are disabled automatically
+* `iapOnActivityResumed()` must be called from the host activity's `onResume()` on the Amazon flavor
 
-- **Compose-first API** — a single `@Composable` (`PromptOverlay`) wires trigger resolution, delay, and rendering with no manual UI code.
-- **Clean two-module architecture** — `core` holds networking, domain models, and business logic; `ui` holds Compose components. Host apps can depend on `ui` for the full experience or on `core` only when providing their own UI.
-- **Automatic prompt types** — popups (modals), interstitials, bottom banners, and inline banners are selected automatically from the prompt configuration in Pulse.
-- **Configuration change safe** — countdown timers, impression state, and dismissal state survive rotation via `rememberSaveable`.
-- **Broad device support** — one SDK for phones, tablets, Android TV, and Amazon Fire devices, with automatic TV vs phone detection and focus-aware inline components.
-- **Typed event model** — a `PromptEvent` sealed class delivers `Impression`, `Clicked`, `Decline`, `Timeout`, and `Dismissed` events with a strongly-typed `PromptResult`.
-- **Optional In-App Purchase and Push** — enabled via product flavors in the `ui` module (Google Billing Library 8.0, Amazon Appstore SDK 3.x, Firebase Cloud Messaging, or Amazon A3L).
+# Definition
 
-### Key details
+The Recurly Engage Android SDK v3 is a native library for Android phones, tablets, Android TV, Fire Tablets, and Fire TV. It ships drop-in Compose components that automatically handle display of modals, interstitials, bottom banners, and inline prompts, while still exposing the underlying prompt data and tracking primitives for apps that need full control over the render tree.
 
-The Recurly Engage Android SDK v3 monitors consumption, fetches active paths for the current `appId`/`userId`, and renders configured prompts inside your Compose tree. Prompt lifecycle events (impression, dismissal, click, timeout, holdout) are reported back to Recurly Engage without additional wiring.
+# Key benefits
 
----
+* **Compose-first API**: A single `@Composable` (`PromptOverlay`) wires trigger resolution, delay, and rendering with no manual UI code.
+* **Clean two-module architecture**: `core` holds networking, domain models, and business logic; `ui` holds Compose components. Host apps can depend on `ui` for the full experience, or on `core` only when providing their own UI.
+* **Automatic prompt types**: Popups (modals), interstitials, bottom banners, and inline banners are selected automatically from the prompt configuration in Pulse.
+* **Configuration change safe**: Countdown timers, impression state, and dismissal state survive rotation via `rememberSaveable`.
+* **Broad device support**: One SDK for phones, tablets, Android TV, and Amazon Fire devices, with automatic TV vs. phone detection and focus-aware inline components.
+* **Typed event model**: A `PromptEvent` sealed class delivers `Impression`, `Clicked`, `Decline`, `Timeout`, and `Dismissed` events with a strongly typed `PromptResult`.
+* **Optional in-app purchase and push**: Enabled via product flavors in the `ui` module (Google Billing Library 8.0, Amazon Appstore SDK 3.x, Firebase Cloud Messaging, or Amazon A3L).
+
+# Key details
+
+The SDK monitors consumption, fetches active paths for the current `appId`/`userId`, and renders configured prompts inside your Compose tree. Prompt lifecycle events (impression, dismissal, click, timeout, holdout) are reported back to Recurly Engage without additional wiring.
 
 ## Install the SDK
 
 The v3 Engage Android SDK is published as two artifacts:
 
-| Artifact | Purpose |
-| --- | --- |
-| `redfast-sdk-core` | Domain models, networking, prompt resolution. No Android UI. |
+| Artifact           | Purpose                                                                      |
+| ------------------ | ---------------------------------------------------------------------------- |
+| `redfast-sdk-core` | Domain models, networking, prompt resolution. No Android UI.                 |
 | `redfast-sdk-ui`   | Jetpack Compose components, IAP adapters, push messaging. Depends on `core`. |
 
 Most integrations depend on **`redfast-sdk-ui`**, which transitively exposes `redfast-sdk-core`. Only depend on `core` directly if you are rendering prompts with your own UI layer.
 
-### Gradle / Maven
+### Gradle/Maven
 
 **Gradle (Kotlin DSL)**
 
@@ -104,10 +113,10 @@ dependencies {
 
 The `ui` module defines two flavor dimensions to tailor the artifact to your store and push provider:
 
-| Dimension | Flavors | Notes |
-| --- | --- | --- |
-| `store` | `google`, `amazon`, `noiap` | Selects the In-App Purchase implementation. `noiap` provides a stub. |
-| `push`  | `fcm`, `adm`, `nopush`      | Selects the push-messaging implementation. |
+| Dimension | Flavors                     | Notes                                                                |
+| --------- | --------------------------- | -------------------------------------------------------------------- |
+| `store`   | `google`, `amazon`, `noiap` | Selects the In-App Purchase implementation. `noiap` provides a stub. |
+| `push`    | `fcm`, `adm`, `nopush`      | Selects the push-messaging implementation.                           |
 
 Invalid combinations (`google` + `adm`, `amazon` + `fcm`) are disabled automatically.
 
@@ -142,13 +151,13 @@ android {
 
 ### Requirements
 
-- **Min SDK**: 24
-- **Compile/Target SDK**: 36
-- **Kotlin**: 2.0.x
-- **Jetpack Compose BOM**: 2024.09.00 or later
-- **Java**: 11
+* **Min SDK**: 24
+* **Compile/Target SDK**: 36
+* **Kotlin**: 2.0.x
+* **Jetpack Compose BOM**: 2024.09.00 or later
+* **Java**: 11
 
----
+***
 
 ## Initialize Engage
 
@@ -177,17 +186,17 @@ class RedflixApplication : Application() {
 val pm = PromptManager.get()
 ```
 
-Under the hood `initialize()`:
+Under the hood, `initialize()`:
 
-1. Builds a `DeviceInfo` record (manufacturer, model, TV vs phone) used by the composition mapper to select the correct asset.
+1. Builds a `DeviceInfo` record (manufacturer, model, TV vs. phone) used by the composition mapper to select the correct asset.
 2. Starts a background ping loop to sync available prompts with Recurly Engage.
 3. Wires the Push and IAP managers for the active `ui` flavor.
 
-The `onComplete` callback is invoked **once** after the first successful sync with `PromptResultCode.OK`.
+The `onComplete` callback is invoked once after the first successful sync with `PromptResultCode.OK`.
 
----
+***
 
-## Trigger a popup via Screen Name
+## Trigger a popup via screen name
 
 Drop `PromptOverlay` inside any Composable screen to allow the SDK to display the appropriate modal/interstitial/bottom-banner when the screen becomes active.
 
@@ -222,12 +231,12 @@ sealed class PromptOverlayTriggerType {
 
 `PromptOverlay` handles all lifecycle concerns for you:
 
-1. Resolves a candidate prompt using the current screen name / click id.
+1. Resolves a candidate prompt using the current screen name/click id.
 2. Applies the configured `delaySeconds` before presenting.
 3. Short-circuits if the user is in a holdout group or if the prompt is currently suppressed (dismiss/accept/decline intervals).
 4. Dispatches to the correct renderer based on `PathType` (`MODAL`, `INTERSTITIAL`, `BOTTOM_BANNER`).
 
----
+***
 
 ## Trigger a popup via button click
 
@@ -273,9 +282,9 @@ prompts.firstOrNull()?.let { prompt ->
 }
 ```
 
-`getTriggerablePrompts` accepts wildcards (`"*"`) for both `screenName` and `clickId` and filters out prompts that are currently suppressed or in holdout.
+`getTriggerablePrompts` accepts wildcards (`"*"`) for both `screenName` and `clickId`, and filters out prompts that are currently suppressed or in holdout.
 
----
+***
 
 ## Retrieve and render inline prompts
 
@@ -366,11 +375,11 @@ pm.getTriggerablePrompts(
 
 `Prompt.pathItem.actions` exposes every field configured in Pulse (see `Action` in the SDK source for the full list).
 
----
+***
 
 ## Deep link to a media asset
 
-Deeplink key-value pairs are configured per-prompt in Pulse. When the user triggers the primary CTA the SDK decodes them and returns them on the `PromptResult.value` field:
+Deep link key-value pairs are configured per-prompt in Pulse. When the user triggers the primary CTA, the SDK decodes them and returns them on the `PromptResult.value` field:
 
 ```kotlin
 PromptOverlay(
@@ -385,13 +394,13 @@ PromptOverlay(
 )
 ```
 
-The same deeplink is exposed on manual retrieval via `Prompt.deeplink` (`Map<String, Any>?`) or `PathItem.actions.rfSettingsDeeplink`.
+The same deep link is exposed on manual retrieval via `Prompt.deeplink` (`Map<String, Any>?`) or `PathItem.actions.rfSettingsDeeplink`.
 
----
+***
 
 ## Access custom metadata
 
-Add custom key-value metadata in Pulse to drive registration flows, feature flags, or any app-specific behaviour. The metadata is delivered on every `PromptEvent` through `PromptResult.meta`:
+Add custom key-value metadata in Pulse to drive registration flows, feature flags, or any app-specific behavior. The metadata is delivered on every `PromptEvent` through `PromptResult.meta`:
 
 ```kotlin
 onEvent = { event ->
@@ -400,13 +409,13 @@ onEvent = { event ->
 }
 ```
 
-To read metadata that is not attached to a visible prompt, use `PromptManager.get().getMeta()` which returns the merged metadata from every **invisible** path currently matched for this user:
+To read metadata that is not attached to a visible prompt, use `PromptManager.get().getMeta()`, which returns the merged metadata from every invisible path currently matched for this user:
 
 ```kotlin
 val allMeta: Map<String, Any> = PromptManager.get().getMeta()
 ```
 
----
+***
 
 ## Send a usage-tracking event
 
@@ -418,9 +427,9 @@ PromptManager.get().customTrack("video_played")
 
 The call is fire-and-forget and runs on `Dispatchers.IO`.
 
----
+***
 
-## Set or change the User ID
+## Set or change the user ID
 
 You can change the `userId` after initialization — for example, once a user signs in. It may take a few seconds for prompts to refresh with the new identity.
 
@@ -445,7 +454,7 @@ Use `resetGoal()` to clear local suppression state and all server-tracked goals 
 PromptManager.get().resetGoal()
 ```
 
----
+***
 
 ## Event model
 
@@ -498,26 +507,26 @@ data class PromptMeta(
 
 Mapping of `PromptResultCode` to user action:
 
-| Code | Fired when |
-| --- | --- |
-| `OK` | SDK initialized successfully |
-| `IMPRESSION` | The prompt was rendered to the user |
-| `BUTTON1` | User tapped the primary (accept) button |
-| `BUTTON2` | User tapped the secondary (accept2) button |
-| `BUTTON3` | User tapped the tertiary (decline) button |
-| `DISMISS` | User closed the prompt (X, back, tap outside) |
-| `TIMEOUT` | The configured timer expired and auto-dismissed the prompt |
-| `HOLDOUT` | The user is in a holdout group; no prompt is shown but the event is tracked |
-| `SUPPRESSED` | The prompt is temporarily suppressed by a previous dismiss/accept/decline interval |
-| `NOT_APPLICABLE` | No prompt matches the current screen/click id |
-| `DISABLED` | `enablePrompt(false)` is active |
-| `ERROR` | An unexpected error occurred; `PromptResult.value` contains the stack trace key |
+| Code             | Fired when                                                                         |
+| ---------------- | ---------------------------------------------------------------------------------- |
+| `OK`             | SDK initialized successfully                                                       |
+| `IMPRESSION`     | The prompt was rendered to the user                                                |
+| `BUTTON1`        | User tapped the primary (accept) button                                            |
+| `BUTTON2`        | User tapped the secondary (accept2) button                                         |
+| `BUTTON3`        | User tapped the tertiary (decline) button                                          |
+| `DISMISS`        | User closed the prompt (X, back, tap outside)                                      |
+| `TIMEOUT`        | The configured timer expired and auto-dismissed the prompt                         |
+| `HOLDOUT`        | The user is in a holdout group; no prompt is shown but the event is tracked        |
+| `SUPPRESSED`     | The prompt is temporarily suppressed by a previous dismiss/accept/decline interval |
+| `NOT_APPLICABLE` | No prompt matches the current screen/click id                                      |
+| `DISABLED`       | `enablePrompt(false)` is active                                                    |
+| `ERROR`          | An unexpected error occurred; `PromptResult.value` contains the stack trace key    |
 
----
+***
 
 ## Rendering prompts manually
 
-If you need to bypass `PromptOverlay`'s automatic resolution (e.g., to show a specific prompt at a specific moment), use `ShowPrompt` with a `Prompt` object you obtained from `getPrompt()` / `getTriggerablePrompts()`:
+If you need to bypass `PromptOverlay`'s automatic resolution (e.g. to show a specific prompt at a specific moment), use `ShowPrompt` with a `Prompt` object you obtained from `getPrompt()` / `getTriggerablePrompts()`:
 
 ```kotlin
 val prompt = PromptManager.get().getPrompt(promptId)
@@ -531,9 +540,9 @@ prompt?.let {
 
 `ShowPrompt` dispatches to `PromptPopup` (modal dialog), `PromptInterstitial` (full-screen), or `PromptBottomBanner` based on `prompt.type`.
 
----
+***
 
-## In-App Purchase
+## In-app purchase
 
 When the `google` or `amazon` store flavor is active, the `PromptManager` instance exposes helpers around the platform billing SDK. Product details returned by Engage (via `prompt.inAppSku` / `Action.rfSettingsAndroidInappProductId`) can be resolved and purchased end-to-end:
 
@@ -587,11 +596,11 @@ enum class IapProductType(val value: String) {
 
 Call `pm.iapOnActivityResumed()` from the hosting activity's `onResume()` to refresh pending purchases on the Amazon flavor (no-op on Google).
 
----
+***
 
 ## Push notifications
 
-When the `fcm` or `adm` flavor is active, `PushManager` is wired automatically. To deliver a push token to Engage, call it from your Firebase / A3L service:
+When the `fcm` or `adm` flavor is active, `PushManager` is wired automatically. To deliver a push token to Engage, call it from your Firebase/A3L service:
 
 ```kotlin
 class MyFcmService : FirebaseMessagingService() {
@@ -617,7 +626,7 @@ class MyFcmService : FirebaseMessagingService() {
 
 `PushManager` reports `trackPushImpression` on delivery and `trackPushGoal` on tap (handled by the bundled `NotificationOpenReceiver`).
 
----
+***
 
 ## Architecture reference
 
@@ -632,13 +641,13 @@ com.redfast           ← Domain models, networking, PromptCore
    (core module)
 ```
 
-| Layer | Key types |
-| --- | --- |
-| Public Compose API | `PromptOverlay`, `PromptInline`, `ShowPrompt` |
-| Public data API | `PromptManager`, `Prompt`, `PromptEvent`, `PromptResult`, `PromptResultCode`, `PathType`, `InlineType`, `InlineCloseButtonStyle`, `InlineTimerStyle`, `InlineFocusStyle` |
-| IAP | `IapManager`, `IapProduct`, `IapProductType` |
-| Push | `PushManager`, `PushMessage` |
-| Internal (SDK only) | `PromptState`, `PromptPopup`, `PromptInterstitial`, `PromptBottomBanner`, `PromptCloseBar`, `ModalParamsMapper`, `InlineParamsMapper` |
+| Layer               | Key types                                                                                                                                                                |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Public Compose API  | `PromptOverlay`, `PromptInline`, `ShowPrompt`                                                                                                                            |
+| Public data API     | `PromptManager`, `Prompt`, `PromptEvent`, `PromptResult`, `PromptResultCode`, `PathType`, `InlineType`, `InlineCloseButtonStyle`, `InlineTimerStyle`, `InlineFocusStyle` |
+| IAP                 | `IapManager`, `IapProduct`, `IapProductType`                                                                                                                             |
+| Push                | `PushManager`, `PushMessage`                                                                                                                                             |
+| Internal (SDK only) | `PromptState`, `PromptPopup`, `PromptInterstitial`, `PromptBottomBanner`, `PromptCloseBar`, `ModalParamsMapper`, `InlineParamsMapper`                                    |
 
 ### Path types
 
@@ -652,66 +661,75 @@ enum class PathType(val value: Int) {
 
 `MODAL`, `INTERSTITIAL`, and `BOTTOM_BANNER` are rendered automatically by `PromptOverlay`. Inline types (`HORIZONTAL`, `VERTICAL`, `TILE`, `VIDEO`) are surfaced through `PromptInline` / `getTriggerablePrompts`.
 
----
+***
 
 ## External libraries
 
 ### Common (both modules)
 
-| Dependency | Version |
-| --- | --- |
-| `com.squareup.retrofit2:retrofit` | 3.0.0 |
-| `com.squareup.retrofit2:converter-gson` | 2.9.0 |
-| `com.squareup.okhttp3:okhttp` | 4.12.0 |
-| `com.squareup.okhttp3:logging-interceptor` | 4.12.0 |
-| `com.google.code.gson:gson` | 2.10.1 |
-| `org.jetbrains.kotlinx:kotlinx-coroutines-core` | 1.9.0 |
-| `androidx.core:core-ktx` | 1.17.0 |
+| Dependency                                      | Version |
+| ----------------------------------------------- | ------- |
+| `com.squareup.retrofit2:retrofit`               | 3.0.0   |
+| `com.squareup.retrofit2:converter-gson`         | 2.9.0   |
+| `com.squareup.okhttp3:okhttp`                   | 4.12.0  |
+| `com.squareup.okhttp3:logging-interceptor`      | 4.12.0  |
+| `com.google.code.gson:gson`                     | 2.10.1  |
+| `org.jetbrains.kotlinx:kotlinx-coroutines-core` | 1.9.0   |
+| `androidx.core:core-ktx`                        | 1.17.0  |
 
 ### UI module (additional)
 
-| Dependency | Version |
-| --- | --- |
-| `androidx.compose:compose-bom` | 2024.09.00 |
-| `androidx.compose.ui:ui`, `ui-graphics` | bundled |
-| `androidx.compose.material3:material3` | bundled |
-| `androidx.compose.material:material-icons-extended` | bundled |
-| `io.coil-kt:coil-compose` | 2.6.0 |
-| `androidx.compose.runtime:runtime-saveable` | 1.10.4 |
+| Dependency                                          | Version    |
+| --------------------------------------------------- | ---------- |
+| `androidx.compose:compose-bom`                      | 2024.09.00 |
+| `androidx.compose.ui:ui`, `ui-graphics`             | bundled    |
+| `androidx.compose.material3:material3`              | bundled    |
+| `androidx.compose.material:material-icons-extended` | bundled    |
+| `io.coil-kt:coil-compose`                           | 2.6.0      |
+| `androidx.compose.runtime:runtime-saveable`         | 1.10.4     |
 
 ### Flavor-conditional
 
-| Flavor | Dependency | Version |
-| --- | --- | --- |
-| `google` | `com.android.billingclient:billing` | 8.0.0 |
-| `google` | `com.android.billingclient:billing-ktx` | 8.0.0 |
-| `amazon` | `com.amazon.device:amazon-appstore-sdk` | 3.0.4 |
-| `fcm` | `com.google.firebase:firebase-messaging` (via `firebase-bom:34.0.0`) | — |
-| `adm` | `A3LMessaging-1.1.0.aar` | 1.1.0 (compile-only) |
+| Flavor   | Dependency                                                           | Version              |
+| -------- | -------------------------------------------------------------------- | -------------------- |
+| `google` | `com.android.billingclient:billing`                                  | 8.0.0                |
+| `google` | `com.android.billingclient:billing-ktx`                              | 8.0.0                |
+| `amazon` | `com.amazon.device:amazon-appstore-sdk`                              | 3.0.4                |
+| `fcm`    | `com.google.firebase:firebase-messaging` (via `firebase-bom:34.0.0`) | —                    |
+| `adm`    | `A3LMessaging-1.1.0.aar`                                             | 1.1.0 (compile-only) |
 
----
+***
 
 ## Migration from v2.x
 
-| v2.x API | v3 equivalent |
-| --- | --- |
-| `PromotionManager.initPromotion(appId, userId)` | `PromptManager.initialize(context, appId, userId, onComplete)` |
-| `PromotionManager.setScreenName(view, name) { }` | `PromptOverlay(PromptOverlayTriggerType.Screen(name), onEvent = { })` |
-| `PromotionManager.showModal(promptId, ctx) { }` | `ShowPrompt(prompt, onEvent = { })` |
-| `PromotionManager.getTriggerablePrompts(screen, clickId, type) { }` | `PromptManager.get().getTriggerablePrompts(screen, clickId, type)` (synchronous) |
-| `PromotionManager.customTrack(id)` | `PromptManager.get().customTrack(id)` |
-| `PromotionManager.setUserId(id)` | `PromptManager.get().setUserId(id)` |
-| Inline `prompt.impression() / click() / click2() / decline() / timeout() / dismiss() / holdout()` | Same lambdas on `Prompt`, plus `PromptEvent` emission via `PromptInline` |
-| `PromotionManager.showDebugView(...)` | Removed — use `setUserId()` / `resetGoal()` directly, or gate with your own UI |
+| v2.x API                                                                                          | v3 equivalent                                                                    |
+| ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `PromotionManager.initPromotion(appId, userId)`                                                   | `PromptManager.initialize(context, appId, userId, onComplete)`                   |
+| `PromotionManager.setScreenName(view, name) { }`                                                  | `PromptOverlay(PromptOverlayTriggerType.Screen(name), onEvent = { })`            |
+| `PromotionManager.showModal(promptId, ctx) { }`                                                   | `ShowPrompt(prompt, onEvent = { })`                                              |
+| `PromotionManager.getTriggerablePrompts(screen, clickId, type) { }`                               | `PromptManager.get().getTriggerablePrompts(screen, clickId, type)` (synchronous) |
+| `PromotionManager.customTrack(id)`                                                                | `PromptManager.get().customTrack(id)`                                            |
+| `PromotionManager.setUserId(id)`                                                                  | `PromptManager.get().setUserId(id)`                                              |
+| Inline `prompt.impression() / click() / click2() / decline() / timeout() / dismiss() / holdout()` | Same lambdas on `Prompt`, plus `PromptEvent` emission via `PromptInline`         |
+| `PromotionManager.showDebugView(...)`                                                             | Removed — use `setUserId()` / `resetGoal()` directly, or gate with your own UI   |
 
 All Compose components are stateless from the caller's perspective: dropping `PromptOverlay` / `PromptInline` inside any `@Composable` is sufficient. There is no longer a need to pass a `View` root nor to manually invoke tracking lambdas when using the built-in renderers.
 
----
+***
 
 ## Troubleshooting
 
-- **Nothing renders** — confirm `PromptManager.initialize()` was called and the `onComplete` callback fired with `PromptResultCode.OK`. Check that the screen name / zone id matches what is configured in Pulse.
-- **Prompt shows once then never again** — this is expected. The SDK honours the **dismiss / accept / decline / timeout intervals** configured in Pulse. Call `PromptManager.get().resetGoal()` in a debug build to clear local suppression state.
-- **Countdown restarts after rotation** — upgrade to v3.0.0+. In v3 the countdown is restored from `initialStartTime` via `rememberSaveable`.
-- **Multiple prompts render on the same screen** — that is supported; each `PromptOverlay` / `PromptInline` manages its own state and `remember(prompt.id)` keys prevent recomposition cross-talk.
-- **TV focus ring invisible** — provide a non-default `InlineFocusStyle` with a contrasting `borderColor` and `borderWidth >= 1`.
+* **Nothing renders** — confirm `PromptManager.initialize()` was called and the `onComplete` callback fired with `PromptResultCode.OK`. Check that the screen name/zone id matches what is configured in Pulse.
+* **Prompt shows once then never again** — this is expected. The SDK honors the dismiss/accept/decline/timeout intervals configured in Pulse. Call `PromptManager.get().resetGoal()` in a debug build to clear local suppression state.
+* **Countdown restarts after rotation** — upgrade to v3.0.0+. In v3 the countdown is restored from `initialStartTime` via `rememberSaveable`.
+* **Multiple prompts render on the same screen** — that is supported; each `PromptOverlay` / `PromptInline` manages its own state and `remember(prompt.id)` keys prevent recomposition cross-talk.
+* **TV focus ring invisible** — provide a non-default `InlineFocusStyle` with a contrasting `borderColor` and `borderWidth >= 1`.
+
+```
+Google IAP: 
+    com.android.billingclient:billing:6.0.1
+    com.android.billingclient:billing-ktx:6.0.1
+    
+Amazon IAP:
+    amazon/in-app-purchasing-2.0.76.jar
+```

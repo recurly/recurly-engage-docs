@@ -1,38 +1,51 @@
 ---
-title: React Native - new
+title: React Native (V2)
 excerpt: >-
-  Configuration guide for the Recurly Engage React Native SDK, enabling prompt
-  rendering and event tracking in your React Native applications.
+  How to install, initialize, and integrate the Recurly Engage React Native SDK
+  to render prompts and track user interaction events in iOS and Android
+  applications.
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-# React Native (V2)
+# Overview
 
-Configuration guide for the Recurly Engage React Native SDK, enabling prompt rendering and event tracking in your React Native applications.
+### Prerequisites
 
-## Overview
+* A Recurly Engage account with a valid App ID
+* An authentication token (AUTHTOKEN) from your Customer Success Manager for the GitHub package registry
+* A React Native project targeting iOS and/or Android
 
-The Recurly Engage React Native SDK provides components and APIs to render configured prompts—modals (popups, bottom banners, interstitials) and inline views—and handle related user interaction events in React Native apps.
+### Limitations
 
-### Key benefits
+* Inline prompts scale to fit within their container — size your container accordingly
+* It may take several seconds for prompts to refresh after calling `setUserId()`
+* `<PromptOverlay />` must be placed at the bottom of your app node to ensure correct Z-order
 
-- Cross-platform UI: Seamlessly display modals and inline prompts on both iOS and Android via React Native.
-- Built-in interaction handling: Automatically track impressions, clicks, dismissals, and other user events.
-- Customizable rendering: Use prebuilt components or implement your own views based on prompt metadata.
+# Definition
 
-### Key details
+The Recurly Engage React Native SDK provides components and APIs to render configured prompts — modals (popups, bottom banners, interstitials) and inline views — and handle related user interaction events in React Native apps.
+
+# Key benefits
+
+* **Cross-platform UI**: Display modals and inline prompts on both iOS and Android via React Native with a single integration.
+* **Built-in interaction handling**: Automatically track impressions, clicks, dismissals, and other user events without manual wiring.
+* **Customizable rendering**: Use prebuilt components or implement your own views based on prompt metadata.
+
+# Key details
 
 The Recurly Engage React Native SDK provides:
 
-- A prompt manager for initialization and user ID management
-- Hooks and components for displaying modal prompts and inline prompts
-- APIs for reporting user interactions (impression, goal, decline, dismiss, timeout, holdout)
+* A prompt manager for initialization and user ID management
+* Hooks and components for displaying modal prompts and inline prompts
+* APIs for reporting user interactions (impression, goal, decline, dismiss, timeout, holdout)
 
 ## Install the SDK
 
-Add the following to your .npmrc or .yarnrc.yml file. Contact your Customer Success Manager for the AUTHTOKEN.
+### Configure the registry
+
+Add the following to your `.npmrc` or `.yarnrc.yml` file. Contact your Customer Success Manager for the AUTHTOKEN.
 
 ```
 # .npmrc
@@ -43,29 +56,31 @@ Add the following to your .npmrc or .yarnrc.yml file. Contact your Customer Succ
 npmAuthToken: "AUTHTOKEN"
 ```
 
-## Install the package
+### Install the package
 
-Using npm
+Using npm:
 
 ```bash
 npm install @redfast/redfast-core
 npm install @redfast/react-native-redfast
 ```
 
-or yarn
+Or yarn:
 
 ```bash
 yarn add @redfast/redfast-core
 yarn add @redfast/react-native-redfast
 ```
 
+***
+
 ## Initialize Engage
 
-Initialize the SDK in your AppRoot using the `<PromptProvider>` component at the top of you app node.
+Initialize the SDK in your AppRoot using the `<PromptProvider>` component at the top of your app node.
 
 Then, pull the SDK to check it has been initialized using the `usePrompt` hook and the `promptMgr.isInitialized()` method.
 
-Finally place a `<PromptOverlay />` component at the bottom of your app node. This will render any modal (interstitial, popoup, bottom banner) prompts that are triggered. And since it is at the bottom of you app node, it will have the highest Z-order to show itself.
+Finally, place a `<PromptOverlay />` component at the bottom of your app node. This will render any modal (interstitial, popup, bottom banner) prompts that are triggered. Since it is at the bottom of your app node, it will have the highest Z-order to show itself.
 
 ```javascript
 // Initialize the SDK at the top of your app node
@@ -149,21 +164,25 @@ const AppRoot: React.FC = () => {
 }
 ```
 
-## Set UserId
+***
 
-You may change the userID after the SDK has been initialized, for example, when the user authenticates mid session. Note that it may take several seconds for the user's prompts to refresh.
+## Set user ID
+
+You may change the user ID after the SDK has been initialized — for example, when the user authenticates mid-session. Note that it may take several seconds for the user's prompts to refresh.
 
 ```javascript
 promptMgr.setUserId(userId);
 ```
 
+***
+
 ## Render modal prompts
 
-Interstitial, Popup and Bottom Banner modals may be triggered upon entering a screen and/or the user registering a click on an element. Add the following code to screens that are eligible to show a modal.
+Interstitial, Popup, and Bottom Banner modals may be triggered upon entering a screen and/or the user registering a click on an element. Add the following code to screens that are eligible to show a modal.
 
-Use the `promptMgr.screenChanged('home')` method for entering a screen with a screen name (customer defined string; example: "home")
+Use the `promptMgr.screenChanged('home')` method for entering a screen with a screen name (customer-defined string; example: `"home"`).
 
-Use the `promptMgr.buttonClicked('clickId')` method for registering a click on an element (customer defined string; example: a button with an id as "clickId")
+Use the `promptMgr.buttonClicked('clickId')` method for registering a click on an element (customer-defined string; example: a button with an id of `"clickId"`).
 
 ```javascript
 // Example a screen
@@ -197,9 +216,11 @@ export default function HomeScreen() {
 }
 ```
 
+***
+
 ## Render inline prompts
 
-You may utilize the RedfastInline view to render an inline prompt, if one is available for the current user. Note the inline prompt will scale to fit within its container.
+Use the `RedfastInline` view to render an inline prompt if one is available for the current user. Note that the inline prompt will scale to fit within its container.
 
 ```javascript
 <RedfastInline
@@ -218,11 +239,13 @@ You may utilize the RedfastInline view to render an inline prompt, if one is ava
 />
 ```
 
+***
+
 ## Custom prompt rendering
 
-You may opt to render prompts utilizing the prompt metadata in cases where the desired rendering is different than that produced by the Redfast SDK.
+You may opt to render prompts using the prompt metadata when the desired rendering differs from what the SDK produces by default.
 
-The app should report Prompt interactions via the provided functions on the prompt object.
+The app should report prompt interactions via the provided functions on the prompt object.
 
 ```javascript
 
@@ -318,8 +341,11 @@ interface ModalButton {
 */
 ```
 
+***
+
 ## Actions
-When a user interacts with the primary prompt CTA, a result callback includes various metadata associated with the Prompt to determine the client-side action that should take place.
+
+When a user interacts with the primary prompt CTA, a result callback includes various metadata associated with the prompt to determine the client-side action that should take place.
 
 ```javaScript
 // Data schema of the result callback
@@ -339,7 +365,9 @@ interface PromptResult {
 }
 ```
 
-## Analytics Callback Example
+***
+
+## Analytics callback example
 
 ```javascript
 <RedfastInline
@@ -407,9 +435,11 @@ interface PromptResult {
 })}
 ```
 
-## Deeplink
+***
 
-You can add a Deeplink to a Prompt within Pulse.. When the user invokes the CTA, you can utilize the Deeplink to send the user to a specific location within the app.
+## Deep link
+
+You can add a deep link to a prompt within Pulse. When the user invokes the CTA, you can use the deep link to send the user to a specific location within the app.
 
 ```javascript
 {
@@ -421,9 +451,11 @@ You can add a Deeplink to a Prompt within Pulse.. When the user invokes the CTA,
 }
 ```
 
+***
+
 ## Custom metadata
 
-Custom key-value pairs can be added to an item via Pulse. These values may be used to perform an action that is not the typical media asset deep link, like sending the user to a registration screen or performing an operation on behalf of the user.
+Custom key-value pairs can be added to an item via Pulse. These values may be used to perform an action that is not the typical media asset deep link, such as sending the user to a registration screen or performing an operation on behalf of the user.
 
 ```javascript
 {
@@ -438,6 +470,8 @@ Custom key-value pairs can be added to an item via Pulse. These values may be us
 }
 ```
 
+***
+
 ## Send usage tracking event
 
 Your app can send custom track events using the SDK. If configured as a tracker within Pulse, these custom events can be used to target prompts at specific sets of users.
@@ -446,10 +480,26 @@ Your app can send custom track events using the SDK. If configured as a tracker 
 promptMgr.customTrack(customFieldId);
 ```
 
+***
+
 ## Debugging
 
-You may reset the current user's prompt status, such that previously suppressed prompts will now be made available.
+You may reset the current user's prompt status so that previously suppressed prompts become available again.
 
 ```javascript
 promptMgr.resetGoal();
 ```
+
+```javascript
+promptMgr.resetGoal()
+```
+
+```javascript
+promptMgr.resetGoal();
+```
+
+```javascript
+promptMgr.resetGoal()
+```
+
+<br />
