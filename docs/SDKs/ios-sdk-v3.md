@@ -9,50 +9,20 @@ hidden: true
 metadata:
   robots: index
 ---
-<br />
+# Overview
 
-<HTMLBlock>{`
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          A Recurly Engage account with a valid <strong>App ID</strong> (found in <strong>Settings → Application</strong>).
-        </p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          Xcode with an <strong>iOS 15+</strong> or <strong>tvOS 15+</strong> deployment target.
-        </p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          Swift Package Manager or access to the <code>RedFast.xcframework</code> file for legacy installation.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          Push notification support is available on <strong>iOS only</strong> — not tvOS.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          In-app purchase support is available on <strong>iOS only</strong>.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          <code>PromptManager</code> is a <code>@MainActor</code>-isolated singleton — all public methods must be called from the main thread.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          Requires <strong>iOS 15+</strong> or <strong>tvOS 15+</strong>.
-        </p>
-      </div>
-    </div>
-  );
-};
-<PrerequisitesLimitations header="Prerequisites & limitations" />
-`}</HTMLBlock>
+### Prerequisites
 
-<br />
+* A Recurly Engage account with a valid App ID (found in **Settings → Application**)
+* Xcode with an iOS 15+ or tvOS 15+ deployment target
+* Swift Package Manager or access to the `RedFast.xcframework` file for legacy installation
+
+### Limitations
+
+* Push notification support is available on iOS only — not tvOS
+* In-app purchase support is available on iOS only
+* `PromptManager` is a `@MainActor`-isolated singleton — all public methods must be called from the main thread
+* Requires iOS 15+ or tvOS 15+
 
 # Definition
 
