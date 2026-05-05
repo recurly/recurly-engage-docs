@@ -5,7 +5,7 @@ excerpt: >-
   to render prompts and track user interaction events in iOS and Android
   applications.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
