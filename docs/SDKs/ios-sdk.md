@@ -22,6 +22,28 @@ The **Recurly Engage Apple SDK** provides native support for iOS and tvOS apps, 
 * **Automatic UI handling**: Built-in support for modals, banners, and inline prompts without manual UI code.
 * **Deep linking & metadata**: Leverage custom metadata and deep links for tailored in-app navigation.
 
+<br />
+
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2" />
+          You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.
+        </p>
+        <p>
+          <i className="fa-solid fa-exclamation-triangle mr-4" />
+          Collaboration with your development or product team to identify URLs, CSS selectors, or custom logic.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+<PrerequisitesLimitations header="Prerequisites & limitations" />
+
 # Key details
 
 The Recurly Engage Apple SDK brings the ability to monitor consumption and show configured prompts within your native iOS and tvOS apps. The SDK automatically handles display of modals (popups, video popups, and banners) and the related user-triggered events. Inline prompts are accessible via helper functions with the necessary metadata for rendering in chosen areas of the app.
@@ -38,19 +60,19 @@ You may add the Redfast SDK from the public Github [repository](https://github.c
 
 1. Add a new Package Dependency to your existing project.
 
-<Image align="center" border={false} src="https://files.readme.io/b69fc2ebde28f7ca810e40ffcc781d6eb0838fe6c859fe97c482ca0f1cd8cbac-Screenshot_2024-11-20_at_19.55.49.png" />
+<Image align="center" src="https://files.readme.io/b69fc2ebde28f7ca810e40ffcc781d6eb0838fe6c859fe97c482ca0f1cd8cbac-Screenshot_2024-11-20_at_19.55.49.png" />
 
 2. Paste the Github repo URL and select appropriate Dependency Rule. Add to your existing project.
 
-<Image align="center" border={false} src="https://files.readme.io/fa893cbcac4f982e312da89be3b511bec8b321c4c8f4fc7f53f660f30157edd8-Screenshot_2024-11-20_at_19.58.25.png" />
+<Image align="center" src="https://files.readme.io/fa893cbcac4f982e312da89be3b511bec8b321c4c8f4fc7f53f660f30157edd8-Screenshot_2024-11-20_at_19.58.25.png" />
 
 3. Complete adding the package
 
-<Image align="center" border={false} src="https://files.readme.io/76fdc54ab8b032fd78e26a3b5e14d80593d14279d6707f81b9e69747926936cf-Screenshot_2024-11-20_at_19.59.52.png" />
+<Image align="center" src="https://files.readme.io/76fdc54ab8b032fd78e26a3b5e14d80593d14279d6707f81b9e69747926936cf-Screenshot_2024-11-20_at_19.59.52.png" />
 
 4. Confirm successful package installation
 
-<Image align="center" border={false} src="https://files.readme.io/9dcc3755e04a1a6daa30fd8f890f99fe420cc12675e2f918e70c2dce8fd88b6e-Screenshot_2024-11-20_at_20.02.19.png" />
+<Image align="center" src="https://files.readme.io/9dcc3755e04a1a6daa30fd8f890f99fe420cc12675e2f918e70c2dce8fd88b6e-Screenshot_2024-11-20_at_20.02.19.png" />
 
 ### Legacy installation via local SDK
 
@@ -59,12 +81,12 @@ You may add the Redfast SDK from the public Github [repository](https://github.c
 1. Within Xcode, select Target > General > Frameworks > Libraries > Embedded Content and click on `+`.
 2. Select "Add Other" on bottom left corner and choose "Add Files"
 
-   <Image align="left" border={false} width="400px" src="https://files.readme.io/0824267-Screenshot_2024-05-23_at_3.19.28_PM.png" />
+   <Image align="left" width="400px" src="https://files.readme.io/0824267-Screenshot_2024-05-23_at_3.19.28_PM.png" />
 3. Open the `Redfast.xcframework` file
 4. Ensure the "Embed & Sign option is selected"
 5. Import the SDK into your project
 
-<Image align="left" border={false} src="https://files.readme.io/ff07460-Screenshot_2024-05-23_at_3.22.56_PM.png" />
+<Image align="left" src="https://files.readme.io/ff07460-Screenshot_2024-05-23_at_3.22.56_PM.png" />
 
 6. Initialize the SDK per instructions below
 
