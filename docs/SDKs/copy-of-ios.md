@@ -1,24 +1,40 @@
 ---
 title: iOS & tvOS SKD (V3)
 excerpt: >-
-  Configuration guide for the Recurly Engage iOS and tvOS SDK, enabling native
-  prompt display and usage tracking in your mobile apps.
+  How to install, initialize, and integrate the Recurly Engage Apple SDK into
+  native iOS and tvOS applications, including prompt display, event tracking,
+  push notifications, and in-app purchases.
 deprecated: false
 hidden: true
 metadata:
   robots: index
 ---
-## Overview
+# Overview
 
-The **Recurly Engage Apple SDK** provides native support for iOS and tvOS apps, automatically handling modal, banner, video popup, and inline prompt rendering, as well as tracking user-triggered events.
+### Prerequisites
 
-### Key benefits
+* A Recurly Engage account with a valid App ID (found in **Settings → Application**)
+* Xcode with an iOS 15+ or tvOS 15+ deployment target
+* Swift Package Manager or access to the `RedFast.xcframework` file for legacy installation
 
-* **SDK integration**: Seamlessly embed prompts and track user events in native iOS and tvOS applications.
-* **Automatic UI handling**: Built-in SwiftUI components for modals, banners, interstitials, and inline prompts.
-* **Deep linking & metadata**: Leverage custom metadata and deep links for tailored in-app navigation.
+### Limitations
 
-***
+* Push notification support is available on iOS only — not tvOS
+* In-app purchase support is available on iOS only
+* `PromptManager` is a `@MainActor`-isolated singleton — all public methods must be called from the main thread
+* Requires iOS 15+ or tvOS 15+
+
+# Definition
+
+The Recurly Engage Apple SDK is a native library for iOS and tvOS apps that handles prompt rendering and user event tracking automatically. It provides built-in SwiftUI components for modals, banners, interstitials, and inline prompts, and gives you full control over deep linking, custom metadata, push notifications, and in-app purchases.
+
+# Key benefits
+
+* **SDK integration**: Embed prompts and track user events directly in native iOS and tvOS applications — no web views or workarounds needed.
+* **Automatic UI handling**: Built-in SwiftUI components for modals, banners, interstitials, and inline prompts take care of rendering so you can focus on your app logic.
+* **Deep links and custom metadata**: Leverage custom metadata and deep links for tailored in-app navigation configured directly from Recurly Engage.
+
+# Key details
 
 ## Install the SDK
 
@@ -28,23 +44,21 @@ The Recurly Engage Apple SDK supports iOS 15+ and tvOS 15+. The latest SDK versi
 
 Add the SDK from the public GitHub [repository](https://github.com/redfast/redfast-sdk-apple).
 
-**Steps:**
-
 1. Add a new Package Dependency to your existing project.
 
-   ![Add package dependency](https://files.readme.io/b69fc2ebde28f7ca810e40ffcc781d6eb0838fe6c859fe97c482ca0f1cd8cbac-Screenshot_2024-11-20_at_19.55.49.png)
+<Image align="center" border={true} width="75%" src="https://files.readme.io/b69fc2ebde28f7ca810e40ffcc781d6eb0838fe6c859fe97c482ca0f1cd8cbac-Screenshot_2024-11-20_at_19.55.49.png" className="border" />
 
 2. Paste the GitHub repo URL and select the appropriate Dependency Rule.
 
-   ![Paste repo URL](https://files.readme.io/fa893cbcac4f982e312da89be3b511bec8b321c4c8f4fc7f53f660f30157edd8-Screenshot_2024-11-20_at_19.58.25.png)
+<Image align="center" border={true} width="75%" src="https://files.readme.io/fa893cbcac4f982e312da89be3b511bec8b321c4c8f4fc7f53f660f30157edd8-Screenshot_2024-11-20_at_19.58.25.png" className="border" />
 
 3. Complete adding the package.
 
-   ![Complete package](https://files.readme.io/76fdc54ab8b032fd78e26a3b5e14d80593d14279d6707f81b9e69747926936cf-Screenshot_2024-11-20_at_19.59.52.png)
+<Image align="center" border={true} width="75%" src="https://files.readme.io/76fdc54ab8b032fd78e26a3b5e14d80593d14279d6707f81b9e69747926936cf-Screenshot_2024-11-20_at_19.59.52.png" className="border" />
 
 4. Confirm successful package installation.
 
-   ![Confirm installation](https://files.readme.io/9dcc3755e04a1a6daa30fd8f890f99fe420cc12675e2f918e70c2dce8fd88b6e-Screenshot_2024-11-20_at_20.02.19.png)
+<Image align="center" border={true} width="75%" src="https://files.readme.io/9dcc3755e04a1a6daa30fd8f890f99fe420cc12675e2f918e70c2dce8fd88b6e-Screenshot_2024-11-20_at_20.02.19.png" className="border" />
 
 The SDK ships three products — add only what your target needs:
 
@@ -60,11 +74,11 @@ The SDK ships three products — add only what your target needs:
 
 2. Select **Add Other → Add Files** and open the `RedFast.xcframework` file.
 
-   ![Add files](https://files.readme.io/0824267-Screenshot_2024-05-23_at_3.19.28_PM.png)
+<Image align="center" border={true} width="75%" src="https://files.readme.io/0824267-Screenshot_2024-05-23_at_3.19.28_PM.png" className="border" />
 
 3. Set the embed option to **Embed & Sign**.
 
-   ![Embed & Sign](https://files.readme.io/ff07460-Screenshot_2024-05-23_at_3.22.56_PM.png)
+<Image align="center" border={true} width="75%" src="https://files.readme.io/ff07460-Screenshot_2024-05-23_at_3.22.56_PM.png" className="border" />
 
 4. Initialize the SDK per the instructions below.
 
@@ -365,7 +379,7 @@ case .dismissed(let result):  // user dismissed
 
 ***
 
-## Deep links & custom metadata
+## Deep links and custom metadata
 
 Deep link key-value pairs and custom metadata are configured in Recurly Engage.
 
@@ -399,7 +413,7 @@ PromptManager.shared.customTrack(customFieldId: "YOUR_CUSTOM_TRACK_ID")
 
 ***
 
-## Update User ID
+## Update user ID
 
 Change the user ID after initialization, for example when a user authenticates mid-session. Prompts refresh automatically within a few seconds.
 
@@ -409,7 +423,7 @@ PromptManager.shared.setUserId("NEW_USER_ID")
 
 ***
 
-## Enable / disable prompts
+## Enable/disable prompts
 
 Pause and resume all prompt display without re-initializing the SDK.
 
@@ -467,7 +481,7 @@ Firebase/FCM support is enabled automatically when `FirebaseMessaging` is presen
 
 See `Redflix/Redflix/redflixApp.swift` for a SwiftUI integration example using `@UIApplicationDelegateAdaptor`.
 
-### Customise the notification action button
+### Customize the notification action button
 
 ```swift
 RedfastPushManager.shared.setCustomButton("Remind me later")
