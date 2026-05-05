@@ -1,5 +1,5 @@
 ---
-title: Copy of React Native
+title: React Native (V2)
 excerpt: >-
   Configuration guide for the Recurly Engage React Native SDK, enabling prompt
   rendering and event tracking in your React Native applications.
@@ -8,8 +8,6 @@ hidden: true
 metadata:
   robots: index
 ---
-<br />
-
 # React Native (V2)
 
 Configuration guide for the Recurly Engage React Native SDK, enabling prompt rendering and event tracking in your React Native applications.
