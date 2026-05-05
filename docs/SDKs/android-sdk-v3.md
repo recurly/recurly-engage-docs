@@ -5,7 +5,7 @@ excerpt: >-
   into native Android applications, including prompt display, event tracking,
   inline components, push notifications, and in-app purchases.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
