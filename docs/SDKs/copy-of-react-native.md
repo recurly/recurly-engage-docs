@@ -8,17 +8,23 @@ hidden: true
 metadata:
   robots: index
 ---
-# Overview
+<br />
 
-The **Recurly Engage React Native SDK** provides components and APIs to render configured prompts—modals (popups, bottom banners, interstitials) and inline views—and handle related user interaction events in React Native apps.
+# React Native (V2)
 
-# Key benefits
+Configuration guide for the Recurly Engage React Native SDK, enabling prompt rendering and event tracking in your React Native applications.
 
-* **Cross-platform UI**: Seamlessly display modals and inline prompts on both iOS and Android via React Native.
-* **Built-in interaction handling**: Automatically track impressions, clicks, dismissals, and other user events.
-* **Customizable rendering**: Use prebuilt components or implement your own views based on prompt metadata.
+## Overview
 
-# Key details
+The Recurly Engage React Native SDK provides components and APIs to render configured prompts—modals (popups, bottom banners, interstitials) and inline views—and handle related user interaction events in React Native apps.
+
+### Key benefits
+
+* Cross-platform UI: Seamlessly display modals and inline prompts on both iOS and Android via React Native.
+* Built-in interaction handling: Automatically track impressions, clicks, dismissals, and other user events.
+* Customizable rendering: Use prebuilt components or implement your own views based on prompt metadata.
+
+### Key details
 
 The Recurly Engage React Native SDK provides:
 
@@ -28,7 +34,7 @@ The Recurly Engage React Native SDK provides:
 
 ## Install the SDK
 
-Add the following to your `.npmrc` or `.yarnrc.yml` file. Contact your Customer Success Manager for the AUTHTOKEN.
+Add the following to your .npmrc or .yarnrc.yml file. Contact your Customer Success Manager for the AUTHTOKEN.
 
 ```
 # .npmrc
@@ -39,67 +45,89 @@ Add the following to your `.npmrc` or `.yarnrc.yml` file. Contact your Customer 
 npmAuthToken: "AUTHTOKEN"
 ```
 
-### Install the package
+## Install the package
 
 Using npm
 
-```shell
+```bash
 npm install @redfast/redfast-core
 npm install @redfast/react-native-redfast
 ```
 
 or yarn
 
-```shell
+```bash
 yarn add @redfast/redfast-core
 yarn add @redfast/react-native-redfast
 ```
 
 ## Initialize Engage
 
-Initialize the SDK in your AppRoot.
+Initialize the SDK in your AppRoot using the `<PromptProvider>` component at the top of you app node.
+
+Then, pull the SDK to check it has been initialized using the `usePrompt` hook and the `promptMgr.isInitialized()` method.
+
+Finally place a `<PromptOverlay />` component at the bottom of your app node. This will render any modal (interstitial, popoup, bottom banner) prompts that are triggered. And since it is at the bottom of you app node, it will have the highest Z-order to show itself.
 
 ```javascript
-// Initialize the SDK, polling until init is complete
-React.useEffect(() => {
-  if (dispatch) {
-    const promptMgr = new PromptManager(
-      'YOUR_APP_ID',
-      'INITIAL_USER_ID' // or null
-    );
+// Initialize the SDK at the top of your app node
+export default function App() {
+  return (
+    <PromptProvider appId="YOUR_APP_ID" userId="INITIAL_USER_ID">
+      <AppRoot />
+    </PromptProvider>
+  );
+}
+
+// pull the SDK to check it has been initialized
+const AppRoot: React.FC = () => {
+  const {
+    dispatch,
+    state: { promptMgr },
+  } = usePrompt();
+  const [isReady, setReady] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!promptMgr) return;
     const intervalId = setInterval(() => {
       if (promptMgr.isInitialized()) {
-        dispatch({
-          type: PromptAction_Init,
-          data: promptMgr,
-        });
         setReady(true);
         clearInterval(intervalId);
       }
     }, 1000);
     return () => clearInterval(intervalId);
-  }
-  return () => {};
-}, [dispatch]);
+  }, [promptMgr]); // eslint-disable-line react-hooks/exhaustive-deps
 
-// (optional) Utilize specific fonts for various parts of the prompts
-useFonts({
-  buttonFont: require('./assets/fonts/fontA.ttf'),
-  otherFont: require('./assets/fonts/fontB.ttf'),
-});
+  return (
+    <NavigationContainer>
+      {isReady && (
+        <Stack.Navigator screenOptions={{ headerShown: true }}>
+          <Stack.Screen />
+          <Stack.Screen />
+          ...
+        </Stack.Navigator>
+      )}
+      <PromptOverlay
+        onEvent={(result: PromptResult) => {
+          // TODO: handle the result
+        }}
+      />
+    </NavigationContainer>
+  );
+}
 
-React.useEffect(() => {
-  if (dispatch) {
-    const promptMgr = new PromptManager(
-      'YOUR_APP_ID',
-      'INITIAL_USER_ID'
-    );
+// (optional) You can load the SDK with specific fonts for various parts of the prompts
+const AppRoot: React.FC = () => {
+  ...
+  useFonts({
+    buttonFont: require('../assets/fonts/AllProDisplayC-Bold.ttf'),
+    otherFont: require('../assets/fonts/AllProDisplayC-Regular.ttf'),
+  });
+
+  React.useEffect(() => {
+    if (!promptMgr) return;
     const intervalId = setInterval(() => {
       if (promptMgr.isInitialized()) {
-        dispatch({
-          type: PromptAction_Init,
-          data: promptMgr,
-        });
         dispatch({
           type: PromptAction_Font_Button,
           data: 'buttonFont',
@@ -117,11 +145,10 @@ React.useEffect(() => {
       }
     }, 1000);
     return () => clearInterval(intervalId);
-  }
-  return () => {};
-}, [dispatch]);
+  }, [promptMgr]); // eslint-disable-line react-hooks/exhaustive-deps
 
-
+  ...
+}
 ```
 
 ## Set UserId
@@ -129,56 +156,52 @@ React.useEffect(() => {
 You may change the userID after the SDK has been initialized, for example, when the user authenticates mid session. Note that it may take several seconds for the user's prompts to refresh.
 
 ```javascript
-promptMgr.setUserId(userId)
+promptMgr.setUserId(userId);
 ```
 
 ## Render modal prompts
 
-Interstitial (mobile only), Popup and Bottom Banner modals may be triggered upon entering a screen and/or the user registering a click on an element. Add the following code to screens that are eligible to show a modal.
+Interstitial, Popup and Bottom Banner modals may be triggered upon entering a screen and/or the user registering a click on an element. Add the following code to screens that are eligible to show a modal.
+
+Use the `promptMgr.screenChanged('home')` method for entering a screen with a screen name (customer defined string; example: "home")
+
+Use the `promptMgr.buttonClicked('clickId')` method for registering a click on an element (customer defined string; example: a button with an id as "clickId")
 
 ```javascript
-// Import from Redfast SDK
+// Example a screen
 import {
   usePrompt, // Prompt state management
-  displayPrompt, // Modal prompts
-  RedfastInline, // Inline prompts
 } from '@redfast/react-native-redfast';
 
-// Trigger when entering the "home" screen
-const { path, delaySeconds } = await promptMgr.onScreenChanged("home");
-if (path) {
-  setTimeout(() => {
-    setPathItem(path);
-    setShowModal(true);
-  }, delaySeconds);
-}
+// Example: trigger when entering the "home" screen
+export default function HomeScreen() {
+  const {
+    dispatch,
+    state: { promptMgr },
+  } = usePrompt();
 
-// Or, trigger when "clickId" is clicked
-const { path, delaySeconds } = await promptMgr.onButtonClicked("clickId");
-if (path) {
-  setTimeout(() => {
-    setPathItem(path);
-    setShowModal(true);
-  }, delaySeconds);
-}
+  React.useEffect(() => {
+    if (promptMgr) {
+      promptMgr.screenChanged('home');
+    }
+  }, [promptMgr]);
 
-// Display the modal UI for the path object returned above.
-// params:
-//   - showModal: a boolean to stipulate showing or hiding a Prompt
-//   - path: a path object returned from one of the trigger calls above
-//   - result: a callback returning PromptResult
-displayPrompt(showModal, path, (result) => {
-  console.log(JSON.stringify({ ...result, source: 'modal' }, null, 2));
-  const { code } = result;
-  if (code !== PromptResultCode.IMPRESSION) {
-    setShowModal(false);
-  }
-})
+  return (
+    // Example: trigger when a button is clicked
+    <TouchableOpacity
+      onPress={async () => {
+        if (promptMgr) {
+          promptMgr.buttonClicked('clickId');
+        }
+      }}
+    >Hello</TouchableOpacity>
+  );
+}
 ```
 
 ## Render inline prompts
 
-You may utilize the `RedfastInline` view to render an inline prompt, if one is available for the current user. Note the inline prompt will scale to fit within its container.
+You may utilize the RedfastInline view to render an inline prompt, if one is available for the current user. Note the inline prompt will scale to fit within its container.
 
 ```javascript
 <RedfastInline
@@ -188,9 +211,13 @@ You may utilize the `RedfastInline` view to render an inline prompt, if one is a
   closeButtonSize="20" // Close button height and width, in pixels
   timerFontSize="14" // Countdown timer font size, if enabled
   timerFontColor="#FFFFFF" // Countdown timer font hex color
-  onEvent={(result) =>}
+  focusStyle={{
+    borderWidth: 2,
+    borderColor: '#ff0000',
+    borderRadius: 5,
+  }}
+  onEvent={(result) => {}}
 />
-
 ```
 
 ## Custom prompt rendering
@@ -200,6 +227,7 @@ You may opt to render prompts utilizing the prompt metadata in cases where the d
 The app should report Prompt interactions via the provided functions on the prompt object.
 
 ```javascript
+
 // Example: Retrieve all available prompts of specified type. See PathType values below. Use this if trigger criteria is to be ignored.
 let prompts = promptMgr.getPrompts(PathType.ALL);
 
@@ -226,7 +254,7 @@ prompt.dismiss() // user dismisses prompt by clicking on "x" close button
 prompt.timeout() // prompt is dismissed via countdown timer
 promot.holdout() // prompt is triggered, however the user is in the Control group so prompt should not be shown
 
-/* 
+/*
 PathType values:
   PathType.ALL = -1
   PathType.MODAL = 2 // Referenced as Popup within Pulse
@@ -236,7 +264,7 @@ PathType values:
   PathType.TILE = 9
   PathType.INTERSTITIAL = 10
   PathType.BOTTOM_BANNER = 13
-  
+
 PromptResultCode values:
   // Success codes
   OK = 1,
@@ -296,7 +324,7 @@ interface ModalButton {
 
 When a user interacts with the primary prompt CTA, a result callback includes various metadata associated with the Prompt to determine the client-side action that should take place.
 
-```javascript
+```javaScript
 // Data schema of the result callback
 interface PromptResult {
   code: PromptResultCode;
@@ -314,7 +342,7 @@ interface PromptResult {
 }
 ```
 
-### Analytics Callback Example
+## Analytics Callback Example
 
 ```javascript
 <RedfastInline
@@ -380,11 +408,9 @@ interface PromptResult {
   // utilize same analytics code above
   setShowModal(false);
 })}
-
-
 ```
 
-### Deeplink
+## Deeplink
 
 You can add a Deeplink to a Prompt within Pulse.. When the user invokes the CTA, you can utilize the Deeplink to send the user to a specific location within the app.
 
@@ -398,11 +424,7 @@ You can add a Deeplink to a Prompt within Pulse.. When the user invokes the CTA,
 }
 ```
 
-### In-app purchase
-
-An In-App Purchase product SKU may be configured on the prompt, which indicates that the user should be sent to the In-App Purchase flow for the specified SKU  once the primary CTA has been selected.
-
-### Custom metadata
+## Custom metadata
 
 Custom key-value pairs can be added to an item via Pulse. These values may be used to perform an action that is not the typical media asset deep link, like sending the user to a registration screen or performing an operation on behalf of the user.
 
@@ -424,12 +446,16 @@ Custom key-value pairs can be added to an item via Pulse. These values may be us
 Your app can send custom track events using the SDK. If configured as a tracker within Pulse, these custom events can be used to target prompts at specific sets of users.
 
 ```javascript
-promptMgr.customTrack(customFieldId)
+promptMgr.customTrack(customFieldId);
 ```
 
 ## Debugging
 
 You may reset the current user's prompt status, such that previously suppressed prompts will now be made available.
+
+```javascript
+promptMgr.resetGoal();
+```
 
 ```javascript
 promptMgr.resetGoal()
