@@ -5,7 +5,7 @@ excerpt: >-
   native iOS and tvOS applications, including prompt display, event tracking,
   push notifications, and in-app purchases.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
