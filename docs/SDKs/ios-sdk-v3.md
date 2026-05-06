@@ -1,5 +1,5 @@
 ---
-title: iOS & tvOS SKD (V3)
+title: iOS & tvOS SDK (V3)
 excerpt: >-
   How to install, initialize, and integrate the Recurly Engage Apple SDK into
   native iOS and tvOS applications, including prompt display, event tracking,
