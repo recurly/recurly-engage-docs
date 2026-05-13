@@ -715,3 +715,7 @@ All Compose components are stateless from the caller's perspective: dropping `Pr
 - **Countdown restarts after rotation** — upgrade to v3.0.0+. In v3 the countdown is restored from `initialStartTime` via `rememberSaveable`.
 - **Multiple prompts render on the same screen** — that is supported; each `PromptOverlay` / `PromptInline` manages its own state and `remember(prompt.id)` keys prevent recomposition cross-talk.
 - **TV focus ring invisible** — provide a non-default `InlineFocusStyle` with a contrasting `borderColor` and `borderWidth >= 1`.
+
+## Claude Skill
+
+A Claude skill for this SDK is available for download at [SKILL.md](https://github.com/redfast/redfast-sdk-android/blob/main/SKILL.md). This skill enables Claude to assist with SDK integration, prompt configuration, and event handling in your Android application.
