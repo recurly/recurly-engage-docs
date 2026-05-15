@@ -28,8 +28,7 @@ The **Recurly Engage Roku SDK** provides the ability to monitor consumption and 
 
 Download the latest Roku SDK (v1.0.36) with Roku Pay support [here](https://assets.redfastlabs.com/sdk/roku-sdk-1.0.36.zip) and without Roku Pay support [here](https://assets.redfastlabs.com/sdk/roku-sdk-noiap-1.0.36.zip). A demo app featuring an example integration can be provided by request.
 
-To build a project using the RedFast SDK for Roku, your project must have been built with the Scenegraph SDK.
-Unzip the SDK into the app `components` directory.
+To build a project using the RedFast SDK for Roku, your project must have been built with the Scenegraph SDK. Unzip the SDK into the app `components` directory.
 
 ## Initialize SDK
 
@@ -373,3 +372,7 @@ m.debugView.callFunc("onKeyDetection", {key: key, screen: m.top})
 ```
 
 When the `*` key on the remote control is pressed, the debug view will be displayed.
+
+## Claude Skill
+
+A Claude skill for this SDK is available for download at [SKILL.md](https://github.com/redfast/redfast-sdk-android/blob/main/SKILL.md). This skill enables Claude to assist with SDK integration, prompt configuration, and event handling in your Android application.
