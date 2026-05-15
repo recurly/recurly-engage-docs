@@ -527,6 +527,6 @@ On a successful purchase the conversion goal is automatically reported to Recurl
 
 **Local testing:** Redflix ships a `configurations.storekit` file. Use Xcode's StoreKit test environment to test purchases without hitting App Store servers.
 
-## Claude Skill
+## Claude skill
 
 A Claude skill for this SDK is available for download at [SKILL.md](https://github.com/redfast/redfast-sdk-android/blob/main/SKILL.md). This skill enables Claude to assist with SDK integration, prompt configuration, and event handling in your Android application.
