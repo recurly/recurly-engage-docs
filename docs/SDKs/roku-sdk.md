@@ -373,6 +373,6 @@ m.debugView.callFunc("onKeyDetection", {key: key, screen: m.top})
 
 When the `*` key on the remote control is pressed, the debug view will be displayed.
 
-## Claude Skill
+## Claude skill
 
 A Claude skill for this SDK is available for download at [SKILL.md](https://github.com/redfast/redfast-sdk-android/blob/main/SKILL.md). This skill enables Claude to assist with SDK integration, prompt configuration, and event handling in your Android application.
