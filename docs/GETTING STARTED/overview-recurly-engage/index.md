@@ -16,6 +16,8 @@ next:
 
 Recurly Engage is an always-on, low-code platform that empowers business teams to deliver targeted in-app and web prompts, guides, and notifications—driving user actions they might not otherwise take. Use cases range from trial-to-paid conversions and feature adoption to churn prevention and cross-sell campaigns. Explore our [Popular Use Cases](popular-uses).
 
+***
+
 # Key benefits
 
 * **Rapid deployment**: Launch prompts without engineering cycles, using tag managers or direct SDK integration.
@@ -42,7 +44,7 @@ Central hub to configure applications, user traits, segments, prompts, guides, a
 
 Real-time engine segments incoming events into cohorts using rule-based or ML-driven logic. These segments feed prompt targeting and journey orchestration.
 
-<Image align="center" alt="Recurly Engage Platform" border={false} caption="Recurly Engage Platform" src="https://files.readme.io/2a163da-image.png" />
+<Image align="center" alt="Recurly Engage Platform" caption="Recurly Engage Platform" src="https://files.readme.io/2a163da-image.png" />
 
 ## Third-party integrations
 
