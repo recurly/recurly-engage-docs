@@ -518,3 +518,7 @@ if case .clicked(let result) = event, let sku = result.inAppProductId {
 On a successful purchase the conversion goal is automatically reported to Recurly Engage.
 
 **Local testing:** Redflix ships a `configurations.storekit` file. Use Xcode's StoreKit test environment to test purchases without hitting App Store servers.
+
+## Claude Skill
+
+A Claude skill for this SDK is available for download at [skill.md](https://github.com/redfast/redfast-sdk-apple/blob/main/skill.md). This skill enables Claude to assist with SDK integration, prompt configuration, and event handling in your iOS application.

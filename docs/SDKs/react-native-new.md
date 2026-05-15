@@ -453,3 +453,7 @@ You may reset the current user's prompt status, such that previously suppressed 
 ```javascript
 promptMgr.resetGoal();
 ```
+
+## Claude Skill
+
+A Claude skill for this SDK is available for download at [SKILL.md](https://github.com/redfast/redfast-sdk-react-native/blob/main/SKILL.md). This skill enables Claude to assist with SDK integration, prompt configuration, and event handling in your React Native application.
