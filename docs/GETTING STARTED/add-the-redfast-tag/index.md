@@ -61,4 +61,23 @@ In most cases, we recommend using the `defer` or `async` script element attribut
 * [Google tag manager](google-tag-manager)
 * [Adobe dynamic tag manager](adobe-dynamic-tag-manager)
 * [Tealium dynamic tag manager](tealium-iq-tag-manager)
-* [Direct](direct)
+* [Direct](rengage-direct-tag)
+
+<br />
+
+# Important: Content Security Policy (CSP) Requirements
+
+If your website uses a Content Security Policy (CSP), you must allow Redfast domains to ensure the tag loads and communicates correctly. 
+
+Please add the following to your configuration:
+
+* **Script Source (script-src):** Add your unique company-specific JS tag domain.
+* **Connect Source (connect-src):** Add `conduit.redfast.com` to allow necessary network traffic.
+
+## Why is this necessary?  
+
+<br />
+
+Without these entries, your browser may block the Redfast tag from executing or prevent it from sending data to our API.
+
+**Technical Note:** This is a client-side configuration. While Redfast manages CORS on our end, the CSP must be updated within your own site’s headers or meta tags.

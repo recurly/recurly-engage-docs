@@ -56,11 +56,12 @@ The **Naviga** connector integrates Recurly Engage with the Naviga Subscribe API
 
 Use these actions within prompt configurations (accept, secondary accept, etc.) to drive Naviga workflows:
 
-| Action              | Description                                 | API Method                                                  |
-| ------------------- | ------------------------------------------- | ----------------------------------------------------------- |
-| Check Subscription  | Verify if a user has an active subscription | `GET /subscribe/v1/subscription/status?userId=<USER_ID>`    |
-| Create Subscription | Create a new subscription for a user        | `POST /subscribe/v1/subscription`                           |
-| Start Subscription  | Activate a pending subscription             | `POST /subscribe/v1/subscription/{subscriptionId}/activate` |
-| End Subscription    | Cancel or end an active subscription        | `POST /subscribe/v1/subscription/{subscriptionId}/cancel`   |
+| Action                         | Description                                 | API Method                                                          |
+| ------------------------------ | ------------------------------------------- | ------------------------------------------------------------------- |
+| Check Subscription             | Verify if a user has an active subscription | `GET /subscribe/v1/subscription/status?userId=<USER_ID>`            |
+| Create Subscription            | Create a new subscription for a user        | `POST /subscribe/v1/subscription`                                   |
+| Start Subscription             | Activate a pending subscription             | `POST /subscribe/v1/subscription/{subscriptionId}/activate`         |
+| End Subscription               | Cancel or end an active subscription        | `POST /subscribe/v1/subscription/{subscriptionId}/cancel`           |
+| Upgrade/Downgrade Subscription | Upgrade or Downgrade an active subscription | POST /subscription/update/upgrade OR /subscription/update/downgrade |
 
 These actions leverage the [Naviga Subscribe API](https://docs.navigaglobal.com/naviga-subscribe/additional-resources/subscribe-apis/subscribe-api). Reach out to your Customer Success Manager for partnership details and advanced integration options.

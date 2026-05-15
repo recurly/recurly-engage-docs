@@ -56,25 +56,25 @@ Connector actions require that certain user attributes (e.g., account IDs, email
 
 * **Billing**
 
-  * [Recurly](recurly)
-  * [Stripe](stripe)
+  * [Recurly](recurly-integration)
+  * [Stripe](stripe-rf)
   * [Zuora](zuora)
-  * [Braintree](braintree)
+  * [Braintree](braintree-rf)
   * [Chargify](chargify)
-  * [Vindicia](vindicia)
-  * [In‑App Purchases](app-stores) (Apple, Google, Amazon, Roku)
-  * [Shopify](shopify)
+  * [Vindicia](vindicia-rf)
+  * [In‑App Purchases](app-stores-rf) (Apple, Google, Amazon, Roku)
+  * [Shopify](shopify-rf)
   * [Cleeng](cleeng)
 
 * **CRM & Marketing**
 
   * [Salesforce Marketing Cloud](salesforce-marketing-cloud)
   * [Segment](segmentio-twilio)
-  * [Braze](braze)
+  * [Braze](braze-rf)
   * [SendGrid](sendgrid)
   * [ActiveCampaign](activecampaign)
   * [Freshdesk](freshdesk)
-  * [Zendesk](zendesk)
+  * [Zendesk](zendesk-rf)
   * [Adobe (AEP & AJO)](adobe-aep-ajo)
 
 * **Analytics & Events**

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Redfast Tenant API
-  version: "1.0"
+  version: '1.0'
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
@@ -32,9 +32,11 @@ paths:
           required: true
           schema:
             type: string
-          description: Shared secret provided by Redfast (separate secrets for Test and Production)
+          description: >-
+            Shared secret provided by Redfast (separate secrets for Test and
+            Production)
       responses:
-        "200":
+        '200':
           description: Tenant retrieved successfully
           content:
             application/json:
@@ -46,37 +48,37 @@ paths:
                     example: true
                   external_tenant_id:
                     type: string
-                    example: "tenant-123"
+                    example: tenant-123
                   app_id:
                     type: string
-                    example: "abc123app"
+                    example: abc123app
                   tag_url:
                     type: string
                     format: uri
-                    example: "https://abc123app.redfastlabs.com/assets/redfast.js"
+                    example: https://abc123app.redfastlabs.com/assets/redfast.js
                   user_first_name:
                     type: string
-                    example: "John"
+                    example: John
                   user_last_name:
                     type: string
-                    example: "Smith"
+                    example: Smith
                   user_email:
                     type: string
                     format: email
-                    example: "jsmith@myemail.com"
+                    example: jsmith@myemail.com
                   app_name:
                     type: string
-                    example: "My App"
+                    example: My App
                   company_name:
                     type: string
-                    example: "My Company"
+                    example: My Company
                   app_domain:
                     type: string
-                    example: "myco.com"
+                    example: myco.com
                   test_mode:
                     type: boolean
                     example: false
-        "401":
+        '401':
           description: Unauthorized - Shared secret is incorrect
           content:
             application/json:
@@ -88,8 +90,8 @@ paths:
                     example: false
                   status:
                     type: string
-                    example: "invalid_secret"
-        "404":
+                    example: invalid_secret
+        '404':
           description: Not Found - Tenant not found
           content:
             application/json:
@@ -101,7 +103,7 @@ paths:
                     example: false
                   status:
                     type: string
-                    example: "not_found"
+                    example: not_found
                   message:
                     type: string
-                    example: "resource not found"
+                    example: resource not found

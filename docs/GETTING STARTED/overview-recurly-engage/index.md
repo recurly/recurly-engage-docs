@@ -16,6 +16,8 @@ next:
 
 Recurly Engage is an always-on, low-code platform that empowers business teams to deliver targeted in-app and web prompts, guides, and notifications—driving user actions they might not otherwise take. Use cases range from trial-to-paid conversions and feature adoption to churn prevention and cross-sell campaigns. Explore our [Popular Use Cases](popular-uses).
 
+***
+
 # Key benefits
 
 * **Rapid deployment**: Launch prompts without engineering cycles, using tag managers or direct SDK integration.
@@ -42,16 +44,16 @@ Central hub to configure applications, user traits, segments, prompts, guides, a
 
 Real-time engine segments incoming events into cohorts using rule-based or ML-driven logic. These segments feed prompt targeting and journey orchestration.
 
-<Image align="center" alt="Recurly Engage Platform" border={false} caption="Recurly Engage Platform" src="https://files.readme.io/2a163da-image.png" />
+<Image align="center" alt="Recurly Engage Platform" caption="Recurly Engage Platform" src="https://files.readme.io/2a163da-image.png" />
 
 ## Third-party integrations
 
 Broad ecosystem of 1‑click connectors across business domains:
 
-* **Billing & Subscription**: [Recurly](recurly), [Zuora](zuora), [Stripe](stripe), [Vindicia](vindicia), Braintree, Piano
-* **Support & CRM**: [Zendesk](zendesk), [Freshdesk](freshdesk), [Salesforce](salesforce), [ActiveCampaign](activecampaign), [Braze](braze), [SendGrid](sendgrid), [Segment](segment)
-* **Marketing Automation**: Salesforce Marketing Cloud, Iterable, Adobe Campaign
-* **E‑commerce**: [Shopify](shopify), Cleeng, Chargify
+* **Billing & Subscription**: [Recurly](recurly-integration), [Zuora](zuora), [Stripe](stripe-rf), [Vindicia](vindicia-rf), [Braintree](braintree-rf), [Piano](piano)
+* **Support & CRM**: [Zendesk](zendesk-rf), [Freshdesk](freshdesk), [Salesforce](salesforce-marketing-cloud), [ActiveCampaign](activecampaign), [Braze](braze), [SendGrid](sendgrid), [Segment](segment)
+* **Marketing Automation**: [Salesforce Marketing Cloud](salesforce-marketing-cloud), [Iterable](iterable), [Adobe Campaign](adobe-aep-ajo)
+* **E‑commerce**: [Shopify](shopify), [Cleeng](cleeng), [Chargify](chargify)
 * **Analytics**: [Google Analytics](google-analytics), [Amplitude](amplitude), [Mixpanel](mixpanel), [mParticle](mparticle), [Heap](heap), [Adobe Analytics](adobe-analytics)
 
 Leverage these integrations to sync user data, trigger 1‑click actions, and report prompt events—seamlessly embedding Recurly Engage into your tech stack.
@@ -59,3 +61,9 @@ Leverage these integrations to sync user data, trigger 1‑click actions, and re
 ## Unlock the Standalone Benefits of Recurly Engage
 
 Ready to uplevel your subscriber lifecycle engagement? Reach out to [support@recurly.com](mailto:support@recurly.com) for detailed pricing. Our team of experts will evaluate your specific use cases and see if the Recurly Engage platform is a fit. Harness the power of our Standalone features to unlock acquisition, engagement, retention, upsells, cross sells and more for your entire subscriber base.
+
+## Security and compliance
+
+The Recurly Engage management console, Pulse, is HIPAA Compliant. In order to be compliant with regulations and standards such as PCI-DSS and HIPAA, we strongly suggest not including any sensitive information (e.g., protected health information, credit card numbers) in any forms or templates processed by Recurly Engage.
+
+<br />

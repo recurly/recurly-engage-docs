@@ -1,6 +1,4 @@
 ---
-title: Impression API
-excerpt: ''
 api:
   file: custom-rendering-api.yaml
   operationId: impression-api

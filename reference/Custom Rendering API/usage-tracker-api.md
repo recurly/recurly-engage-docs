@@ -1,6 +1,4 @@
 ---
-title: Usage Tracker API
-excerpt: ''
 api:
   file: custom-rendering-api.yaml
   operationId: usage-tracker-api

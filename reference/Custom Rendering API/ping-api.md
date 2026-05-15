@@ -1,6 +1,4 @@
 ---
-title: Ping
-excerpt: The ping call is the starting point to interacting with the Redfast backend
 api:
   file: custom-rendering-api.yaml
   operationId: ping-api

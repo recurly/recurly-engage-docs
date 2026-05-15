@@ -1,6 +1,4 @@
 ---
-title: Dismiss API
-excerpt: ''
 api:
   file: custom-rendering-api.yaml
   operationId: dismiss-api

@@ -48,7 +48,11 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 # Definition
 
-The **Recurly** connector imports subscription traits nightly and provides actions for managing subscriptions—coupon application, plan changes, pauses, resumes—via prompts.<br />
+The **Recurly** connector imports subscription traits nightly and provides actions for managing subscriptions—coupon application, plan changes, pauses, resumes—via prompts.
+
+Learn more about <a href="https://docs.recurly.com/recurly-subscriptions/docs/recurly-engage-integration#/step-4-import-user-traits-using-both-recurly-and-recurly-engage-sites">importing user traits</a> with Recurly.
+
+To receive near real time data from Recurly Subscription Management, learn more about integrating with <a href="https://docs.recurly.com/recurly-engage/docs/recurly-webhooks#/">Recurly Webhooks.</a>
 
 # Key benefits
 
@@ -65,32 +69,31 @@ The **Recurly** connector imports subscription traits nightly and provides actio
 3. Toggle **Use Account Code** to **On** if you map your own user IDs to Recurly Account Codes.
 4. Toggle **Active** to **On**.
 
-**API Key ([Instructions](https://docs.recurly.com/docs/api-keys) )**
+**API Key ([Instructions](https://docs.recurly.com/recurly-engage/docs/api-actions#/) )**
 
 ## Data integration
 
-to enable the automated sync.
+Automated exports from Recurly may be configured to automatically sync on a nightly basis. Learn more about configuring <a href="https://docs.recurly.com/recurly-subscriptions/docs/automated-exports#/">Automated Exports</a> within Recurly Subscription Management.
 
-Once enabled, the following traits are imported nightly:
-
-| Trait Name                  | Description                                                                      |
-| --------------------------- | -------------------------------------------------------------------------------- |
-| `state`                     | Current state of subscription (`pending`, `active`, `canceled`, `expired`)       |
-| `plan_code`                 | Plan code the customer is subscribed to                                          |
-| `currency`                  | Currency of the subscription                                                     |
-| `current_period_started_at` | Date/time when the current billing period starts                                 |
-| `current_period_ends_at`    | Date/time when the current billing period ends                                   |
-| `trial_started_at`          | Date/time when the trial period began                                            |
-| `trial_ends_at`             | Date/time when the trial period ends                                             |
-| `activated_at`              | Date/time the subscription became active                                         |
-| `canceled_at`               | Date/time the subscription was canceled                                          |
-| `expires_at`                | Date/time when the subscription will churn                                       |
-| `status`                    | Invoice status (`pending`, `processing`, `past_due`, `paid`, `failed`, `voided`) |
-| `maintenance_url`           | Link to the customer’s hosted account maintenance page (if enabled)              |
+| Trait Name                  | Description                                                                                                 |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `state`                     | Current state of subscription (`pending`, `active`, `canceled`, `expired`)                                  |
+| `plan_code`                 | Plan code the customer is subscribed to                                                                     |
+| `currency`                  | Currency of the subscription                                                                                |
+| `current_period_started_at` | Date/time when the current billing period starts                                                            |
+| `current_period_ends_at`    | Date/time when the current billing period ends                                                              |
+| `trial_started_at`          | Date/time when the trial period began                                                                       |
+| `trial_ends_at`             | Date/time when the trial period ends                                                                        |
+| `activated_at`              | Date/time the subscription became active                                                                    |
+| `canceled_at`               | Date/time the subscription was canceled                                                                     |
+| `expires_at`                | Date/time when the subscription will churn                                                                  |
+| `status`                    | Invoice status (`pending`, `processing`, `past_due`, `paid`, `failed`, `voided`)                            |
+| `maintenance_url`           | Link to the customer’s hosted account maintenance page (if enabled)                                         |
+| `total_recurring_amount`    | The total amount, in the subscription's currency, that is billed on a recurring basis for the subscription. |
 
 ## Supported actions
 
-Once your connector is active and data is synced, you can attach these 1-Click actions to prompt interactions. The **account\_code** or **account\_number** trait must be present on users.
+Once your connector is active and data is synced, you can attach these 1-Click actions to prompt interactions. The **account_code** or **account_number** trait must be present on users.
 
 | Action                    | Description                                                 | API Integration         | Additional Instructions                     |
 | ------------------------- | ----------------------------------------------------------- | ----------------------- | ------------------------------------------- |

@@ -7,8 +7,9 @@
 - triggers-1
 - data-sources
 - custom-js-snippet
-- actions-2
+- integrations
 - zones
 - custom-devices
 - users
 - download-data
+- sso-integration

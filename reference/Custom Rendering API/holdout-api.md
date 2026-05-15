@@ -1,6 +1,4 @@
 ---
-title: Holdout API
-excerpt: ''
 api:
   file: custom-rendering-api.yaml
   operationId: holdout-api

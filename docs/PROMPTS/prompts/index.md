@@ -36,9 +36,9 @@ Recurly Engage supports a variety of in-app message formats, all designed in acc
 
 * [Inlines](inlines) (horizontal, vertical, tile, text-only): Prompts embedded directly within your page layout.
 * [Overlays](overlays) (notification, interstitial, pop up, video, bottom banner): Floating prompts that appear above your content.
-* [Invisible](invisible-1): Silent prompts delivered via tracking pixels or JavaScript callbacks for analytics.
+* [Invisible](invisible): Silent prompts delivered via tracking pixels or JavaScript callbacks for analytics.
 * [Email](other): Messages sent outside the page—email campaigns.
-* [Push](push): Scheduled notifications sent to users’ devices (ADM, APNs, FCM) to drive re-engagement.
+* [Push](push-notification): Scheduled notifications sent to users’ devices (ADM, APNs, FCM) to drive re-engagement.
 * [Video](video): Rich-media overlays that play video content with text and call-to-action buttons in a popup modal.
 * [Mobile interstitial](mobile-interstitial): Full-screen native prompts on iOS and Android, rendered via the SDK for immersive mobile experiences.
 

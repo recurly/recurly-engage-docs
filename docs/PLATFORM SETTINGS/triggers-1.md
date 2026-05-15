@@ -5,7 +5,7 @@ deprecated: false
 hidden: false
 link:
   new_tab: true
-  url: https://help.redfast.com/docs/triggers-1#/
+  url: https://docs.recurly.com/recurly-engage/docs/triggers#/
 metadata:
   title: ''
   description: ''

@@ -23,7 +23,7 @@ The **Data Privacy & Security** section outlines how Recurly Engage handles end-
 # Key benefits
 
 * **Privacy-by-design**: Minimal default data collection with configurable tracking to meet your privacy requirements.
-* **Regulatory compliance**: Built-in support for SOC 2 Type II, GDPR, and CCPA controls to safeguard user data.
+* **Regulatory compliance**: Built-in support for HIPAA, SOC 2 Type II, GDPR, and CCPA controls to safeguard user data.
 * **Flexible retention**: Default 90-day lookback window with optional extended retention or suppression lists.
 
 # Key details
@@ -60,4 +60,17 @@ You may provide a list of user IDs to suppress. Recurly Engage will immediately 
 
 ## Data retention
 
-Data is retained no longer than 90 days past the user’s last activity by default. Extended lookback (up to one
+On an ongoing basis, Recurly Engage will retain end-user usage data no longer than ninety days past the latest activity encountered by that end user unless extended lookback has been enabled. For customers who request the extended lookback feature, data is retained for one year. For end users that have been added to the Suppression List, Recurly Engage will not retain any history of the end user's usage.
+
+## API access
+
+Any direct integration with third party systems that you configure within Recurly Engage should be secured with a developer specific API key assigned to Recurly Engage. Recurly Engage uses publicly or privately supplied documentation with these APIs to establish communications between the systems. An alternative to API access for 1-Click actions is redirecting the user to an existing screen within your app to perform the desired action. However this will come with an adverse impact to conversion rate.
+
+## Apple AppStore
+
+In December 2020, Apple introduced new requirements for app developers to outline their apps' data collection and usage policy. The following specifies data collected by Recurly Engage.
+
+Data collected by default:
+
+* **Identifiers:** Recurly Engage does not create a user identifier. A User ID created by your system is passed on to the Recurly Engage SDK. Please note that your system may be using Apple's IDFV identifier and passing that to the Recurly Engage SDK. Consult with your engineer for specific details.
+* **Usage Data:** Session related information. Optionally, additional user events that you elect to be tracked using Recurly Engage.

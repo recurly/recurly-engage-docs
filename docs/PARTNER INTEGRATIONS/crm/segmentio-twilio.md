@@ -1,8 +1,8 @@
 ---
 title: Segment
 excerpt: >-
-  Configuration guide for ingesting Segment.com events into Recurly Engage via
-  AWS Lambda and using them as usage trackers.
+  Configuration guide for syncing Segment traits into Recurly Engage via Segment
+  Unify or Amazon Lambda
 deprecated: false
 hidden: false
 metadata:
@@ -25,15 +25,11 @@ export const PrerequisitesLimitations = ({ header }) => {
         <p className="text-lg font-bold">{header}</p>
         <p>
           <i className="fa-solid fa-check mr-2" />
-          An AWS account with permissions to create and configure Lambda functions and roles.
-        </p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
           Access to your Segment workspace with permission to add destinations.
         </p>
         <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          Segment’s Lambda destination requires Node.js 14+ runtime.
+          <i className="fa-solid fa-check mr-2" />
+          Access to your Segment Unify space with permission to retrieve Unify Access Token and Space ID.
         </p>
       </div>
     </div>
@@ -44,74 +40,70 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 # Definition
 
-By routing Segment events through an AWS Lambda function, Recurly Engage ingests those events as custom usage traits (e.g., page views, button clicks), enabling you to target prompts based on real user behavior tracked in Segment.
+By setting up an integration to Segment Unify or by routing Segment events to an AWS Lambda Destination, Recurly Engage syncs each user's traits as they arrive on your site, enabling you to target prompts based on all profile data available within your Segment account.
 
 # Key benefits
 
 * **No additional instrumentation**: Leverage your existing Segment calls—no new SDKs or code changes required.
 * **Real-time targeting**: Segment events can be available in Recurly Engage within minutes for immediate prompt personalization.
-* **Flexible event mapping**: Track any Page, Screen, or custom Track call as a usage trait without rebuilding your analytics stack.
+* **Flexible trait mapping**: Sync any profile trait without rebuilding your analytics stack.
 
 # Key details
 
-## Integrating with Segment.com
+## Setup Segment Unify Sync
 
-Recurly Engage allows you to ingest Segment.com events and target your users according to your existing Page (web), Screen (mobile), and Track calls. This article explains how to add us as a destination via Amazon Lambda.
+If you utilize Segment Unify (formerly known as Profiles), Recurly Engage can automatically sync traits when a user starts a new session on your site or app.
+
+Within your Segment console:
+
+1. Click on the **Unify** tab in the left nav
+2. Select the space that should be synced (i.e. production or staging)
+3. Click on **Unify Settings** in the subnav
+4. Select **API Access**
+5. Note the **Space ID**
+6. If an access token has not yet been created, click on **Generate Token** and assign a name (i.e. Recurly Engage Token). Save the token as it will be displayed only once
+7. Copy over the  **Unify Access Token** and **Unify Space ID** within the Pulse Settings > Integrations > Segment modal and reach out to your CSM to activate this functionality.
+
+Newly synced traits will appear on the Settings > User Traits screen 5-10 minutes after syncing has commenced.
+
+## Setup Amazon Lambda Destination
+
+As an alternative to integrating with Segment Unify, you may setup an Amazon Lambda destination for events processed by Segment. "Identify" events will trigger a real-time sync of the associated user traits to Recurly Engage.
+
+Setup instructions:
 
 1. **Login** to Segment.
 
 2. **Go** to the correct app workspace.
 
-   <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/f5c742b-Segment_configure.png" />
+   <Image align="center" border={true} width="80% " src="https://files.readme.io/f5c742b-Segment_configure.png" className="border" />
 
 3. **Add** a new destination.
 
-   <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/125929e-Segment_configure_2.png" />
+   <Image align="center" border={true} width="80% " src="https://files.readme.io/125929e-Segment_configure_2.png" className="border" />
 
 4. **Type** lambda in the search box and click the found tile.
 
-   <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/cfe1f2f-Segment_configure_3.png" />
+   <Image align="center" border={true} width="80% " src="https://files.readme.io/cfe1f2f-Segment_configure_3.png" className="border" />
 
 5. **Click** "Configure Amazon Lambda".
 
-   <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/8baf8c6-Segment_configure_4.png" />
+   <Image align="center" border={true} width="80% " src="https://files.readme.io/8baf8c6-Segment_configure_4.png" className="border" />
 
 6. **Select** your app and **click** "Confirm Source".
 
-   <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/ffd3c94-Segment_configure_5.png" />
+   <Image align="center" border={true} width="80% " src="https://files.readme.io/ffd3c94-Segment_configure_5.png" className="border" />
 
 7. Now **go** to **Usage Tracking** and locate the credentials to enter.
 
-   <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/58f7707-Segment_Configure_6.png" />
+   <Image align="center" border={true} width="80% " src="https://files.readme.io/58f7707-Segment_Configure_6.png" className="border" />
 
 8. **Copy over** the `Region`, `Role Address` and `Lambda ARN` values. Make sure to provide the read-only `External ID` to your customer success manager as the final step. **Note that** `Client Context` and `Log Type` do not need any special configuration.
 
-   <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/a036acc-Segment_configure_7.png" />
+   <Image align="center" border={true} width="80% " src="https://files.readme.io/a036acc-Segment_configure_7.png" className="border" />
 
-   <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/a6f4a75-Segment_Configure_8.png" />
+   <Image align="center" border={true} width="80% " src="https://files.readme.io/a6f4a75-Segment_Configure_8.png" className="border" />
 
-> **Note:** Segment data can take up to one hour before it appears in Recurly Engage.
+> **Note:** New traits may take up to 10 minutes before they appear in Recurly Engage.
 
-## Adding a new tracker
-
-1. **Go** to **Settings > Usage Tracking > Segment > Add New Tracker**.
-
-   <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/47e233c-Segment_configure_9.png" />
-
-2. **Select** a Segment event.
-
-   <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/0caf0ba-Segment_configure_10.png" />
-
-3. **Click** **Submit**.
-
-   <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/8c96b24-Segment_Configure_11.png" />
-
-   <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/f74c2d1-Segment_Configure_12.png" />
-
-4. **Go** to **Segments > New Segment** and **choose** the **Usage** tab.
-
-   <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/8ec2610-Segment_Configure_13.png" />
-
-5. Under **Usage**, **select** your newly ingested Segment trait to target prompts based on those events.
-
-   <Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/0af69fd-Redfast_usage_4.png" />
+<br />

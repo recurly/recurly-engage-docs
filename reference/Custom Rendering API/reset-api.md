@@ -1,6 +1,4 @@
 ---
-title: Reset API
-excerpt: ''
 api:
   file: custom-rendering-api.yaml
   operationId: reset-api
