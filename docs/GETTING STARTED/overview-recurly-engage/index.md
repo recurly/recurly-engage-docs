@@ -16,8 +16,6 @@ next:
 
 Recurly Engage is an always-on, low-code platform that empowers business teams to deliver targeted in-app and web prompts, guides, and notifications—driving user actions they might not otherwise take. Use cases range from trial-to-paid conversions and feature adoption to churn prevention and cross-sell campaigns. Explore our [Popular Use Cases](popular-uses).
 
-***
-
 # Key benefits
 
 * **Rapid deployment**: Launch prompts without engineering cycles, using tag managers or direct SDK integration.
