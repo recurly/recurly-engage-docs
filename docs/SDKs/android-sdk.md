@@ -28,84 +28,88 @@ The Recurly Engage Android SDK brings the ability to monitor consumption and sho
 
 ## Install the SDK
 
-The Engage Android SDK includes support for mobile, tablet and TV devices. The latest SDK version as well as the source code of an example app is available [here](https://github.com/redfast/redfast-sdk-android/releases). Please reach out to your customer success manager if you would like the keys needed to run the example app.
+The Recurly Engage Android SDK is available on **Maven Central**. The SDK is split into variants depending on your target platform and billing setup — choose the one that fits your app:
 
-There are two options with installing the SDK: Add a dependency to an existing Gradle/Maven config, or add the local SDK packages.
+| Variant | Use when |
+|---------|----------|
+| `engage-sdk-android-google` | Google Play devices with in-app billing (IAP) |
+| `engage-sdk-android-amazon` | Amazon Fire devices with in-app billing (IAP) |
+| `engage-sdk-android-noiap` | Google Play devices without in-app billing |
+| `engage-sdk-android-core` | Google Play devices without in-app billing or push notifications |
 
-### Gradle/Maven Config
+### Add via Gradle
 
-**Gradle**
+**Step 1** — Confirm `mavenCentral()` is included in your `settings.gradle` or `settings.gradle.kts`:
 
-```java
-// settings.gradle
+```kotlin
+// settings.gradle.kts
 dependencyResolutionManagement {
   repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
   repositories {
     mavenCentral()
-    maven { url 'https://jitpack.io' }
   }
-}
-
-// dependency
-dependencies {
-  // amazon devices with inapp billing support
-  "amazonImplementation"("com.github.redfast.redfast-sdk-android-build:redfast-sdk-amazon:v2.3.0")
-
-  // google devices with inapp billing support
-  "googleImplementation"("com.github.redfast.redfast-sdk-android-build:redfast-sdk-google:v2.3.0"
-
-  // google devices without inapp billing support
-  "noiapImplementation"("com.github.redfast.redfast-sdk-android-build:redfast-sdk-noiap:v2.3.0")
-
-  // google devices without inapp and push support
-  "coreImplementation"("com.github.redfast.redfast-sdk-android-build:redfast-sdk-core:v2.3.0")
-
 }
 ```
 
-**Maven**
+**Step 2** — Add the SDK dependency in your app's `build.gradle.kts`. Pick the variant that matches your setup:
 
-```java
-// Maven pom.xml
-<repositories>
-  <repository>
-    <id>jitpack.io</id>
-    <url>https://jitpack.io</url>
-  </repository>
-</repositories>
+```kotlin
+// build.gradle.kts
+dependencies {
+  // Google Play with in-app billing
+  implementation(“com.recurly:engage-sdk-android-google:2.3.5”)
 
-// dependency
+  // Amazon Fire with in-app billing
+  implementation(“com.recurly:engage-sdk-android-amazon:2.3.5”)
+
+  // Google Play without in-app billing
+  implementation(“com.recurly:engage-sdk-android-noiap:2.3.5”)
+
+  // Google Play without in-app billing or push
+  implementation(“com.recurly:engage-sdk-android-core:2.3.5”)
+}
+```
+
+**Step 3** — Sync your project with Gradle files.
+
+### Add via Maven
+
+No additional repository configuration is needed — the SDK is published to Maven Central. Add the dependency to your `pom.xml`:
+
+```xml
 <dependency>
-  <groupId>com.github.redfast.redfast-sdk-android-build</groupId>
-  <artifactId>redfast-sdk-google</artifactId> // or redfast-sdk-amazon, redfast-sdk-noiap, redfast-sdk-core
-  <version>v2.3.0</version>
+  <groupId>com.recurly</groupId>
+  <!-- Replace artifactId with your chosen variant:
+       engage-sdk-android-google | engage-sdk-android-amazon |
+       engage-sdk-android-noiap  | engage-sdk-android-core   -->
+  <artifactId>engage-sdk-android-google</artifactId>
+  <version>2.3.5</version>
 </dependency>
 ```
 
-### Local package
+### Add via local package
 
-**Steps:**
+If you prefer to integrate the `.aar` files directly:
 
-1. Download the latest .aar files from [here](https://github.com/redfast/redfast-sdk-android/releases)
-2. Create folder “libs” under “src/main”
-3. Add .aar libraries to “libs” folder
-4. Add library as a dependency in “build.gradle”. Example:
-
-```kotlin
-"implementation"(files("src/main/libs/redfast-google-release.aar"))
-"implementation"(files("src/main/libs/redfast-amazon-release.aar"))
-```
-
-4. For the`google-sdk.aar`library, it is also required to add the Android billing library dependency. Example:
+1. Download the latest `.aar` files from [GitHub Releases](https://github.com/redfast/redfast-sdk-android/releases)
+2. Create a `libs` folder under `src/main`
+3. Copy the `.aar` files into that folder
+4. Add them as dependencies in your `build.gradle.kts`:
 
 ```kotlin
-"implementation"("com.android.billingclient:billing:6.0.1")
-"implementation"("com.android.billingclient:billing-ktx:6.0.1")
+implementation(files(“src/main/libs/redfast-google-release.aar”))
 ```
 
-5. Enable the following features in `build.gradle`:
+5. If using the Google IAP variant, also add the billing library:
 
-```kotlin Kotlin
+```kotlin
+implementation(“com.android.billingclient:billing:6.0.1”)
+implementation(“com.android.billingclient:billing-ktx:6.0.1”)
+```
+
+6. Enable the following in `build.gradle`:
+
+```kotlin
 buildFeatures {
   viewBinding = true
   dataBinding = true
