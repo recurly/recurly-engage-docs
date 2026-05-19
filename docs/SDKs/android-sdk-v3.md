@@ -50,16 +50,19 @@ The SDK monitors consumption, fetches active paths for the current `appId`/`user
 
 ## Install the SDK
 
-The v3 Engage Android SDK is available on **Maven Central**. Choose the variant that matches your target platform and billing setup:
+The v3 SDK is split into two modules published separately to **Maven Central**:
 
-| Variant                       | Store        | Push     | IAP                  |
-| ----------------------------- | ------------ | -------- | -------------------- |
-| `engage-sdk-android-google`   | Google Play  | FCM      | Google Play Billing  |
-| `engage-sdk-android-amazon`   | Amazon Fire  | ADM      | Amazon IAP           |
-| `engage-sdk-android-noiap`    | Google Play  | FCM      | None                 |
-| `engage-sdk-android-core`     | Any          | None     | None                 |
+- **`ui` module** — Jetpack Compose components (`PromptOverlay`, `PromptInline`, etc.), IAP adapters, and push. Depends on `core`. **Use this if you want the SDK to render prompts for you.**
+- **`core` module** — Networking, domain models, and prompt resolution. No Compose UI. **Use this if you want to fetch prompt data and render your own UI.**
 
-Use `engage-sdk-android-core` only if you are rendering prompts with your own UI layer. All other variants include the full Compose UI.
+Each `ui` artifact bundles `core` transitively — you only need one dependency.
+
+| Artifact                      | Module | Store        | Push | IAP                 |
+| ----------------------------- | ------ | ------------ | ---- | ------------------- |
+| `engage-sdk-android-google`   | UI     | Google Play  | FCM  | Google Play Billing |
+| `engage-sdk-android-amazon`   | UI     | Amazon Fire  | ADM  | Amazon IAP          |
+| `engage-sdk-android-noiap`    | UI     | Google Play  | FCM  | None                |
+| `engage-sdk-android-core`     | Core   | Any          | None | None                |
 
 ### Gradle/Maven
 
