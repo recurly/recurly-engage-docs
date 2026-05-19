@@ -20,7 +20,7 @@ This document covers the **v3 architecture** (`core` + `ui` modules). If you are
 * Kotlin 2.0.x
 * Jetpack Compose BOM 2024.09.00 or later
 * Java 11
-* JitPack repository access (for Gradle/Maven installation)
+* Maven Central access (included by default in Android projects)
 
 ### Limitations
 
@@ -50,14 +50,19 @@ The SDK monitors consumption, fetches active paths for the current `appId`/`user
 
 ## Install the SDK
 
-The v3 Engage Android SDK is published as two artifacts:
+The v3 SDK is split into two modules published separately to **Maven Central**:
 
-| Artifact           | Purpose                                                                      |
-| ------------------ | ---------------------------------------------------------------------------- |
-| `redfast-sdk-core` | Domain models, networking, prompt resolution. No Android UI.                 |
-| `redfast-sdk-ui`   | Jetpack Compose components, IAP adapters, push messaging. Depends on `core`. |
+- **`ui` module** — Jetpack Compose components (`PromptOverlay`, `PromptInline`, etc.), IAP adapters, and push. Depends on `core`. **Use this if you want the SDK to render prompts for you.**
+- **`core` module** — Networking, domain models, and prompt resolution. No Compose UI. **Use this if you want to fetch prompt data and render your own UI.**
 
-Most integrations depend on **`redfast-sdk-ui`**, which transitively exposes `redfast-sdk-core`. Only depend on `core` directly if you are rendering prompts with your own UI layer.
+Each `ui` artifact bundles `core` transitively — you only need one dependency.
+
+| Artifact                      | Module | Store        | Push | IAP                 |
+| ----------------------------- | ------ | ------------ | ---- | ------------------- |
+| `engage-sdk-android-google`   | UI     | Google Play  | FCM  | Google Play Billing |
+| `engage-sdk-android-amazon`   | UI     | Amazon Fire  | ADM  | Amazon IAP          |
+| `engage-sdk-android-noiap`    | UI     | Google Play  | FCM  | None                |
+| `engage-sdk-android-core`     | Core   | Any          | None | None                |
 
 ### Gradle/Maven
 
@@ -70,17 +75,22 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven(url = "https://jitpack.io")
     }
 }
 
 // app/build.gradle.kts
 dependencies {
-    // Full SDK (recommended)
-    implementation("com.github.redfast.redfast-sdk-android-build:redfast-sdk-ui:v3.0.0")
+    // Google Play with IAP + FCM push (recommended for most apps)
+    implementation("com.recurly:engage-sdk-android-google:3.0.0")
 
-    // Or, data layer only (bring your own UI)
-    implementation("com.github.redfast.redfast-sdk-android-build:redfast-sdk-core:v3.0.0")
+    // Amazon Fire with IAP + ADM push
+    implementation("com.recurly:engage-sdk-android-amazon:3.0.0")
+
+    // Google Play without IAP
+    implementation("com.recurly:engage-sdk-android-noiap:3.0.0")
+
+    // Data layer only — bring your own UI
+    implementation("com.recurly:engage-sdk-android-core:3.0.0")
 }
 ```
 
@@ -88,37 +98,23 @@ dependencies {
 
 ```groovy
 dependencies {
-    implementation "com.github.redfast.redfast-sdk-android-build:redfast-sdk-ui:v3.0.0"
+    implementation "com.recurly:engage-sdk-android-google:3.0.0"
 }
 ```
 
 **Maven**
 
 ```xml
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
-
+<!-- No extra repository needed — SDK is on Maven Central -->
 <dependency>
-    <groupId>com.github.redfast.redfast-sdk-android-build</groupId>
-    <artifactId>redfast-sdk-ui</artifactId>
-    <version>v3.0.0</version>
+    <groupId>com.recurly</groupId>
+    <!-- Replace artifactId with your chosen variant:
+         engage-sdk-android-google | engage-sdk-android-amazon |
+         engage-sdk-android-noiap  | engage-sdk-android-core   -->
+    <artifactId>engage-sdk-android-google</artifactId>
+    <version>3.0.0</version>
 </dependency>
 ```
-
-### Product flavors (optional)
-
-The `ui` module defines two flavor dimensions to tailor the artifact to your store and push provider:
-
-| Dimension | Flavors                     | Notes                                                                |
-| --------- | --------------------------- | -------------------------------------------------------------------- |
-| `store`   | `google`, `amazon`, `noiap` | Selects the In-App Purchase implementation. `noiap` provides a stub. |
-| `push`    | `fcm`, `adm`, `nopush`      | Selects the push-messaging implementation.                           |
-
-Invalid combinations (`google` + `adm`, `amazon` + `fcm`) are disabled automatically.
 
 ### Local `.aar` installation
 
@@ -694,7 +690,7 @@ enum class PathType(val value: Int) {
 | -------- | -------------------------------------------------------------------- | -------------------- |
 | `google` | `com.android.billingclient:billing`                                  | 8.0.0                |
 | `google` | `com.android.billingclient:billing-ktx`                              | 8.0.0                |
-| `amazon` | `com.amazon.device:amazon-appstore-sdk`                              | 3.0.4                |
+| `amazon` | `com.amazon.device:amazon-appstore-sdk`                              | 3.0.8                |
 | `fcm`    | `com.google.firebase:firebase-messaging` (via `firebase-bom:34.0.0`) | —                    |
 | `adm`    | `A3LMessaging-1.1.0.aar`                                             | 1.1.0 (compile-only) |
 
@@ -724,15 +720,6 @@ All Compose components are stateless from the caller's perspective: dropping `Pr
 * **Countdown restarts after rotation** — upgrade to v3.0.0+. In v3 the countdown is restored from `initialStartTime` via `rememberSaveable`.
 * **Multiple prompts render on the same screen** — that is supported; each `PromptOverlay` / `PromptInline` manages its own state and `remember(prompt.id)` keys prevent recomposition cross-talk.
 * **TV focus ring invisible** — provide a non-default `InlineFocusStyle` with a contrasting `borderColor` and `borderWidth >= 1`.
-
-```
-Google IAP: 
-    com.android.billingclient:billing:6.0.1
-    com.android.billingclient:billing-ktx:6.0.1
-    
-Amazon IAP:
-    amazon/in-app-purchasing-2.0.76.jar
-```
 
 ## Claude skill
 
