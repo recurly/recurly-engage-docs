@@ -26,6 +26,4 @@ The new Sandbox ensures that all configuration, testing, and integration are don
 3. **Account Activation & Team Access:** Check your inbox for an automated email from Recurly Engage. Click the login link provided to activate your sandbox. Once logged in, navigate to Settings > Users to invite additional team members to the environment.
 4. Enjoy your Recurly Engage Sandbox!
 
-***
-
-# This is a test, please don't make this page public
+<br />
