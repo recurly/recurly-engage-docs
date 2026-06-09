@@ -1,20 +1,24 @@
 ---
 title: Churn Propensity Modeling
+excerpt: >-
+  Predict subscriber churn risk before cancellation occurs using Recurly
+  Engage's machine learning propensity model — combining behavioral engagement
+  signals with subscription billing intelligence to enable proactive retention.
 deprecated: false
 hidden: true
 metadata:
   robots: index
 ---
-#### Metadata description: Predict subscriber churn risk before cancellation occurs using Recurly Engage's machine learning propensity model — combining behavioral engagement signals with subscription billing intelligence to enable proactive retention.
-
 # Churn propensity modeling
 
 ### Prerequisites
+
 - Recurly Engage must be enabled on your account
 - The Churn Propensity Score feature must be activated by your Recurly customer success team before it appears in the Engage console
 - Approximately two weeks of subscriber data is required for meaningful predictions; full model accuracy is reached after approximately 12 weeks
 
 ### Limitations
+
 - Score distributions may take time to stabilize for new accounts or accounts that have recently onboarded a large number of subscribers
 - It's normal for some accounts to have few or no subscribers in the 8–10 risk range — this reflects the model's confidence threshold, not a misconfiguration
 - Merchants using Recurly Engage without Recurly Subscription Management (RSM) have access to a behavioral engagement-only model; the enhanced model incorporating billing and payment history requires RSM
@@ -29,10 +33,10 @@ Risk scores are expressed on a scale of 1–10, where 1 indicates low churn risk
 
 Data inputs vary by merchant configuration:
 
-| Integration type | Data used in model |
-|---|---|
+| Integration type     | Data used in model                                                       |
+| -------------------- | ------------------------------------------------------------------------ |
 | Recurly Engage + RSM | Behavioral engagement signals + subscription billing and payment history |
-| Recurly Engage only | Behavioral engagement signals only |
+| Recurly Engage only  | Behavioral engagement signals only                                       |
 
 The model improves as more data accumulates. Scores are useful after approximately two weeks of subscriber data and reach full accuracy after approximately 12 weeks. If you maintain your own propensity scores, you can import them as user traits and use them for segmentation alongside — or instead of — the native model.
 
