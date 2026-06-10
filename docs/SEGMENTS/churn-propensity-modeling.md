@@ -1,11 +1,11 @@
 ---
-title: Churn Propensity Modeling
+title: Churn propensity modeling
 excerpt: >-
   Churn propensity modeling is a machine learning feature in Recurly Engage that
   assigns each subscriber a real-time risk score from 1–10 to surface at-risk
   subscribers before they cancel.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
