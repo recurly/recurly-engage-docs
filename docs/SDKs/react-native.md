@@ -32,7 +32,7 @@ Add the following to your `.npmrc` or `.yarnrc.yml` file. Contact your Customer 
 
 ```
 # .npmrc
-@redfast:registry=https://npm.pkg.github.com
+@recurly:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=AUTHTOKEN
 
 # .yarnyc.yml
@@ -44,15 +44,15 @@ npmAuthToken: "AUTHTOKEN"
 Using npm
 
 ```shell
-npm install @redfast/redfast-core
-npm install @redfast/react-native-redfast
+npm install @recurly/redfast-core
+npm install @recurly/react-native-redfast
 ```
 
 or yarn
 
 ```shell
-yarn add @redfast/redfast-core
-yarn add @redfast/react-native-redfast
+yarn add @recurly/redfast-core
+yarn add @recurly/react-native-redfast
 ```
 
 ## Initialize Engage
@@ -142,7 +142,7 @@ import {
   usePrompt, // Prompt state management
   displayPrompt, // Modal prompts
   RedfastInline, // Inline prompts
-} from '@redfast/react-native-redfast';
+} from '@recurly/react-native-redfast';
 
 // Trigger when entering the "home" screen
 const { path, delaySeconds } = await promptMgr.onScreenChanged("home");
