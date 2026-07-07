@@ -49,7 +49,7 @@ Add the following to your `.npmrc` or `.yarnrc.yml` file. Contact your Customer 
 
 ```
 # .npmrc
-@redfast:registry=https://npm.pkg.github.com
+@recurly:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=AUTHTOKEN
 
 # .yarnyc.yml
@@ -61,15 +61,15 @@ npmAuthToken: "AUTHTOKEN"
 Using npm:
 
 ```bash
-npm install @redfast/redfast-core
-npm install @redfast/react-native-redfast
+npm install @recurly/redfast-core
+npm install @recurly/react-native-redfast
 ```
 
 Or yarn:
 
 ```bash
-yarn add @redfast/redfast-core
-yarn add @redfast/react-native-redfast
+yarn add @recurly/redfast-core
+yarn add @recurly/react-native-redfast
 ```
 
 ***
@@ -188,7 +188,7 @@ Use the `promptMgr.buttonClicked('clickId')` method for registering a click on a
 // Example a screen
 import {
   usePrompt, // Prompt state management
-} from '@redfast/react-native-redfast';
+} from '@recurly/react-native-redfast';
 
 // Example: trigger when entering the "home" screen
 export default function HomeScreen() {
