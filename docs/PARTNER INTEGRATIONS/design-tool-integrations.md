@@ -7,7 +7,7 @@ excerpt: >-
   directly and let Engage do the heavy lifting.Today, this category includes a
   single integration: Figma.
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
