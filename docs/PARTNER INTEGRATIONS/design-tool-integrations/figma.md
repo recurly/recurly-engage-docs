@@ -5,7 +5,7 @@ excerpt: >-
   a Figma design and have it automatically translated into an editable Engage
   prompt, letting you go from design to live campaign without a developer.
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
