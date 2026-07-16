@@ -13,7 +13,11 @@ metadata:
 
 The Figma integration lets you turn a finished Figma design into a Recurly Engage prompt automatically. Upload a Figma file or paste a Figma URL from within the Engage console, and Engage generates an editable prompt — copy, calls to action, colors, and layout intent included — that you can review, adjust, and publish yourself.
 
-<br />Required plan<br />This feature is an add on and can be purchased for any Recurly Engage subscription plan.<br />Prerequisites & limitations<br />Company or App Administrator permissions.<br />A completed Figma design exported as a single frame or single page. Multi-frame and multi-page files are not supported in this release.<br />Figma is the only supported design tool at this time.<br />Definition<br />The Recurly Engage Figma integration removes the manual handoff between design and campaign setup. Instead of a developer or implementation specialist rebuilding a Figma mockup in Engage by hand, the integration interprets your design and generates a matching prompt for you. You keep full control at the review step — nothing publishes without your explicit confirmation — so you can launch on-brand campaigns in minutes rather than days or weeks.<br />Key benefits
+### Required plan
+
+This feature is included in all Recurly Engage subscription plans, but requires that merchants have a Figma developer plan .
+
+<br />Prerequisites & limitations<br />Company or App Administrator permissions.<br />A completed Figma design exported as a single frame or single page. Multi-frame and multi-page files are not supported in this release.<br />Figma is the only supported design tool at this time.<br />Definition<br />The Recurly Engage Figma integration removes the manual handoff between design and campaign setup. Instead of a developer or implementation specialist rebuilding a Figma mockup in Engage by hand, the integration interprets your design and generates a matching prompt for you. You keep full control at the review step — nothing publishes without your explicit confirmation — so you can launch on-brand campaigns in minutes rather than days or weeks.<br />Key benefits
 
 Faster time to launch: Go from a finished design to a live prompt in minutes, eliminating the design-to-development queue that traditionally delays campaigns.
 No developer required: Marketers and designers can complete the entire workflow themselves inside the Engage console, with no technical intermediary.
