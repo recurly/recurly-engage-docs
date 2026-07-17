@@ -4,7 +4,7 @@ excerpt: >-
   How to import a Figma design into Recurly Engage and generate a styled web
   popup prompt using AI Figma Sync.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
