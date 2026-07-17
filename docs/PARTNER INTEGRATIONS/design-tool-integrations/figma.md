@@ -10,7 +10,7 @@ metadata:
 ---
 # Overview
 
-Import a Figma frame to create a styled Recurly Engage web popup prompt that you can refine in the prompt editor.
+Import a Figma frame to create a stylized Recurly Engage web popup prompt that you can refine in the prompt editor.
 
 ## Required plan
 
@@ -25,7 +25,7 @@ AI Figma Sync is included with Recurly Engage at no additional cost.
 Complete these steps before you import a design:
 
 1. Use a Figma account with a developer license so you can generate an API key.
-2. Create your design from a Recurly Engage Figma template.
+2. Create your design from a <Anchor target="_blank" href="https://www.figma.com/community/file/1660045412615829580">Recurly Engage Figma template</Anchor>.
 
 # Limitations
 
