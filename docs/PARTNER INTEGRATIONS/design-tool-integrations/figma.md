@@ -8,15 +8,47 @@ hidden: true
 metadata:
   robots: index
 ---
+# Overview
+
 Import a Figma frame to create a styled Recurly Engage web popup prompt that you can refine in the prompt editor.
 
-## Prerequisites
+# Required plan
+
+Enable the AI Figma Sync feature for your Recurly Engage account before you import a design.
+
+# Additional cost
+
+The source content does not specify additional cost information for AI Figma Sync.
+
+# Prerequisites
 
 Complete these steps before you import a design:
 
 1. Enable AI Figma Sync for your Recurly Engage account.
 2. Use a Figma account with a developer license so you can generate an API key.
 3. Create your design from a Recurly Engage Figma template.
+
+# Limitations
+
+- AI Figma Sync supports web popup prompts only. Other prompt types are not supported.
+- Mapping accuracy depends on how closely the design follows the provided template. Changes to the template structure can reduce mapping reliability for elements such as legal text and call-to-action buttons.
+- Recurly Engage supports a maximum of three buttons per prompt. Additional buttons might not map as expected.
+- Templates use a fixed medium popup size.
+
+# Definition
+
+AI Figma Sync lets you turn a Figma design into a styled Recurly Engage web popup prompt without manually rebuilding it. Paste a Figma frame link into Engage to map your styling and messaging into a draft that you can edit.
+
+The feature reads mapped fields (metadata that identifies where each element belongs) in Recurly Engage Figma templates. When you import, AI Figma Sync brings in your title, message, survey options, and buttons, then translates your custom styles into CSS in the prompt editor.
+
+# Key benefits
+
+- **Faster launches:** Start from a styled draft instead of a blank canvas.
+- **Lower technical barrier:** Create brand-aligned prompts without hand-written CSS.
+- **Brand consistency:** Use approved Figma designs while preserving your styling.
+- **Flexible editing:** Refine the result in Recurly Engage or update the design in Figma and re-import it.
+
+# Key details
 
 ## Connect Figma to Recurly Engage
 
@@ -29,7 +61,7 @@ Connect Figma with a developer API key. You only need to add this token once.
 
 ## Create your design from a template
 
-Recurly Engage templates include mapped fields (metadata that identifies where each element belongs). These fields let Engage place your title, message, survey options, and buttons in the prompt editor when you import the design.
+Recurly Engage templates include mapped fields. These fields let Engage place your title, message, survey options, and buttons in the prompt editor when you import the design.
 
 Make a copy of the template file before you edit it. The original template is shared and cannot be edited directly.
 
@@ -58,20 +90,17 @@ Import a frame link, not a link to the full Figma file.
 
 Processing typically takes about one minute. When processing finishes, the prompt editor opens with the imported text, mapped buttons, and generated custom CSS. View the generated styling in the **CSS** tab at the bottom of the prompt.
 
-## Optional: Edit the imported prompt
+## Edit the imported prompt
 
 Choose one of these approaches after importing:
 
 - **Edit in Recurly Engage:** Update copy, replace the background image, adjust styling, or modify individual elements in the prompt editor.
 - **Edit in Figma and re-import:** For a larger change or a redesign, update your Figma file and repeat the import process with the frame link.
 
-## Optional: Import separate desktop and mobile designs
+## Import separate desktop and mobile designs
 
 Recurly Engage imports desktop and mobile web designs separately. When you provide a mobile-specific frame link with the desktop frame link, Engage maps its fields to the prompt's mobile section.
 
-## Limitations
+# FAQs
 
-- AI Figma Sync supports web popup prompts only. Other prompt types are not supported.
-- Mapping accuracy depends on how closely the design follows the provided template. Changes to the template structure can reduce mapping reliability for elements such as legal text and call-to-action buttons.
-- Recurly Engage supports a maximum of three buttons per prompt. Additional buttons might not map as expected.
-- Templates use a fixed medium popup size.
+The source content does not provide FAQs for AI Figma Sync.
