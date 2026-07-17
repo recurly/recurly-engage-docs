@@ -14,19 +14,18 @@ Import a Figma frame to create a styled Recurly Engage web popup prompt that you
 
 # Required plan
 
-Enable the AI Figma Sync feature for your Recurly Engage account before you import a design.
+AI Figma Sync is available to all Recurly Engage merchants. The feature is rolled out behind a feature flag and enabled across all accounts at release.
 
 # Additional cost
 
-The source content does not specify additional cost information for AI Figma Sync.
+AI Figma Sync is included with Recurly Engage at no additional cost.
 
 # Prerequisites
 
 Complete these steps before you import a design:
 
-1. Enable AI Figma Sync for your Recurly Engage account.
-2. Use a Figma account with a developer license so you can generate an API key.
-3. Create your design from a Recurly Engage Figma template.
+1. Use a Figma account with a developer license so you can generate an API key.
+2. Create your design from a Recurly Engage Figma template.
 
 # Limitations
 
