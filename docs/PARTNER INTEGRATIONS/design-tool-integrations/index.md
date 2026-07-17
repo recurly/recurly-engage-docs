@@ -11,20 +11,19 @@ hidden: false
 metadata:
   robots: index
 ---
-# Overview
+Turn a finished design into an editable Recurly Engage prompt without rebuilding it by hand or waiting on a developer.
 
-Recurly Engage integrates with design tools so you can turn finished designs into live prompts — without rebuilding them by hand or waiting on a developer. Design Tool Integrations take a design you've already created and translate it directly into an editable Engage prompt, preserving copy, layout intent, calls to action, and color.
+## How design tool integrations work
 
-# Definition
+Design tool integrations are pre-built connectors that translate an existing design into an Engage prompt while preserving its copy, layout intent, calls to action (CTAs), and color.
 
-**Design Tool Integrations** are pre-built connectors that enable you to:&#x20;
+You can then:
 
-- Import a finished design and generate an Engage prompt from it automatically.
-- Review and edit every generated field — copy, CTA, colors, and layout — before anything goes live.
-- Publish directly to Engage or save your work as a draft, without a design-to-development handoff.
+- Review and edit generated copy, CTAs, colors, and layout before publishing.
+- Publish the prompt directly to Engage or save it as a draft.
 
-# Key details
+## Available integration
 
-- **Figma:** Upload a Figma file or paste a Figma URL to generate an editable Engage prompt from your design. ([Learn more](https://docs.recurly.com/recurly-engage/update/docs/figma))
+- **Figma:** Upload a Figma file or paste a Figma URL to generate an editable Engage prompt from your design. [Learn more](https://docs.recurly.com/recurly-engage/update/docs/figma).
 
 <br />
