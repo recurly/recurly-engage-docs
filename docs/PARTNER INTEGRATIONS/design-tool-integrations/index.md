@@ -18,6 +18,6 @@ Design Tools integrations allow Recurly Engage to import designs from external t
 
 # Key details
 
-- **Figma:** Import a Figma frame and generate a styled web popup prompt with AI Figma Sync, mapping brand styling and messaging into an editable draft. ([Learn more]())
+- **Figma:** Import a Figma frame and generate a styled web popup prompt with AI Figma Sync, mapping brand styling and messaging into an editable draft. ([Learn more](https://docs.recurly.com/recurly-engage/docs/figma))
 
 <br />
