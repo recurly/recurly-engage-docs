@@ -8,19 +8,16 @@ hidden: false
 metadata:
   robots: index
 ---
-Turn a finished design into an editable Recurly Engage prompt without rebuilding it by hand or waiting on a developer.
+# Overview
 
-## How design tool integrations work
+Recurly Engage can connect to design tools, letting teams turn existing brand designs into styled prompts without manually rebuilding creative inside the platform.
 
-Design tool integrations are pre-built connectors that translate an existing design into an Engage prompt while preserving its copy, layout intent, calls to action (CTAs), and color.
+# Definition
 
-You can then:
+Design Tools integrations allow Recurly Engage to import designs from external tools and translate their layout, styling, and messaging into Engage prompts — mapping elements like titles, body copy, buttons, and survey options into an editable draft with matching CSS generated automatically.
 
-- Review and edit generated copy, CTAs, colors, and layout before publishing.
-- Publish the prompt directly to Engage or save it as a draft.
+# Key details
 
-## Available integration
-
-- **Figma:** Upload a Figma file or paste a Figma URL to generate an editable Engage prompt from your design. [Learn more](https://docs.recurly.com/recurly-engage/update/docs/figma).
+- **Figma:** Import a Figma frame and generate a styled web popup prompt with AI Figma Sync, mapping brand styling and messaging into an editable draft. ([Learn more]())
 
 <br />
