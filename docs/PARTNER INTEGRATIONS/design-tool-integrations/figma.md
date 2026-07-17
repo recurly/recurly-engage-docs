@@ -12,14 +12,6 @@ metadata:
 
 Import a Figma frame to create a stylized Recurly Engage web popup prompt that you can refine in the prompt editor.
 
-## Required plan
-
-AI Figma Sync is available to all Recurly Engage merchants. The feature is rolled out behind a feature flag and enabled across all accounts at release.
-
-## Additional cost
-
-AI Figma Sync is included with Recurly Engage at no additional cost.
-
 # Prerequisites
 
 Complete these steps before you import a design:
@@ -100,6 +92,14 @@ Choose one of these approaches after importing:
 
 Recurly Engage imports desktop and mobile web designs separately. When you provide a mobile-specific frame link with the desktop frame link, Engage maps its fields to the prompt's mobile section.
 
-# FAQs
+# Required plan
 
-The source content does not provide FAQs for AI Figma Sync.
+AI Figma Sync is available to all Recurly Engage merchants. The feature is rolled out behind a feature flag and enabled across all accounts at release.
+
+# Additional cost
+
+AI Figma Sync is included with Recurly Engage at no additional cost.
+
+#
+
+<br />
