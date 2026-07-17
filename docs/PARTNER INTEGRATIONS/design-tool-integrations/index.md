@@ -25,6 +25,6 @@ Recurly Engage integrates with design tools so you can turn finished designs int
 
 # Key details
 
-- **Figma:** Upload a Figma file or paste a Figma URL to generate an editable Engage prompt from your design. (Learn more)
+- **Figma:** Upload a Figma file or paste a Figma URL to generate an editable Engage prompt from your design. ([Learn more](https://docs.recurly.com/recurly-engage/update/docs/figma))
 
 <br />
