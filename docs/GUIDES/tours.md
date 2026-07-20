@@ -32,7 +32,7 @@ The subscriber moves through steps in a fixed, sequential order and can move bac
 
 # Key details
 
-## How a Tour works
+## How a tour works
 
 Each Tour step is a web notification prompt with two capabilities specific to Tours:
 
@@ -43,7 +43,7 @@ Each Tour step is a web notification prompt with two capabilities specific to To
 
 Tour steps inherit the guide's **Limits**, **Segments**, and **Schedule** settings. Tour impressions, step completions, and exits appear in Engage analytics.
 
-# Build a Tour
+# Build a tour
 
 1. Go to **Guides** > **New Guide**.
 2. Enter a **Name** and, optionally, a **Description**. Select the **Tour** guide type.
