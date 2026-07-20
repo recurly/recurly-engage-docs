@@ -4,7 +4,7 @@ excerpt: >-
   Build a Tour in Recurly Engage — a multi-step, element-anchored tooltip
   walkthrough that guides subscribers through your site.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
