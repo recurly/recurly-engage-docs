@@ -18,7 +18,7 @@ Confirm that you have Company, App Administrator, or App Member permissions in R
 
 Tours run in standard web browsers only. They do not support connected TV (CTV), mobile, or other device platforms.
 
-## How Tours work
+## How tours work
 
 A Tour is a guide type that presents floating tooltips anchored to specific elements on your site. Use Tours for onboarding, feature discovery, and guided navigation without a third-party onboarding tool.
 
@@ -33,7 +33,7 @@ Each Tour step is a web notification prompt with these Tour-specific capabilitie
 
 Tour steps inherit the guide's Limits, Segments, and Schedule settings.
 
-## Build a Tour
+## Build a tour
 
 1. Go to **Guides** > **New Guide**.
 2. Enter a **Name** and, optionally, a **Description**. Select the **Tour** guide type and your **Segments**.
