@@ -49,19 +49,18 @@ Tour steps inherit the guide's **Limits**, **Segments**, and **Schedule** settin
 2. Enter a **Name** and, optionally, a **Description**. Select the **Tour** guide type.
 3. **Configure** your **Segments** and the guide's trigger conditions — audience segment, page URL, event, and schedule — using the standard Engage targeting options.
 4. **Add** Tour steps in the order subscribers should see them. Each step is a web notification prompt with its own content, targeting, and placement.
+5. For each step, **navigate** to the prompt design editor to **configure** the **Pin to** section:
+   1. Enter the CSS selector of the element you want to anchor the tooltip to.
+   2. Choose the placement relative to that element: top, bottom, left, or right.
 
-For each step, **navigate** to the prompt design editor to **configure** the **Pin to** section:
-
-1. Enter the CSS selector of the element you want to anchor the tooltip to.
-2. Choose the placement relative to that element: top, bottom, left, or right.
-
-   <Image src="https://files.readme.io/2db5e0e07a32e8f264ba7228c91838e40f360beb1b2cb1c806e11f54791622a2-Screenshot_2026-07-20_at_1.23.05_PM.png" align="center" width="400px" />
+      <Image src="https://files.readme.io/2db5e0e07a32e8f264ba7228c91838e40f360beb1b2cb1c806e11f54791622a2-Screenshot_2026-07-20_at_1.23.05_PM.png" align="center" width="400px" />
 
 
-
-Under **User interactions**, set **Show prompt again after Button 1 click** and **Show prompt again after Button 2 click** to **Amount of time: 0 minutes**. Set the **Fadeout timer** to **0 seconds**.
-
-1. Set a **transition URL** on each step that moves the subscriber to another page. This URL tells Engage where to navigate when the subscriber moves forward or backward in the Tour.
-2. Preview the Tour on your site to confirm its positioning and copy, then click **Start** to make it live.
+6. (Optional) **Set** the **scroll into view** behavior so the page scrolls the anchored element into view — top, center, or bottom of the viewport — when the step triggers.
+7. Under **User interactions**, set **Show prompt again after Button 1 click** and **Show prompt again after Button 2 click** to **Amount of time: 0 minutes**. Set the **Fadeout timer** to **0 seconds**.
+8. **Return** to the guide page to **configure** the optional **transition** settings.
+9. **Set** the **transition URL** for any step that moves the subscriber to a different page. This tells Engage where to navigate next as the subscriber moves forward or backward through the Tour.
+10. (Optional) **Set Limits** and a **Schedule&#x20;**&#x66;or the entire Tour.
+11. **Preview** the Tour against your site to confirm positioning and copy, then **click Start** to make it live.
 
 <br />
