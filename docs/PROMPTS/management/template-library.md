@@ -16,8 +16,8 @@ Templates are drawn from the best-practice prompts and guides Engage has histori
 
 ## Limitations
 
-- Templates are available for prompts and guides on desktop and mobile web.
-- Creating and saving your own custom templates isn't currently supported.
+- Templates are available for prompts and guides on desktop and mobile web
+- Creating and saving your own custom templates isn't currently supported
 
 # Definition
 
@@ -25,10 +25,10 @@ A template is a pre-built prompt or guide, mapped to a common subscriber lifecyc
 
 # Key benefits
 
-- **No blank canvas:** Begin with a proven foundation for common use cases instead of building from scratch.
-- **Faster activation:&#x20;**&#x4C;aunch your first campaign in minutes with copy, layout, and settings already in place.
-- **Fewer setup mistakes:** Required fields come pre-populated, reducing misconfiguration and support requests.
-- **Best practices built in:&#x20;**&#x54;emplates reflect the lifecycle moments Recurly Engage customers use most.
+- **No blank canvas:** Begin with a proven foundation for common use cases instead of building from scratch
+- **Faster activation:&#x20;**&#x4C;aunch your first campaign in minutes with copy, layout, and settings already in place
+- **Fewer setup mistakes:** Required fields come pre-populated, reducing misconfiguration and support requests
+- **Best practices built in:&#x20;**&#x54;emplates reflect the lifecycle moments Recurly Engage customers use most
 
 # Key details
 
@@ -44,22 +44,22 @@ Popular examples include **cancel save with offer** and **personalized onboardin
 
 ## Create a prompt from a template
 
-1. From the Engage dashboard, click **+ New prompt**.
-2. The **New prompt** modal opens with the Template library displayed, showing available templates grouped by use case.
-3. Browse the categories and select the template that matches your goal (for example, Cancel save under Churn prevention).
-4. A new prompt draft is created with preset copy and layout already filled in.
-5. You land in the Prompt editor, where you can refine the content and launch.
+1. From the Engage dashboard, click **+ New prompt**
+2. The **New prompt** modal opens with the Template library displayed, showing available templates grouped by use case
+3. Browse the categories and select the template that matches your goal (for example, Cancel save under Churn prevention)
+4. A new prompt draft is created with preset copy and layout already filled in
+5. You land in the Prompt editor, where you can refine the content and launch
 
-To build a prompt without a template, scroll down to the Custom Prompts section, which remains available in the modal.
+To build a prompt without a template, scroll down to the Custom Prompts section, which remains available in the modal
 
 ## Create a guide from a template
 
-1. From the Engage dashboard, click **+ New guide.**
-2. The New guide modal opens with the template library displayed, showing available guide templates grouped by use case.
-3. Select the template that matches your goal, for example, payment failure under involuntary churn.
-4. A new guide draft is created with all preset configuration filled in, including the guide name, description, and segment, along with the required launch fields for that use case.
-5. You land in the guide editor to review, customize, and launch.
+1. From the Engage dashboard, click **+ New guide**
+2. The New guide modal opens with the template library displayed, showing available guide templates grouped by use case
+3. Select the template that matches your goal, for example, payment failure under involuntary churn
+4. A new guide draft is created with all preset configuration filled in, including the guide name, description, and segment, along with the required launch fields for that use case
+5. You land in the guide editor to review, customize, and launch
 
-To build a guide without a template, scroll down to the Custom Guides section, which remains available in the modal.
+To build a guide without a template, scroll down to the Custom Guides section, which remains available in the modal
 
 <br />
