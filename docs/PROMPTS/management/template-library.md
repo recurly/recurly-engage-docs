@@ -18,7 +18,7 @@ Templates are drawn from the best-practice prompts Recurly Engage has historical
 
 The Template library is currently available for web prompts on desktop and mobile web. Guide templates and the ability to save your own custom templates are planned for a future release.
 
-## Key benefits
+# Key benefits
 
 - **No blank canvas:** Begin with a proven foundation for common use cases instead of building from scratch.
 - **Faster activation:&#x20;**&#x4C;aunch your first campaign in minutes with copy, layout, and settings already in place.
