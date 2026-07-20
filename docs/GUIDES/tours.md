@@ -8,6 +8,8 @@ hidden: false
 metadata:
   robots: index
 ---
+# Overview
+
 Build a Tour in Recurly Engage to guide subscribers through your site with a sequence of element-anchored tooltips.
 
 ## Prerequisites
@@ -18,7 +20,7 @@ Verify that you have the **Company**, **App Administrator**, or **App Member** p
 
 Tours run in standard web browsers only. They do not support connected TV (CTV), mobile, or other device platforms.
 
-## How Tours work
+# How Tours work
 
 A Tour is a guide type that presents floating tooltips anchored to specific elements on your site. Use Tours for onboarding, feature discovery, and guided navigation without a third-party onboarding tool.
 
@@ -33,7 +35,7 @@ Each Tour step is a web notification prompt with these Tour-specific capabilitie
 
 Tour steps inherit the guide's **Limits**, **Segments**, and **Schedule** settings. Tour impressions, step completions, and exits appear in Engage analytics.
 
-## Build a Tour
+# Build a Tour
 
 1. Go to **Guides** > **New Guide**.
 2. Enter a **Name** and, optionally, a **Description**. Select the **Tour** guide type and your **Segments**.
@@ -46,11 +48,11 @@ Tour steps inherit the guide's **Limits**, **Segments**, and **Schedule** settin
 6. Set a **transition URL** on each step that moves the subscriber to another page. This URL tells Engage where to navigate when the subscriber moves forward or backward in the Tour.
 7. Preview the Tour on your site to confirm its positioning and copy, then click **Start** to make it live.
 
-## Optional: Configure scrolling
+# Optional: Configure scrolling
 
 For each step, configure **Scroll into view** to scroll the anchored element to the top, center, or bottom of the viewport when the step triggers. Turn off this setting when you do not want the page to scroll automatically.
 
-## Optional: Set guide limits and schedule
+# Optional: Set guide limits and schedule
 
 Set **Limits** and a **Schedule** for the entire Tour.
 
