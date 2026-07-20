@@ -22,7 +22,7 @@ The Prompts management section provides all the tools you need to create, config
 
 - **Prompts**: View and manage your entire list of prompts and their current status. ([Prompts](prompts))
 - **Prompt editor**: Create and edit prompt content, design, and configuration settings. ([Prompt editor](editor))
-- **Template library:&#x20;**&#x53;tart from a pre-built, best-practice template instead of a blank canvas when creating a new web prompt. (Template library)
+- **Template library:&#x20;**&#x53;tart from a pre-built, best-practice template instead of a blank canvas when creating a new web prompt. ([Template library](https://docs.recurly.com/recurly-engage/update/docs/template-library))
 - **Triggers**: Define conditions and events that activate prompts for specific users. ([Triggers](triggers))
 - **Limits**: Set impression, frequency, and holdout constraints on individual prompts. ([Limits](limits))
 - **Schedule**: Specify start/end dates and time windows for prompt delivery. ([Schedule](schedule-1))
