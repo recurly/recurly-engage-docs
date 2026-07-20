@@ -8,17 +8,17 @@ hidden: false
 metadata:
   robots: index
 ---
-Create a Tour in Recurly Engage to guide subscribers through your site with a sequence of element-anchored tooltips.
+Build a Tour in Recurly Engage to guide subscribers through your site with a sequence of element-anchored tooltips.
 
 ## Prerequisites
 
-Confirm that you have Company, App Administrator, or App Member permissions in Recurly Engage.
+Verify that you have the **Company**, **App Administrator**, or **App Member** permission in Recurly Engage.
 
 ## Limitations
 
 Tours run in standard web browsers only. They do not support connected TV (CTV), mobile, or other device platforms.
 
-## How tours work
+## How Tours work
 
 A Tour is a guide type that presents floating tooltips anchored to specific elements on your site. Use Tours for onboarding, feature discovery, and guided navigation without a third-party onboarding tool.
 
@@ -26,14 +26,14 @@ Subscribers move through steps in a fixed sequence. They can return to steps the
 
 Each Tour step is a web notification prompt with these Tour-specific capabilities:
 
-- **Pin to element:** Anchor the prompt to a page element with a CSS selector, then position it above, below, to the left, or to the right of that element. Pinning overrides the size and position in the prompt's standard settings.
+- **Pin to element:** Anchor the prompt to a page element with a CSS selector, then place it above, below, to the left, or to the right of that element. Pinning overrides the size and position in the prompt's standard settings.
 - **Scroll into view:** When the anchored element is off-screen, scroll it to the top, center, or bottom of the viewport. You can also turn off automatic scrolling.
 
 **Button 1** advances to the next step, and **Button 2** acts as the **Back** button. Dismissing a step with the X exits the entire Tour. Subscribers cannot skip ahead, but they can move backward and forward among steps they have reached.
 
-Tour steps inherit the guide's Limits, Segments, and Schedule settings.
+Tour steps inherit the guide's **Limits**, **Segments**, and **Schedule** settings. Tour impressions, step completions, and exits appear in Engage analytics.
 
-## Build a tour
+## Build a Tour
 
 1. Go to **Guides** > **New Guide**.
 2. Enter a **Name** and, optionally, a **Description**. Select the **Tour** guide type and your **Segments**.
