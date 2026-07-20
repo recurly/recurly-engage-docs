@@ -14,7 +14,7 @@ Create a Tour in Recurly Engage to guide subscribers through your site with a se
 
 Confirm that you have Company, App Administrator, or App Member permissions in Recurly Engage.
 
-## Supported devices
+## Limitations
 
 Tours run in standard web browsers only. They do not support connected TV (CTV), mobile, or other device platforms.
 
