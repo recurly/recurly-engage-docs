@@ -16,28 +16,20 @@ Confirm that you have Company, App Administrator, or App Member permissions in R
 
 ## Supported devices
 
-Tours run in standard web browsers only. They do not currently support connected TV (CTV), mobile, or other device platforms.
+Tours run in standard web browsers only. They do not support connected TV (CTV), mobile, or other device platforms.
 
-## What is a Tour?
+## How Tours work
 
-A Tour is a guide type that walks subscribers through your site using floating tooltips anchored to specific page elements. Use Tours for onboarding, feature discovery, and guided navigation without a third-party onboarding tool.
+A Tour is a guide type that presents floating tooltips anchored to specific elements on your site. Use Tours for onboarding, feature discovery, and guided navigation without a third-party onboarding tool.
 
-Subscribers move through Tour steps in a fixed sequence and can return to steps they have already viewed. Steps can span multiple pages, so you can guide a subscriber from a homepage to an account page in one flow. Configure the entire experience in Engage.
+Subscribers move through steps in a fixed sequence. They can return to steps they have already viewed, and steps can span multiple pages—for example, from a homepage to an account page.
 
-## Key benefits
+Each Tour step is a web notification prompt with these Tour-specific capabilities:
 
-- **Native onboarding:** Guide subscribers through your product without a separate onboarding tool or contract.
-- **Element-anchored guidance:** Attach each tooltip to the element it describes so the guidance appears in context.
-- **One place for data:** Tour impressions, step completions, and exits appear in Engage analytics alongside your other prompts.
+- **Pin to element:** Anchor the prompt to a page element with a CSS selector, then position it above, below, to the left, or to the right of that element. Pinning overrides the size and position in the prompt's standard settings.
+- **Scroll into view:** When the anchored element is off-screen, scroll it to the top, center, or bottom of the viewport. You can also turn off automatic scrolling.
 
-## How a Tour works
-
-Each Tour step is a web notification prompt with two Tour-specific capabilities:
-
-- **Pin to element:** Anchor the notification to a page element with a CSS selector, then place it above, below, to the left, or to the right of that element. Pinning overrides the size and position in the prompt's standard settings.
-- **Scroll into view:** When the anchored element is off-screen, automatically scroll it into view. Place the element at the top, center, or bottom of the viewport, or turn off automatic scrolling.
-
-Button 1 advances to the next step, Button 2 acts as the **Back** button, and dismissing a step with the X exits the entire Tour. Subscribers cannot skip ahead, but they can move backward and forward among steps they have reached.
+**Button 1** advances to the next step, and **Button 2** acts as the **Back** button. Dismissing a step with the X exits the entire Tour. Subscribers cannot skip ahead, but they can move backward and forward among steps they have reached.
 
 Tour steps inherit the guide's Limits, Segments, and Schedule settings.
 
