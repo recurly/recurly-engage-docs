@@ -227,9 +227,9 @@ metadata:
   }
 </style>
 <div id="recurly-changelog-header" class="rm-Markdown markdown-body">
-  <h1>Recurly Subscriptions Changelog</h1>
+  <h1>Recurly Engage Changelog</h1>
   <p>
-    Discover what's new in Recurly Subscriptions Management. Browse posts by year to see recent launches,
+    Discover what's new in Recurly Engage. Browse posts by year to see recent launches,
     enhancements, and behind-the-scenes improvements that keep your platform sharp.
   </p>
   <p class="rss-line">
