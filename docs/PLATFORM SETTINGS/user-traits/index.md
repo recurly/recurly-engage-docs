@@ -189,11 +189,11 @@ When your data lives in your own backend or internal database — or you simply 
 - **Authentication:** Basic Auth with your Application ID and API Key. Depending on your client, the API Key may be passed as a query-string parameter. Find your API Key at Settings > Application > API Key.
 - **Payload:**
 
-  <br />
+
 
   ```
   {
-    "id": "123-456-789-012-",
+    "id": "123-456-789-012",
     "user_id": "test-user-001",
     "properties": {
       "first_name": "Jane",
