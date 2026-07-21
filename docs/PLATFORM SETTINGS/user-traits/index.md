@@ -185,18 +185,32 @@ If your data already lives in a supported tool — such as Segment, Stripe, Braz
 
 When your data lives in your own backend or internal database — or you simply need updates faster than the batch cycle allows — call the Ingest API directly. There's no S3 upload and no batch wait; traits are available as soon as the call succeeds.&#x20;
 
-- **Endpoint:** POST https\://conduit.redfast.com/ingest/property
+- **Endpoint:** POST [https://conduit.redfast.com/ingest/property](https://conduit.redfast.com/ingest/property)
 - **Authentication:** Basic Auth with your Application ID and API Key. Depending on your client, the API Key may be passed as a query-string parameter. Find your API Key at Settings > Application > API Key.
 - **Payload:**
 
+  <br />
+
+  ```
   {
-    "id": "your-app-id",
+    "id": "123-456-789-012-",
     "user_id": "test-user-001",
     "properties": {
       "first_name": "Jane",
       "plan": "premium"
     }
   }
+
+  ```
+
+  **Example response**
+
+  ```
+  {
+    "success": true
+  }
+
+  ```
 
 Each key in properties maps to a Recurly Engage user trait. As with CSV ingest, you'll configure the type and display for each new trait before using it in a segment (see Customizing user traits).
 
