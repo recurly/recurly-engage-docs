@@ -31,7 +31,7 @@ export const PrerequisitesLimitations = ({ header }) => {
         </p>
         <p>
           <i className="fa-solid fa-check mr-2"></i>
-          Access to an S3 bucket or CSV export source.
+          For CSV ingest: access to your Engage S3 bucket or a CSV export source.
         </p>
         <p>
           <i className="fa-solid fa-exclamation-triangle mr-4"></i>
@@ -158,8 +158,6 @@ After creating your CSV file you will need to upload it to your secure area on A
 9. Locate **Upload Location** which gives you the location where you should put your CSV.
 
 
-
-
    <Image src="https://files.readme.io/db565a6-image.png" align="center" border={true} />
 
 
@@ -209,11 +207,7 @@ After a trait is ingested — whether by CSV, a partner integration, or the Inge
 2. Now go through each trait to update the type, display and description (optional) by clicking on the **Edit** (pencil) icon
 
 
-
-
    <Image src="https://files.readme.io/669873a-image.png" align="center" border={true} />
-
-
 
 
 
@@ -259,6 +253,6 @@ After a trait is ingested — whether by CSV, a partner integration, or the Inge
    <Image src="https://files.readme.io/0cc29c7-image.png" align="center" border={true} />
 
 
-
+<br />
 
 <br />
