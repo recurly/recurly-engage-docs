@@ -1,7 +1,7 @@
 ---
 title: Recurly Navigate Home Page
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
