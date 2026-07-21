@@ -1,5 +1,5 @@
 ---
-title: Navigate Events & Office Hours
+title: Recurly Navigate Events & Office Hours
 deprecated: false
 hidden: true
 link:
