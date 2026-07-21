@@ -186,7 +186,7 @@ If your data already lives in a supported tool — such as Segment, Stripe, Braz
 When your data lives in your own backend or internal database — or you simply need updates faster than the batch cycle allows — call the Ingest API directly. There's no S3 upload and no batch wait; traits are available as soon as the call succeeds.&#x20;
 
 - **Endpoint:** POST https\://conduit.redfast.com/ingest/property
-- **Authentication:** Basic Auth using your App ID and API Key, found at Settings > Application > API Key
+- **Authentication:** Basic Auth with your Application ID and API Key. Depending on your client, the API Key may be passed as a query-string parameter. Find your API Key at Settings > Application > API Key.
 - **Payload:**
 
   {
