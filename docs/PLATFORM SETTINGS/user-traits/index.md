@@ -202,7 +202,7 @@ Each key in properties maps to a Recurly Engage user trait. As with CSV ingest, 
 
 **Note:** This section covers custom attribute (property) data. To send event or behavioral signals — for example, "payment failed" or "user hit a milestone" — see Usage tracking.
 
-## Customizing User Traits
+# Customizing User Traits
 
 After a trait is ingested — whether by CSV, a partner integration, or the Ingest API — you'll need to configure it before you can use it in your segments.
 
