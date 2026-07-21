@@ -183,9 +183,9 @@ If your data already lives in a supported tool — such as Segment, Stripe, Braz
 
 ## Method 3 — Ingest API (real time)
 
-When your data lives in your own backend or internal database — or you simply need updates faster than the batch cycle allows — call the Ingest API directly. There's no S3 upload and no batch wait; traits are available as soon as the call succeeds. This is the same mechanism the Hightouch integration uses under the hood, so you can replicate the pattern straight from your own pipeline.
+When your data lives in your own backend or internal database — or you simply need updates faster than the batch cycle allows — call the Ingest API directly. There's no S3 upload and no batch wait; traits are available as soon as the call succeeds.&#x20;
 
-- **Endpoint:** POST [https://conduit.redfast.com/ingest/property](https://conduit.redfast.com/ingest/property)
+- **Endpoint:** POST https\://conduit.redfast.com/ingest/property
 - **Authentication:** Basic Auth using your App ID and API Key, found at Settings > Application > API Key
 - **Payload:**
 
