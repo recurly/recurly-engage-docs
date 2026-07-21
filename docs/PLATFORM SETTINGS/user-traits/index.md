@@ -34,8 +34,16 @@ export const PrerequisitesLimitations = ({ header }) => {
           For CSV ingest: access to your Engage S3 bucket or a CSV export source.
         </p>
         <p>
+          <i className="fa-solid fa-check mr-2"></i>
+          For real‑time ingest via the Ingest API: your App ID and API Key (<strong>Settings &gt; Application &gt; API Key</strong>).
+        </p>
+        <p>
           <i className="fa-solid fa-exclamation-triangle mr-4"></i>
           For third‑party connector activation, ensure required ID columns are present.
+        </p>
+        <p>
+          <i className="fa-solid fa-exclamation-triangle mr-4"></i>
+          CSV uploads to S3 are ingested within a few hours — for real‑time updates, use the Ingest API.
         </p>
       </div>
     </div>
