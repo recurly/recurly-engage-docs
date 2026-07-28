@@ -267,12 +267,13 @@ metadata:
 
 <RecurlyChangelogMount
   rssUrl="https://docs.recurly.com/recurly-engage/changelog.rss"
-  product="Engage"
+  product="RevRec"
   itemsPerPage={25}
   cacheMinutes={0}
   showSearch={true}
   showFeatureFilter={true}
   showImpactFilter={true}
+  showTypeFilter={true}
   showDateFilter={true}
   showItemsPerPageDropdown={true}
 />
