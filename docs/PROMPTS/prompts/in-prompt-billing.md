@@ -17,17 +17,17 @@ Under the hood, In-Prompt Billing uses Recurly.js to tokenize sensitive payment 
 
 # Key benefits
 
-* **Fewer drop-offs.** Keeping customers in-context during a payment update removes friction and reduces the chance they abandon the process mid-flow.
-* **Faster updates.** Billing fields are surfaced inline — customers can update their card in seconds, without a page redirect.
-* **PCI DSS compliance, built in.** Payment data is captured and tokenized client-side via Recurly.js, so sensitive card information never touches your servers.
-* **Fits your existing UI.** The payment form supports your prompt's Custom CSS configuration, so it inherits your existing styles with no extra work.
-* **Prefilled for convenience.** Where possible, existing billing name and address details are pre-populated so customers only need to enter updated card information.
+- **Fewer drop-offs.** Keeping customers in-context during a payment update removes friction and reduces the chance they abandon the process mid-flow.
+- **Faster updates.** Billing fields are surfaced inline — customers can update their card in seconds, without a page redirect.
+- **PCI DSS compliance, built in.** Payment data is captured and tokenized client-side via Recurly.js, so sensitive card information never touches your servers.
+- **Fits your existing UI.** The payment form supports your prompt's Custom CSS configuration, so it inherits your existing styles with no extra work.
+- **Prefilled for convenience.** Where possible, existing billing name and address details are pre-populated so customers only need to enter updated card information.
 
 # How it works
 
 ## Step 1: Secure identity verification (JWT signing)
 
-To protect your customers' billing information, In-Prompt Billing requires **JWT (JSON Web Token) signing** as part of the integration. Before any billing update is processed, your backend generates a signed JWT using a shared secret provided by Recurly Engage. This token is passed through the Brick SDK and validated server-side, ensuring that only authenticated users can initiate a billing info update.
+To protect your customers' billing information, In-Prompt Billing requires **JWT (JSON Web Token) signing** as part of the integration. Before any billing update is processed, your backend generates a signed JWT using a shared secret provided by Recurly Engage. This token is passed through the Brig SDK and validated server-side, ensuring that only authenticated users can initiate a billing info update.
 
 Boilerplate implementation code is provided to make this straightforward to set up. Please contact your Customer Success Manager to get your JWT signing configured.
 
@@ -47,4 +47,8 @@ When the prompt appears, the customer is shown a secure payment form powered by 
 
 Once they submit, the new payment information is tokenized client-side and sent to Recurly's API to update their billing profile. The customer sees your configured confirmation message and the prompt closes automatically.
 
-<Image align="center" border={true} width="80% " src="https://files.readme.io/f58bf86f250282509146243103e7556df8ef0e3d7f0a981ea2857794ffd16560-Screenshot_2026-04-02_at_8.48.16_AM.png" className="border" />
+
+<Image src="https://files.readme.io/f58bf86f250282509146243103e7556df8ef0e3d7f0a981ea2857794ffd16560-Screenshot_2026-04-02_at_8.48.16_AM.png" align="center" width="80% " border={true} />
+
+
+<br />
