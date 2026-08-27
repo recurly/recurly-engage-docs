@@ -14,7 +14,6 @@ metadata:
 ### Prerequisites
 
 * A Recurly Engage account with a valid App ID
-* An authentication token (AUTHTOKEN) from your Customer Success Manager for the GitHub package registry
 * A React Native project targeting iOS and/or Android
 
 ### Limitations
@@ -43,34 +42,29 @@ The Recurly Engage React Native SDK provides:
 
 ## Install the SDK
 
-### Configure the registry
-
-Add the following to your `.npmrc` or `.yarnrc.yml` file. Contact your Customer Success Manager for the AUTHTOKEN.
-
-```
-# .npmrc
-@recurly:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=AUTHTOKEN
-
-# .yarnyc.yml
-npmAuthToken: "AUTHTOKEN"
-```
-
-### Install the package
+Published on the public npm registry — no registry configuration or authentication token required.
 
 Using npm:
 
 ```bash
-npm install @recurly/redfast-core
-npm install @recurly/react-native-redfast
+npm install @recurly/engage-core
+npm install @recurly/engage-react-native
 ```
 
 Or yarn:
 
 ```bash
-yarn add @recurly/redfast-core
-yarn add @recurly/react-native-redfast
+yarn add @recurly/engage-core
+yarn add @recurly/engage-react-native
 ```
+
+> 📘 Also install `@react-native-async-storage/async-storage`
+>
+> `@recurly/engage-react-native` depends on `@react-native-async-storage/async-storage`, but React Native's autolinking only picks up native modules declared directly in your app's `package.json` — not transitive dependencies. Add it to your own `package.json` as well (matching the version range `@recurly/engage-react-native` depends on), or you'll see `NativeModule: AsyncStorage is null` at runtime:
+>
+> ```bash
+> npm install @react-native-async-storage/async-storage
+> ```
 
 ***
 
@@ -188,7 +182,7 @@ Use the `promptMgr.buttonClicked('clickId')` method for registering a click on a
 // Example a screen
 import {
   usePrompt, // Prompt state management
-} from '@recurly/react-native-redfast';
+} from '@recurly/engage-react-native';
 
 // Example: trigger when entering the "home" screen
 export default function HomeScreen() {
@@ -220,10 +214,10 @@ export default function HomeScreen() {
 
 ## Render inline prompts
 
-Use the `RedfastInline` view to render an inline prompt if one is available for the current user. Note that the inline prompt will scale to fit within its container.
+Use the `RecurlyInline` view to render an inline prompt if one is available for the current user. Note that the inline prompt will scale to fit within its container.
 
 ```javascript
-<RedfastInline
+<RecurlyInline
   zoneId="myZoneId" // ZoneID as specified in Pulse
   closeButtonColor="#000000" // Hex color for close button, if enabled
   closeButtonBgColor="#FFFFFF" // Hex background color for close button
@@ -370,7 +364,7 @@ interface PromptResult {
 ## Analytics callback example
 
 ```javascript
-<RedfastInline
+<RecurlyInline
   zoneId="myZoneId" // ZoneID as specified in Pulse
   closeButtonColor="#000000" // Hex color for close button, if enabled
   closeButtonBgColor="#FFFFFF" // Hex background color for close button
@@ -381,21 +375,21 @@ interface PromptResult {
     const getEventName = (code: PromptResultCode) => {
       switch (code) {
         case PromptResultCode.IMPRESSION:
-          return 'Redfast Impression';
+          return 'Engage Impression';
         case PromptResultCode.BUTTON1:
-          return 'Redfast Click';
+          return 'Engage Click';
         case PromptResultCode.BUTTON2:
-          return 'Redfast Click2';
+          return 'Engage Click2';
         case PromptResultCode.BUTTON3:
-          return 'Redfast Decline';
+          return 'Engage Decline';
         case PromptResultCode.DISMISS:
-          return 'Redfast Dismiss';
+          return 'Engage Dismiss';
         case PromptResultCode.TIMEOUT:
-          return 'Redfast Timeout';
+          return 'Engage Timeout';
         case PromptResultCode.HOLDOUT:
-          return 'Redfast Holdout';
+          return 'Engage Holdout';
         default:
-          return 'Redfast Event';
+          return 'Engage Event';
       }
     };
 
@@ -409,7 +403,7 @@ interface PromptResult {
     console.log('ANALYTICS:', JSON.stringify(analyticsData, null, 2));
     /* Example:
       ANALYTICS: {
-        "name": "Redfast Click",
+        "name": "Engage Click",
         "data": {
           "promptName": "My Prompt Name",
           "promptID": "438c8eec-1111-1111-1111-2222",
@@ -428,11 +422,13 @@ interface PromptResult {
   }}
 />
 
-// Perform the same for modals
-{displayPrompt(showModal, pathItem, (result) => {
-  // utilize same analytics code above
-  setShowModal(false);
-})}
+// Modal prompts (interstitial, popup, bottom banner) are rendered automatically
+// by <PromptOverlay />. Use the same analytics code inside its onEvent callback:
+<PromptOverlay
+  onEvent={(result: PromptResult) => {
+    // utilize same analytics code above
+  }}
+/>
 ```
 
 ***
@@ -490,20 +486,23 @@ You may reset the current user's prompt status so that previously suppressed pro
 promptMgr.resetGoal();
 ```
 
-```javascript
-promptMgr.resetGoal()
-```
+***
 
-```javascript
-promptMgr.resetGoal();
-```
+## Migrating from the redfast-scoped packages
 
-```javascript
-promptMgr.resetGoal()
-```
+If you integrated this SDK before it moved to public npm, update the following:
+
+| Before                                 | After                            |
+| --------------------------------------- | -------------------------------- |
+| `@recurly/react-native-redfast`         | `@recurly/engage-react-native`   |
+| `@recurly/redfast-core`                 | `@recurly/engage-core`           |
+| `RedfastInline`                         | `RecurlyInline`                  |
+| `.npmrc`/`.yarnrc.yml` with an AUTHTOKEN for `npm.pkg.github.com` | Remove entirely — no registry config needed |
+
+You'll also need to add `@react-native-async-storage/async-storage` as a direct dependency in your own `package.json` if you haven't already — see the note under **Install the SDK** above.
 
 ***
 
 ## Claude skill
 
-A Claude skill for this SDK is available for download at [SKILL.md](https://github.com/redfast/redfast-sdk-android/blob/main/SKILL.md). This skill enables Claude to assist with SDK integration, prompt configuration, and event handling in your Android application.
+A Claude skill for this SDK is available for download at [SKILL.md](https://github.com/recurly/recurly-engage-react-native-sdk-build/blob/main/docs/SKILL.md). This skill enables Claude to assist with SDK integration, prompt configuration, and event handling in your React Native application.
