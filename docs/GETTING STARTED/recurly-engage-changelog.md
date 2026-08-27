@@ -229,17 +229,19 @@ metadata:
 <div id="recurly-changelog-header" class="rm-Markdown markdown-body">
   <h1>Recurly Engage Changelog</h1>
   <p>
+
     Discover what's new in Recurly Engage. Browse posts by year to see recent launches,
     enhancements, and behind-the-scenes improvements that keep your platform sharp.
   </p>
   <p class="rss-line">
     <i class="fa-solid fa-rss rss-icon" aria-hidden="true"></i>
     <span>
+
       Stay in the loop — copy our
       <button
         type="button"
         class="rss-copy"
-        data-url="https://docs.recurly.com/recurly-revrec/changelog.rss"
+        data-url="https://docs.recurly.com/recurly-engage/changelog.rss"
       >RSS feed URL</button>
       and paste it into your favorite RSS reader to get every update the moment it ships.
     </span>
@@ -278,5 +280,3 @@ metadata:
 }
 </style> 
 `}</HTMLBlock>
-
-<br />
