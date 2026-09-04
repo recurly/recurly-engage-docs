@@ -26,7 +26,7 @@ The **Recurly Engage Roku SDK** provides the ability to monitor consumption and 
 
 ## Install the SDK
 
-Download the latest Roku SDK (v1.0.36) with Roku Pay support [here](https://assets.redfastlabs.com/sdk/roku-sdk-1.0.36.zip) and without Roku Pay support [here](https://assets.redfastlabs.com/sdk/roku-sdk-noiap-1.0.36.zip). A demo app featuring an example integration can be provided by request.
+Download the latest Roku SDK (v1.0.49) with Roku Pay support [here](https://assets.redfastlabs.com/sdk/roku-sdk-1.0.49.zip) and without Roku Pay support [here](https://assets.redfastlabs.com/sdk/roku-sdk-noiap-1.0.49.zip). A demo app featuring an example integration can be provided by request.
 
 To build a project using the RedFast SDK for Roku, your project must have been built with the Scenegraph SDK. Unzip the SDK into the app `components` directory.
 
@@ -83,6 +83,28 @@ The anonymousUserId may be updated after the SDK has been initialized. If not se
 
 ```
 m.promoMgr.callFunc("setAnonymousUserId", {userId: "[new anon user id]"})
+```
+
+## Set privacy consent categories
+
+Prompts may be configured in the Redfast console to require one or more privacy consent categories. You may restrict which prompts are eligible to be shown by specifying the categories the user has consented to (e.g. after they interact with a cookie/privacy consent banner). A prompt is only considered eligible when its configured consent categories are an exact match (same set) of the categories you specify here.
+
+If `setPrivacyConsentCategories` is never called, consent filtering is disabled and all prompts remain eligible regardless of their configured consent categories.
+
+```brightscript
+' Supported category values, see `PrivacyConsentCategory()` in the SDK `consts.brs` file:
+' m.strictlyNecessary = "strictly_necessary"
+' m.performance = "performance"
+' m.functional = "functional"
+' m.targeting = "targeting"
+
+m.promoMgr.callFunc("setPrivacyConsentCategories", {categories: ["strictly_necessary", "performance"]})
+```
+
+You may retrieve the currently set categories at any time:
+
+```brightscript
+categories = m.promoMgr.callFunc("getPrivacyConsentCategories")
 ```
 
 ## Supported prompt types
@@ -355,7 +377,7 @@ m.promoMgr.callFunc("enablePromotion", {enabled: true})
 
 ## Debug view
 
-The SDK provides a debug view modal in which you can use the onscreen keyboard to either reset all prompts for the current user or set a new userId.
+The SDK provides a debug view modal in which you can use the onscreen keyboard to either reset all prompts for the current user, set a new userId, or set the active privacy consent categories (a comma-separated list, e.g. `strictly_necessary,performance`; leave blank to disable consent filtering).
 
 To trigger the debug view for a specific screen, add the `DebugView` component and connect it to a local variable on the screen,
 
@@ -375,4 +397,4 @@ When the `*` key on the remote control is pressed, the debug view will be displa
 
 ## Claude skill
 
-A Claude skill for this SDK is available for download at [SKILL.md](https://github.com/redfast/redfast-sdk-android/blob/main/SKILL.md). This skill enables Claude to assist with SDK integration, prompt configuration, and event handling in your Android application.
+A Claude skill for this SDK is available for download at [SKILL.md](https://github.com/recurly/redfast-sdk-roku/blob/main/docs/SKILL.md). This skill enables Claude to assist with SDK integration, prompt configuration, and event handling in your Roku application.
