@@ -230,7 +230,7 @@ Each key in properties maps to a Recurly Engage user trait. As with CSV ingest, 
 
 **Note:** This section covers custom attribute (property) data. To send event or behavioral signals — for example, "payment failed" or "user hit a milestone" — see Usage tracking.
 
-\##Method 4 — Live ingest via Custom JS Snippet
+## Method 4 - Live ingest via Custom JS Snippet
 
 If your trait data already lives on the client — in cookies, localStorage, a data layer, or reachable through a call to your own backend — you can push it into Recurly Engage on every page load by implementing a `fetchUserTraits()` function in your Custom JS Snippet. This works alongside the `fetchUserId()` and `fetchAnonUserId()` functions described in <a href="/recurly-engage/docs/custom-js-snippet" target="_blank">Custom JS snippet</a>.
 
