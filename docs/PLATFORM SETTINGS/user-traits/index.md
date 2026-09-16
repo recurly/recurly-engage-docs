@@ -89,6 +89,16 @@ You can import user traits into Recurly Engage to target users on characteristic
 
 You can also export your CSV data from Looker.
 
+### One-off uploads
+
+If you need to load a small, one-time batch of trait data — for example, an exclusion list or a short-term partner list — you can upload a CSV directly in Pulse instead of dropping a file to your S3 bucket:
+
+1. In Pulse, use the CSV upload option in **Settings > User Traits**.
+2. Check **App Messages** in Pulse to track the file's status.
+3. Once the status shows successful, your new trait keys will appear in the User Traits list, ready to configure.
+
+This method mimics the same processing your S3 uploads go through, just triggered manually rather than automatically. It's best suited for small, one-time uploads — for ongoing or recurring trait syncs, use the S3 method above.
+
 ### Formatting the CSV file
 
 Here is an example of what your CSV file should look like. **The first column must be**`user_id`, all other columns can be utilized to specify user traits. There are no limits on columns but please keep in mind this can significantly impact load and sync times.
@@ -99,6 +109,11 @@ user_id,ltv,channel,signup_date,nps,plan_type,payment_failed
 322321,0,blog,2014-09-18,7,trial,false
 900194,100,homepage,2018-04-01,9,annual,true
 ```
+
+- **Trait key casing is case-sensitive.** If you change the casing of a column header between uploads (for example, `LTV` vs. `ltv`), Engage treats it as a brand-new trait rather than an update to the existing one — this creates duplicate traits and inconsistent data. Keep column header casing identical across every file you upload.
+- **Trait keys must use underscores, not spaces.** A column header containing a space (e.g. `signup date`) will not be processed. Use `signup_date` instead.
+- **Only include traits you actually plan to use for segmentation.** Every additional column increases file size and processing time. If you upload traits you don't intend to use, you'll still need to configure each one (see "Customizing user traits" above) before they're usable.
+- **Do not include personally identifiable information (PII)** in trait columns.
 
 ### Required columns for third party connectors
 
@@ -189,8 +204,6 @@ When your data lives in your own backend or internal database — or you simply 
 - **Authentication:** Basic Auth with your Application ID and API Key. Depending on your client, the API Key may be passed as a query-string parameter. Find your API Key at Settings > Application > API Key.
 - **Payload:**
 
-
-
   ```
   {
     "id": "123-456-789-012",
@@ -275,6 +288,16 @@ After a trait is ingested — whether by CSV, a partner integration, or the Inge
    <Image src="https://files.readme.io/0cc29c7-image.png" align="center" border={true} />
 
 
-<br />
+## Common issues & how to resolve them
 
-<br />
+| Issue                                                                 | What's happening                                                                                                                                   | How to resolve                                                                                                                                                     |
+| --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| A trait key has a space in it                                         | The column isn't processed at all.                                                                                                                 | Rename the column header to use underscores instead of spaces, and re-upload.                                                                                      |
+| Trait key casing changed between uploads                              | Engage creates a new, separate trait rather than updating the existing one, leading to inconsistent data.                                          | Keep column header casing identical across every file. If duplicates already exist, contact support to help consolidate them.                                      |
+| A newly created coupon isn't showing up in the segment builder        | No user with that coupon has synced to Engage yet — coupons only appear once at least one user carries that value.                                 | Wait for the first user with that coupon to sync, or manually add the value to the trait in **Settings > User Traits** to pre-build your segment (see note below). |
+| A segment built on a manually-added trait value has no matching users | The manually-entered value doesn't exactly match the value that eventually syncs from your data (for example, a typo or different capitalization). | Double check the manually-entered value against the actual synced value once data arrives, and correct if needed.                                                  |
+| A file isn't processing                                               | This can happen for a few reasons — an incorrectly formatted file, or ingestion validation paused on your account.                                 | Check **App Messages** in Pulse for an error status. If the file looks correctly formatted and there's no clear error, contact Recurly support.                    |
+| Processing is slower than expected                                    | Large files, or a high volume of merchants syncing at once, can add processing time.                                                               | Where possible, sync only changed records ("delta" files) after your initial historical load, rather than re-sending your full dataset every time.                 |
+| A very large initial file is taking a long time to process            | A large one-time historical load can take substantially longer than routine daily syncs.                                                           | Expect longer processing on your first sync. Switch to delta files (changed records only) for all syncs after the initial load.                                    |
+
+> **Note on pre-seeding trait values:** You can manually add a trait value in **Settings > User Traits** before any user has actually synced with that value — useful for building a segment ahead of time. Just make sure the value you enter exactly matches what will eventually sync; a mismatch means no users will be assigned to that segment until it's corrected.
