@@ -37,12 +37,13 @@ Recurly Engage supports a variety of in-app message formats, all designed in acc
 * [Inlines](inlines) (horizontal, vertical, tile, text-only): Prompts embedded directly within your page layout.
 * [Overlays](overlays) (notification, interstitial, pop up, video, bottom banner): Floating prompts that appear above your content.
 * [Invisible](invisible): Silent prompts delivered via tracking pixels or JavaScript callbacks for analytics.
-* [Email](other): Messages sent outside the page—email campaigns.
 * [Push](push-notification): Scheduled notifications sent to users’ devices (ADM, APNs, FCM) to drive re-engagement.
 * [Video](video): Rich-media overlays that play video content with text and call-to-action buttons in a popup modal.
 * [Mobile interstitial](mobile-interstitial): Full-screen native prompts on iOS and Android, rendered via the SDK for immersive mobile experiences.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/b91dfe4-image.png" />
+
+<Image src="https://files.readme.io/b91dfe4-image.png" align="center" width="80% " border={true} />
+
 
 A prompt can be targeted to one or more [Segments](segments) and set to [Trigger](triggers) on events like button clicks, page visits, or time spent on a page. You can [Schedule](schedule-1) prompts for specific dates and times and [Limit](limits) their delivery by user count or budget. For use-case inspiration, explore our [Popular Use Cases](popular-uses).
 
@@ -52,4 +53,5 @@ Creating prompts is core to what your customers experience. In this section, you
 
 The **Prompts** page provides a quick view of all prompts in your account, displaying their status, design preview, target segments, schedule, and high-level performance metrics (impressions, clicks, CTR). Use the **Search** bar or filters (Status, Device/type, Segment) to find what you need.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/b2e10b0-Screenshot_2024-04-18_173049.png" />
+
+<Image src="https://files.readme.io/b2e10b0-Screenshot_2024-04-18_173049.png" align="center" width="80% " border={true} />
