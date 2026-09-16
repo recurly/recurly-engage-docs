@@ -228,6 +228,22 @@ When your data lives in your own backend or internal database — or you simply 
 
 Each key in properties maps to a Recurly Engage user trait. As with CSV ingest, you'll configure the type and display for each new trait before using it in a segment (see Customizing user traits).
 
+### Error responses
+
+| Status | Message               | Cause                                                                      |
+| ------ | --------------------- | -------------------------------------------------------------------------- |
+| 422    | `app_not_found`       | Your app ID didn't resolve to a valid app.                                 |
+| 422    | `user_id_not_found`   | No user ID was provided in the request.                                    |
+| 401    | `invalid_credentials` | Authentication is required for your account but was missing or invalid.    |
+| 401    | `not_authorized`      | Real-time ingest isn't enabled for your app yet — contact Recurly support. |
+
+**A few behaviors worth knowing:**
+
+- You don't need to include `user_id` inside the `properties` object — it's automatically attached to the trait set from the user ID you provide in the request.
+- Sending the exact same trait values for the same user repeatedly is treated as a no-op — it won't cause an error, but it also won't re-trigger any downstream processing. Only send a trait update when a value has actually changed.
+- Depending on your account's configuration, certain trait keys may be filtered out automatically. If a trait you're sending isn't showing up, contact Recurly support to check your configuration.
+- As with other ingest methods, this is processed asynchronously — a successful response confirms the request was accepted, not that it's finished processing.
+
 **Note:** This section covers custom attribute (property) data. To send event or behavioral signals — for example, "payment failed" or "user hit a milestone" — see Usage tracking.
 
 ## Method 4 - Live ingest via Custom JS Snippet
