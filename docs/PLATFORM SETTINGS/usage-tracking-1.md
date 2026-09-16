@@ -339,17 +339,37 @@ This example will show you how to add a custom tracker. You can use it to track 
 
    - **CURL** – Can be used in any system. Just provide the associated `ENDUSER_ID` in your system. Make sure `rf-app` is set to the actual app ID (from Pulse URL).
 
-
-
    ```bash
    curl -H 'rf-app: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx' \
         -H 'user-id: ENDUSER_ID' \
         'https://conduit.redcurly.com/ping/?type=custom&custom_field_id=fc4ccd34-7876-430b-8b64-65ac7c19a505'
    ```
 
-   - **JavaScript** – For web or JavaScript clients.
+   **More on the cURL (server-to-server) method**
 
+   **Optional headers**, only needed if your account is configured for them:
 
+   | Header              | Value                     | When to send                                                        |
+   | ------------------- | ------------------------- | ------------------------------------------------------------------- |
+   | `user-id-jwt`       | Signed JWT of the user ID | Only if your app requires JWT-verified user IDs.                    |
+   | `anonymous-user-id` | Anonymous visitor ID      | Only for anonymous visitors, on apps that allow anonymous tracking. |
+
+   **Query parameters**
+
+   | Parameter         | Required | Value                        | Notes                          |
+   | ----------------- | -------- | ---------------------------- | ------------------------------ |
+   | `type`            | Yes      | `custom`                     | Marks this as a custom event.  |
+   | `custom_field_id` | Yes      | The usage tracker's ID       | The tracker being incremented. |
+   | `device_type`     | No       | e.g. `web`, `ios`, `android` | Defaults to `web` if omitted.  |
+
+   **A few things to know before you integrate:**
+
+   - The tracker referenced by `custom_field_id` must already exist as a usage-type tracker (created via **Add New Tracker** in **Settings > Usage Tracking**). Reporting against an ID that isn't configured this way is silently ignored — you won't see an error, but no usage will be recorded.
+   - An incorrect app ID or tracker ID also won't raise an error — the request still returns `200 OK`, but nothing is recorded. Double-check both values when setting this up.
+   - Processing happens shortly after the request is accepted, not synchronously in the response — don't expect the usage event to be immediately reflected.
+   - The app ID can also be supplied as part of the URL path instead of a header, but the header form shown above is recommended for server-to-server integrations.
+
+   * **JavaScript** – For web or JavaScript clients.
 
    ```javascript
    RecurlyEngage.customTrack("fc4ccd34-7876-430b-8b64-65ac7c19a505");
@@ -359,15 +379,11 @@ This example will show you how to add a custom tracker. You can use it to track 
 
    - **HTML** – Tracking pixel for emails, web, or JavaScript clients.
 
-
-
    ```html
    <img src="https://conduit.redcurly.com/ping/?type=custom&custom_field_id=fc4ccd34-7876-430b-8b64-65ac7c19a505" />
    ```
 
    - **SWIFT** – For Apple devices.
-
-
 
    ```swift
    PromotionManager.customTrack("fc4ccd34-7876-430b-8b64-65ac7c19a505")
@@ -375,15 +391,11 @@ This example will show you how to add a custom tracker. You can use it to track 
 
    - **KOTLIN** – For Android devices.
 
-
-
    ```kotlin
    PromotionManager.customTrack("fc4ccd34-7876-430b-8b64-65ac7c19a505")
    ```
 
    - **ROKU** – For Roku devices.
-
-
 
    ```brightscript
    m.promoMgr.callFunc("customTrack", { custom_field_id: "fc4ccd34-7876-430b-8b64-65ac7c19a505" })
@@ -434,5 +446,3 @@ To test, send an event via the GTM dataLayer. The contents of the Custom HTML ta
 
 // Test Event for anon user: c7c02a061db6aba3adae5263523005b57a8f90f16cf59d46fe036191213be5dd, user: 123
 ```
-
-<br />
