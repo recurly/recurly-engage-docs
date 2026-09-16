@@ -8,90 +8,138 @@ hidden: false
 metadata:
   robots: index
 ---
-<div class="rp-page">
-  <div class="rp-overview">This guide takes you from installing the Recurly Commerce app on Shopify to launching your first subscriptions. Follow the steps below to download the app, choose a plan, and configure your subscriptions, storefront, and customer communications.</div>
-  <div class="rp-plan">[TODO: Confirm plan availability]</div>
-  <div class="rp-toc">
-    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
-    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
-    <a class="rp-toc-pill" href="#onboarding-steps"><span class="rp-toc-num">3</span>Onboarding steps</a>
-  </div>
-</div>
+# Overview
 
-### Prerequisites
+The **Recurly** integration allows you to sync your subscription data and execute billing actions directly from prompts in Recurly Engage, leveraging your Recurly account.
 
-<ul class="rp-list">
-  <li>A Shopify or Shopify Plus store is required.</li>
-  <li>To activate a Recurly Commerce plan, the Shopify user must have the <strong>Approve app charges</strong> permission. Verify this in Shopify Admin by reviewing the user's permissions individually.</li>
-</ul>
+### Video
+
+<HTMLBlock>{`
+<iframe width="712" height="400" src="https://www.loom.com/embed/46bc074c2ae84fcd8fd55d7b342859d2?sid=d12f25e0-c01d-4ce7-b63c-a6c26f28f83d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+`}</HTMLBlock>
+
+### Required plan
+
+This feature or setting is available to all customers on any Recurly Engage subscription plan.<br />
+
+export const PrerequisitesLimitations = ({ header }) => {
+  return (
+    <div className="flex justify-start">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-check mr-2"></i>
+          <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
+        </p>
+        <p>
+          <i className="fa-solid fa-check mr-2"></i>
+
+          A Recurly account with API access and valid API key.
+        </p>
+        <p>
+          <i className="fa-solid fa-check mr-2"></i>
+
+          The <strong>Integrations</strong> role in Recurly Subscription Management, needed to configure Automated Exports. Some exports also require the <strong>Admin</strong> role.
+        </p>
+        <p>
+          <i className="fa-solid fa-exclamation-triangle mr-4"></i>
+
+          If your application uses custom User IDs (Account Codes), enable <strong>Use Account Code</strong> in the connector settings.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 # Definition
 
-<div class="rp-definition">
+The **Recurly** connector imports subscription traits nightly and provides actions for managing subscriptions—coupon application, plan changes, pauses, resumes—via prompts.
 
-The installing and onboarding workflow is the guided path for adding Recurly Commerce to your Shopify store and getting your first subscriptions, storefront, and notifications live.
+Learn more about <a href="https://docs.recurly.com/recurly-subscriptions/docs/recurly-engage-integration#/step-4-import-user-traits-using-both-recurly-and-recurly-engage-sites">importing user traits</a> with Recurly.
 
-</div>
+To receive near real time data from Recurly Subscription Management, learn more about integrating with <a href="https://docs.recurly.com/recurly-engage/docs/recurly-webhooks#/">Recurly Webhooks.</a>
 
 # Key benefits
 
-<div class="rp-benefits">
-  <div class="rp-benefit">
-    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
-    <strong>Rapid launch</strong>
-    <span>Get subscriptions up and running in minutes.</span>
-  </div>
-  <div class="rp-benefit">
-    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
-    <strong>Plan flexibility</strong>
-    <span>Choose or upgrade plans to match your business needs.</span>
-  </div>
-  <div class="rp-benefit">
-    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
-    <strong>Native integration</strong>
-    <span>Manage everything directly within Shopify's interface.</span>
-  </div>
-</div>
+* **Seamless billing workflows**: Manage subscriptions without leaving the prompt interface.
+* **Real-time data**: Keep segments and prompts in sync with nightly data imports.
+* **Flexible configurations**: Support custom account codes and multiple subscription actions.
 
-# Onboarding steps
+# Key details
 
-<div class="rp-steps">
-  <div class="rp-step">
-    <div class="rp-step-num">1</div>
-    <div><h4>Download the app</h4><p>Recurly Commerce is supported on Shopify and Shopify Plus. Install it from the Shopify App Store.</p></div>
-  </div>
-</div>
+## Activation
 
-<div class="rp-steps">
-  <div class="rp-step">
-    <div class="rp-step-num">2</div>
-    <div><h4>Choose a plan</h4><p>Select the plan that fits your business—you can upgrade anytime.</p></div>
-  </div>
-</div>
+1. Generate an **API Key** in the Recurly console.
+2. In Recurly Engage, navigate to **Settings > Integrations > Recurly** and paste your API Key.
+3. Toggle **Use Account Code** to **On** if you map your own user IDs to Recurly Account Codes.
+4. Toggle **Active** to **On**.
 
-<ol>
-  <li>Open the Recurly Commerce app.</li>
-  <li>Select one of the two plans.</li>
-  <li>Complete checkout via Shopify.</li>
-</ol>
+**API Key (**[Instructions](https://docs.recurly.com/recurly-engage/docs/api-actions#/)**&#x20;)**
 
-<div class="rp-steps">
-  <div class="rp-step">
-    <div class="rp-step-num">3</div>
-    <div><h4>Create a subscription plan</h4><p>Define your subscription offers—these feed directly into your storefront widget. See <a href="https://docs.recurly.com/recurly-commerce-docs/docs/create-a-subscription-plan#/" target="_blank">Create a subscription plan</a>.</p></div>
-  </div>
-</div>
+## Configure Automated Exports in Recurly Subscription Management
 
-<div class="rp-steps">
-  <div class="rp-step">
-    <div class="rp-step-num">4</div>
-    <div><h4>Set up your storefront</h4><p>Make sure the subscription purchase widget displays on your product pages. See the <a href="https://docs.recurly.com/recurly-commerce-docs/docs/storefront-setup#/" target="_blank">Storefront setup guide</a>.</p></div>
-  </div>
-</div>
+The connector's nightly sync depends on four exports being enabled on the Recurly Subscription Management side. Without them, the connector will show as **Active** in Recurly Engage, but no traits will populate.
 
-<div class="rp-steps">
-  <div class="rp-step">
-    <div class="rp-step-num">5</div>
-    <div><h4>Configure communications</h4><p>Free transactional email and SMS keep subscribers informed at every stage. See <a href="https://docs.recurly.com/recurly-commerce-docs/docs/transactional-emails" target="_blank">Configure transactional emails</a>.</p></div>
-  </div>
-</div>
+In Recurly Subscription Management, go to **Integrations → Automated Exports** and enable the following, each filtered on Modified Yesterday:
+
+| Export                 | Version | Filter                                                             |
+| ---------------------- | ------- | ------------------------------------------------------------------ |
+| Billing Info           | v6      | Modified Yesterday                                                 |
+| Invoices — Summary     | v5      | Modified Yesterday                                                 |
+| Subscriptions          | v5      | Modified Yesterday                                                 |
+| External Subscriptions | v5      | Modified Yesterday — only available if you're using App Management |
+
+The **Modified Yesterday** filter keeps each export scoped to the previous day's changes, which is what lets Recurly Engage stay in sync on its nightly cadence. For general setup steps, see Automated exports.
+
+## Verify the connection
+
+Once exports are enabled in Recurly Subscription Management and the connector is active in Recurly Engage, confirm both sides are configured correctly:
+
+1. In Recurly Engage, go to **Settings → Integrations → Recurly** and confirm the connector shows **Active**.
+2. In Recurly Subscription Management, go to **Integrations → Automated Exports** and confirm all four exports above are enabled with a recent successful run.
+3. In Recurly Engage, go to **Settings → User Traits** and confirm the imported attributes are populating.
+
+If traits aren't appearing after the first nightly cycle, check that:
+
+- All four exports are still enabled and haven't been superseded by a newer version — Recurly doesn't auto-upgrade export versions, so you'll need to delete and recreate the configuration manually when one is released.
+- The API Key entered in the connector hasn't expired or been regenerated on the Recurly Subscription Management side.
+- The Modified Yesterday filter is applied to every export — without it, an export can return more or less data than the connector expects.
+
+## Data integration
+
+Automated exports from Recurly may be configured to automatically sync on a nightly basis. Learn more about configuring <a href="https://docs.recurly.com/recurly-subscriptions/docs/automated-exports#/">Automated Exports</a> within Recurly Subscription Management.
+
+| Trait Name                  | Description                                                                                                 |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `state`                     | Current state of subscription (`pending`, `active`, `canceled`, `expired`)                                  |
+| `plan_code`                 | Plan code the customer is subscribed to                                                                     |
+| `currency`                  | Currency of the subscription                                                                                |
+| `current_period_started_at` | Date/time when the current billing period starts                                                            |
+| `current_period_ends_at`    | Date/time when the current billing period ends                                                              |
+| `trial_started_at`          | Date/time when the trial period began                                                                       |
+| `trial_ends_at`             | Date/time when the trial period ends                                                                        |
+| `activated_at`              | Date/time the subscription became active                                                                    |
+| `canceled_at`               | Date/time the subscription was canceled                                                                     |
+| `expires_at`                | Date/time when the subscription will churn                                                                  |
+| `status`                    | Invoice status (`pending`, `processing`, `past_due`, `paid`, `failed`, `voided`)                            |
+| `maintenance_url`           | Link to the customer’s hosted account maintenance page (if enabled)                                         |
+| `total_recurring_amount`    | The total amount, in the subscription's currency, that is billed on a recurring basis for the subscription. |
+
+## Supported actions
+
+Once your connector is active and data is synced, you can attach these 1-Click actions to prompt interactions. The **account_code** or **account_number** trait must be present on users.
+
+| Action                    | Description                                                 | API Integration         | Additional Instructions                     |
+| ------------------------- | ----------------------------------------------------------- | ----------------------- | ------------------------------------------- |
+| Apply Coupon Code         | Applies a coupon code to the user's account or subscription | Coupon Redemption       | Select the coupon code                      |
+| Pause Subscription        | Pauses a user's subscription                                | Pause Subscription      | Select how many billing cycles to pause for |
+| Resume Subscription       | Resumes a paused subscription                               | Resume Subscription     |                                             |
+| Switch Subscription       | Switches the user to a new plan                             | Subscription Change     | Select the plan                             |
+| Create Subscription       | Creates a subscription for an existing account              | Create Subscription     | Select the plan and enter the currency      |
+| Reactivate Subscription   | Reactivate a cancelled subscription                         | Reactivate Subscription |                                             |
+| Update Subscription Price | Update price of an active subscription                      | Subscription Change     |                                             |
+| Convert Trial             | Convert trial to paid subscription                          | Convert Trial           |                                             |
+| Record Usage              | Logs a usage record for a subscription add-on               | Log Usage Record        | Select the add-on and amount                |
+| Cancel Subscription       | Stops auto-renewal for an active subscription               | Cancel Subscription     | Select refund option                        |
