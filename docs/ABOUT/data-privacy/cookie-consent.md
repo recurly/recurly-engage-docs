@@ -40,7 +40,7 @@ Set the Engage tag's cookie category to Strictly Necessary. This ensures critica
 <div class="rp-steps">
   <div class="rp-step">
     <div class="rp-step-num">2</div>
-    <div><h4>Sync opt-out status into Engage</h4><p>Engage can read the cookie consent directly using live user trait ingest, recording that value as a user trait.</p></div>
+    <div><h4>Sync opt-out status into Engage</h4><p>Engage can read the cookie consent directly using live user trait ingest, recording that value as a user trait. <a href="https://docs.recurly.com/recurly-engage/docs/user-traits">Learn more about user traits</a></p></div>
   </div>
 </div>
 
