@@ -77,12 +77,12 @@ You can also export your CSV data from [Looker](looker).
 
 Recurly Engage supports three ways to get custom trait data in. Pick the one that matches how fresh your data needs to be and where it lives.
 
-| Method                                     | Latency            | Best for                                                                                                                                              |
-| ------------------------------------------ | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CSV upload to S3                           | Within a few hours | Bulk or historical loads, scheduled exports                                                                                                           |
-| Partner integration                        | Varies by partner  | Data already flowing through a supported connector                                                                                                    |
-| Ingest API                                 | Real time          | Custom data from your own backend or database                                                                                                         |
-| Custom JS Snippet<br />\`fetchUserTraits\` | Real time          | Trait data already available client-side (cookies, localStorage, a data layer) that you want to sync without calling the Ingest API from your backend |
+| Method                                           | Latency            | Best for                                                                                                                                              |
+| ------------------------------------------------ | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CSV upload to S3                                 | Within a few hours | Bulk or historical loads, scheduled exports                                                                                                           |
+| Partner integration                              | Varies by partner  | Data already flowing through a supported connector                                                                                                    |
+| Ingest API                                       | Real time          | Custom data from your own backend or database                                                                                                         |
+| Custom JS Snippet<br /><br />`fetchUserTraits()` | Real time          | Trait data already available client-side (cookies, localStorage, a data layer) that you want to sync without calling the Ingest API from your backend |
 
 ## Method 1 — CSV upload to S3 (batch)
 
