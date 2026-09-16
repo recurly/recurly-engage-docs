@@ -28,15 +28,17 @@ export const PrerequisitesLimitations = ({ header }) => {
       <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
         <p className="text-lg font-bold">{header}</p>
         <p>
-          <i className="fa-solid fa-check mr-2" />
+          <i className="fa-solid fa-check mr-2"></i>
           <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
         </p>
         <p>
-          <i className="fa-solid fa-check mr-2" />
+          <i className="fa-solid fa-check mr-2"></i>
+
           A Recurly account with API access and valid API key.
         </p>
         <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
+          <i className="fa-solid fa-exclamation-triangle mr-4"></i>
+
           If your application uses custom User IDs (Account Codes), enable <strong>Use Account Code</strong> in the connector settings.
         </p>
       </div>
@@ -69,7 +71,30 @@ To receive near real time data from Recurly Subscription Management, learn more 
 3. Toggle **Use Account Code** to **On** if you map your own user IDs to Recurly Account Codes.
 4. Toggle **Active** to **On**.
 
-**API Key ([Instructions](https://docs.recurly.com/recurly-engage/docs/api-actions#/) )**
+**API Key (**[Instructions](https://docs.recurly.com/recurly-engage/docs/api-actions#/)**&#x20;)**
+
+## Configure Automated Exports in Recurly Subscription Management
+
+The connector's nightly sync depends on four exports being enabled on the Recurly Subscription Management side. Without them, the connector will show as **Active** in Recurly Engage, but no traits will populate.
+
+In Recurly Subscription Management, go to **Integrations → Automated Exports** and enable the following, each filtered on Modified Yesterday:
+
+| Export                 | Version | Filter                                                             |
+| ---------------------- | ------- | ------------------------------------------------------------------ |
+| Billing Info           | v6      | Modified Yesterday                                                 |
+| Invoices — Summary     | v5      | Modified Yesterday                                                 |
+| Subscriptions          | v5      | Modified Yesterday                                                 |
+| External Subscriptions | v5      | Modified Yesterday — only available if you're using App Management |
+
+The **Modified Yesterday** filter keeps each export scoped to the previous day's changes, which is what lets Recurly Engage stay in sync on its nightly cadence. For general setup steps, see Automated exports.
+
+# Verify the connection
+
+Once exports are enabled in Recurly Subscription Management and the connector is active in Recurly Engage, confirm both sides are configured correctly:
+
+1. In Recurly Engage, go to **Settings → Integrations → Recurly** and confirm the connector shows **Active**.
+2. In Recurly Subscription Management, go to **Integrations → Automated Exports** and confirm all four exports above are enabled with a recent successful run.
+3. In Recurly Engage, go to **Settings → User Traits** and confirm the imported attributes are populating.
 
 ## Data integration
 
