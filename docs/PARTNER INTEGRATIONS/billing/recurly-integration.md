@@ -101,6 +101,12 @@ Once exports are enabled in Recurly Subscription Management and the connector is
 2. In Recurly Subscription Management, go to **Integrations → Automated Exports** and confirm all four exports above are enabled with a recent successful run.
 3. In Recurly Engage, go to **Settings → User Traits** and confirm the imported attributes are populating.
 
+If traits aren't appearing after the first nightly cycle, check that:
+
+- All four exports are still enabled and haven't been superseded by a newer version — Recurly doesn't auto-upgrade export versions, so you'll need to delete and recreate the configuration manually when one is released.
+- The API Key entered in the connector hasn't expired or been regenerated on the Recurly Subscription Management side.
+- The Modified Yesterday filter is applied to every export — without it, an export can return more or less data than the connector expects.
+
 ## Data integration
 
 Automated exports from Recurly may be configured to automatically sync on a nightly basis. Learn more about configuring <a href="https://docs.recurly.com/recurly-subscriptions/docs/automated-exports#/">Automated Exports</a> within Recurly Subscription Management.
