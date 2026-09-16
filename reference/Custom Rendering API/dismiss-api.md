@@ -2,7 +2,6 @@
 api:
   file: custom-rendering-api.yaml
   operationId: dismiss-api
-deprecated: false
 hidden: false
 metadata:
   title: ''
