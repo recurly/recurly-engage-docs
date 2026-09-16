@@ -30,7 +30,8 @@ export const PrerequisitesLimitations = ({ header }) => {
       <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
         <p className="text-lg font-bold">{header}</p>
         <p>
-          <i className="fa-solid fa-check mr-2" />
+          <i className="fa-solid fa-check mr-2"></i>
+
           You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.
         </p>
       </div>
@@ -42,7 +43,7 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 # Definition
 
-This guide outlines the implementation of a "Cancel/Save" flow, a highly effective strategy for mitigating customer churn. You can **save up to 40%** of your cancelled users with just this one flow. The fundamental principle involves intercepting a customer's attempt to cancel their subscription and subsequently presenting a tailored offer or resolution designed to retain their subscription. This application can range from a singular offer to a comprehensive exit survey that delivers varied solutions contingent upon the customer's stated reason for cancellation.
+Cancel Save is also known as voluntary churn. This guide outlines the implementation of a "Cancel/Save" flow, a highly effective strategy for mitigating customer churn. You can **save up to 40%** of your cancelled users with just this one flow. The fundamental principle involves intercepting a customer's attempt to cancel their subscription and subsequently presenting a tailored offer or resolution designed to retain their subscription. This application can range from a singular offer to a comprehensive exit survey that delivers varied solutions contingent upon the customer's stated reason for cancellation.
 
 # Key benefits
 
@@ -54,7 +55,9 @@ This guide outlines the implementation of a "Cancel/Save" flow, a highly effecti
 
 Follow these steps to create a simple yet powerful Cancel/Save prompt.
 
-> 📘 When combined with [1-Click Actions](actions-1), you can expect significant reductions in cancellations with improved customer satisfaction.
+<Callout icon="📘" theme="info">
+  ### When combined with [1-Click Actions](actions-1), you can expect significant reductions in cancellations with improved customer satisfaction.
+</Callout>
 
 ## Step-by-step guide
 
@@ -74,7 +77,9 @@ Follow these steps to create a simple yet powerful Cancel/Save prompt.
 
    If your billing platform isn’t one of our out-of-the-box options, you can still integrate it with API actions. <a href="https://docs.recurly.com/recurly-engage/docs/billing">More details on platform integration are available.</a>
 
-<Image align="center" src="https://files.readme.io/0c70fd88cadbe4ded00ad4b2510717b33ad88f030081518231a48647520188e8-cancel_1.png" />
+
+<Image src="https://files.readme.io/0c70fd88cadbe4ded00ad4b2510717b33ad88f030081518231a48647520188e8-cancel_1.png" align="center" />
+
 
 4. **Create a new Cancel Survey with Offers**
 
@@ -83,7 +88,9 @@ Follow these steps to create a simple yet powerful Cancel/Save prompt.
 * Go to Guides in the main navigation
 * Select the pre-configured Cancel Survey with Offers.
 
-<Image align="center" src="https://files.readme.io/e0bed59ebb84babc996bc9e52d8eb3837dd727eb90fd60cc7075232757f7aa60-cancel_2.png" />
+
+<Image src="https://files.readme.io/e0bed59ebb84babc996bc9e52d8eb3837dd727eb90fd60cc7075232757f7aa60-cancel_2.png" align="center" />
+
 
 <br />
 
@@ -93,7 +100,9 @@ Follow these steps to create a simple yet powerful Cancel/Save prompt.
 
    You’ll also see a chart displaying important **Users**, **Clicks** and **Conversion** **Rate** data.
 
-<Image align="center" src="https://files.readme.io/72ff000242fba0e849f8ee007d999355e3cec86f408113a1e4eace2db2555cd4-cancel_3.png" />
+
+<Image src="https://files.readme.io/72ff000242fba0e849f8ee007d999355e3cec86f408113a1e4eace2db2555cd4-cancel_3.png" align="center" />
+
 
 <br />
 
@@ -101,7 +110,9 @@ Follow these steps to create a simple yet powerful Cancel/Save prompt.
 
    Select the Cancellation Reasons Survey from the Guide.
 
-<Image align="center" src="https://files.readme.io/64154c89c1a4b56224c397100eadc53648d4b09ef28626614a8a1fb5c1da4a1d-cancel_4.png" />
+
+<Image src="https://files.readme.io/64154c89c1a4b56224c397100eadc53648d4b09ef28626614a8a1fb5c1da4a1d-cancel_4.png" align="center" />
+
 
 <br />
 
@@ -113,7 +124,9 @@ Follow these steps to create a simple yet powerful Cancel/Save prompt.
 
    _For example:_ The Cancellation survey prompt would fire when the user clicks the “Cancel Subscription” button.
 
-<Image align="center" src="https://files.readme.io/44709757aef931a087945318a4063a6161b5c682448f7174ef6e9b716ace2da4-cancel_5.png" />
+
+<Image src="https://files.readme.io/44709757aef931a087945318a4063a6161b5c682448f7174ef6e9b716ace2da4-cancel_5.png" align="center" />
+
 
 <br />
 
@@ -129,7 +142,9 @@ Follow these steps to create a simple yet powerful Cancel/Save prompt.
   <li>Technical issues → CTA to support</li>
 </ol>
 
-<Image align="center" src="https://files.readme.io/5a8d386476cd5d74a59ced1fd99863a1e8ce6b26ee73536cf36a6605b810daff-cancel_7.png" />
+
+<Image src="https://files.readme.io/5a8d386476cd5d74a59ced1fd99863a1e8ce6b26ee73536cf36a6605b810daff-cancel_7.png" align="center" />
+
 
 <br />
 
@@ -137,27 +152,35 @@ Follow these steps to create a simple yet powerful Cancel/Save prompt.
 
    From the **Details** section, click “Edit prompt design” to open the prompt customization window.
 
-   <br />
 
-<Image align="center" src="https://files.readme.io/b3336790a31fd879577c7cfedd6af3abdfd4093a9b5058995803abadffca8ea7-cancel_8.png" />
+
+
+<Image src="https://files.readme.io/b3336790a31fd879577c7cfedd6af3abdfd4093a9b5058995803abadffca8ea7-cancel_8.png" align="center" />
+
 
 **Edit the prompt** to customize the title, message, size, and styling to fit your messaging and styles. Make sure the message is clear and compelling. Be sure to configure your prompt on both **Desktop & Mobile.**
 
 <br />
 
-<Image align="center" src="https://files.readme.io/8f3c527f5f7c120bb9aab711eddc2272fef33f2025ba9a02b5f4a9b2effb9ac5-cancel_9.png" />
+
+<Image src="https://files.readme.io/8f3c527f5f7c120bb9aab711eddc2272fef33f2025ba9a02b5f4a9b2effb9ac5-cancel_9.png" align="center" />
+
 
 <br />
 
 If desired, adjust the prompt visibility settings in the User Interaction section to display the prompt again after specific button clicks within your guide.
 
-<Image align="center" src="https://files.readme.io/2f15699bf2836225d4d37ec21024cf7302638069154069364cc399a66d4431f5-cancel_10.png" />
+
+<Image src="https://files.readme.io/2f15699bf2836225d4d37ec21024cf7302638069154069364cc399a66d4431f5-cancel_10.png" align="center" />
+
 
 In the Form section, configure the form to hide and show your survey options. Ensure the value matches the action in the details screen.
 
 <br />
 
-<Image align="center" src="https://files.readme.io/673d29073865432f7332848a74a1b9e1662d7c631c38a53d0247b38206748d36-cancel_11.png" />
+
+<Image src="https://files.readme.io/673d29073865432f7332848a74a1b9e1662d7c631c38a53d0247b38206748d36-cancel_11.png" align="center" />
+
 
 <br />
 
@@ -168,7 +191,9 @@ In the Form section, configure the form to hide and show your survey options. En
   _For Example:_ If they select “Too Expensive” They would receive another prompt “Price - Save Offer” that would also need to be customized and configured.
 * Be sure to include criteria for when the guide should continue or exit, if necessary.
 
-<Image align="center" src="https://files.readme.io/60fbea1fc41413091b7ddb4a48159f91dddec9f4f84ed4465ba88a649a513483-cancel_12.png" />
+
+<Image src="https://files.readme.io/60fbea1fc41413091b7ddb4a48159f91dddec9f4f84ed4465ba88a649a513483-cancel_12.png" align="center" />
+
 
 <br />
 
@@ -176,18 +201,26 @@ In the Form section, configure the form to hide and show your survey options. En
     * After customizing your prompt, click "Live Preview" to see how the design will appear on your website. Please note that Live Preview does not test the actual flows.
     * You can test the flows on Live by adding your own user ID to the **Test Users** segment under **Settings > Users > Test Users.**
 
-      <Image align="center" src="https://files.readme.io/ab10db3a14f319a92e4be5bdd3ee5821901de56112578c9efddfe8f98e2d6182-cancel_13.png" />
+
+      <Image src="https://files.readme.io/ab10db3a14f319a92e4be5bdd3ee5821901de56112578c9efddfe8f98e2d6182-cancel_13.png" align="center" />
+
     * In the Cancel Survey guide, add the Test Users as the segment. This ensures that only test users will see the prompt.
 
-      <Image align="center" src="https://files.readme.io/4c47b6b47683b920a6319001ac9e876830a24fe910415bc60c49f86442c7f6d9-cancel_14.png" />
+
+      <Image src="https://files.readme.io/4c47b6b47683b920a6319001ac9e876830a24fe910415bc60c49f86442c7f6d9-cancel_14.png" align="center" />
+
 
 * During testing, if needed, you can reset the user clicks to relaunch the guide for testing. This can be done under **Settings > Users > Test Users > Reset Clicks.**
 
-<Image align="center" src="https://files.readme.io/4947bd8af0dbdcaf25f72ab3bb855071ac04963189b70a1b879647acbb1d1a21-cancel_15.png" />
+
+<Image src="https://files.readme.io/4947bd8af0dbdcaf25f72ab3bb855071ac04963189b70a1b879647acbb1d1a21-cancel_15.png" align="center" />
+
 
 * Alternatively, you can use the built in Preview Tool in the **Live Preview** section and set the userID to match the UserId you’re wanting to test.
 
-  <Image align="center" src="https://files.readme.io/0210d22d8974405a35c6db572d1200ce32909f262385cab2f09963b5da976df1-cancel_16.png" />
+
+  <Image src="https://files.readme.io/0210d22d8974405a35c6db572d1200ce32909f262385cab2f09963b5da976df1-cancel_16.png" align="center" />
+
 * Once you’re satisfied with your flow, **remember to update your segments** to target live users instead of test users.
 * Set your Guide **Live** in the Status section!
 
