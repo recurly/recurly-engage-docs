@@ -1,5 +1,8 @@
 ---
 title: Complex Collections
+excerpt: >-
+  How complex collection traits, like subscriptions, differ from standard traits
+  — with filtering examples and known behavior to watch for.
 deprecated: false
 hidden: false
 metadata:
@@ -18,7 +21,6 @@ metadata:
 ### Limitations
 
 - Filters on different sub-attributes within the same collection evaluate independently — see [Filtering behavior](#filtering-behavior) below. This can produce broader matches than expected.
-- \[TODO: Confirm with team] Subscriptions is the only complex collection trait currently supported — confirm before publishing whether others exist or are planned.
 
 # Definition
 
