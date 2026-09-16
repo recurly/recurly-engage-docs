@@ -77,11 +77,12 @@ You can also export your CSV data from [Looker](looker).
 
 Recurly Engage supports three ways to get custom trait data in. Pick the one that matches how fresh your data needs to be and where it lives.
 
-| Method              | Latency            | Best for                                           |
-| ------------------- | ------------------ | -------------------------------------------------- |
-| CSV upload to S3    | Within a few hours | Bulk or historical loads, scheduled exports        |
-| Partner integration | Varies by partner  | Data already flowing through a supported connector |
-| Ingest API          | Real time          | Custom data from your own backend or database      |
+| Method                                     | Latency            | Best for                                                                                                                                              |
+| ------------------------------------------ | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CSV upload to S3                           | Within a few hours | Bulk or historical loads, scheduled exports                                                                                                           |
+| Partner integration                        | Varies by partner  | Data already flowing through a supported connector                                                                                                    |
+| Ingest API                                 | Real time          | Custom data from your own backend or database                                                                                                         |
+| Custom JS Snippet<br />\`fetchUserTraits\` | Real time          | Trait data already available client-side (cookies, localStorage, a data layer) that you want to sync without calling the Ingest API from your backend |
 
 ## Method 1 — CSV upload to S3 (batch)
 
@@ -228,6 +229,25 @@ When your data lives in your own backend or internal database — or you simply 
 Each key in properties maps to a Recurly Engage user trait. As with CSV ingest, you'll configure the type and display for each new trait before using it in a segment (see Customizing user traits).
 
 **Note:** This section covers custom attribute (property) data. To send event or behavioral signals — for example, "payment failed" or "user hit a milestone" — see Usage tracking.
+
+\##Method 4 — Live ingest via Custom JS Snippet
+
+If your trait data already lives on the client — in cookies, localStorage, a data layer, or reachable through a call to your own backend — you can push it into Recurly Engage on every page load by implementing a `fetchUserTraits()` function in your Custom JS Snippet. This works alongside the `fetchUserId()` and `fetchAnonUserId()` functions described in <a href="/recurly-engage/docs/custom-js-snippet" target="_blank">Custom JS snippet</a>.
+
+`fetchUserTraits()` returns an object whose keys map to Recurly Engage user traits — the same shape as the properties object in the Ingest API payload.
+
+```text
+static fetchUserTraits() {
+  const user = JSON.parse(localStorage.getItem("user_object"));
+  return {
+    is_registered: !!user.token,
+    member_since: user.registrationDate,
+    accepted_tos: localStorage.getItem("tos_acceptance_date")
+  };
+}
+```
+
+<div class="rp-callout rp-callout-note"> <div><strong><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Note</strong>Traits ingested this way still need to be configured (type, display, and an optional description) under Customizing user traits before you can use them in a segment.</div> </div>
 
 # Customizing User Traits
 
