@@ -53,8 +53,6 @@ export const PrerequisitesLimitations = ({ header }) => {
 
 <PrerequisitesLimitations header="Prerequisites & limitations" />
 
-<PrerequisitesLimitations header="Prerequisites & limitations" />
-
 # Definition
 
 The **Recurly** connector imports subscription traits nightly and provides actions for managing subscriptions—coupon application, plan changes, pauses, resumes—via prompts.
