@@ -93,7 +93,7 @@ In Recurly Subscription Management, go to **Integrations → Automated Exports**
 
 The **Modified Yesterday** filter keeps each export scoped to the previous day's changes, which is what lets Recurly Engage stay in sync on its nightly cadence. For general setup steps, see Automated exports.
 
-# Verify the connection
+## Verify the connection
 
 Once exports are enabled in Recurly Subscription Management and the connector is active in Recurly Engage, confirm both sides are configured correctly:
 
