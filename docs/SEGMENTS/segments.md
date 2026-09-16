@@ -59,7 +59,7 @@ A **segment** uses trait filters—built-in usage, device, location, or imported
 
 - **Built-in traits**: Usage metrics (visits, minutes), device type, location, and prompt interactions, tracked automatically. See [Usage tracking](/recurly-engage/docs/usage-tracking-1) for the full list of automatically tracked attributes and how to add custom trackers.
 - **Custom traits**: Import via [AWS S3](/recurly-engage/docs/user-traits) (CSV, ingested within a few hours), direct CSV upload in Pulse, or [real-time events via API or SDK](/recurly-engage/docs/usage-tracking-1#custom-tracker).
-- **Complex collections**: Such as a user having multiple active or expired subscriptions. _(needs its own doc — no existing page)_
+- **Complex collections**: Such as a user having multiple active or expired subscriptions.
 
 ## Common segment examples
 
