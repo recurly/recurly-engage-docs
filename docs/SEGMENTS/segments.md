@@ -16,7 +16,7 @@ next:
 
 ### Video
 
-<Embed url="https://www.loom.com/embed/5e730b455754424fa13f1f282bcaafe6?sid=669292ce-0cd1-4d29-960a-ad13a1aebd5c" href="https://www.loom.com/embed/5e730b455754424fa13f1f282bcaafe6?sid=669292ce-0cd1-4d29-960a-ad13a1aebd5c" typeOfEmbed="iframe" height="480px" width="100%" iframe="true" />
+<Embed title="" typeOfEmbed="iframe" url="https://www.loom.com/embed/5e730b455754424fa13f1f282bcaafe6?sid=669292ce-0cd1-4d29-960a-ad13a1aebd5c" height="480px" width="100%" href="https://www.loom.com/embed/5e730b455754424fa13f1f282bcaafe6?sid=669292ce-0cd1-4d29-960a-ad13a1aebd5c" />
 
 ### Required plan
 
@@ -28,11 +28,12 @@ export const PrerequisitesLimitations = ({ header }) => {
       <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
         <p className="text-lg font-bold">{header}</p>
         <p>
-          <i className="fa-solid fa-check mr-2" />
+          <i className="fa-solid fa-check mr-2"></i>
           <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
         </p>
         <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
+          <i className="fa-solid fa-exclamation-triangle mr-4"></i>
+
           No limit on the number of segments you can create; users may belong to multiple segments.
         </p>
       </div>
@@ -56,9 +57,9 @@ A **segment** uses trait filters—built-in usage, device, location, or imported
 
 ## Trait sources
 
-* **Built-in traits**: Usage metrics (visits, minutes), device type, location, prompt interactions.
-* **Custom traits**: Import via AWS S3, CSV upload in Pulse, or real-time event data from your application.
-* **Complex Collections**: Such as a user having multiple active or expired subscriptions.
+- **Built-in traits**: Usage metrics (visits, minutes), device type, location, and prompt interactions, tracked automatically. See [Usage tracking](/recurly-engage/docs/usage-tracking-1) for the full list of automatically tracked attributes and how to add custom trackers.
+- **Custom traits**: Import via [AWS S3](/recurly-engage/docs/user-traits) (CSV, ingested within a few hours), direct CSV upload in Pulse, or [real-time events via API or SDK](/recurly-engage/docs/usage-tracking-1#custom-tracker).
+- **Complex collections**: Such as a user having multiple active or expired subscriptions. _(needs its own doc — no existing page)_
 
 ## Common segment examples
 
@@ -71,7 +72,9 @@ A **segment** uses trait filters—built-in usage, device, location, or imported
 * **Multi-Value Support**: You can now add multiple rows for the same custom trait within a single segment. For example, you can set a filter to include "Renewal Start Date" greater than 30 days AND exclude "Renewal Start Date" greater than 60 days.
 * **Within a single "Subscription" collection**: Currently, filters within the subscription object function independently. A user qualifies if they have any subscription matching criterion A and any subscription matching criterion B (they do not necessarily have to be the same subscription).
 
-<Image align="center" border={false} src="https://files.readme.io/3d0176cb8376d1f61829a3d2bf950e182dac28a7f2651906a5ec6995d624027c-segments.png" />
+
+<Image src="https://files.readme.io/3d0176cb8376d1f61829a3d2bf950e182dac28a7f2651906a5ec6995d624027c-segments.png" align="center" />
+
 
 ## Usage-based segments
 
@@ -94,8 +97,8 @@ Below is an example for creating a segment of **Engaged, US-based iOS Premium pl
    * **Premium plan**: Under **Custom** → **Plan** → **Include** → **Premium**.
 
      > **Note:** “Custom” covers any traits you’ve imported—learn more about importing custom traits [here](user-traits).
-   * **Not redeemed iOS prompt**: Select **Interactions → User has not → accepted (primary) → [iOS popup]**. Choose your created prompt from the dropdown.
-   * **Add complex subscription traits:** 
+   * **Not redeemed iOS prompt**: Select **Interactions → User has not → accepted (primary) → \[iOS popup]**. Choose your created prompt from the dropdown.
+   * **Add complex subscription traits:**
      * Select Subscriptions from the trait dropdown.
      * Sub-attribute: Choose a dimension.
      * Match Type: Set your criteria.
