@@ -37,6 +37,11 @@ export const PrerequisitesLimitations = ({ header }) => {
           A Recurly account with API access and valid API key.
         </p>
         <p>
+          <i className="fa-solid fa-check mr-2"></i>
+
+          The <strong>Integrations</strong> role in Recurly Subscription Management, needed to configure Automated Exports. Some exports also require the <strong>Admin</strong> role.
+        </p>
+        <p>
           <i className="fa-solid fa-exclamation-triangle mr-4"></i>
 
           If your application uses custom User IDs (Account Codes), enable <strong>Use Account Code</strong> in the connector settings.
@@ -45,6 +50,8 @@ export const PrerequisitesLimitations = ({ header }) => {
     </div>
   );
 };
+
+<PrerequisitesLimitations header="Prerequisites & limitations" />
 
 <PrerequisitesLimitations header="Prerequisites & limitations" />
 
