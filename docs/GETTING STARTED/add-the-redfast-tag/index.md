@@ -76,6 +76,7 @@ Please add the following to your configuration:
 
 * **Script Source (script-src):** Add your unique company-specific JS tag domain.
 * **Connect Source (connect-src):** Add `conduit.redfast.com` to allow necessary network traffic.
+* **Additional domains to allowlist:** Please allowlist `assets.redfastlabs.com`, `sapi.redfast.com`, and any other `redfast.com` and `redfastlabs.com` domains you encounter.
 
 ## Why is this necessary?
 
