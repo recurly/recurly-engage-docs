@@ -1,7 +1,7 @@
 ---
 title: Cookie consent
 excerpt: >-
-  Explains why OneTrust can block the Engage tag under default consent settings
+  Explains why cookies can block the Engage tag under default consent settings
   and how to configure consent categorization and opt-out syncing correctly.
 deprecated: false
 hidden: false
@@ -9,7 +9,7 @@ metadata:
   robots: index
 ---
 <div class="rp-page">
-  <div class="rp-overview">If you're using OneTrust to manage cookie consent, the Engage (Redfast) tag can get blocked before a visitor ever consents — and that can quietly stop critical functions like cancel-save from firing. Here's why it happens and how to configure consent categorization and opt-out syncing so Engage keeps working for every visitor.</div>
+  <div class="rp-overview">If you're managing cookie consent, the Engage (Redfast) tag can get blocked before a visitor ever consents — and that can quietly stop critical functions like cancel-save from firing. Here's why it happens and how to configure consent categorization and opt-out syncing so Engage keeps working for every visitor.</div>
   <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage plans</div>
   <div class="rp-toc">
     <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
@@ -20,7 +20,7 @@ metadata:
 
 # Definition
 
-<div class="rp-definition">By default, the Engage tag loads with your site's default consent configuration in OneTrust. If that configuration categorizes the tag under Performance or Targeting, OneTrust blocks it until the visitor consents to that category. Because Engage deploys as a single script rather than per-prompt, this classification applies at the tag level, not to individual prompts.</div>
+<div class="rp-definition">By default, the Engage tag loads with your site's default consent configuration. If that configuration categorizes the tag under Performance or Targeting, cookie managers block it until the visitor consents to that category. Because Engage deploys as a single script rather than per-prompt, this classification applies at the tag level, not to individual prompts.</div>
 
 <div class="rp-callout rp-callout-warning">
   <div><strong><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Warning</strong>If the Engage tag is categorized under Performance or Targeting, it won't load for any visitor who hasn't consented to that category — including visitors who need to reach critical functions like cancel-save or the on-hold state.</div>
@@ -28,19 +28,19 @@ metadata:
 
 # Recommended setup
 
-Set the Engage tag's OneTrust category to Strictly Necessary. This ensures critical functions fire reliably for every visitor, regardless of consent status.
+Set the Engage tag's cookie category to Strictly Necessary. This ensures critical functions fire reliably for every visitor, regardless of consent status.
 
 <div class="rp-steps">
   <div class="rp-step">
     <div class="rp-step-num">1</div>
-    <div><h4>Categorize the Engage tag as Strictly Necessary</h4><p>Set this at the tag level in OneTrust. Since Engage deploys as a single script, the category applies to the tag as a whole rather than to individual prompts.</p></div>
+    <div><h4>Categorize the Engage tag as Strictly Necessary</h4><p>Set this at the tag level in your cookie manager. Since Engage deploys as a single script, the category applies to the tag as a whole rather than to individual prompts.</p></div>
   </div>
 </div>
 
 <div class="rp-steps">
   <div class="rp-step">
     <div class="rp-step-num">2</div>
-    <div><h4>Sync opt-out status into Engage</h4><p>Engage can read the OneTrust cookie directly using live user trait ingest, recording that value as a user trait.</p></div>
+    <div><h4>Sync opt-out status into Engage</h4><p>Engage can read the cookie consent directly using live user trait ingest, recording that value as a user trait.</p></div>
   </div>
 </div>
 
