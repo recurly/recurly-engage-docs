@@ -1,8 +1,9 @@
 ---
 title: Custom JS snippet
 excerpt: >-
-  Admin users may override certain behaviors of the Recurly Engage JavaScript
-  SDK by supplying custom `fetchUserId` and `fetchAnonUserId` functions.
+  Override default identification, trait syncing, consent, promotion display,
+  and analytics behaviors in the Recurly Engage JavaScript SDK by supplying
+  custom Settings functions.
 deprecated: false
 hidden: false
 metadata:
