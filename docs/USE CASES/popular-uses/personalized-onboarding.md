@@ -14,170 +14,210 @@ next:
       slug: popular-uses
       title: Popular Uses
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">A well-designed onboarding experience is crucial for user retention and engagement. This guide shows you how to set up a personalized, multi-visit onboarding journey that educates users contextually — without disrupting their flow.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+    <a class="rp-toc-pill" href="#estimate-your-savings"><span class="rp-toc-num">4</span>Estimate your savings</a>
+  </div>
+</div>
 
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.
-        </p>
-      </div>
-    </div>
-  );
-};
+### Prerequisites
 
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.</li>
+</ul>
 
 # Definition
 
-A well-designed onboarding experience is crucial for user retention and engagement. This guide will show you how to set up a personalized, multi-visit onboarding journey that educates users contextually, without disrupting their flow. Unlike traditional tours, this approach delivers prompts only for features the user hasn’t yet seen.
-
-Traditional approaches to onboarding new users include a step-by-step homepage tour with highlighted callouts to various features. This method may work for B2B, but B2C users often find it disruptive.
-
-Recurly Engage’s Journey guide lets you predefine a sequence of prompts linked to key site elements. Each prompt fires only if the user hasn’t completed the associated action, and you can schedule them over multiple visits—resulting in a more user-friendly onboarding flow.
+<div class="rp-definition">Unlike traditional tours, this approach delivers prompts only for features the user hasn't yet seen. Traditional onboarding often relies on a step-by-step homepage tour with highlighted callouts across various features — that can work for B2B, but B2C users often find it disruptive. Recurly Engage's Journey guide lets you predefine a sequence of prompts linked to key site elements. Each prompt fires only if the user hasn't completed the associated action, and you can schedule them across multiple visits for a more user-friendly onboarding flow.</div>
 
 # Key benefits
 
-* **Contextual guidance**: Prompts appear only when a user interacts with a new feature, providing relevant guidance at the right moment.
-* **Multi-visit flexibility**: Onboarding steps are spread across multiple sessions, preventing user overload and respecting their learning pace.
-* **Higher engagement**: A streamlined, non-disruptive experience leads to higher engagement with your key features.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></div>
+    <strong>Contextual guidance</strong>
+    <span>Prompts appear only when a user interacts with a new feature, providing relevant guidance at the right moment.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i></div>
+    <strong>Multi-visit flexibility</strong>
+    <span>Spread onboarding steps across multiple sessions, preventing overload and respecting the user's learning pace.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+    <strong>Higher engagement</strong>
+    <span>A streamlined, non-disruptive experience drives higher engagement with your key features.</span>
+  </div>
+</div>
 
 # Key details
 
-> 📘 Important
->
-> Create usage trackers for your key features and content, then reference those trackers in your onboarding guide to target only first-time interactions.
+<div class="rp-callout rp-callout-important">
+  <div><strong><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> Important</strong>Create usage trackers for your key features and content, then reference those trackers in your onboarding guide to target only first-time interactions.</div>
+</div>
 
 ## Guide
 
-1. Make sure you are an active user of Recurly Engage  with Company, App Administrator or App Member permissions.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Confirm your access</h4><p>Make sure you're an active Recurly Engage user with Company, App Administrator, or App Member permissions.</p></div>
+  </div>
+</div>
 
-   <a href="https://recurly.com/product/engage/">If not, book a demo today!</a>
-2. **Login to Recurly Engage**
+<a class="rp-btn-secondary" href="https://recurly.com/product/engage/" target="_blank">Book a demo →</a>
 
-   Access the Recurly Engage Management console, known as **Pulse**, via <a href="https://pulsepp.redfast.com/login">Login</a>. This console serves as a central interface for configuring applications, user traits, segments, prompts, guides, and integrations.
-3. **Create a New Default Personalized Onboarding Guide**
-   * Go to **Guides** in the main navigation.
-   * Select the pre-configured Default Personalized Onboarding Guide
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Log in to Recurly Engage</h4><p>Access the Recurly Engage management console — known as Pulse — via <a href="https://pulsepp.redfast.com/login" target="_blank">Login</a>. Pulse is your central interface for configuring applications, user traits, segments, prompts, guides, and integrations.</p></div>
+  </div>
+</div>
 
-<Image align="center" src="https://files.readme.io/9b8b2dca341ae321013408e8ddea3069aeb07cc75046c43280c17b9580e5fa0e-personalized_1.png" />
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Create a Default Personalized Onboarding Guide</h4></div>
+  </div>
+</div>
 
-<br />
+<ol>
+  <li>Go to <strong>Guides</strong> in the main navigation.</li>
+  <li>Select the pre-configured <strong>Default Personalized Onboarding Guide</strong>.</li>
+</ol>
 
-4. **Default Personalized Onboarding Guide Data**
 
-   When you open up the pre-configured Guide, you’ll see a dashboard showing key data including, **Segments**, **Limits**, the **Status** of the guide, **Schedule** information and any **Daypart** settings. Edit this data based on the needs of your customized Guide.
+<Image src="https://files.readme.io/9b8b2dca341ae321013408e8ddea3069aeb07cc75046c43280c17b9580e5fa0e-personalized_1.png" align="center" width="75%" border={true} />
 
-   You’ll also see a chart displaying important **Users**, **Clicks** and **Conversion Rate** data.
 
-<Image align="center" src="https://files.readme.io/ff4212545cfcd3ad1522f8546c8cd9bc69431a5dac00f26225369cbb77fdbefc-personalized_2.png" />
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">4</div>
+    <div><h4>Review the guide data</h4><p>The pre-configured guide opens to a dashboard showing its <strong>Segments</strong>, <strong>Limits</strong>, <strong>Status</strong>, <strong>Schedule</strong>, and any <strong>Daypart</strong> settings, plus a chart of <strong>Users</strong>, <strong>Clicks</strong>, and <strong>Conversion Rate</strong>. Edit these to fit your customized guide.</p></div>
+  </div>
+</div>
 
-<br />
 
-5. **Set up your prompt**
+<Image src="https://files.readme.io/ff4212545cfcd3ad1522f8546c8cd9bc69431a5dac00f26225369cbb77fdbefc-personalized_2.png" align="center" width="75%" border={true} />
 
-   Select an Item, or **Prompt** from the Guide.
 
-   <Image align="center" src="https://files.readme.io/12f91dd5b9c010cb9fd4b0246a59b210184e6e45d915fd026ec03560d1336943-personalized_3.png" />
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">5</div>
+    <div><h4>Set up your prompt</h4><p>Select a prompt from the guide.</p></div>
+  </div>
+</div>
 
-<br />
 
-6. **Add your trigger**
+<Image src="https://files.readme.io/12f91dd5b9c010cb9fd4b0246a59b210184e6e45d915fd026ec03560d1336943-personalized_3.png" align="center" width="75%" border={true} />
 
-   In the **Details** section, edit your trigger information. The trigger is the page on your website that when visited, triggers the prompt to fire.
 
-   _For Example:_ Step 1 would fire if the user clicks a button on your website.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">6</div>
+    <div><h4>Add your trigger</h4><p>In the <strong>Details</strong> section, set your trigger — the page on your site that fires the prompt when visited. For example, step 1 could fire when the user clicks a button on your site.</p></div>
+  </div>
+</div>
 
-<Image align="center" src="https://files.readme.io/83aa4092a448512127e5d0404e1529535ce85700b8696235c00bfd865cad0394-personalized_4.png" />
 
-<br />
+<Image src="https://files.readme.io/83aa4092a448512127e5d0404e1529535ce85700b8696235c00bfd865cad0394-personalized_4.png" align="center" width="75%" border={true} />
 
-7. **Set your actions**
 
-   In the **Actions** section, set your Action and Values to trigger customized flows based on the user inputs.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">7</div>
+    <div><h4>Set your actions</h4><p>In the <strong>Actions</strong> section, set your action and values to trigger customized flows based on the user's input — for example, if the user clicks the prompt's primary button, direct them to a specific page or serve another prompt in the sequence.</p></div>
+  </div>
+</div>
 
-   _For Example:_ If the user clicks the primary button on the Prompt, direct them to a specific page or serve then another customized Save prompt.
 
-<Image align="center" src="https://files.readme.io/948784a0bae3cc40bd2e3c26a0074681c3fab42e8b84d1b71c94800e44dfe41d-payment_5.png" />
+<Image src="https://files.readme.io/948784a0bae3cc40bd2e3c26a0074681c3fab42e8b84d1b71c94800e44dfe41d-payment_5.png" align="center" width="75%" border={true} />
 
-<br />
 
-8. **Edit your design**
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">8</div>
+    <div><h4>Edit your design</h4><p>From the <strong>Details</strong> section, click <strong>Edit prompt design</strong> to open the prompt customization window.</p></div>
+  </div>
+</div>
 
-   From the **Details** section, click “Edit prompt design” to open the prompt customization window.
 
-<Image align="center" src="https://files.readme.io/10350322980f593844f3294a88964af5cfd844a8d144be9ded363589c5a0e0b2-personalized_6.png" />
+<Image src="https://files.readme.io/10350322980f593844f3294a88964af5cfd844a8d144be9ded363589c5a0e0b2-personalized_6.png" align="center" width="75%" border={true} />
 
-<br />
 
-**Edit the prompt** to customize the title, message, size, and styling to fit your messaging and styles. Make sure the message is clear and compelling. Be sure to configure your prompt on **Desktop & Mobile.**
+Customize the title, message, size, and styling to fit your messaging — make sure the message is clear and compelling, and configure the prompt for both **Desktop & Mobile**.
 
-<Image align="center" src="https://files.readme.io/3d85386b117cbed7fd6850b9bfc4300c1eb2279b0604f3a3c69a0872b0120911-personalized_7.png" />
 
-If desired, adjust the prompt visibility settings in the User Interaction section to display the prompt again after specific button clicks within your guide.
+<Image src="https://files.readme.io/3d85386b117cbed7fd6850b9bfc4300c1eb2279b0604f3a3c69a0872b0120911-personalized_7.png" align="center" width="75%" border={true} />
 
-<Image align="center" src="https://files.readme.io/41d42f9ca37606cfaef0a09727dbcdcb2eb2f67f87d170164bc6dd94445dc468-personalized_8.png" />
 
-<br />
+If you'd like, adjust the prompt's visibility settings in the **User Interaction** section to show it again after specific button clicks within your guide.
 
-<br />
 
-9. **Repeat steps 5 - 8 for all additional Prompts that are part of the Guide.**
+<Image src="https://files.readme.io/41d42f9ca37606cfaef0a09727dbcdcb2eb2f67f87d170164bc6dd94445dc468-personalized_8.png" align="center" width="75%" border={true} />
 
-Additional prompts may include the Actions that will appear based on a users survey results.
 
-For Example: If they select “Too Expensive” They would receive another prompt “Price - Save Offer” that would also need to be customized and configured.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">9</div>
+    <div><h4>Repeat steps 5–8 for additional prompts</h4><p>Additional prompts might present the actions tied to a user's response to an earlier prompt in the sequence, and each needs its own design and configuration. Be sure to set criteria for when the guide should continue or exit.</p></div>
+  </div>
+</div>
 
-Be sure to include criteria for when the guide should continue or exit.
 
-For involuntary churn scenarios, a custom goal can be implemented where users are required to perform an additional action, such as updating their payment method, to recover their account. While the primary button click is recorded, the conversion event, which is the redirect, is the key metric tracked. An exit event can be configured to occur upon the achievement of this custom goal.
+<Image src="https://files.readme.io/2f791cf37a4478d51c31e03dbf2c491563a5258cfd41f9097e7276ba4db92db3-personalized_9.png" align="center" width="75%" border={true} />
 
-<Image align="center" src="https://files.readme.io/2f791cf37a4478d51c31e03dbf2c491563a5258cfd41f9097e7276ba4db92db3-personalized_9.png" />
 
-<br />
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">10</div>
+    <div><h4>Preview, test, and launch</h4><p>After customizing your prompt, click <strong>Live Preview</strong> to see how the design appears on your site. Live Preview doesn't test the actual flows.</p></div>
+  </div>
+</div>
 
-10. **Live Preview, Testing and Launch**
+**Test the flow on Live**: add your own user ID to the **Test Users** segment under **Settings > Users > Test Users**.
 
-* After customizing your prompt, click "Live Preview" to see how the design will appear on your website. Please note that Live Preview does not test the actual flows.
-* You can test the flows on Live by adding your own user ID to the Test Users segment under **Settings > Users > Test Users**.
 
-<Image align="center" src="https://files.readme.io/6c0a17189e2557485c7b70e28ee18c8602d9a65fcd1c6a1ef628f2fc6d33a91c-personalized_10.png" />
+<Image src="https://files.readme.io/6c0a17189e2557485c7b70e28ee18c8602d9a65fcd1c6a1ef628f2fc6d33a91c-personalized_10.png" align="center" width="75%" border={true} />
 
-* In the Cancel Survey guide, add the Test Users as the segment. This ensures that only test users will see the prompt.
 
-<Image align="center" src="https://files.readme.io/b31c255ddbeb2b24237e67432f8b9318d288c9d930de1e3b4e8c7ccf8bd201e0-personalized_11.png" />
+**Add Test Users to the guide**: add Test Users as the segment so only test users see the prompt.
 
-* During testing, if needed, you can reset the user clicks to relaunch the guide for testing. This can be done under **Settings > Users > Test Users > Reset Clicks.**
 
-<Image align="center" src="https://files.readme.io/a175319ab01b0e7209d0dcc8aa737e4d79ee8794b8c9ba3cab754a55c6fd394c-personalized_12.png" />
+<Image src="https://files.readme.io/b31c255ddbeb2b24237e67432f8b9318d288c9d930de1e3b4e8c7ccf8bd201e0-personalized_11.png" align="center" width="75%" border={true} />
 
-<br />
 
-* Alternatively, you can use the built in Preview Tool in the Live Preview section and set the userID to match the UserId you’re wanting to test.
+**Reset clicks during testing**: if you need to relaunch the guide while testing, reset the user's clicks under **Settings > Users > Test Users > Reset Clicks**.
 
-<Image align="center" src="https://files.readme.io/d77463969c9c9a85460dc89a625f6c9f9647e853378830d17eb27ab07b8a2604-personalized_13.png" />
 
-* Once you’re satisfied with your flow, **remember to update your segments** to target live users instead of test users.
-* Set your Guide **Live** in the Status section!
+<Image src="https://files.readme.io/a175319ab01b0e7209d0dcc8aa737e4d79ee8794b8c9ba3cab754a55c6fd394c-personalized_12.png" align="center" width="75%" border={true} />
 
-<br />
+
+**Use the built-in preview tool**: alternatively, use the Preview Tool in the **Live Preview** section and set the user ID to the one you want to test.
+
+
+<Image src="https://files.readme.io/d77463969c9c9a85460dc89a625f6c9f9647e853378830d17eb27ab07b8a2604-personalized_13.png" align="center" width="75%" border={true} />
+
+
+Once you're satisfied with your flow, remember to update your segments to target live users instead of test users, then set your guide's status to **Live**.
 
 ## Estimate your savings
 
-Every Churn is Lost Revenue. We Can Help You Get It Back.
+<div class="rp-card">
 
-Losing users isn't just a number- it's a direct hit to your bottom line. If you're losing 1,000 users a month, each worth $10, that’s **$10,000 in lost revenue** every single month.
+Every churn is lost revenue — and this flow can help you get it back.
 
-Imagine what recovering even a fraction of that could do for your business. By proactively re-engaging users, you can recover significant revenue and build a more sustainable future.
+Losing users isn't just a number, it's a direct hit to your bottom line. If you're losing 1,000 users a month at $10 each, that's **$10,000 in lost revenue** every month.
 
-Want to see how we can turn your churned users into recovered revenue?
+Recovering even a fraction of that can make a real difference to your business. By proactively re-engaging users, you can recover meaningful revenue and build a more sustainable subscriber base.
 
-<a href="https://recurly.com/product/engage/">Book a quick demo today.</a>
+Want to see how you could turn churned users into recovered revenue?
 
-<br />
+</div>
 
-<br />
+<a class="rp-btn-primary" href="https://recurly.com/product/engage/" target="_blank">Book a quick demo →</a>
