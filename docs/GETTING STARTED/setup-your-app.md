@@ -12,54 +12,62 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">This page walks you through setting up your application in the Recurly Engage console. You'll give your app a clear name, register the domain where it's hosted, and — if you need it — manage multiple domain aliases under one unified configuration.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-This page walks you through setting up your application in the Recurly Engage console. You’ll learn how to give your app a clear name, register the domain where it’s hosted, and—if needed—manage multiple domain aliases for unified control.
+### Prerequisites
 
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          You need <strong>Administrator</strong> access to configure your Recurly Engage account.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>You need <strong>Administrator</strong> access to configure your Recurly Engage account.</li>
+</ul>
 
 # Definition
 
-An **application** in Recurly Engage is the container for your integration: it holds your app’s name, its primary domain, and any additional domains you want to manage under one console.
+<div class="rp-definition">An application in Recurly Engage is the container for your integration. It holds your app's name, its primary domain, and any additional domains you want to manage under one console.</div>
 
 # Key benefits
 
-* **Centralized management**: Define and update your app’s settings from a single, intuitive console.
-* **Flexible branding**: Use domain aliases to serve multiple brands or environments without repeating setup steps.
-* **Consistent user experience**: Guarantee that every domain you control delivers the same secure, branded checkout flow.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-gauge" aria-hidden="true"></i></div>
+    <strong>Centralized management</strong>
+    <span>Define and update your app's settings from a single, intuitive console.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></div>
+    <strong>Flexible branding</strong>
+    <span>Use domain aliases to serve multiple brands or environments without repeating setup steps.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+    <strong>Consistent user experience</strong>
+    <span>Guarantee that every domain you control delivers the same secure, branded checkout flow.</span>
+  </div>
+</div>
 
 # Key details
 
-1. **Application name**
+## Application name
 
-   * Enter a friendly name for your app or website (for example, `Demo`).
+Enter a friendly name for your app or website — for example, `Demo`.
 
-2. **Primary domain**
+## Primary domain
 
-   * Provide the domain where your app lives (for example, `demo.recurlyengage.com`).
-   * You don’t need to include subdomains like `www` unless you plan to host multiple applications under the same root domain.
+Provide the domain where your app lives — for example, `demo.recurlyengage.com`. You don't need to include subdomains like `www` unless you plan to host multiple applications under the same root domain.
 
-3. **Domain aliases**
+## Domain aliases
 
-   * Aliases let you run multiple domains through one Recurly Engage configuration.
-   * Perfect when you have several brands or testing environments pointing to the same backend.
+Aliases let you run multiple domains through one Recurly Engage configuration — perfect for when you have several brands or testing environments pointing to the same backend.
 
-   <br />
 
-   <Image align="center" className="border" border={true} src="https://files.readme.io/172cd70-Screenshot_2024-05-24_at_6.21.22_PM.png" />
+<Image src="https://files.readme.io/172cd70-Screenshot_2024-05-24_at_6.21.22_PM.png" align="center" width="75%" border={true} />
 
-Learn more about application settings <a href="http://docs.recurly.com/recurly-engage/docs/application#/" target="_blank" rel="noopener">here</a>.
+
+Learn more about <a href="https://docs.recurly.com/recurly-engage/docs/application" target="_blank">application settings</a>.
