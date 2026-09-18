@@ -4,7 +4,7 @@ author: Alex Molter
 hidden: true
 published_at: '2026-09-18T15:40:57.842Z'
 ---
-Xxx
+September 15, 2026 Release: This release adds a new way to target subscribers by their active Recurly subscription add-ons, so you can include or exclude users based on the specific add-ons they're subscribed to when building Segments.
 
 | Release Date | **Feature**  | **Type**    | **Potential Impact** | **Description / Overview**                                                                                                                                                                                                                                                                                                                                       |
 | :----------- | :----------- | :---------- | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
