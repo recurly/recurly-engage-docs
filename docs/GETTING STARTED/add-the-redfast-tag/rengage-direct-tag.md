@@ -12,64 +12,110 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">Add the Recurly Engage SDK to your application by inserting the script snippet directly into your HTML. Once it's in place, Recurly Engage starts syncing customer data for personalized experiences.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available to all customers on any Recurly Engage subscription plan</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-This page shows you how to add the Recurly Engage SDK to your application by inserting the script snippet into your HTML. Once complete, Recurly Engage will begin syncing customer data for personalized experiences.
+### Prerequisites
 
-### Required plan
+<ul class="rp-list">
+  <li>You need <strong>Administrator</strong> access to your Recurly Engage console.</li>
+</ul>
 
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
+### Limitations
 
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          You need <strong>Administrator</strong> access to your Recurly Engage console.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          Ensure you can edit and redeploy your site’s HTML files.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>You must be able to edit and redeploy your site's HTML files.</li>
+</ul>
 
 # Definition
 
-The **Direct tag integration** lets you manually paste the Recurly Engage JavaScript snippet into your site’s HTML, enabling Engage features without using a tag manager.
+<div class="rp-definition">The Direct tag integration lets you manually paste the Recurly Engage JavaScript snippet into your site's HTML, enabling Engage features without a tag manager.</div>
 
 # Key benefits
 
-* **Full control**: Embed the script exactly where you need it in your page lifecycle.
-* **No external tools**: Skip tag managers and deploy directly in your codebase.
-* **Performance-safe**: Use the `defer` attribute to prevent blocking page rendering.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-sliders" aria-hidden="true"></i></div>
+    <strong>Full control</strong>
+    <span>Embed the script exactly where you need it in your page lifecycle.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+    <strong>No external tools</strong>
+    <span>Skip tag managers and deploy directly in your codebase.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></div>
+    <strong>Performance-safe</strong>
+    <span>Use the <code>defer</code> attribute to keep the script from blocking page rendering.</span>
+  </div>
+</div>
 
 # Key details
 
 Follow these steps to add the Recurly Engage SDK directly:
 
-1. **Log in to Recurly Engage and select your application**: **Make sure** you’re in the correct app context before retrieving your snippet.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Log in to Recurly Engage and select your application</h4><p>Make sure you're in the correct app context before retrieving your snippet.</p></div>
+  </div>
+</div>
 
-2. **Retrieve the JavaScript snippet**: In the Engage console, **navigate** to **Settings > Usage Tracking**.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Retrieve the JavaScript snippet</h4><p>In the Engage console, go to <strong>Settings > Usage Tracking</strong>.</p></div>
+  </div>
+</div>
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/2c35d83-Screenshot_2024-05-23_at_16.23.58.png" />
 
-3. **Copy the code snippet**: **Select** and **copy** the entire `<script>` block provided.
+<Image src="https://files.readme.io/2c35d83-Screenshot_2024-05-23_at_16.23.58.png" align="center" width="75%" border={true} />
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/9e21b53-Screenshot_2024-05-23_at_16.25.30.png" />
 
-4. **Locate your root HTML file**: Open your project and find the main HTML file (commonly named `index.html`) where other scripts load.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Copy the code snippet</h4><p>Select and copy the entire <code>&lt;script&gt;</code> block provided.</p></div>
+  </div>
+</div>
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/3520de0-js-tag-direct-3.png" />
 
-5. **Paste the snippet above the closing`</head>` tag**: **Insert** the `<script>` block right before `</head>`. You may add `defer` if desired; it won’t affect the SDK’s operation.
+<Image src="https://files.readme.io/9e21b53-Screenshot_2024-05-23_at_16.25.30.png" align="center" width="75%" border={true} />
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/5bffbbf-js-tag-direct-4.png" />
 
-6. **Save and deploy your project**: **Commit** your changes, **deploy** your site, and **confirm** the SDK loads on page view.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">4</div>
+    <div><h4>Locate your root HTML file</h4><p>Open your project and find the main HTML file — commonly named <code>index.html</code> — where your other scripts load.</p></div>
+  </div>
+</div>
+
+
+<Image src="https://files.readme.io/3520de0-js-tag-direct-3.png" align="center" width="75%" border={true} />
+
+
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">5</div>
+    <div><h4>Paste the snippet above the closing <code>&lt;/head&gt;</code> tag</h4><p>Insert the <code>&lt;script&gt;</code> block right before <code>&lt;/head&gt;</code>. You can add <code>defer</code> if you'd like — it won't affect the SDK's operation.</p></div>
+  </div>
+</div>
+
+
+<Image src="https://files.readme.io/5bffbbf-js-tag-direct-4.png" align="center" width="75%" border={true} />
+
+
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">6</div>
+    <div><h4>Save and deploy your project</h4><p>Commit your changes, deploy your site, and confirm the SDK loads on page view.</p></div>
+  </div>
+</div>
