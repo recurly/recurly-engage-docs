@@ -22,7 +22,8 @@ export const PrerequisitesLimitations = ({ header }) => {
       <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
         <p className="text-lg font-bold">{header}</p>
         <p>
-          <i className="fa-solid fa-check mr-2" />
+          <i className="fa-solid fa-check mr-2"></i>
+
           You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.
         </p>
       </div>
@@ -250,7 +251,7 @@ export const PrerequisitesLimitations = ({ header }) => {
       </td>
 
       <td>
-        [Guidance to user with rebill fail or card expiring to update billing](/playbooks/win-back-user.html)
+        [Guidance to user with rebill fail or card expiring to update billing](https://docs.recurly.com/recurly-engage/docs/failed-rebill)
       </td>
 
       <td>
