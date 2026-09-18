@@ -55,225 +55,261 @@ next:
 
 # Key details
 
-Each row below is a lifecycle category. Swipe within a row to bring a scenario into the spotlight — the neighbors softly dissolve at the edges. Prefer plain text? The full list is right below.
+Each row below is a lifecycle category. In carousel rows, use the arrows to bring a scenario into the spotlight — the neighbors fade to 30% opacity on the sides. Prefer plain text? The full list is right below.
 
 <HTMLBlock>{`
-<div style="background: #0D0D0B; border-radius: 16px; padding: 24px 4px 20px; margin-bottom: 20px; box-shadow: 0 0 0 1px rgba(255,215,6,0.1), 0 24px 60px -30px rgba(255,215,6,0.2);">
-  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding: 0 20px;">
-    <div style="display: inline-flex; align-items: center; gap: 8px; background: #FFD706; color: #0D0D0B; font-size: 13px; font-weight: 700; padding: 6px 16px; border-radius: 20px; letter-spacing: 0.3px;"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i>Cancel Save</div>
-    <div style="font-size: 11px; color: rgba(255,253,242,0.45); letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600;">1 scenario</div>
+<div class="rp-shelf rp-shelf-single">
+  <div class="rp-shelf-header">
+    <div class="rp-shelf-label"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i>Cancel Save</div>
+    <div class="rp-shelf-count">1 scenario</div>
   </div>
-  <div style="display: flex; justify-content: center; padding: 6px 20px 16px;">
-    <div style="flex: 0 0 88%; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">LTV-based cancel offer</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Show an offer sized to the customer's lifetime value when they click Cancel.</span>
-    </div>
-  </div>
-</div>
-
-<div style="background: #0D0D0B; border-radius: 16px; padding: 24px 4px 20px; margin-bottom: 20px; box-shadow: 0 0 0 1px rgba(255,215,6,0.1), 0 24px 60px -30px rgba(255,215,6,0.2);">
-  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding: 0 20px;">
-    <div style="display: inline-flex; align-items: center; gap: 8px; background: #FFD706; color: #0D0D0B; font-size: 13px; font-weight: 700; padding: 6px 16px; border-radius: 20px; letter-spacing: 0.3px;"><i class="fa-solid fa-user-check" aria-hidden="true"></i>Retention</div>
-    <div style="font-size: 11px; color: rgba(255,253,242,0.45); letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600;">4 scenarios · swipe</div>
-  </div>
-  <div style="display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 13% 16px; -webkit-mask-image: linear-gradient(to right, transparent 0, black 13%, black 87%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, black 13%, black 87%, transparent 100%);">
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">LTV offer for anxious users</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Show an offer sized to lifetime value to users showing renewal anxiety.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">$0.99 win-back offer</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Show a next-month $0.99 offer to a member with decreasing consumption, on the account page.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Payment-page lingering offer</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">If a customer lingers more than 2 minutes on the Payment page, show an offer to test conversion.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Auto-renew off guidance</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Give inline guidance on premium features and content to a user who turns off auto-renew.</span>
+  <div class="rp-shelf-viewport">
+    <div class="rp-shelf-track">
+      <div class="rp-shelf-card">
+        <strong>LTV-based cancel offer</strong>
+        <span>Show an offer sized to the customer's lifetime value when they click Cancel.</span>
+      </div>
     </div>
   </div>
 </div>
 
-<div style="background: #0D0D0B; border-radius: 16px; padding: 24px 4px 20px; margin-bottom: 20px; box-shadow: 0 0 0 1px rgba(255,215,6,0.1), 0 24px 60px -30px rgba(255,215,6,0.2);">
-  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding: 0 20px;">
-    <div style="display: inline-flex; align-items: center; gap: 8px; background: #FFD706; color: #0D0D0B; font-size: 13px; font-weight: 700; padding: 6px 16px; border-radius: 20px; letter-spacing: 0.3px;"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>Abandon Cart</div>
-    <div style="font-size: 11px; color: rgba(255,253,242,0.45); letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600;">2 scenarios · swipe</div>
+<div class="rp-shelf rp-shelf-carousel">
+  <div class="rp-shelf-header">
+    <div class="rp-shelf-label"><i class="fa-solid fa-user-check" aria-hidden="true"></i>Retention</div>
+    <div class="rp-shelf-count">4 scenarios</div>
   </div>
-  <div style="display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 13% 16px; -webkit-mask-image: linear-gradient(to right, transparent 0, black 13%, black 87%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, black 13%, black 87%, transparent 100%);">
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Cart reminder after 2 minutes</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Show the cart item inline on the home screen, then move it to the nav bar after 2 minutes.</span>
+  <div class="rp-shelf-viewport">
+    <div class="rp-shelf-track">
+      <div class="rp-shelf-card">
+        <strong>LTV offer for anxious users</strong>
+        <span>Show an offer sized to lifetime value to users showing renewal anxiety.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>$0.99 win-back offer</strong>
+        <span>Show a next-month $0.99 offer to a member with decreasing consumption, on the account page.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Payment-page lingering offer</strong>
+        <span>If a customer lingers more than 2 minutes on the Payment page, show an offer to test conversion.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Auto-renew off guidance</strong>
+        <span>Give inline guidance on premium features and content to a user who turns off auto-renew.</span>
+      </div>
     </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Drip campaign for decliners</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Add a user who declines an in-app offer to an email drip campaign.</span>
+  </div>
+  <div class="rp-shelf-controls">
+    <button class="rp-shelf-btn rp-shelf-prev" aria-label="Previous scenario"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+    <button class="rp-shelf-btn rp-shelf-next" aria-label="Next scenario"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+  </div>
+</div>
+
+<div class="rp-shelf rp-shelf-pair">
+  <div class="rp-shelf-header">
+    <div class="rp-shelf-label"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>Abandon Cart</div>
+    <div class="rp-shelf-count">2 scenarios</div>
+  </div>
+  <div class="rp-shelf-viewport">
+    <div class="rp-shelf-track">
+      <div class="rp-shelf-card">
+        <strong>Cart reminder after 2 minutes</strong>
+        <span>Show the cart item inline on the home screen, then move it to the nav bar after 2 minutes.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Drip campaign for decliners</strong>
+        <span>Add a user who declines an in-app offer to an email drip campaign.</span>
+      </div>
     </div>
   </div>
 </div>
 
-<div style="background: #0D0D0B; border-radius: 16px; padding: 24px 4px 20px; margin-bottom: 20px; box-shadow: 0 0 0 1px rgba(255,215,6,0.1), 0 24px 60px -30px rgba(255,215,6,0.2);">
-  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding: 0 20px;">
-    <div style="display: inline-flex; align-items: center; gap: 8px; background: #FFD706; color: #0D0D0B; font-size: 13px; font-weight: 700; padding: 6px 16px; border-radius: 20px; letter-spacing: 0.3px;"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i>Upsell</div>
-    <div style="font-size: 11px; color: rgba(255,253,242,0.45); letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600;">3 scenarios · swipe</div>
+<div class="rp-shelf rp-shelf-carousel">
+  <div class="rp-shelf-header">
+    <div class="rp-shelf-label"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i>Upsell</div>
+    <div class="rp-shelf-count">3 scenarios</div>
   </div>
-  <div style="display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 13% 16px; -webkit-mask-image: linear-gradient(to right, transparent 0, black 13%, black 87%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, black 13%, black 87%, transparent 100%);">
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Add-on bundle on home screen</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Show an add-on bundle for the user's plan inline on the home screen.</span>
+  <div class="rp-shelf-viewport">
+    <div class="rp-shelf-track">
+      <div class="rp-shelf-card">
+        <strong>Add-on bundle on home screen</strong>
+        <span>Show an add-on bundle for the user's plan inline on the home screen.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Next-tier nudge</strong>
+        <span>Show the next plan tier inline to a member with increasing consumption, on the home page.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Annual plan offer</strong>
+        <span>Show an inline annual plan offer to a monthly member with 4+ months of tenure, on the account page.</span>
+      </div>
     </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Next-tier nudge</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Show the next plan tier inline to a member with increasing consumption, on the home page.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Annual plan offer</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Show an inline annual plan offer to a monthly member with 4+ months of tenure, on the account page.</span>
+  </div>
+  <div class="rp-shelf-controls">
+    <button class="rp-shelf-btn rp-shelf-prev" aria-label="Previous scenario"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+    <button class="rp-shelf-btn rp-shelf-next" aria-label="Next scenario"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+  </div>
+</div>
+
+<div class="rp-shelf rp-shelf-pair">
+  <div class="rp-shelf-header">
+    <div class="rp-shelf-label"><i class="fa-solid fa-crown" aria-hidden="true"></i>VIP</div>
+    <div class="rp-shelf-count">2 scenarios</div>
+  </div>
+  <div class="rp-shelf-viewport">
+    <div class="rp-shelf-track">
+      <div class="rp-shelf-card">
+        <strong>Fewer ads for day-zero users</strong>
+        <span>Show fewer ads to users on their first day.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Exclusive content for high LTV</strong>
+        <span>Show an exclusive content menu item to high-LTV users.</span>
+      </div>
     </div>
   </div>
 </div>
 
-<div style="background: #0D0D0B; border-radius: 16px; padding: 24px 4px 20px; margin-bottom: 20px; box-shadow: 0 0 0 1px rgba(255,215,6,0.1), 0 24px 60px -30px rgba(255,215,6,0.2);">
-  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding: 0 20px;">
-    <div style="display: inline-flex; align-items: center; gap: 8px; background: #FFD706; color: #0D0D0B; font-size: 13px; font-weight: 700; padding: 6px 16px; border-radius: 20px; letter-spacing: 0.3px;"><i class="fa-solid fa-crown" aria-hidden="true"></i>VIP</div>
-    <div style="font-size: 11px; color: rgba(255,253,242,0.45); letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600;">2 scenarios · swipe</div>
+<div class="rp-shelf rp-shelf-carousel">
+  <div class="rp-shelf-header">
+    <div class="rp-shelf-label"><i class="fa-solid fa-heart" aria-hidden="true"></i>Engagement</div>
+    <div class="rp-shelf-count">8 scenarios</div>
   </div>
-  <div style="display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 13% 16px; -webkit-mask-image: linear-gradient(to right, transparent 0, black 13%, black 87%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, black 13%, black 87%, transparent 100%);">
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Fewer ads for day-zero users</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Show fewer ads to users on their first day.</span>
+  <div class="rp-shelf-viewport">
+    <div class="rp-shelf-track">
+      <div class="rp-shelf-card">
+        <strong>1-click next episode</strong>
+        <span>Use past episodic viewing to pop up 1-click playback of the next episode.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Seasonal LTV offer</strong>
+        <span>Pop up a seasonal offer based on lifetime value.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Time-of-day promotions</strong>
+        <span>Promote content and features based on time of day or day of week.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Announcements</strong>
+        <span>Surface company announcements directly in the product.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Mobile app promotion via SMS</strong>
+        <span>Promote the mobile app via SMS with a link, for mobile-first activities.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Updated content badges</strong>
+        <span>Badge updated content thumbnails the user has previously consumed.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Seasonal campaigns</strong>
+        <span>Run seasonal campaigns tied to key dates.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Personalized feature discovery</strong>
+        <span>Personalize feature discovery based on features used and not used.</span>
+      </div>
     </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Exclusive content for high LTV</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Show an exclusive content menu item to high-LTV users.</span>
+  </div>
+  <div class="rp-shelf-controls">
+    <button class="rp-shelf-btn rp-shelf-prev" aria-label="Previous scenario"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+    <button class="rp-shelf-btn rp-shelf-next" aria-label="Next scenario"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+  </div>
+</div>
+
+<div class="rp-shelf rp-shelf-carousel">
+  <div class="rp-shelf-header">
+    <div class="rp-shelf-label"><i class="fa-solid fa-user-plus" aria-hidden="true"></i>Registration</div>
+    <div class="rp-shelf-count">7 scenarios</div>
+  </div>
+  <div class="rp-shelf-viewport">
+    <div class="rp-shelf-track">
+      <div class="rp-shelf-card">
+        <strong>SMS alert opt-in</strong>
+        <span>Ask an anonymous user for a mobile number to receive an alert when a favorite item is updated.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Email alert opt-in</strong>
+        <span>Ask an anonymous user for an email to be notified when a favorite item is updated.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Sign-up on repeated clicks</strong>
+        <span>Prompt for sign-up when a user repeatedly clicks a premium feature.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Watch-list sign-up</strong>
+        <span>When a user adds to their watch list, ask them to sign up for updates.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Sign-up on video pause</strong>
+        <span>On video pause, show a sign-up offer to users with increasing usage.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Email for exclusive access</strong>
+        <span>Ask an anonymous heavy user for an email in exchange for exclusive access.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>SMS for exclusive access</strong>
+        <span>Ask an anonymous heavy user for a mobile number in exchange for exclusive access via SMS.</span>
+      </div>
+    </div>
+  </div>
+  <div class="rp-shelf-controls">
+    <button class="rp-shelf-btn rp-shelf-prev" aria-label="Previous scenario"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+    <button class="rp-shelf-btn rp-shelf-next" aria-label="Next scenario"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+  </div>
+</div>
+
+<div class="rp-shelf rp-shelf-single">
+  <div class="rp-shelf-header">
+    <div class="rp-shelf-label"><i class="fa-solid fa-arrow-rotate-left" aria-hidden="true"></i>Win back</div>
+    <div class="rp-shelf-count">1 scenario</div>
+  </div>
+  <div class="rp-shelf-viewport">
+    <div class="rp-shelf-track">
+      <div class="rp-shelf-card">
+        <strong>Failed rebill guidance</strong>
+        <span>Guide a user with a failed rebill or expiring card to update billing. <a href="https://docs.recurly.com/recurly-engage/docs/failed-rebill" target="_blank">Learn more</a></span>
+      </div>
     </div>
   </div>
 </div>
 
-<div style="background: #0D0D0B; border-radius: 16px; padding: 24px 4px 20px; margin-bottom: 20px; box-shadow: 0 0 0 1px rgba(255,215,6,0.1), 0 24px 60px -30px rgba(255,215,6,0.2);">
-  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding: 0 20px;">
-    <div style="display: inline-flex; align-items: center; gap: 8px; background: #FFD706; color: #0D0D0B; font-size: 13px; font-weight: 700; padding: 6px 16px; border-radius: 20px; letter-spacing: 0.3px;"><i class="fa-solid fa-heart" aria-hidden="true"></i>Engagement</div>
-    <div style="font-size: 11px; color: rgba(255,253,242,0.45); letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600;">8 scenarios · swipe</div>
+<div class="rp-shelf rp-shelf-pair">
+  <div class="rp-shelf-header">
+    <div class="rp-shelf-label"><i class="fa-solid fa-bullseye" aria-hidden="true"></i>Acquisition</div>
+    <div class="rp-shelf-count">2 scenarios</div>
   </div>
-  <div style="display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 13% 16px; -webkit-mask-image: linear-gradient(to right, transparent 0, black 13%, black 87%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, black 13%, black 87%, transparent 100%);">
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">1-click next episode</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Use past episodic viewing to pop up 1-click playback of the next episode.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Seasonal LTV offer</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Pop up a seasonal offer based on lifetime value.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Time-of-day promotions</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Promote content and features based on time of day or day of week.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Announcements</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Surface company announcements directly in the product.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Mobile app promotion via SMS</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Promote the mobile app via SMS with a link, for mobile-first activities.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Updated content badges</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Badge updated content thumbnails the user has previously consumed.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Seasonal campaigns</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Run seasonal campaigns tied to key dates.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Personalized feature discovery</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Personalize feature discovery based on features used and not used.</span>
+  <div class="rp-shelf-viewport">
+    <div class="rp-shelf-track">
+      <div class="rp-shelf-card">
+        <strong>Expired-trial offer</strong>
+        <span>Show an offer to a user with an expired trial, varying it by activity level.</span>
+      </div>
+      <div class="rp-shelf-card">
+        <strong>Landing page video CTA</strong>
+        <span>Show video personalization on the main landing page with a built-in CTA.</span>
+      </div>
     </div>
   </div>
 </div>
 
-<div style="background: #0D0D0B; border-radius: 16px; padding: 24px 4px 20px; margin-bottom: 20px; box-shadow: 0 0 0 1px rgba(255,215,6,0.1), 0 24px 60px -30px rgba(255,215,6,0.2);">
-  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding: 0 20px;">
-    <div style="display: inline-flex; align-items: center; gap: 8px; background: #FFD706; color: #0D0D0B; font-size: 13px; font-weight: 700; padding: 6px 16px; border-radius: 20px; letter-spacing: 0.3px;"><i class="fa-solid fa-user-plus" aria-hidden="true"></i>Registration</div>
-    <div style="font-size: 11px; color: rgba(255,253,242,0.45); letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600;">7 scenarios · swipe</div>
+<div class="rp-shelf rp-shelf-single">
+  <div class="rp-shelf-header">
+    <div class="rp-shelf-label"><i class="fa-solid fa-arrows-to-dot" aria-hidden="true"></i>Conversion</div>
+    <div class="rp-shelf-count">1 scenario</div>
   </div>
-  <div style="display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 13% 16px; -webkit-mask-image: linear-gradient(to right, transparent 0, black 13%, black 87%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, black 13%, black 87%, transparent 100%);">
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">SMS alert opt-in</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Ask an anonymous user for a mobile number to receive an alert when a favorite item is updated.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Email alert opt-in</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Ask an anonymous user for an email to be notified when a favorite item is updated.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Sign-up on repeated clicks</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Prompt for sign-up when a user repeatedly clicks a premium feature.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Watch-list sign-up</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">When a user adds to their watch list, ask them to sign up for updates.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Sign-up on video pause</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">On video pause, show a sign-up offer to users with increasing usage.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Email for exclusive access</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Ask an anonymous heavy user for an email in exchange for exclusive access.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">SMS for exclusive access</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Ask an anonymous heavy user for a mobile number in exchange for exclusive access via SMS.</span>
-    </div>
-  </div>
-</div>
-
-<div style="background: #0D0D0B; border-radius: 16px; padding: 24px 4px 20px; margin-bottom: 20px; box-shadow: 0 0 0 1px rgba(255,215,6,0.1), 0 24px 60px -30px rgba(255,215,6,0.2);">
-  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding: 0 20px;">
-    <div style="display: inline-flex; align-items: center; gap: 8px; background: #FFD706; color: #0D0D0B; font-size: 13px; font-weight: 700; padding: 6px 16px; border-radius: 20px; letter-spacing: 0.3px;"><i class="fa-solid fa-arrow-rotate-left" aria-hidden="true"></i>Win back</div>
-    <div style="font-size: 11px; color: rgba(255,253,242,0.45); letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600;">1 scenario</div>
-  </div>
-  <div style="display: flex; justify-content: center; padding: 6px 20px 16px;">
-    <div style="flex: 0 0 88%; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Failed rebill guidance</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Guide a user with a failed rebill or expiring card to update billing. <a href="https://docs.recurly.com/recurly-engage/docs/failed-rebill" target="_blank" style="color: #FFD706; text-decoration: underline;">Learn more</a></span>
-    </div>
-  </div>
-</div>
-
-<div style="background: #0D0D0B; border-radius: 16px; padding: 24px 4px 20px; margin-bottom: 20px; box-shadow: 0 0 0 1px rgba(255,215,6,0.1), 0 24px 60px -30px rgba(255,215,6,0.2);">
-  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding: 0 20px;">
-    <div style="display: inline-flex; align-items: center; gap: 8px; background: #FFD706; color: #0D0D0B; font-size: 13px; font-weight: 700; padding: 6px 16px; border-radius: 20px; letter-spacing: 0.3px;"><i class="fa-solid fa-bullseye" aria-hidden="true"></i>Acquisition</div>
-    <div style="font-size: 11px; color: rgba(255,253,242,0.45); letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600;">2 scenarios · swipe</div>
-  </div>
-  <div style="display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 13% 16px; -webkit-mask-image: linear-gradient(to right, transparent 0, black 13%, black 87%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, black 13%, black 87%, transparent 100%);">
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Expired-trial offer</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Show an offer to a user with an expired trial, varying it by activity level.</span>
-    </div>
-    <div style="flex: 0 0 74%; scroll-snap-align: center; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Landing page video CTA</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Show video personalization on the main landing page with a built-in CTA.</span>
-    </div>
-  </div>
-</div>
-
-<div style="background: #0D0D0B; border-radius: 16px; padding: 24px 4px 20px; margin-bottom: 28px; box-shadow: 0 0 0 1px rgba(255,215,6,0.1), 0 24px 60px -30px rgba(255,215,6,0.2);">
-  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding: 0 20px;">
-    <div style="display: inline-flex; align-items: center; gap: 8px; background: #FFD706; color: #0D0D0B; font-size: 13px; font-weight: 700; padding: 6px 16px; border-radius: 20px; letter-spacing: 0.3px;"><i class="fa-solid fa-arrows-to-dot" aria-hidden="true"></i>Conversion</div>
-    <div style="font-size: 11px; color: rgba(255,253,242,0.45); letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600;">1 scenario</div>
-  </div>
-  <div style="display: flex; justify-content: center; padding: 6px 20px 16px;">
-    <div style="flex: 0 0 88%; background: linear-gradient(135deg, #1c1b18 0%, #0D0D0B 100%); border: 1px solid rgba(255,215,6,0.15); border-radius: 12px; padding: 24px 26px; min-height: 130px;">
-      <strong style="display: block; font-size: 15px; font-weight: 700; color: #FFFDF2; margin-bottom: 10px;">Extend low-activity trials</strong>
-      <span style="display: block; font-size: 13px; color: rgba(255,253,242,0.7); line-height: 1.65;">Extend a trial if the user has shown little activity so far.</span>
+  <div class="rp-shelf-viewport">
+    <div class="rp-shelf-track">
+      <div class="rp-shelf-card">
+        <strong>Extend low-activity trials</strong>
+        <span>Extend a trial if the user has shown little activity so far.</span>
+      </div>
     </div>
   </div>
 </div>
 `}</HTMLBlock>
 
-<Accordion title="All cases">
+<Accordion title="See the full list as plain text">
   1. **Cancel Save** — LTV-based cancel offer: Show an offer sized to the customer's lifetime value when they click Cancel.
   2. **Retention** — LTV offer for anxious users: Show an offer sized to lifetime value to users showing renewal anxiety.
   3. **Abandon Cart** — Cart reminder after 2 minutes: Show the cart item inline on the home screen, then move it to the nav bar after 2 minutes.
