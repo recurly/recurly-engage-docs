@@ -1,5 +1,5 @@
 ---
-title: Sandbox Provisioning
+title: Sandbox provisioning
 excerpt: >-
   Begin a fully self-serve, free sandbox of Recurly Engage to run internal
   customer engagement campaigns, starting with involuntary churn, using a
@@ -9,21 +9,66 @@ hidden: false
 metadata:
   robots: index
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">Explore everything Recurly Engage can do with a free, friction-free sandbox. It's fully self-serve — provision it directly from the Recurly application via the Integrations page or the guided workflows in Compass.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">1</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-steps"><span class="rp-toc-num">2</span>Key steps</a>
+  </div>
+</div>
 
-Enjoy a simplified, friction-free path to explore the full power of Recurly Engage through a free and streamlined sandbox.
+# Key benefits
 
-The sandbox is fully self-serve and accessible directly within the Recurly application via the Integrations page and guided workflows in the Compass experience.
-
-The new Sandbox ensures that all configuration, testing, and integration are done in a secure, isolated environment that mirrors your production capabilities. This significantly accelerates your time-to-value, allowing you to test critical campaigns—such as involuntary churn remediation—with zero risk before moving to a live production environment.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+    <strong>Zero-risk testing</strong>
+    <span>Configure, test, and integrate in a secure, isolated environment before anything touches production.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+    <strong>Fast self-serve setup</strong>
+    <span>Get provisioned in minutes from the Integrations page or the Compass chatbot — no engineering ticket required.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-clone" aria-hidden="true"></i></div>
+    <strong>Production-mirrored environment</strong>
+    <span>Test critical campaigns, like involuntary churn remediation, against a sandbox that mirrors your live capabilities.</span>
+  </div>
+</div>
 
 # Key steps
 
-1. **Access Your Recurly Account:** **Log in** to your Recurly Subscription Management account.
-2. **Sandbox Provisioning:** **Get** your free Recurly Engage sandbox through one of two integrated pathways:
-   1. **Navigate** directly to Integrations > Recurly Engage to access the self-serve provisioning page.
-   2. **Open** the Recurly Compass chatbot and request to "set up an Engage sandbox."
-3. **Account Activation & Team Access:** Check your inbox for an automated email from Recurly Engage. Click the login link provided to activate your sandbox. Once logged in, navigate to Settings > Users to invite additional team members to the environment.
-4. Enjoy your Recurly Engage Sandbox!
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Log in to your Recurly account</h4><p>Sign in to your Recurly Subscription Management account.</p></div>
+  </div>
+</div>
 
-<br />
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Get your Engage sandbox</h4><p>Provision your free Recurly Engage sandbox through either integrated pathway below.</p></div>
+  </div>
+</div>
+
+<ol>
+  <li>Navigate to <strong>Integrations > Recurly Engage</strong> to access the self-serve provisioning page.</li>
+  <li>Open the Recurly Compass chatbot and ask it to "set up an Engage sandbox."</li>
+</ol>
+
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Activate your account and invite your team</h4><p>Check your inbox for an automated email from Recurly Engage and select the login link to activate your sandbox. Once you're in, go to Settings > Users to invite teammates to the environment.</p></div>
+  </div>
+</div>
+
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">4</div>
+    <div><h4>Start exploring</h4><p>Your Recurly Engage sandbox is ready to go.</p></div>
+  </div>
+</div>
