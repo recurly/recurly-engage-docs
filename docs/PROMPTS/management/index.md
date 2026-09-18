@@ -8,26 +8,66 @@ hidden: false
 metadata:
   robots: index
 ---
-# Overview
-
-The Prompts management section provides all the tools you need to create, configure, schedule, and optimize prompts—ensuring targeted, controlled, and measurable user engagement across your application.
+<div class="rp-page">
+  <div class="rp-overview">Prompt management brings everything you need to build and run prompts into one place — create them, configure how and when they fire, schedule delivery, and optimize performance over time. The result is targeted, controlled, and measurable engagement across your application.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">1</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">2</span>Key details</a>
+  </div>
+</div>
 
 # Key benefits
 
-- **Unified prompt workflow**: Manage creation, editing, and publishing of prompts in one place.
-- **Fine-grained control**: Customize triggers, limits, and schedules to tailor user experiences.
-- **Data-driven optimization**: Define goals and run experiments to continuously improve performance.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Unified prompt workflow</strong>
+    <span>Create, edit, and publish every prompt from one place, without jumping between tools.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Fine-grained control</strong>
+    <span>Tune triggers, limits, and schedules so each prompt reaches the right users at the right moment.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Data-driven optimization</strong>
+    <span>Set goals and run experiments to measure what works and steadily improve prompt performance.</span>
+  </div>
+</div>
 
 # Key details
 
-- **Prompts**: View and manage your entire list of prompts and their current status. ([Prompts](prompts))
-- **Prompt editor**: Create and edit prompt content, design, and configuration settings. ([Prompt editor](editor))
-- **Template library:&#x20;**&#x53;tart from a pre-built, best-practice template instead of a blank canvas when creating a new web prompt. ([Template library](https://docs.recurly.com/recurly-engage/docs/template-library))
-- **Triggers**: Define conditions and events that activate prompts for specific users. ([Triggers](triggers))
-- **Limits**: Set impression, frequency, and holdout constraints on individual prompts. ([Limits](limits))
-- **Schedule**: Specify start/end dates and time windows for prompt delivery. ([Schedule](schedule-1))
-- **Goals**: Configure engagement or conversion goals to measure prompt effectiveness. ([Goals](goals))
-- **Actions**: Attach API or tracking actions to prompt events (e.g., impressions, clicks). ([Actions](actions-1))
-- **Experiments**: Create A/B tests and experiments to compare prompt variations. ([Experiments](experiments-1))
+<div class="rp-nav-grid">
 
-<br />
+<Cards>
+  <Card title="Prompts" href="https://docs.recurly.com/recurly-engage/docs/prompts" target="_blank">
+    View and manage your entire list of prompts and their current status.
+  </Card>
+  <Card title="Prompt editor" href="https://docs.recurly.com/recurly-engage/docs/editor" target="_blank">
+    Create and edit prompt content, design, and configuration settings.
+  </Card>
+  <Card title="Template library" href="https://docs.recurly.com/recurly-engage/docs/template-library" target="_blank">
+    Start from a pre-built, best-practice template instead of a blank canvas when creating a new web prompt.
+  </Card>
+  <Card title="Triggers" href="https://docs.recurly.com/recurly-engage/docs/triggers" target="_blank">
+    Define the conditions and events that activate prompts for specific users.
+  </Card>
+  <Card title="Limits" href="https://docs.recurly.com/recurly-engage/docs/limits" target="_blank">
+    Set impression, frequency, and holdout constraints on individual prompts.
+  </Card>
+  <Card title="Schedule" href="https://docs.recurly.com/recurly-engage/docs/schedule-1" target="_blank">
+    Specify start and end dates and time windows for prompt delivery.
+  </Card>
+  <Card title="Goals" href="https://docs.recurly.com/recurly-engage/docs/goals" target="_blank">
+    Configure engagement or conversion goals to measure prompt effectiveness.
+  </Card>
+  <Card title="Actions" href="https://docs.recurly.com/recurly-engage/docs/actions-1" target="_blank">
+    Attach API or tracking actions to prompt events, such as impressions and clicks.
+  </Card>
+  <Card title="Experiments" href="https://docs.recurly.com/recurly-engage/docs/experiments-1" target="_blank">
+    Create A/B tests and experiments to compare prompt variations.
+  </Card>
+</Cards>
+</div>
