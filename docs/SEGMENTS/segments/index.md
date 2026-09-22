@@ -108,8 +108,4 @@ Below is an example for creating a segment of **Engaged, US-based iOS Premium pl
 
 Recurly Engage will start processing incoming data and populate your segment within a few hours. Monitor the segment’s metrics by clicking into its detail view and adjusting the date range as needed.
 
-## Segment priority
-
-When a single prompt is assigned to multiple segments and a user qualifies for more than one of those segments, the system selects the prompt to display based on the first segment for which the user qualifies.
-
-This means that if a user belongs to two or more groups associated with the same prompt, they will see the prompt as long as they meet the criteria for at least one of those segments.
+<br />
