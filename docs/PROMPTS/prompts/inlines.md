@@ -119,6 +119,8 @@ Follow these steps to build and publish your first inline prompt.
 <Image src="https://files.readme.io/0e07cb5-image.png" align="center" width="75%" border={true} />
 
 
+<br />
+
 
 <Image src="https://files.readme.io/60a9382-inline2.png" align="center" width="75%" border={true} />
 
@@ -136,6 +138,8 @@ Enter a name and description, assign the prompt to your new zone, then select <s
 
 <Image src="https://files.readme.io/664a781-image.png" align="center" width="75%" border={true} />
 
+
+<br />
 
 
 <Image src="https://files.readme.io/c8c3561-image.png" align="center" width="75%" border={true} />
@@ -171,9 +175,9 @@ Select <strong>Publish</strong> to make the prompt live.
 
 <Tabs>
   <Tab title="Live tool">
-    <div class="rp-steps">
-    <div class="rp-step"><div class="rp-step-num">1</div><div><h4>Open the Live Tool</h4><p>Select the <strong>Live Tool</strong> button and choose your domain.</p></div></div>
-    </div>
+      <div class="rp-steps">
+      <div class="rp-step"><div class="rp-step-num">1</div><div><h4>Open the Live Tool</h4><p>Select the <strong>Live Tool</strong> button and choose your domain.</p></div></div>
+      </div>
 
 
     <Image src="https://files.readme.io/7cb2ded-Screenshot_2024-04-22_175333.png" align="center" width="75%" border={true} />
@@ -183,17 +187,17 @@ Select <strong>Publish</strong> to make the prompt live.
     <Image src="https://files.readme.io/03543e0-Screenshot_2024-04-22_175548.png" align="center" width="75%" border={true} />
 
 
-    <div class="rp-steps">
-    <div class="rp-step"><div class="rp-step-num">2</div><div><h4>Add your zone</h4><p>Expand the panel, switch to the <strong>Add</strong> tab, and choose your zone.</p></div></div>
-    </div>
+      <div class="rp-steps">
+      <div class="rp-step"><div class="rp-step-num">2</div><div><h4>Add your zone</h4><p>Expand the panel, switch to the <strong>Add</strong> tab, and choose your zone.</p></div></div>
+      </div>
 
 
     <Image src="https://files.readme.io/a1fe85f-image.png" align="center" width="75%" border={true} />
 
 
-    <div class="rp-steps">
-    <div class="rp-step"><div class="rp-step-num">3</div><div><h4>Place the zone</h4><p>Hover over the target area until the outline appears, then click to insert the zone.</p></div></div>
-    </div>
+      <div class="rp-steps">
+      <div class="rp-step"><div class="rp-step-num">3</div><div><h4>Place the zone</h4><p>Hover over the target area until the outline appears, then click to insert the zone.</p></div></div>
+      </div>
 
 
     <Image src="https://files.readme.io/7878719-image.png" align="center" width="75%" border={true} />
@@ -253,9 +257,3 @@ Use the Live Tool sparingly, and make sure your prompt's dimensions match the el
 <li>Use CSS media queries or <code>transform: scale()</code> for width issues.</li>
 <li>Apply <code>background-size: cover</code>, or bake text directly into your background images.</li>
 </ul>
-
-***
-
-📋 TODO before publishing:
-
-- [ ] Confirm page title (drafted as "Inline Prompts")
