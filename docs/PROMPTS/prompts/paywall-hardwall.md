@@ -1,10 +1,12 @@
 ---
-title: Paywall & hardwall
+title: Paywall and hardwall prompts
 excerpt: >-
   Set up an Engage dynamic paywall to limit free content and convert readers
   into subscribers.
 deprecated: false
 hidden: false
+link:
+  new_tab: false
 metadata:
   robots: index
 ---
@@ -33,7 +35,9 @@ The solution allows a user to view a limited number of complimentary articles or
   * Fill out the required fields for Name, Label, Description. Select the Page tracker type, enter the relevant url path.
 * **Check** the “Use as paywall tracker” select button.
 
-<Image align="center" border={true} src="https://files.readme.io/561bbcb28f9202306e6c0e2a1b687e67798a766f508e25df00b1b35c85fd0681-paywall_tracker.png" className="border" />
+
+<Image src="https://files.readme.io/561bbcb28f9202306e6c0e2a1b687e67798a766f508e25df00b1b35c85fd0681-paywall_tracker.png" align="center" border={true} />
+
 
 ## Step 2: Create a zone
 
@@ -62,4 +66,5 @@ You will need to create a zone to define the article which contains the content 
 * **Elements to allow:** How many paragraphs or  child elements in the Article Zone that will not be blocked (if not using a CSS selector in (e))
 * **Save and Activate**: Once your limits are set and your copy is finalized, save your prompt to apply the paywall logic to your site.
 
-<Image align="center" border={false} src="https://files.readme.io/302f616bd65719d846476778ae5d4ab3ee543349ef49b89b1755c179c7bf2b8a-paywall_config.png" />
+
+<Image src="https://files.readme.io/302f616bd65719d846476778ae5d4ab3ee543349ef49b89b1755c179c7bf2b8a-paywall_config.png" align="center" />
