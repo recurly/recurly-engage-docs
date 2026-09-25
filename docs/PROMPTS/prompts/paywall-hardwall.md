@@ -10,61 +10,89 @@ link:
 metadata:
   robots: index
 ---
-# Overview
+<div class="rp-page">
+<div class="rp-overview">Dynamic Paywall and hardwall prompts help publishers and content providers control and monetize access to their digital content. Let readers view a set number of complimentary articles or paragraphs, then require sign-up or subscription before they can keep reading—no intrusive blocking required.</div>
+<div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage plans</div>
+<div class="rp-toc">
+<a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+<a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+<a class="rp-toc-pill" href="#step-by-step-guide"><span class="rp-toc-num">3</span>Step-by-step guide</a>
+</div>
+</div>
 
-The Recurly Engage Dynamic Paywall & hardwall prompt types are specifically designed for publishers and content providers seeking to manage and monetize access to their digital assets. This solution effectively controls reader access, encouraging user sign-ups and subscriptions.
+# Definition
 
-The solution allows a user to view a limited number of complimentary articles or paragraphs before requiring paid access. The content is typically visually obscured and interaction-blocked by an intrusive prompt that prevents scrolling past the designated limit.
+<div class="rp-definition">A Dynamic Paywall or hardwall prompt limits how much content a reader can access for free. Once a user reaches that limit, the prompt visually obscures the remaining content and blocks further scrolling until they sign up or subscribe.</div>
 
 # Key benefits
 
-* **Maximized Content Value:** Provides a proven method to convert frequent readers into paying subscribers by blocking the remainder of premium article content.
-* **Flexible Access Control:** Content providers can define the precise number of complimentary  visits a user is permitted to view, offering granular control over the pre-access user experience.
-* **Customizable Blocking:** Providers can select from a range of methods to block content, including hiding, blurring, or custom CSS, with precise control over complimentary paragraphs or elements
-* **Versatile Conversion Experience:** Supports a wide range of inline or standalone prompts. Content blocking persists after the prompt is dismissed or interacted with.
-* **Drives User Registration:** Creates a clear incentive for users to sign up or register once they have utilized their introductory content quota.
-* **Focus on User Experience:** Emulates UX patterns currently used in major publication sites today, proven to increase conversion, rather than intrusive block methods that penalize users.
-* **Optimize with Experiments:** A/B test any part of the experience over time to improve conversion.
+<div class="rp-benefits">
+<div class="rp-benefit"><div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div><strong>Maximized content value</strong><span>Convert frequent readers into paying subscribers by blocking the remainder of premium article content.</span></div>
+<div class="rp-benefit"><div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div><strong>Flexible access control</strong><span>Define the precise number of complimentary visits a user is permitted, with granular control over the pre-access experience.</span></div>
+<div class="rp-benefit"><div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div><strong>Customizable blocking</strong><span>Block content by hiding, blurring, or custom CSS, with precise control over complimentary paragraphs or elements.</span></div>
+<div class="rp-benefit"><div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div><strong>Drives user registration</strong><span>Create a clear incentive for users to sign up once they've used their introductory content quota.</span></div>
+<div class="rp-benefit"><div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div><strong>Optimize with experiments</strong><span>A/B test any part of the experience over time to improve conversion.</span></div>
+</div>
 
-# Key steps
+# Step-by-step guide
 
-## Step 1: Add a new usage tracker:
+<div class="rp-steps">
+<div class="rp-step"><div class="rp-step-num">1</div><div><h4>Add a new usage tracker</h4><p>Navigate to <strong>Settings > Usage Tracking</strong> and select <strong>+ Add new tracker</strong>.</p></div></div>
+</div>
 
-* **Navigate** to Settings > Usage Tracking
-* **Select** “+ Add new tracker”
-  * Fill out the required fields for Name, Label, Description. Select the Page tracker type, enter the relevant url path.
-* **Check** the “Use as paywall tracker” select button.
-
-
-<Image src="https://files.readme.io/561bbcb28f9202306e6c0e2a1b687e67798a766f508e25df00b1b35c85fd0681-paywall_tracker.png" align="center" border={true} />
-
-
-## Step 2: Create a zone
-
-You will need to create a zone to define the article which contains the content to be blocked (Article Zone). If using an inline prompt, you can define a new zone as per normal to control where the prompt is displayed, or reuse the same zone. If using the same Article Zone, the prompt will be appended to the end of the zone.
-
-* **Navigate** to Settings > Zones
-  * **Select** the New Zone button
-  * **Enter** the associated information for your zone. Your zone is the parent element containing the content you would like to block or hide.
-
-## Step 3: Create a new prompt
-
-* **Create** a New Prompt Navigate to the main Prompts screen in your dashboard and click the + New Prompt button.
-* **Choose** a desired prompt type.
-* In the Edit Prompt Design view, scroll through the configuration options to locate the Paywall accordion menu.
-* Enable and Configure Check the box labeled Enable paywall.  Select the zone created that defines the article (Article Zone)
-* **Select** Settings for the paywall
-  * **Paywall tracker:** The usage tracker created from Step 1.
-  * **Free visits:** The number of visits for content the user is allowed to access before the paywall is enabled.
-  * **Zone to block:** The area that will be obscured.
-* **Block method:** The way that the content will be removed or obscured from the page
-  * **Blur:** the content will remain on the page, but CSS styling will prevent it from being readable.
-  * **Hide:** The content will be hidden, but not removed from the page.
-  * **Strip text:** The text content will be removed from the DOM, but the DOM elements will remain (to avoid breaking any Javascript)
-  * **Custom CSS:** Enter your own custom css to block the content.
-* **Apply to elements:** Which elements in the Article Zone the block method will be applied to. You can specify a custom CSS selector for precise control.
-* **Elements to allow:** How many paragraphs or  child elements in the Article Zone that will not be blocked (if not using a CSS selector in (e))
-* **Save and Activate**: Once your limits are set and your copy is finalized, save your prompt to apply the paywall logic to your site.
+<ul class="rp-list">
+<li>Fill out the required fields for Name, Label, and Description. Select the <strong>Page</strong> tracker type, then enter the relevant URL path.</li>
+<li>Check the <strong>Use as paywall tracker</strong> checkbox.</li>
+</ul>
 
 
-<Image src="https://files.readme.io/302f616bd65719d846476778ae5d4ab3ee543349ef49b89b1755c179c7bf2b8a-paywall_config.png" align="center" />
+<Image src="https://files.readme.io/561bbcb28f9202306e6c0e2a1b687e67798a766f508e25df00b1b35c85fd0681-paywall_tracker.png" align="center" width="75%" border={true} />
+
+
+<div class="rp-steps">
+<div class="rp-step"><div class="rp-step-num">2</div><div><h4>Create a zone</h4><p>Create a zone to define the article that contains the content you want to block—your Article Zone.</p></div></div>
+</div>
+
+If you're using an inline prompt, you can create a new zone to control where the prompt displays, or reuse the same zone. If you reuse the Article Zone, the prompt is appended to the end of it.
+
+<ul class="rp-list">
+<li>Navigate to <strong>Settings > Zones</strong> and select <strong>New Zone</strong>.</li>
+<li>Enter the information for your zone—the parent element containing the content you want to block or hide.</li>
+</ul>
+
+<div class="rp-steps">
+<div class="rp-step"><div class="rp-step-num">3</div><div><h4>Create a new prompt</h4><p>Navigate to the main Prompts screen in your dashboard, select <strong>+ New Prompt</strong>, and choose your desired prompt type.</p></div></div>
+</div>
+
+<ul class="rp-list">
+<li>In the Edit Prompt Design view, scroll to the <strong>Paywall</strong> accordion menu.</li>
+<li>Check <strong>Enable paywall</strong>, then select the zone that defines the article—your Article Zone.</li>
+</ul>
+
+<div class="rp-callout rp-callout-note">
+<div><strong><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Note</strong>Configure the following paywall settings before you save.</div>
+</div>
+
+<ul class="rp-list">
+<li><strong>Paywall tracker</strong>: the usage tracker you created in Step 1.</li>
+<li><strong>Free visits</strong>: how many visits a user gets before the paywall activates.</li>
+<li><strong>Zone to block</strong>: the area that will be obscured.</li>
+</ul>
+
+Choose a block method—how the content will be removed or obscured from the page:
+
+<ul class="rp-list">
+<li><strong>Blur</strong>: the content stays on the page, but CSS styling prevents it from being readable.</li>
+<li><strong>Hide</strong>: the content is hidden, but not removed from the page.</li>
+<li><strong>Strip text</strong>: the text is removed from the DOM, but the DOM elements remain, so you don't break any JavaScript.</li>
+<li><strong>Custom CSS</strong>: enter your own CSS to block the content.</li>
+</ul>
+
+<ul class="rp-list">
+<li><strong>Apply to elements</strong>: choose which elements in the Article Zone the block method applies to. You can specify a custom CSS selector for precise control.</li>
+<li><strong>Elements to allow</strong>: set how many paragraphs or child elements in the Article Zone stay unblocked, if you're not using a CSS selector above.</li>
+<li><strong>Save and activate</strong>: once your limits are set and your copy is finalized, save the prompt to apply the paywall logic to your site.</li>
+</ul>
+
+
+<Image src="https://files.readme.io/302f616bd65719d846476778ae5d4ab3ee543349ef49b89b1755c179c7bf2b8a-paywall_config.png" align="center" width="75%" border={true} />
