@@ -12,61 +12,69 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+<div class="rp-overview">Invisible Prompts run automations behind the scenes—no banner, no pop-up, nothing your users ever see. Define a trigger, and Recurly Engage fires off API calls, toggles UI elements, or applies discounts the moment it matches. It's the same prompt-building flow you already know, just without the visual layer.</div>
+<div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage plans</div>
+<div class="rp-toc">
+<a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+<a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+<a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+</div>
+</div>
 
-### Required plan
+### Prerequisites
 
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
-
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+<li>Company, App Administrator, or App Member permissions in Recurly Engage.</li>
+</ul>
 
 # Definition
 
-An **Invisible Prompt** is a hidden rule that executes server-side or client-side actions automatically upon matching a trigger. Unlike other prompts, it presents no UI to the user.
+<div class="rp-definition">An Invisible Prompt is a hidden rule that runs a server-side or client-side action automatically when its trigger matches—it never presents anything to the user.</div>
 
 # Key benefits
 
-* **Automate background tasks**: Launch API calls, hide or show UI elements, or apply discounts without user clicks.
-* **Seamless user experience**: Modify behavior or content without interrupting the user.
-* **Flexible triggers**: Fire on page load, custom events, or segment entry to suit any workflow.
+<div class="rp-benefits">
+<div class="rp-benefit"><div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div><strong>Automate background tasks</strong><span>Launch API calls, hide or show UI elements, or apply discounts without user clicks.</span></div>
+<div class="rp-benefit"><div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div><strong>Seamless user experience</strong><span>Modify behavior or content without interrupting the user.</span></div>
+<div class="rp-benefit"><div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div><strong>Flexible triggers</strong><span>Fire on page load, custom events, or segment entry to suit any workflow.</span></div>
+</div>
 
 # Key details
 
-This prompt type shares its configuration flow with a [popup](overlays#how-to-video) but with no visual component. All actions run immediately when the trigger fires.
+This prompt type shares its configuration flow with a <a href="overlays#how-to-video" target="_blank">pop-up</a>, but with no visual component—every action runs immediately when the trigger fires.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/c386e48-image.png" />
 
-**Example use cases**
+<Image src="https://files.readme.io/c386e48-image.png" align="center" width="75%" border={true} />
 
-* Automatically add a show to a user’s watchlist on page load
-* Hide competing ads for premium subscribers
-* Trigger a fulfillment API or apply a discount coupon
+
+#### Example use cases
+
+<ul class="rp-list">
+<li>Automatically add a show to a user's watchlist on page load.</li>
+<li>Hide competing ads for premium subscribers.</li>
+<li>Trigger a fulfillment API or apply a discount coupon.</li>
+</ul>
 
 ## Configuring metadata
 
-Use metadata tags to pass custom key-value pairs into your Invisible Prompt for advanced behaviors:
+Use metadata tags to pass custom key-value pairs into your Invisible Prompt for advanced behaviors.
 
-1. Click the **Edit** (pencil) icon on your Invisible Prompt to open the Metadata modal.
+<div class="rp-steps">
+<div class="rp-step"><div class="rp-step-num">1</div><div><h4>Open the Metadata modal</h4><p>Select the <strong>Edit</strong> (pencil) icon on your Invisible Prompt.</p></div></div>
+</div>
 
-<Image align="center" width="80% " src="https://files.readme.io/e45aa27-image.png" />
 
-2. Add one or more key-value pairs to tailor your action logic.
+<Image src="https://files.readme.io/e45aa27-image.png" align="center" width="75%" border={true} />
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/7db1c7e-image.png" />
+
+<div class="rp-steps">
+<div class="rp-step"><div class="rp-step-num">2</div><div><h4>Add key-value pairs</h4><p>Add one or more key-value pairs to tailor your action logic.</p></div></div>
+</div>
+
+
+<Image src="https://files.readme.io/7db1c7e-image.png" align="center" width="75%" border={true} />
+
 
 ### Retrieving metadata in code
 
@@ -77,4 +85,4 @@ Redfast.getMetas()
 
 ## Test the prompt
 
-Validate your trigger and actions before full deployment by assigning the **Test Users** segment. Learn how in the [test user guide](test-users).
+Validate your trigger and actions before full deployment by assigning the <strong>Test Users</strong> segment. See the <a href="test-users" target="_blank">test user guide</a> for details.
