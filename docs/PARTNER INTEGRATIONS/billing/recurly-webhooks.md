@@ -10,50 +10,80 @@ hidden: false
 metadata:
   robots: index
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">Connect Recurly webhooks to Recurly Engage to keep your users' subscription data up to date in real time. This page covers the endpoint, the authentication credentials, the events to subscribe to, and how to track Recurly events as custom goals.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-A Recurly Webhook is an automatic HTTP POST notification sent by Recurly to a specified URL (Ingestion Endpoint) in real-time when a subscription-related event occurs (e.g., a subscription is activated, updated, canceled, or expires). The payload of this request is a JSON object containing the details of the event, adhering to the Recurly subscription notification format.
+# Definition
+
+<div class="rp-definition">A Recurly webhook is an automatic HTTP POST notification that Recurly sends in real time to a specified URL, called the Ingestion Endpoint, when a subscription-related event occurs. Examples include a subscription being activated, updated, canceled, or expiring. The request payload is a JSON object with the details of the event, following the Recurly subscription notification format.</div>
+
+# Key benefits
+
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+    <strong>Real-time data sync</strong>
+    <span>Get immediate notification of subscription status changes, so your system's user traits are updated promptly.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-user-check" aria-hidden="true"></i></div>
+    <strong>Enhanced user experience</strong>
+    <span>Take timely action based on subscription events, such as adjusting service access, triggering tailored communication, or managing lifecycle campaigns.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-rotate" aria-hidden="true"></i></div>
+    <strong>Data consistency</strong>
+    <span>Keep your Recurly billing data and your internal user management system synchronized.</span>
+  </div>
+</div>
+
+# Key details
+
+## Ingestion Endpoint
 
 The designated Ingestion Endpoint for subscription change events is:
 
 `https://conduit.redfast.com/ingest/APP_ID/update_user_subscription?source=recurly`
 
-The `APP_ID` is a unique identifier (UUID) for your application.
+The `APP_ID` is a unique identifier (universally unique identifier, or UUID) for your application.
 
-# Key benefits
+## Configure the webhook endpoint
 
-Integrating with Recurly Webhooks offers several advantages for maintaining accurate, up-to-date user subscription data:
+These steps configure the webhook endpoint in your Recurly account.
 
-1. **Real-time data sync:** Provides immediate notification of subscription status changes, ensuring that your system's user traits are updated promptly.
-2. **Enhanced user experience:** Enables timely actions based on subscription events, such as adjusting service access, triggering tailored communication, or managing lifecycle campaigns.
-3. **Data consistency:** Helps maintain synchronization between your Recurly billing data and your internal user management system.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Locate your authentication credentials</h4><p>You need two credentials for authentication, listed below.</p></div>
+  </div>
+</div>
 
-# Key steps
+* **Username**: Your Application ID (`APP_ID`), which is the UUID in the Ingestion Endpoint URL.
+* **Password**: Your Application API key, available in Pulse under Settings → Application.
 
-The following steps detail the process for configuring the webhook endpoint within your Recurly account.
 
-## Step 1: Locate authentication credentials
+<Image src="https://files.readme.io/a706f0863987825de8a1601eaceaf60f424d87555296f3ee3690a918d9ccc086-Screenshot_2025-10-03_at_11.21.59_AM.png" align="center" width="75%" border={true} />
 
-You will need the following credentials for authentication:
 
-* **Username:** Your Application ID (APP_ID), which is the UUID found in the Ingestion Endpoint URL.
-* **Password:** Your Application API Key, accessible in the Pulse system under Settings → Application.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Configure the Recurly webhooks endpoint</h4><p>Make sure the endpoint's payload format is set to <span style={{fontWeight: "bold"}}>JSON</span>. Then open the Webhook Endpoint configuration screen in your Recurly application's settings and complete the actions below.</p></div>
+  </div>
+</div>
 
-<Image align="center" src="https://files.readme.io/a706f0863987825de8a1601eaceaf60f424d87555296f3ee3690a918d9ccc086-Screenshot_2025-10-03_at_11.21.59_AM.png" />
-
-## Step 2: Configure the Recurly webhooks endpoint
-
-Ensure the endpoint's payload format **is set to JSON.**
-
-**Navigate** to the Webhook Endpoint configuration screen within your Recurly application's settings and **perform** the following actions:
-
-1. **Enter** the Ingestion Endpoint URL: Input the complete URL, replacing APP_ID with your specific application UUID: `https://conduit.redfast.com/ingest/APP_ID/update_user_subscription?source=recurly`.
-
-   The `APP_ID` is a unique identifier (UUID) for your application.
-2. **Configure** Authentication: **Enable** HTTP Basic Authentication for the endpoint.
-   1. **Enter** your **Application ID** as the Username.
-   2. **Enter** your **Application API Key** as the Password.
-3. **Subscribe** to Events: **Select** the specific subscription-related events you wish to track in real-time. For a comprehensive update, it is recommended to subscribe to all relevant subscription change events, such as:
+1. **Enter the Ingestion Endpoint URL**: Input the complete URL, replacing `APP_ID` with your application UUID: `https://conduit.redfast.com/ingest/APP_ID/update_user_subscription?source=recurly`.
+2. **Configure authentication**: Enable HTTP Basic Authentication for the endpoint.
+   1. Enter your **Application ID** as the Username.
+   2. Enter your **Application API Key** as the Password.
+3. **Subscribe to events**: Select the subscription-related events you want to track in real time. For a comprehensive update, we recommend subscribing to all relevant subscription change events, such as:
    1. `subscription.created`
    2. `subscription.updated`
    3. `subscription.canceled`
@@ -64,22 +94,31 @@ Ensure the endpoint's payload format **is set to JSON.**
    8. `charge_invoice.paid`
    9. `charge_invoice.past_due`
 
-## Step 3: Enabling Recurly events as custom goals
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Enable Recurly events as custom goals</h4><p>Engage supports using specific Recurly webhook events to increment custom goals for end users. A Recurly Subscription Management user can configure the webhook to fire on these events and track them as custom goal completions.</p></div>
+  </div>
+</div>
 
-Engage supports the use of specific Recurly Webhook events to increment Custom Goals for end users. A Recurly Subscription Management user can configure the webhook to fire on these events and track them as custom goal completions.
-
-Engage is configured to automatically support the following two Recurly webhook events as Custom Goals:
+Engage automatically supports the following two Recurly webhook events as custom goals:
 
 * `subscription.canceled`
 * `billing_info.updated`
 
-To enable tracking for these custom goals: Ensure that you have subscribed to the relevant events (`subscription.canceled` and `billing_info.updated`) in the Recurly Webhook Endpoint configuration (Step 2.3).
+To enable tracking for these custom goals, make sure you've subscribed to the relevant events (`subscription.canceled` and `billing_info.updated`) in the Recurly webhook endpoint configuration (Step 2, item 3).
 
-### Advanced usage and custom goals
+## Advanced usage and custom goals
 
-If you wish to implement additional Recurly events as custom goals beyond the default two, you will need to create usage trackers within Engage with the proper label attributes. These labels must match the Recurly webhook payload using the convention `object_type.event_type`. Learn more about <a href="https://docs.recurly.com/recurly-engage/docs/usage-tracking-1#/">usage tracking</a>.
+To implement additional Recurly events as custom goals beyond the default two, create usage trackers in Engage with the proper label attributes. These labels must match the Recurly webhook payload, using the convention `object_type.event_type`. Learn more about <a href="https://docs.recurly.com/recurly-engage/docs/usage-tracking-1#/" target="_blank">usage tracking</a>.
 
-1. Navigate to Settings > Usage Tracking > **+Add New Tracker**
-2. Create a new Custom Tracker by adding the name, label (be sure to match the Recurly Webhook Payload), and description of the tracker. Ensure the tracker type is set to "Custom"
+1. Navigate to **Settings > Usage Tracking > +Add New Tracker**.
+2. Create a new custom tracker by adding the name, label (be sure to match the Recurly webhook payload), and description of the tracker. Make sure the tracker type is set to "Custom".
 
-<Image align="center" src="https://files.readme.io/c0a9d08cc7a0f407ce69c81b6426b05956a2fd8d6485bc1398aab980c28564c6-Screenshot_2025-10-16_at_9.45.37_AM.png" />
+
+<Image src="https://files.readme.io/c0a9d08cc7a0f407ce69c81b6426b05956a2fd8d6485bc1398aab980c28564c6-Screenshot_2025-10-16_at_9.45.37_AM.png" align="center" width="75%" border={true} />
+
+
+<br />
+
+<br />
