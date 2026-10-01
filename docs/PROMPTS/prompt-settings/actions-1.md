@@ -166,13 +166,13 @@ Build your own actions for advanced scenarios:
 <div class="rp-nav-grid">
 
 <Cards>
-  <Card title="Connector actions" href="/docs/connector-actions" target="_blank">
+  <Card title="Connector actions" href="/recurly-engage/docs/connector-actions" target="_blank">
     Integrate additional business systems.
   </Card>
-  <Card title="API actions" href="/docs/api-actions" target="_blank">
+  <Card title="API actions" href="/recurly-engage/docs/api-actions" target="_blank">
     Call your custom endpoints.
   </Card>
-  <Card title="Website actions" href="/docs/website-actions" target="_blank">
+  <Card title="Website actions" href="/recurly-engage/docs/website-actions" target="_blank">
     Run custom JavaScript in the user's browser.
   </Card>
 </Cards>
