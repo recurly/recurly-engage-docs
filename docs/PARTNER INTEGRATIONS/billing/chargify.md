@@ -10,47 +10,52 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">The Chargify integration lets you manage subscriptions and coupons directly from your prompts, using your Chargify billing system to automate user plan changes and coupon applications.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage subscription plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-The **Chargify** integration enables you to manage subscriptions and coupons directly from your prompts, leveraging your Chargify billing system to automate user plan changes and coupon applications.
+### Prerequisites
 
-### Required plan
+<ul class="rp-list">
+  <li>You must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.</li>
+  <li>You must have a valid Chargify account with API access.</li>
+</ul>
 
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
+### Limitations
 
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          You must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
-        </p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          A valid Chargify account with API access.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          User records in Recurly Engage must include the <code>chargify_id</code> trait for action targeting.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>User records in Recurly Engage must include the <code>chargify_id</code> trait for action targeting.</li>
+</ul>
 
 # Definition
 
-The **Chargify** connector synchronizes products, coupons, and subscription data from Chargify into Recurly Engage, allowing you to trigger billing-related actions from within prompts.
+<div class="rp-definition">The Chargify connector synchronizes products, coupons, and subscription data from Chargify into Recurly Engage, so you can trigger billing-related actions from within prompts.</div>
 
 # Key benefits
 
-* **Automated billing workflows**: Create or cancel subscriptions directly from prompts.
-* **Coupon management**: Apply coupon codes in real time as users interact.
-* **Seamless user experience**: Keep users in the flow without manual backend steps.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-gears" aria-hidden="true"></i></div>
+    <strong>Automated billing workflows</strong>
+    <span>Create or cancel subscriptions directly from prompts.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-ticket" aria-hidden="true"></i></div>
+    <strong>Coupon management</strong>
+    <span>Apply coupon codes in real time as users interact.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-route" aria-hidden="true"></i></div>
+    <strong>Uninterrupted user flow</strong>
+    <span>Keep users in the flow without manual backend steps.</span>
+  </div>
+</div>
 
 # Key details
 
@@ -59,19 +64,20 @@ The **Chargify** connector synchronizes products, coupons, and subscription data
 Configure your Chargify connector under **Settings > Connectors**:
 
 * **API Key**: Your Chargify API key.
-* **Domain**: Your Chargify site domain (e.g., `your-site.chargify.com`).
+* **Domain**: Your Chargify site domain (for example, `your-site.chargify.com`).
 
 ## Data integration
 
-* **Products and coupons** are synchronized on a scheduled basis to ensure availability in prompt configurations.
-* **Chargify ID** must be mapped to the user’s `chargify_id` trait in Recurly Engage for action execution.
+* **Products and coupons** are synchronized on a scheduled basis, so they're available in prompt configurations.
+* **Chargify ID** must be mapped to the user's `chargify_id` trait in Recurly Engage for action execution.
 
 ## Supported actions
 
 Use these actions within your prompt configurations to perform billing operations:
 
-| Action              | Description                                              | User Dependencies | Additional Instructions                              |
-| ------------------- | -------------------------------------------------------- | ----------------- | ---------------------------------------------------- |
-| Create subscription | Subscribes a user to a specified Chargify product plan   | `chargify_id`     | Select the desired plan from the connector dropdown. |
-| Cancel subscription | Cancels a user’s existing subscription to a product plan | `chargify_id`     | Choose which plan to cancel on the prompt screen.    |
-| Add coupon code     | Applies a coupon code to a user’s subscription           | `chargify_id`     | Select both the plan and coupon code on the prompt.  |
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Action</td><td>Description</td><td>User dependencies</td><td>Additional instructions</td></tr>
+  <tr><td>Create subscription</td><td>Subscribes a user to a specified Chargify product plan</td><td><code>chargify_id</code></td><td>Select the desired plan from the connector dropdown.</td></tr>
+  <tr><td>Cancel subscription</td><td>Cancels a user's existing subscription to a product plan</td><td><code>chargify_id</code></td><td>Choose which plan to cancel on the prompt screen.</td></tr>
+  <tr><td>Add coupon code</td><td>Applies a coupon code to a user's subscription</td><td><code>chargify_id</code></td><td>Select both the plan and coupon code on the prompt.</td></tr>
+</table>
