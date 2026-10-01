@@ -12,52 +12,59 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">The Mixpanel integration streams Recurly Engage prompt events and user traits into your Mixpanel project, so you can run analytics and segmentation based on in-app messaging interactions.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage subscription plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-The **Mixpanel** integration streams Recurly Engage prompt events and user traits into your Mixpanel project, enabling advanced analytics and segmentation based on in-app messaging interactions.
+### Prerequisites
 
-### Required plan
-
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
-
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
-        </p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          A Mixpanel account with Service Account credentials and project access.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>You must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.</li>
+  <li>You must have a Mixpanel account with Service Account credentials and project access.</li>
+</ul>
 
 # Definition
 
-The **Mixpanel** connector authenticates via service account credentials and uses your project token to send prompt events and mapped user traits to Mixpanel in real time.
+<div class="rp-definition">The Mixpanel connector authenticates with service account credentials and uses your project token to send prompt events and mapped user traits to Mixpanel in real time.</div>
 
 # Key benefits
 
-* **Unified analytics**: Combine prompt interactions with existing Mixpanel event streams for comprehensive user behavior insights.
-* **Segmentation**: Leverage Mixpanel’s powerful cohort and segmentation tools based on prompt engagement.
-* **Real-time sync**: Forward events and user traits immediately upon prompt interactions.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+    <strong>Unified analytics</strong>
+    <span>Combine prompt interactions with existing Mixpanel event streams for comprehensive user behavior insights.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-users-viewfinder" aria-hidden="true"></i></div>
+    <strong>Segmentation</strong>
+    <span>Use Mixpanel's cohort and segmentation tools based on prompt engagement.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+    <strong>Real-time sync</strong>
+    <span>Forward events and user traits immediately upon prompt interactions.</span>
+  </div>
+</div>
 
 # Key details
 
-## Information
+## What Recurly Engage sends
 
-Once activated, Recurly Engage will send both prompt interaction events (impression, click, dismiss, etc.) and configured user trait properties to Mixpanel.
+Once the integration is activated, Recurly Engage sends both prompt interaction events (impression, click, dismiss, and so on) and your configured user trait properties to Mixpanel.
 
-* [Mixpanel Service Accounts](https://developer.mixpanel.com/reference/service-accounts)
-* [Mixpanel Project Token](https://developer.mixpanel.com/reference/project-token)
+Learn more:
+
+<ul class="rp-list">
+  <li><a href="https://developer.mixpanel.com/reference/service-accounts" target="_blank">Mixpanel Service Accounts</a></li>
+  <li><a href="https://developer.mixpanel.com/reference/project-token" target="_blank">Mixpanel Project Token</a></li>
+</ul>
 
 ## Required settings
 
