@@ -133,9 +133,6 @@ Tour steps inherit the guide's **Limits**, **Segments**, and **Schedule** settin
   </div>
 </div>
 
-***
+<br />
 
-📋 TODO before publishing:
-
-- [ ] Confirm the title. The draft had none, so I used "Tours".
-- [ ] Confirm plan availability. The draft had no "Required plan" section, so I used the standard "Available on all Recurly plans" pill.
+<br />
