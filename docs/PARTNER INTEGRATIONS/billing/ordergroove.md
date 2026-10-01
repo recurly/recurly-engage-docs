@@ -9,88 +9,142 @@ hidden: false
 metadata:
   robots: index
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">The Recurly Engage integration with Ordergroove lets merchants use their subscription data for advanced customer engagement and automated, one-click subscription management. It syncs subscription and order information from Ordergroove into Recurly Engage, and it lets Recurly Engage trigger key subscription actions back in Ordergroove.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-The Recurly Engage integration with Ordergroove empowers Merchants to use their subscription data for advanced customer engagement and automated one-click subscription management.  
+# Definition
 
-This combination allows for a unified view of the subscriber lifecycle by syncing essential subscription and order information from Ordergroove into Recurly Engage.  
-
-Furthermore, it enables Recurly Engage to trigger key subscription actions back into Ordergroove, providing a proactive and streamlined experience for both Merchants and their Subscribers.
+<div class="rp-definition">The Ordergroove integration gives you a unified view of the subscriber lifecycle. It syncs subscription and order data (traits) from Ordergroove into Recurly Engage, and it runs 1-Click subscription actions from Recurly Engage that update the customer's subscription in Ordergroove.</div>
 
 The integration is built around two core capabilities:
 
-1. **Data Ingestion:** Syncing comprehensive user subscription and order data (traits) from Ordergroove into Recurly Engage. This includes using webhooks for real-time data ingestion for events like day 1 cancellations and other critical subscription or order changes.
-2. **1-Click Actions:** Enabling top-supported subscription actions to be executed from Recurly Engage, directly updating the customer's subscription in Ordergroove.
-
-<br />
+1. **Data ingestion**: Sync comprehensive user subscription and order data (traits) from Ordergroove into Recurly Engage. Webhooks provide real-time ingestion for events like day 1 cancellations and other critical subscription or order changes.
+2. **1-Click actions**: Run top-supported subscription actions from Recurly Engage that directly update the customer's subscription in Ordergroove.
 
 # Key benefits
 
-Integrating Recurly Engage and Ordergroove provides significant advantages for managing and growing your subscription business:
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+    <strong>Unified subscriber data</strong>
+    <span>Automatically sync subscription information such as status, frequency, product, and next order date from Ordergroove to Recurly Engage, creating a single source of truth for subscriber data.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-bell" aria-hidden="true"></i></div>
+    <strong>Proactive engagement</strong>
+    <span>Use Ordergroove webhooks to track critical subscription and order changes (for example, billing or subscription changes) in Recurly Engage right away, so you can send targeted communication that prevents churn or encourages re-engagement.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-hand-pointer" aria-hidden="true"></i></div>
+    <strong>1-Click management</strong>
+    <span>Let customers manage, delay, or skip their Ordergroove subscriptions with 1-Click actions directly from Recurly Engage prompts.</span>
+  </div>
+</div>
 
-* **Unified subscriber data:** Automatically sync subscription information like status, frequency, product, and next order date from Ordergroove to Recurly Engage, creating a single source of truth for all subscriber data.
-* **Proactive engagement:** Utilize Ordergroove Webhooks to instantly track critical subscription and order changes (e.g., billing or subscription changes) in Recurly Engage, allowing for immediate, targeted communication to prevent churn or encourage re-engagement.
-* **Seamless 1-Click Management:** Empower customers with 1-click actions directly from Recurly Engage prompts, enabling them to manage, delay, or skip their Ordergroove subscriptions with a seamless experience.
+# Key details
 
-<br />
+The integration involves configuring data ingestion and setting up 1-Click actions in both Recurly Engage and Ordergroove.
 
-# Key steps
+## Sync traits with subscription reports
 
-The integration primarily involves configuring data ingestion and setting up the 1-Click Actions within Recurly Engage and Ordergroove.
+To give Recurly Engage the most up-to-date subscriber information, configure Automating Subscription Reports in Ordergroove. This method syncs core subscription traits.
 
-## Step 1: Data Ingestion Subscription reporting (traits sync)
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Ensure access to automated reports</h4><p>Make sure you have access to automated reports in Ordergroove.</p></div>
+  </div>
+</div>
 
-To ensure Recurly Engage has the most up-to-date subscriber information, you'll need to configure Automating Subscription Reports from Ordergroove. This method is used to sync core subscription traits.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Specify fields</h4><p>Make sure the report includes the key fields (traits) Recurly Engage needs, such as:</p></div>
+  </div>
+</div>
 
-1. **Ensure access to automated reports**
-2. **Specify fields:** Ensure the report includes the key fields (traits) necessary for Recurly Engage, such as:
-   `Ordergroove User ID`
-   `Merchant User ID`
-   `Subscription ID`
-   `Status (Active, Canceled, etc.)`
-   `Frequency`
-   `Quantity`
-   `SKU`
-   `Price`
-   `Cancel Date`
-   `Next Order Date`  
-   <br />
-   For a full list of available fields please refer to <a href="https://help.ordergroove.com/hc/en-us/articles/360050746374-Automating-Subscription-Reports">Ordergrooves Automating Subscription Reports</a> documentation.
-3. **Configure delivery:** Recurly Engage provides a seamless way to upload your file within the management console.
-4. **Recurly Engage configuration:** Recurly Engage will map the delivered data fields (e.g., `Subscription ID`, `Next Order Date`) to the corresponding subscriber traits within the Engage platform.
+<ul class="rp-list">
+  <li><code>Ordergroove User ID</code></li>
+  <li><code>Merchant User ID</code></li>
+  <li><code>Subscription ID</code></li>
+  <li><code>Status (Active, Canceled, etc.)</code></li>
+  <li><code>Frequency</code></li>
+  <li><code>Quantity</code></li>
+  <li><code>SKU</code></li>
+  <li><code>Price</code></li>
+  <li><code>Cancel Date</code></li>
+  <li><code>Next Order Date</code></li>
+</ul>
 
-## Step 2: Event sync - Webhooks configuration
+For a full list of available fields, see <a href="https://help.ordergroove.com/hc/en-us/articles/360050746374-Automating-Subscription-Reports" target="_blank">Ordergroove's Automating Subscription Reports</a> documentation.
 
-To enable real-time tracking of critical events like churn, cancellations, and order issues, you must configure <a href="https://developer.ordergroove.com/reference/webhooks-overview">Ordergroove Webhooks</a> to notify Recurly Engage of changes.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Configure delivery</h4><p>Upload your file in the Recurly Engage management console.</p></div>
+  </div>
+  <div class="rp-step">
+    <div class="rp-step-num">4</div>
+    <div><h4>Review the trait mapping</h4><p>Recurly Engage maps the delivered data fields (for example, <code>Subscription ID</code> and <code>Next Order Date</code>) to the corresponding subscriber traits in the Engage platform.</p></div>
+  </div>
+</div>
 
-1. **Configure Endpoint:** Enter the specific endpoint URL provided by Recurly Engage for receiving Ordergroove webhooks.
-2. **Select Events:** Select the events for which you want to receive notifications. The most critical events for Recurly Engage are:
-   * Subscription changes
-   * Subscriber changes
-   * Order changes (especially `order.reject`)
-3. **Authentication:** Utilize the Verification Key provided in the Ordergroove Admin to secure the webhook. This key is used by Recurly Engage to verify that the requests are genuinely issued by Ordergroove.
+## Sync events with webhooks
 
-## Step 3: 1-Click actions configuration (API integration)
+To track critical events like churn, cancellations, and order issues in real time, configure <a href="https://developer.ordergroove.com/reference/webhooks-overview" target="_blank">Ordergroove Webhooks</a> to notify Recurly Engage of changes.
 
-Recurly Engage uses the Ordergroove 1-Click APIs to enable real-time subscription management.  
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Configure the endpoint</h4><p>Enter the endpoint URL provided by Recurly Engage for receiving Ordergroove webhooks.</p></div>
+  </div>
+</div>
 
-The following **1-Click Actions** are supported by the integration and can be triggered via Recurly Engage:
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Select events</h4><p>Select the events you want to receive notifications for. The most critical events for Recurly Engage are:</p></div>
+  </div>
+</div>
 
-<br />
+<ul class="rp-list">
+  <li>Subscription changes</li>
+  <li>Subscriber changes</li>
+  <li>Order changes (especially <code>order.reject</code>)</li>
+</ul>
 
-| 1-Click Action             | Ordergroove API Action                                                                                      | Description                                                        |
-| -------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| Cancel subscription        | [Cancel subscription](https://developer.ordergroove.com/reference/subscriptions-cancel)                     | Terminates an active subscription.                                 |
-| Change quantity            | [Change quantity](https://developer.ordergroove.com/reference/subscriptions-change-quantity)                | Increases or decreases the number of units in a subscription.      |
-| Change frequency           | [Change frequency](https://developer.ordergroove.com/reference/subscriptions-change-frequency)              | Modifies the order placement frequency (e.g., from 30 to 60 days). |
-| Reactivate                 | [Reactivate](https://developer.ordergroove.com/reference/subscriptions-reactivate)                          | Turns on an existing, inactive subscription.                       |
-| Change product             | [Change product](https://developer.ordergroove.com/reference/subscriptions-change-product)                  | Swaps the current product for a different one.                     |
-| Delay next order date      | [Change next order date](https://developer.ordergroove.com/reference/change-next-order-date)                | Pushes the next scheduled order date further out.                  |
-| Accelerate next order date | [Change next order date](https://developer.ordergroove.com/reference/change-next-order-date)                | Moves the next scheduled order date closer.                        |
-| Skip order                 | [Skip subscription](https://developer.ordergroove.com/reference/skip-subscription)                          | Skips the next recurring order placement.                          |
-| Enable auto renew          | [Change prepaid renewal behavior](https://developer.ordergroove.com/reference/subscriptions-change-payment) | Changes the prepaid subscription renewal setting.                  |
-| Apply coupon (offer)       | [Subscriptions update](https://developer.ordergroove.com/reference/subscriptions-update)                    | Apply any discounts to the subscription.                           |
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Authenticate the webhook</h4><p>Use the Verification Key provided in the Ordergroove Admin to secure the webhook. Recurly Engage uses this key to verify that requests are genuinely issued by Ordergroove.</p></div>
+  </div>
+</div>
 
-<br />
+## Configure 1-Click actions
 
-**Configuration:** Recurly Engage will require your Ordergroove **API credentials** to authenticate and execute these 1-Click Actions against your subscriber data. Consult your Recurly Engage implementation team for the secure exchange and configuration of these credentials.
+Recurly Engage uses the Ordergroove 1-Click APIs to enable real-time subscription management. The following 1-Click actions are supported and can be triggered from Recurly Engage:
+
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>1-Click action</td><td>Ordergroove API action</td><td>Description</td></tr>
+  <tr><td>Cancel subscription</td><td><a href="https://developer.ordergroove.com/reference/subscriptions-cancel" target="_blank">Cancel subscription</a></td><td>Terminates an active subscription.</td></tr>
+  <tr><td>Change quantity</td><td><a href="https://developer.ordergroove.com/reference/subscriptions-change-quantity" target="_blank">Change quantity</a></td><td>Increases or decreases the number of units in a subscription.</td></tr>
+  <tr><td>Change frequency</td><td><a href="https://developer.ordergroove.com/reference/subscriptions-change-frequency" target="_blank">Change frequency</a></td><td>Modifies the order placement frequency (for example, from 30 to 60 days).</td></tr>
+  <tr><td>Reactivate</td><td><a href="https://developer.ordergroove.com/reference/subscriptions-reactivate" target="_blank">Reactivate</a></td><td>Turns on an existing, inactive subscription.</td></tr>
+  <tr><td>Change product</td><td><a href="https://developer.ordergroove.com/reference/subscriptions-change-product" target="_blank">Change product</a></td><td>Swaps the current product for a different one.</td></tr>
+  <tr><td>Delay next order date</td><td><a href="https://developer.ordergroove.com/reference/change-next-order-date" target="_blank">Change next order date</a></td><td>Pushes the next scheduled order date further out.</td></tr>
+  <tr><td>Accelerate next order date</td><td><a href="https://developer.ordergroove.com/reference/change-next-order-date" target="_blank">Change next order date</a></td><td>Moves the next scheduled order date closer.</td></tr>
+  <tr><td>Skip order</td><td><a href="https://developer.ordergroove.com/reference/skip-subscription" target="_blank">Skip subscription</a></td><td>Skips the next recurring order placement.</td></tr>
+  <tr><td>Enable auto renew</td><td><a href="https://developer.ordergroove.com/reference/subscriptions-change-payment" target="_blank">Change prepaid renewal behavior</a></td><td>Changes the prepaid subscription renewal setting.</td></tr>
+  <tr><td>Apply coupon (offer)</td><td><a href="https://developer.ordergroove.com/reference/subscriptions-update" target="_blank">Subscriptions update</a></td><td>Applies discounts to the subscription.</td></tr>
+</table>
+
+<div class="rp-callout rp-callout-note">
+  <div><strong><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Configuration</strong>Recurly Engage requires your Ordergroove <span style={{fontWeight: "bold"}}>API credentials</span> to authenticate and run these 1-Click actions against your subscriber data. Consult your Recurly Engage implementation team for the secure exchange and configuration of these credentials.</div>
+</div>
