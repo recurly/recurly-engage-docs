@@ -12,53 +12,63 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">Pipelines let you manage users across lifecycle stages or custom behavior loops in Recurly Engage. Visualize where your users are, and trigger targeted prompts that move them to the next stage.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage subscription plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-Recurly Engage Pipelines provide a unique way to manage users across various lifecycle stages or custom behavior loops. Use pipelines to visualize where users are and to trigger targeted prompts that move them to the next stage.
+### Prerequisites
 
-### Required plan
+<ul class="rp-list">
+  <li>You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.</li>
+</ul>
 
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
+### Limitations
 
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          Pipelines update automatically based on incoming trait and usage data; allow time for data refresh.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>Pipelines update automatically based on incoming trait and usage data. Allow time for the data to refresh.</li>
+</ul>
 
 # Definition
 
-A **pipeline** is a multi-stage user lane—either lifecycle-based or custom—that organizes users by progression and allows you to attach prompts to drive movement between stages.
+<div class="rp-definition">A pipeline is a multi-stage user lane, either lifecycle-based or custom, that organizes users by progression. You can attach prompts to a pipeline to drive movement between stages.</div>
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/effdb79-Screenshot_2024-04-30_at_6.53.20_PM.png" />
+
+<Image src="https://files.readme.io/effdb79-Screenshot_2024-04-30_at_6.53.20_PM.png" align="center" width="75%" border={true} />
+
 
 # Key benefits
 
-* **Holistic user view**: See where users reside in their journey—from anonymous visitors to loyal customers.
-* **Behavioral reinforcement**: Create custom pipelines to reward and reinforce desired usage patterns.
-* **Prompt orchestration**: Attach prompts at each stage to guide users forward in the funnel.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-eye" aria-hidden="true"></i></div>
+    <strong>Holistic user view</strong>
+    <span>See where users are in their journey, from anonymous visitors to loyal customers.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-repeat" aria-hidden="true"></i></div>
+    <strong>Behavioral reinforcement</strong>
+    <span>Create custom pipelines to reward and reinforce desired usage patterns.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></div>
+    <strong>Prompt orchestration</strong>
+    <span>Attach prompts at each stage to guide users forward in the funnel.</span>
+  </div>
+</div>
 
 # Key details
 
 ## Lifecycle pipelines
 
-Recurly Engage includes three out‑of‑the‑box pipelines:
+Recurly Engage includes three built-in pipelines.
 
-### Member Pipeline
+### Member pipeline
 
 1. **Anonymous**: Visitors to marketing pages.
 2. **Trial**: Users in their trial period.
@@ -67,7 +77,7 @@ Recurly Engage includes three out‑of‑the‑box pipelines:
 5. **Pending Cancel**: Canceled subscribers with continued access.
 6. **Cancelled**: Users who have fully churned.
 
-### Engagement Pipeline
+### Engagement pipeline
 
 1. **New users**
 2. **Repeat users**
@@ -75,9 +85,11 @@ Recurly Engage includes three out‑of‑the‑box pipelines:
 4. **Frequent users**
 5. **Heavy users**
 
-> Each stage can be further segmented into **Engaged** (increasing activity), **At Risk** (decreasing activity), or **Everyone Else** based on visits and minutes trends.
+<div class="rp-callout rp-callout-note">
+  <div><strong><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Note</strong>Based on visit and minute trends, you can further segment each stage into <span style={{fontWeight: "bold"}}>Engaged</span> (increasing activity), <span style={{fontWeight: "bold"}}>At Risk</span> (decreasing activity), or <span style={{fontWeight: "bold"}}>Everyone Else</span>.</div>
+</div>
 
-### E‑commerce Pipeline
+### Ecommerce pipeline
 
 1. **Visitor**: Has not started checkout.
 2. **Shopper**: Added items to cart.
@@ -86,7 +98,7 @@ Recurly Engage includes three out‑of‑the‑box pipelines:
 
 ## Behavior pipelines
 
-Create custom, behavior‑driven pipelines to reinforce lifetime value patterns. For example, a “Watch More” pipeline:
+Create custom, behavior-driven pipelines to reinforce lifetime value patterns. For example, a "Watch More" pipeline:
 
 1. Watched one episode
 2. Watched two episodes
@@ -94,12 +106,32 @@ Create custom, behavior‑driven pipelines to reinforce lifetime value patterns.
 
 ## Moving users between stages
 
-You can attach prompts directly to any pipeline stage. For example, to convert **Engaged Trial** users into paying members before trial expiry:
+You can attach prompts directly to any pipeline stage. For example, to convert **Engaged Trial** users into paying members before their trial expires:
 
-1. Click **Add Prompt** on the **Trial** stage.
-2. Select a prompt style and target the sub‑segment (“Engaged Trial”).
-3. Define a custom goal and continue configuring the prompt as usual.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Add a prompt</h4><p>Select <span style={{fontWeight: "bold"}}>Add Prompt</span> on the <span style={{fontWeight: "bold"}}>Trial</span> stage.</p></div>
+  </div>
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Choose a style and sub-segment</h4><p>Select a prompt style and target the sub-segment ("Engaged Trial").</p></div>
+  </div>
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Define a custom goal</h4><p>Define a custom goal and continue configuring the prompt as usual.</p></div>
+  </div>
+</div>
 
-The remaining setup steps follow the same flow as [creating a prompt](prompts). Once live, prompts will fire when users enter that pipeline stage, driving them toward the next segment.
+The remaining setup steps follow the same flow as <a href="/docs/prompts" target="_blank">creating a prompt</a>. Once live, prompts fire when users enter that pipeline stage, driving them toward the next segment.
 
-<Image align="center" className="border" border={true} width="60% " src="https://files.readme.io/05d43d1-Screenshot_2024-04-30_at_7.00.32_PM.png" />
+
+<Image src="https://files.readme.io/05d43d1-Screenshot_2024-04-30_at_7.00.32_PM.png" align="center" width="75%" border={true} />
+
+
+***
+
+📋 TODO before publishing:
+
+- [ ] Confirm the "creating a prompt" link destination. The source used the relative slug `prompts`; I rendered it as `/docs/prompts`.
+- [ ] Confirm the third lifecycle pipeline name. The source spells it "E-commerce Pipeline"; I wrote "Ecommerce pipeline" to follow the brand word bank. Revert if that's the exact name shown in Pulse.
