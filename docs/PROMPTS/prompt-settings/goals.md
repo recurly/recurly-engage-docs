@@ -73,7 +73,7 @@ next:
   <li>Recurly Subscription Management webhook events, which deliver near real-time subscription status updates (for example, plan changes, payment failures, and cancellations) for instant targeting and custom goal events in Recurly Engage. <a href="https://docs.recurly.com/recurly-engage/docs/recurly-webhooks#/" target="_blank">Learn more</a></li>
 </ul>
 
-To use a custom goal, first create a <a href="/docs/usage-tracking-1" target="_blank">usage tracker</a>. Then follow the steps below to attach it to a prompt.
+To use a custom goal, first create a <a href="/recurly-engage/docs/usage-tracking-1" target="_blank">usage tracker</a>. Then follow the steps below to attach it to a prompt.
 
 ## Attach a custom goal to a prompt
 
