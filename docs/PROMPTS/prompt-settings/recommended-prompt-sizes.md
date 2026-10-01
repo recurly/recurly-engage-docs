@@ -112,10 +112,3 @@ To keep your messages clean and professional, use the default filter to specify 
 **Example:**
 
 `Hello {{ user.first_name | default: 'there' }}, your {{ subscription.plan.name }} plan is set to renew on {{ subscription.renews_at }}.`
-
-***
-
-📋 TODO before publishing:
-
-- [ ] Confirm the title. The draft had none, so I used "Personalize prompts with Liquid".
-- [ ] Confirm plan availability. The draft had no "Required plan" section, so I used the standard "Available on all Recurly plans" pill.
