@@ -12,15 +12,35 @@ metadata:
 next:
   description: ''
 ---
-# Overview
-
-The SDK section contains comprehensive guides for integrating Recurly Engage into your applications across web, mobile, TV, and hybrid platforms. Dive into installation, initialization, prompt rendering, and testing workflows tailored for each environment.
+<div class="rp-page">
+  <div class="rp-overview">The SDK section has guides for integrating Recurly Engage into your applications across web, mobile, TV, and hybrid platforms. Each guide covers the installation, initialization, prompt rendering, and testing workflows for its environment.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly plans</div>
+</div>
 
 # Key details
 
-* **JavaScript (Web and CTV)**: Guide for installing and configuring the JavaScript SDK on web browsers and HTML5-based CTV devices. ([JavaScript (Web and CTV)](javascript-sdk))
-* **iOS**: Instructions for integrating the Recurly Engage Apple SDK in native iOS and tvOS apps, including Swift Package Manager and legacy frameworks. ([iOS](ios-sdk))
-* **Android**: Steps to add the Recurly Engage Android SDK for phones, tablets, and TV devices via Gradle/Maven or local packages. ([Android](android-sdk))
-* **Roku**: Setup and usage details for the Recurly Engage Roku SDK within SceneGraph-based Roku channels. ([Roku](roku-sdk))
-* **React Native**: Guide for rendering modals and inline prompts in React Native apps using prebuilt components and APIs. ([React Native](react-native-sdk-v2))
-* **Testing tips**: Best practices for using the Test Users segment, resetting state, and accounting for propagation delays during SDK testing. ([Testing tips](sdk-testing-tips))
+Select a guide for your platform.
+
+<div class="rp-nav-grid">
+
+<Cards>
+  <Card title="JavaScript (Web and CTV)" href="/recurly-engage/docs/javascript-sdk" target="_blank">
+    Install and configure the JavaScript software development kit (SDK) on web browsers and HTML5-based connected TV (CTV) devices.
+  </Card>
+  <Card title="iOS" href="/recurly-engage/docs/ios-sdk" target="_blank">
+    Integrate the Recurly Engage Apple SDK in native iOS and tvOS apps, including Swift Package Manager and legacy frameworks.
+  </Card>
+  <Card title="Android" href="/recurly-engage/docs/android-sdk" target="_blank">
+    Add the Recurly Engage Android SDK for phones, tablets, and TV devices through Gradle/Maven or local packages.
+  </Card>
+  <Card title="Roku" href="/recurly-engage/docs/roku-sdk" target="_blank">
+    Set up and use the Recurly Engage Roku SDK within SceneGraph-based Roku channels.
+  </Card>
+  <Card title="React Native" href="/recurly-engage/docs/react-native-sdk-v2" target="_blank">
+    Render modals and inline prompts in React Native apps using prebuilt components and APIs.
+  </Card>
+  <Card title="Testing tips" href="/recurly-engage/docs/sdk-testing-tips" target="_blank">
+    Follow best practices for using the Test Users segment, resetting state, and accounting for propagation delays during SDK testing.
+  </Card>
+</Cards>
+</div>
