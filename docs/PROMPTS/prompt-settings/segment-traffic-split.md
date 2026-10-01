@@ -111,10 +111,6 @@ To implement a segment traffic split, follow these steps.
 <Image src="https://files.readme.io/18cacc2dd7ae5768b6ef9703fbb32eab55f1b74ea629747a778e4c7eb639b7a1-segment_split_4.png" align="center" width="75%" border={true} />
 
 
-***
+<br />
 
-📋 TODO before publishing:
-
-- [ ] Confirm the title. The draft had none, so I used "Segment traffic split".
-- [ ] Confirm the experiments link in the overview. It ends in an unusual `#/` fragment: `https://docs.recurly.com/recurly-engage/docs/create-an-experiment#/`. Left verbatim.
-- [ ] Confirm plan availability. The draft had no "Required plan" section, so I used the standard "Available on all Recurly plans" pill.
+<br />
