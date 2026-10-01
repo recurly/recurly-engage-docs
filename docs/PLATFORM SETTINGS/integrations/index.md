@@ -12,67 +12,95 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">Recurly Engage comes with dozens of prebuilt integrations — connectors that let you trigger actions in your existing business systems or stream events to them.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-Recurly Engage supports dozens of prebuilt integrations—connectors that let you trigger actions in, or stream events to, your existing business systems.
+### Prerequisites
 
-### Required plan
-
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
-
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          You must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
-        </p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          Connector-specific credentials (API keys, client IDs/secrets, etc.)
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          Appropriate permissions in both Recurly Engage and the target system.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>You must have <span style={{fontWeight: "bold"}}>Company</span> or <span style={{fontWeight: "bold"}}>App Administrator</span> permissions in Engage.</li>
+  <li>Connector-specific credentials, such as API keys and client IDs or secrets.</li>
+  <li>Appropriate permissions in both Engage and the target system.</li>
+</ul>
 
 # Definition
 
-An **integration** (or connector) links Recurly Engage prompts and user interactions with external platforms—enabling 1-click actions, event streaming, and data sync.
+<div class="rp-definition">An <span style={{fontWeight: "bold"}}>integration</span> (or connector) links Engage prompts and user interactions with external platforms, enabling one-click actions, event streaming, and data sync.</div>
 
 # Key benefits
 
-* **Streamline workflows**: Automate subscription changes, support tickets, emails, and more directly from in-app prompts.
-* **Unified user experience**: Keep your user’s context in sync across billing, CRM, support, and analytics systems.
-* **Rapid time to value**: Prebuilt connectors mean you can be live in minutes, not weeks.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Streamline workflows</strong>
+    <span>Automate subscription changes, support tickets, emails, and more directly from in-app prompts.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Unified user experience</strong>
+    <span>Keep your user's context in sync across billing, customer relationship management (CRM), support, and analytics systems.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Rapid time to value</strong>
+    <span>Prebuilt connectors mean you can be live in minutes, not weeks.</span>
+  </div>
+</div>
 
 # Key details
 
 ## Configure external integrations
 
-1. **Go to** Settings → Actions.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Open Actions settings</h4><p>Go to <span style={{fontWeight: "bold"}}>Settings → Actions</span>.</p></div>
+  </div>
+</div>
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/3f60efa-image.png" />
 
-2. **Select** a connector (e.g. Zuora).
+<Image src="https://files.readme.io/3f60efa-image.png" align="center" width="75%" border={true} />
 
-<Image align="center" width="80% " src="https://files.readme.io/2bae331-image.png" />
 
-3. **Fill in** the required credentials.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Select a connector</h4><p>Select a connector, such as Zuora.</p></div>
+  </div>
+</div>
 
-<Image align="center" width="80% " src="https://files.readme.io/5f1e9d9-image.png" />
 
-4. **Toggle** to **Active** and **Save changes**
+<Image src="https://files.readme.io/2bae331-image.png" align="center" width="75%" border={true} />
 
-<Image align="center" width="80% " src="https://files.readme.io/dbee0b4-image.png" />
+
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Enter your credentials</h4><p>Fill in the required credentials.</p></div>
+  </div>
+</div>
+
+
+<Image src="https://files.readme.io/5f1e9d9-image.png" align="center" width="75%" border={true} />
+
+
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">4</div>
+    <div><h4>Activate the connector</h4><p>Toggle the connector to <span style={{fontWeight: "bold"}}>Active</span> and click <span style={{fontWeight: "bold"}}>Save changes</span>.</p></div>
+  </div>
+</div>
+
+
+<Image src="https://files.readme.io/dbee0b4-image.png" align="center" width="75%" border={true} />
+
 
 ## Connector capabilities
 
@@ -141,13 +169,11 @@ An **integration** (or connector) links Recurly Engage prompts and user interact
 
 * Create or update a user record by email
 
-### Apple (APNS)
+### Apple (APNs)
 
 * Trigger in-app purchase flows (Upgrade/Downgrade)
 * Send push notifications via APNs
 
-***
-
-**Need another connector?**
-
-Contact your Recurly Engage Customer Success team to request a custom integration or new connector.
+<div class="rp-callout rp-callout-tip">
+  <div><strong><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Need another connector?</strong>Contact your Engage Customer Success team to request a custom integration or new connector.</div>
+</div>
