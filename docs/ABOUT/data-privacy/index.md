@@ -12,65 +12,93 @@ metadata:
 next:
   description: ''
 ---
-# Overview
-
-Recurly Engage processes only the data you designate, with strict controls around retention, and access—providing a secure, privacy-first engagement platform.
+<div class="rp-page">
+  <div class="rp-overview">Recurly Engage processes only the data you designate, with strict controls around retention and access. The result is a secure, privacy-first engagement platform.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
 # Definition
 
-The **Data Privacy & Security** section outlines how Recurly Engage handles end-user information, including what is collected, how it is stored, and how it is protected.
+<div class="rp-definition">This page outlines how Recurly Engage handles end-user information, including what it collects, how it stores that information, and how it protects it.</div>
 
 # Key benefits
 
-* **Privacy-by-design**: Minimal default data collection with configurable tracking to meet your privacy requirements.
-* **Regulatory compliance**: Built-in support for HIPAA, SOC 2 Type II, GDPR, and CCPA controls to safeguard user data.
-* **Flexible retention**: Default 90-day lookback window with optional extended retention or suppression lists.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-user-shield" aria-hidden="true"></i></div>
+    <strong>Privacy-by-design</strong>
+    <span>Minimal default data collection with configurable tracking to meet your privacy requirements.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></div>
+    <strong>Regulatory compliance</strong>
+    <span>Built-in support for Health Insurance Portability and Accountability Act (HIPAA), System and Organization Controls (SOC) 2 Type II, General Data Protection Regulation (GDPR), and California Consumer Privacy Act (CCPA) controls to safeguard user data.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i></div>
+    <strong>Flexible retention</strong>
+    <span>A default 90-day lookback window, with optional extended retention or suppression lists.</span>
+  </div>
+</div>
 
 # Key details
 
-By default, Recurly Engage does not collect or process end-user information besides session timestamps. IP addresses are never stored. Tracking is limited to the attributes and events you explicitly enable. Data is retained for a default 90-day lookback window, configurable per your needs.
+By default, Recurly Engage does not collect or process end-user information besides session timestamps. IP addresses are never stored. Tracking is limited to the attributes and events you explicitly enable. Data is retained for a default 90-day lookback window, configurable to your needs.
 
-## IP Address
+## IP address
 
-Recurly Engage never stores end-user IP addresses. Location targeting uses a one-way hashed integration with a locally hosted copy of MaxMind’s GeoIP database. IP data remains internal and is not shared externally.
+Recurly Engage never stores end-user IP addresses. Location targeting uses a one-way hashed integration with a locally hosted copy of MaxMind's GeoIP database. IP data remains internal and is not shared externally.
 
 ## Cookies
 
-Recurly Engage does not utilize cookies in its platform operations unless you explicitly enable first-party cookies for your use case.
+Recurly Engage does not use cookies in its platform operations unless you explicitly enable first-party cookies for your use case.
 
 ## Email address
 
-Recurly Engage does not use email addresses by default. **Email addresses may only be imported at your option** as a custom trait (see [User Traits](user-traits)). Third-party connectors (e.g., SendGrid) may require encrypted email for campaign triggers.
+Recurly Engage does not use email addresses by default. **Email addresses may only be imported at your option** as a custom trait (see <a href="/recurly-engage/docs/user-traits" target="_blank">User traits</a>). Third-party connectors (for example, SendGrid) may require encrypted email for campaign triggers.
 
 ## End user privacy
 
-We never share your end-user data with third parties nor aggregate external data against your user profiles. We rely on platform-recommended identifiers (e.g., IDFV on iOS, Instance ID on Android) and never use hardware or network identifiers (MAC, IP) for identification.
+We never share your end-user data with third parties, and we never aggregate external data against your user profiles. We rely on platform-recommended identifiers (for example, Identifier for Vendor (IDFV) on iOS and Instance ID on Android). We never use hardware or network identifiers (MAC, IP) for identification.
 
 ## SOC 2 Type II
 
-Recurly Engage is SOC 2 Type II compliant, audited by a trusted AICPA firm. Controls cover security policies, change management, access controls, backup, disaster recovery, and incident response. Growth and Enterprise customers can request the SOC 2 report via their Customer Success Manager.
+Recurly Engage is SOC 2 Type II compliant, audited by a trusted American Institute of Certified Public Accountants (AICPA) firm. Controls cover security policies, change management, access controls, backup, disaster recovery, and incident response. Growth and Enterprise customers can request the SOC 2 report through their Customer Success Manager.
 
-## GDPR / CCPA compliance
+## GDPR and CCPA compliance
 
-See the Recurly Engage [Privacy Policy](https://www.redfast.com/privacy) for details on GDPR and CCPA adherence, data subject requests, and privacy rights.
+See the Recurly Engage <a href="https://www.redfast.com/privacy" target="_blank">Privacy Policy</a> for details on GDPR and CCPA adherence, data subject requests, and privacy rights.
 
 ## Suppression list
 
-You may provide a list of user IDs to suppress. Recurly Engage will immediately cease processing any data associated with those users.
+You can provide a list of user IDs to suppress. Recurly Engage immediately stops processing any data associated with those users.
 
 ## Data retention
 
-On an ongoing basis, Recurly Engage will retain end-user usage data no longer than ninety days past the latest activity encountered by that end user unless extended lookback has been enabled. For customers who request the extended lookback feature, data is retained for one year. For end users that have been added to the Suppression List, Recurly Engage will not retain any history of the end user's usage.
+On an ongoing basis, Recurly Engage retains end-user usage data for no longer than 90 days past the latest activity from that end user, unless extended lookback has been enabled. For customers who request the extended lookback feature, data is retained for one year. For end users who have been added to the suppression list, Recurly Engage retains no history of their usage.
 
 ## API access
 
-Any direct integration with third party systems that you configure within Recurly Engage should be secured with a developer specific API key assigned to Recurly Engage. Recurly Engage uses publicly or privately supplied documentation with these APIs to establish communications between the systems. An alternative to API access for 1-Click actions is redirecting the user to an existing screen within your app to perform the desired action. However this will come with an adverse impact to conversion rate.
+Secure any direct integration with third-party systems that you configure within Recurly Engage with a developer-specific API key assigned to Recurly Engage. Recurly Engage uses publicly or privately supplied documentation for these APIs to establish communications between the systems. An alternative to API access for 1-Click actions is redirecting the user to an existing screen within your app to perform the desired action. However, this will adversely impact your conversion rate.
 
-## Apple AppStore
+## Apple App Store
 
-In December 2020, Apple introduced new requirements for app developers to outline their apps' data collection and usage policy. The following specifies data collected by Recurly Engage.
+In December 2020, Apple introduced new requirements for app developers to outline their apps' data collection and usage policies. The following list specifies the data Recurly Engage collects by default:
 
-Data collected by default:
+* **Identifiers**: Recurly Engage does not create a user identifier. A User ID created by your system is passed to the Recurly Engage software development kit (SDK). Your system may be using Apple's IDFV identifier and passing that to the SDK. Consult your engineer for specific details.
+* **Usage data**: Session-related information, and optionally any additional user events that you choose to track using Recurly Engage.
 
-* **Identifiers:** Recurly Engage does not create a user identifier. A User ID created by your system is passed on to the Recurly Engage SDK. Please note that your system may be using Apple's IDFV identifier and passing that to the Recurly Engage SDK. Consult with your engineer for specific details.
-* **Usage Data:** Session related information. Optionally, additional user events that you elect to be tracked using Recurly Engage.
+***
+
+📋 TODO before publishing:
+
+- [ ] Confirm the title. The draft had none, so I used "Data privacy and security".
+- [ ] Confirm plan availability. The draft had no "Required plan" section, so I used the standard "Available on all Recurly plans" pill.
+- [ ] Compliance review: the "Regulatory compliance" benefit lists HIPAA, but nothing else on the page covers HIPAA. Left as written. Confirm with the appropriate owner.
+- [ ] Confirm the Privacy Policy URL. It still points to the `redfast.com` domain: `https://www.redfast.com/privacy`.
+- [ ] Confirm the User traits link destination. The source used the relative slug `user-traits`; I rendered it as `/recurly-engage/docs/user-traits`.
