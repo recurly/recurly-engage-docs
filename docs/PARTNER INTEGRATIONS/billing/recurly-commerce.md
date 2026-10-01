@@ -1,52 +1,94 @@
 ---
 title: Recurly Commerce
 excerpt: >-
-  Documentation for connecting Recurly Commerce with Recurly Engage, enabling
-  real-time, one-click actions (like pausing or applying discounts) within
-  Engage prompts for active subscriptions.
+  Learn how to create a Recurly Commerce connector action so subscribers can
+  pause a subscription or apply a discount with one click from a Recurly Engage
+  prompt.
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">This guide explains how to create a Connector Action that integrates your Recurly Commerce account with Recurly Engage. Subscribers can then perform instant, one-click actions on their subscriptions, such as applying a discount or pausing a subscription, directly within Engage prompts and without custom code.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-This guide details the process of creating a Connector Action to integrate your Recurly Commerce account with your Recurly Engage instance. This powerful connection gives your subscribers the ability to perform instant, one-click actions on their subscriptions directly within Engage prompts, all without requiring custom code.
+# Definition
 
-Specifically, this integration unlocks out-of-the-box actions such as applying discounts or pausing a subscription, leveraging the robust subscription logic of Recurly Commerce to power seamless user experiences in Recurly Engage.
+<div class="rp-definition">The Recurly Commerce connector action lets subscribers manage their subscriptions with one click from a Recurly Engage prompt. It runs on the subscription logic of Recurly Commerce and authenticates with your Recurly API key.</div>
 
 # Key benefits
 
-* **Code-free User Experience:** Quickly deploy complex subscription actions within Engage prompts, allowing for an easy, no-code setup for your development and marketing teams.
-* **Instant Subscription Management:** Enable subscribers to make real-time changes, such as pausing or applying discounts, with a single click, dramatically improving the user experience.
-* **Crush Churn:** Deploy targeted save offers and win-back triggers using real-time Commerce actions in Engage, allowing you to maximize customer retention efforts.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+    <strong>Code-free user experience</strong>
+    <span>Deploy complex subscription actions in Engage prompts with a no-code setup for your development and marketing teams.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+    <strong>Instant subscription management</strong>
+    <span>Let subscribers make real-time changes, such as pausing a subscription or applying a discount, with a single click.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-user-check" aria-hidden="true"></i></div>
+    <strong>Reduced churn</strong>
+    <span>Deploy targeted save offers and win-back triggers using real-time Commerce actions in Engage to maximize customer retention.</span>
+  </div>
+</div>
 
-# Key steps
+# Key details
 
-## Step 1: Enable the Recurly Commerce integration
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Enable the Recurly Commerce integration</h4><p>Contact your Recurly Account Manager to request that the Recurly Commerce integration feature be enabled in Recurly Engage. Your Account Manager confirms when the feature has been provisioned.</p></div>
+  </div>
+</div>
 
-* **Contact your Recurly Account Manager** to request the enablement of the Recurly Commerce integration feature within Recurly Engage.
-* Your Account Manager will confirm when the feature has been successfully provisioned.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Connect your accounts with your API key</h4><p>Once the feature is enabled, connect your accounts using the steps below.</p></div>
+  </div>
+</div>
 
-## Step 2: Connect your accounts using the API key
+1. Navigate to **Settings > Integrations** in Pulse, the Recurly Engage management console.
+2. Locate the **Recurly Commerce** connector setup page.
+3. Enter your unique **Recurly API key** in the required field to connect your accounts.
 
-* Once the feature is enabled, navigate to **Settings > Integrations** within Pulse, the Recurly Engage management console.
-* Locate the **Recurly Commerce** connector setup page.
-* Enter your unique **Recurly API Key** into the required field to instantly connect your accounts. This key establishes a secure, authenticated link between Commerce and Engage, granting the necessary permissions for executing subscription actions.
+This key establishes a secure, authenticated link between Commerce and Engage and grants the permissions needed to run subscription actions.
 
-<Image align="center" border={true} width="80% " src="https://files.readme.io/b789cc94ee2b0a45d7a57d2c9709705b0516f82b29e35525e55a1538d3f59d9c-Screenshot_2025-12-02_at_10.03.06_AM.png" className="border" />
 
-## Step 3: Configure your segments
+<Image src="https://files.readme.io/b789cc94ee2b0a45d7a57d2c9709705b0516f82b29e35525e55a1538d3f59d9c-Screenshot_2025-12-02_at_10.03.06_AM.png" align="center" width="75%" border={true} />
 
-A Segment is a distinct group of customers defined by shared financial or behavioral criteria (e.g., customers with a failed payment or an expiring card). Configuring segments allows you to target specific subsets of customers with highly relevant messages through Recurly Engage, maximizing the effectiveness of your campaigns. <a href="https://docs.recurly.com/recurly-engage/docs/segments#/">Learn more about segments</a>.
 
-* Navigate to **Segments > + New Segment** to add a new segment group.
-* **Name Your Segments:** Give your segment a clear and descriptive name.
-* **Select the Appropriate Fields to Define Your Segments:** Use preset fields like user, location or interactions to build the specific logic for your targeted group.
-* <a href="https://docs.recurly.com/recurly-engage/docs/segments#/">Learn more about segments</a>.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Configure your segments</h4><p>Segments let you target specific groups of customers with relevant messages through Recurly Engage.</p></div>
+  </div>
+</div>
 
-<Image align="center" border={true} width="80% " src="https://files.readme.io/eb7bef51535c897fdeefece5d27ec3f5a5a642055575358ead03dfeffd99ab85-Screenshot_2025-12-02_at_10.05.41_AM.png" className="border" />
+A segment is a distinct group of customers defined by shared financial or behavioral criteria (for example, customers with a failed payment or an expiring card). Targeting these subsets with highly relevant messages maximizes the effectiveness of your campaigns. <a href="https://docs.recurly.com/recurly-engage/docs/segments#/" target="_blank">Learn more about segments</a>.
 
-## Step 4: Add one-click actions to your Recurly Engage prompts
+1. Navigate to **Segments > + New Segment** to add a new segment group.
+2. **Name your segment**: Give it a clear, descriptive name.
+3. **Select the fields that define your segment**: Use preset fields like user, location, or interactions to build the logic for your targeted group.
 
-* For detailed instructions on adding and configuring actions to your prompts, please refer to the <a href="https://docs.recurly.com/recurly-engage/docs/actions-1#/">Actions documentation</a>.
+
+<Image src="https://files.readme.io/eb7bef51535c897fdeefece5d27ec3f5a5a642055575358ead03dfeffd99ab85-Screenshot_2025-12-02_at_10.05.41_AM.png" align="center" width="75%" border={true} />
+
+
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">4</div>
+    <div><h4>Add one-click actions to your prompts</h4><p>For detailed instructions on adding and configuring actions on your prompts, see the <a href="https://docs.recurly.com/recurly-engage/docs/actions-1#/" target="_blank">Actions documentation</a>.</p></div>
+  </div>
+</div>
