@@ -47,8 +47,23 @@ Select an integration to see its setup details.
   <Card title="Zuora" href="/recurly-engage/docs/zuora" target="_blank">
     Ingest Zuora account and subscription traits, and manage rate plans, suspensions, resumes, and term changes from your prompts.
   </Card>
+  <Card title="Ordergroove" href="/recurly-engage/docs/ordergroove" target="_blank">
+    Sync Ordergroove subscription and order data into Recurly Engage, and run 1-Click actions such as skipping, delaying, or canceling an order.
+  </Card>
+  <Card title="Chargebee" href="/recurly-engage/docs/chargebee" target="_blank">
+    Sync Chargebee subscription, dunning, and payment traits, and run 1-Click billing actions such as switching, pausing, or canceling subscriptions.
+  </Card>
   <Card title="Recurly" href="/recurly-engage/docs/recurly-integration" target="_blank">
     Use the native integration to sync nightly subscription metrics and perform billing actions (pauses, resumes, and plan switches) within prompts.
+  </Card>
+  <Card title="Recurly webhooks" href="/recurly-engage/docs/recurly-webhooks" target="_blank">
+    Send real-time Recurly subscription events to Recurly Engage through a webhook endpoint, and track them as custom goals.
+  </Card>
+  <Card title="Recurly.js / HAM / Checkout" href="/recurly-engage/docs/recurlyjs-ham-checkout" target="_blank">
+    Use Recurly Engage automatically in Hosted Account Management, Recurly Checkout, and wherever Recurly.js is installed.
+  </Card>
+  <Card title="Recurly Commerce" href="/recurly-engage/docs/recurly-commerce" target="_blank">
+    Create a connector action so subscribers can apply discounts or pause subscriptions with one click from Recurly Engage prompts.
   </Card>
   <Card title="Stripe" href="/recurly-engage/docs/stripe-rf" target="_blank">
     Activate through Connect or an API key for webhook-driven real-time sync and 1-Click subscription upgrades, trial extensions, coupon application, and more.
@@ -76,7 +91,3 @@ Select an integration to see its setup details.
   </Card>
 </Cards>
 </div>
-
-<br />
-
-<br />
