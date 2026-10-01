@@ -95,7 +95,7 @@ Supported on Web and HTML5-based smart TVs.
 
 Wizard guides present prompts immediately, in the defined order, within a single session. Only the first prompt requires a trigger. Subsequent prompts fire automatically when the user interacts with the previous prompt.
 
-Items within a guide inherit the guide's configurations: <a href="/docs/limits-1" target="_blank">Limits</a>, <a href="/docs/segments" target="_blank">Segments</a>, and <a href="/docs/schedule-1" target="_blank">Schedule</a>.
+Items within a guide inherit the guide's configurations: <a href="/recurly-engage/docs/limits" target="_blank">Limits</a>, <a href="/recurly-engage/docs/segments" target="_blank">Segments</a>, and <a href="/recurly-engage/docs/schedule-1" target="_blank">Schedule</a>.
 
 
 <Image src="https://files.readme.io/8a86d2f-image.png" align="center" width="75%" border={true} />
@@ -146,3 +146,8 @@ Tour guides walk subscribers through your site with a sequence of floating toolt
 
 
 <Image src="https://files.readme.io/e1674c35bce8685ff830b9a209f8c9821aa3fa46cb207188d647b36445266bda-Screenshot_2026-07-20_at_1.23.50_PM.png" align="center" width="75%" border={true} />
+
+
+<br />
+
+<br />
