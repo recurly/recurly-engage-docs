@@ -44,7 +44,7 @@ Select an integration to see its setup details.
   <Card title="Adobe" href="/recurly-engage/docs/adobe-aep-ajo" target="_blank">
     Stream prompt events into Experience Platform, trigger Journey Optimizer actions, and send web events to Analytics.
   </Card>
-  <Card title="Iterable">
+  <Card title="Iterable" href="/recurly-engage/docs/iterable" target="_blank">
     Sync user events and trigger Iterable campaigns directly from prompts.
   </Card>
   <Card title="Naviga" href="/recurly-engage/docs/naviga" target="_blank">
@@ -59,10 +59,13 @@ Select an integration to see its setup details.
   <Card title="Segment" href="/recurly-engage/docs/segmentio-twilio" target="_blank">
     Ingest Segment events (Page, Screen, and Track) as usage traits for real-time targeting.
   </Card>
+  <Card title="Hightouch" href="/recurly-engage/docs/hightouch" target="_blank">
+    Sync customer data from your data warehouse to Recurly Engage through a Hightouch HTTP Request destination and the Ingest API.
+  </Card>
   <Card title="Braze" href="/recurly-engage/docs/braze-rf" target="_blank">
     Create or update user records and aliases in Braze for personalized engagement campaigns.
   </Card>
-  <Card title="SendGrid" href="/recurly-engage/docs/sendgrid" target="_blank">
+  <Card title="SendGrid" href="/recurly-engage/docs/sendgrid-rf" target="_blank">
     Send dynamic templated emails and manage mailing lists through prompts.
   </Card>
   <Card title="Zendesk" href="/recurly-engage/docs/zendesk-rf" target="_blank">
