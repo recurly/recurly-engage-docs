@@ -131,11 +131,3 @@ You can clone an existing prompt from one guide to another within the same app, 
 
 
 <Image src="https://files.readme.io/d4f123e998ac3176cec3303bd308d0c418015041a6b56267e2a42ba9dd7a5e07-Screenshot_2025-09-12_at_10.15.21_AM.png" align="center" width="75%" border={true} />
-
-
-***
-
-📋 TODO before publishing:
-
-- [ ] Confirm the title. The draft had none, so I used "Clone prompts".
-- [ ] Confirm plan availability. The draft had no "Required plan" section, so I used the standard "Available on all Recurly plans" pill.
