@@ -123,7 +123,12 @@ You can attach prompts directly to any pipeline stage. For example, to convert *
   </div>
 </div>
 
-The remaining setup steps follow the same flow as <a href="/docs/prompts" target="_blank">creating a prompt</a>. Once live, prompts fire when users enter that pipeline stage, driving them toward the next segment.
+The remaining setup steps follow the same flow as <a href="/recurly-engage/docs/prompts" target="_blank">creating a prompt</a>. Once live, prompts fire when users enter that pipeline stage, driving them toward the next segment.
 
 
 <Image src="https://files.readme.io/05d43d1-Screenshot_2024-04-30_at_7.00.32_PM.png" align="center" width="75%" border={true} />
+
+
+<br />
+
+<br />
