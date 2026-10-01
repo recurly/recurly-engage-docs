@@ -27,10 +27,10 @@ Select a guide for your platform.
   <Card title="JavaScript (Web and CTV)" href="/recurly-engage/docs/javascript-sdk" target="_blank">
     Install and configure the JavaScript software development kit (SDK) on web browsers and HTML5-based connected TV (CTV) devices.
   </Card>
-  <Card title="iOS" href="/recurly-engage/docs/ios-sdk" target="_blank">
+  <Card title="iOS" href="/recurly-engage/docs/ios-sdk-v3" target="_blank">
     Integrate the Recurly Engage Apple SDK in native iOS and tvOS apps, including Swift Package Manager and legacy frameworks.
   </Card>
-  <Card title="Android" href="/recurly-engage/docs/android-sdk" target="_blank">
+  <Card title="Android" href="/recurly-engage/docs/android-sdk-v3" target="_blank">
     Add the Recurly Engage Android SDK for phones, tablets, and TV devices through Gradle/Maven or local packages.
   </Card>
   <Card title="Roku" href="/recurly-engage/docs/roku-sdk" target="_blank">
