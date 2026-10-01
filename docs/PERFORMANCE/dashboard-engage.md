@@ -12,57 +12,73 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">The Performance tab gives you a single view of how your Recurly Engage prompts, guides, and experiments are performing. Use it to track users, impressions, clicks, and click-through rate (CTR), and to see your top performers and recent activity.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage subscription plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-### Required plan
+### Prerequisites
 
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
+<ul class="rp-list">
+  <li>You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.</li>
+</ul>
 
-### Prerequisites & limitations
+### Limitations
 
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          Data reflects the selected date range; historical data availability depends on your account’s retention settings.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>Data reflects the selected date range.</li>
+  <li>Historical data availability depends on your account's retention settings.</li>
+</ul>
 
 # Definition
 
-The **Performance** tab aggregates usage data—users, impressions, clicks, and conversions—across prompts, guides, and experiments, with insights into top performers and recent activity.
+<div class="rp-definition">The Performance tab aggregates usage data (users, impressions, clicks, and conversions) across prompts, guides, and experiments, with insights into top performers and recent activity.</div>
 
 # Key benefits
 
-* **Holistic overview**: Monitor total users, impressions, clicks, and average CTR at a glance.
-* **Top performers**: Identify your Top 5 prompts and guides by engagement metrics.
-* **Experiment insights**: Track active experiments and their leading variations.
-* **Activity log**: Stay informed on recent changes to prompts, triggers, and actions.
+<div class="rp-benefits rp-benefits-2x2">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></div>
+    <strong>Holistic overview</strong>
+    <span>Monitor total users, impressions, clicks, and average CTR at a glance.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-trophy" aria-hidden="true"></i></div>
+    <strong>Top performers</strong>
+    <span>Identify your top five prompts and guides by engagement metrics.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-flask" aria-hidden="true"></i></div>
+    <strong>Experiment insights</strong>
+    <span>Track active experiments and their leading variations.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i></div>
+    <strong>Activity log</strong>
+    <span>Stay informed about recent changes to prompts, triggers, and actions.</span>
+  </div>
+</div>
 
 # Key details
 
-By default, the Performance tab shows weekly statistics. Update the date range by clicking on the date picker in the upper-right corner of the screen.
+By default, the Performance tab shows weekly statistics. To update the date range, select the date picker in the upper-right corner of the screen.
 
-Here you can access:
+The tab includes:
 
-* **Total Users**: Users who visited your site or app within the selected date range.
-* **Total Impressions**: Times your prompts were displayed in that period.
-* **Total Clicks**: Number of times users accepted prompts by clicking CTA buttons.
-* **Average CTR**: Clicks divided by impressions (click-through rate).
-* **Top 5 Prompts** and **Top 5 Guides**: Ranked by performance with high-level metrics for each.
-* **Active Experiments**: Running A/B tests with the highest conversion counts.
-* **Activity Log**: Timeline of recent updates to prompts, triggers, and actions.
+<ul class="rp-list">
+  <li><strong>Total Users</strong>: Users who visited your site or app within the selected date range.</li>
+  <li><strong>Total Impressions</strong>: The number of times your prompts were displayed in that period.</li>
+  <li><strong>Total Clicks</strong>: The number of times users accepted prompts by clicking call-to-action (CTA) buttons.</li>
+  <li><strong>Average CTR</strong>: Clicks divided by impressions (click-through rate).</li>
+  <li><strong>Top 5 Prompts</strong> and <strong>Top 5 Guides</strong>: Ranked by performance, with high-level metrics for each.</li>
+  <li><strong>Active Experiments</strong>: Running A/B tests with the highest conversion counts.</li>
+  <li><strong>Activity Log</strong>: A timeline of recent updates to prompts, triggers, and actions.</li>
+</ul>
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/1646d2e-image.png" />
+
+<Image src="https://files.readme.io/1646d2e-image.png" align="center" width="75%" border={true} />
