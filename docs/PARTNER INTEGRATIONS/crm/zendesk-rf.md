@@ -12,64 +12,74 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">The Zendesk integration lets Recurly Engage prompts handle support tasks directly in your Zendesk instance, so common requests don't need a manual hand-off.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage subscription plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-### Required plan
+### Prerequisites
 
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
-
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          Your Zendesk account must support API token authentication and you must have an admin-generated token.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.</li>
+  <li>Your Zendesk account must support API token authentication, and you must have an admin-generated token.</li>
+</ul>
 
 # Definition
 
-The Zendesk integration allows Recurly Engage prompts to perform support actions—like creating tickets, assigning agents, and managing user status—directly in your Zendesk instance.
+<div class="rp-definition">The Zendesk integration allows Recurly Engage prompts to perform support actions, such as creating tickets, assigning agents, and managing user status, directly in your Zendesk instance.</div>
 
 # Key benefits
 
-* **Automate ticket creation**: Instantly log support tickets when users interact with prompts.
-* **Streamline support workflows**: Assign, prioritize, or suspend users without leaving your app’s interface.
-* **Improve response times**: Reduce manual hand-offs by handling common support tasks programmatically.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-ticket" aria-hidden="true"></i></div>
+    <strong>Automate ticket creation</strong>
+    <span>Instantly log support tickets when users interact with prompts.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-list-check" aria-hidden="true"></i></div>
+    <strong>Streamline support workflows</strong>
+    <span>Assign, prioritize, or suspend users without leaving your app's interface.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-stopwatch" aria-hidden="true"></i></div>
+    <strong>Improve response times</strong>
+    <span>Reduce manual hand-offs by handling common support tasks programmatically.</span>
+  </div>
+</div>
 
 # Key details
 
 ## Required settings
 
-* Domain (e.g., `yourcompany.zendesk.com`)
-* API Key (aka API Token)
-* Username (Zendesk account email)
+Provide the following settings:
+
+* **Domain**: Your Zendesk domain (for example, `yourcompany.zendesk.com`).
+* **API Key** (also called an API token): Your Zendesk API token.
+* **Username**: Your Zendesk account email.
 
 ## Supported actions
 
-| Action                                                      | Description                                                         | User Dependencies               | Additional Instructions                                                                                     |
-| ----------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Create support ticket with notification of offer acceptance | Creates a support ticket with information about the user and prompt | n/a                             | —                                                                                                           |
-| Set priority of all existing tickets                        | Sets priority attribute for all tickets created by the user         | `zendesk_id` or `email_address` | Select the priority level on the prompt screen                                                              |
-| Assign all existing tickets to a specific agent             | Assigns all tickets created by the user to one agent                | `zendesk_id` or `email_address` | Select the agent on the prompt screen. Manage agents under **Admin > People > Agents** in Zendesk dashboard |
-| Suspend user                                                | Sets the user to suspended state                                    | `zendesk_id` or `email_address` | —                                                                                                           |
-| Restore suspended user                                      | Restores the user from suspended state                              | `zendesk_id` or `email_address` | —                                                                                                           |
-| Assign all existing tickets to a group                      | Assigns all tickets created by the user to a group                  | `zendesk_id` or `email_address` | Select the group on the prompt screen. Manage groups under **Admin > People > Groups** in Zendesk dashboard |
-| Delete all tickets                                          | Deletes all tickets created by the user                             | `zendesk_id` or `email_address` | —                                                                                                           |
-| Set status of all existing tickets                          | Sets status of all tickets created by the user                      | `zendesk_id` or `email_address` | Select the status on the prompt screen                                                                      |
-| Delete and spam all existing tickets                        | Marks all tickets created by the user as spam                       | `zendesk_id` or `email_address` | —                                                                                                           |
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Action</td><td>Description</td><td>User dependencies</td><td>Additional instructions</td></tr>
+  <tr><td>Create support ticket with notification of offer acceptance</td><td>Creates a support ticket with information about the user and prompt</td><td>n/a</td><td>—</td></tr>
+  <tr><td>Set priority of all existing tickets</td><td>Sets priority attribute for all tickets created by the user</td><td><code>zendesk_id</code> or <code>email_address</code></td><td>Select the priority level on the prompt screen</td></tr>
+  <tr><td>Assign all existing tickets to a specific agent</td><td>Assigns all tickets created by the user to one agent</td><td><code>zendesk_id</code> or <code>email_address</code></td><td>Select the agent on the prompt screen. Manage agents under <strong>Admin &gt; People &gt; Agents</strong> in Zendesk dashboard</td></tr>
+  <tr><td>Suspend user</td><td>Sets the user to suspended state</td><td><code>zendesk_id</code> or <code>email_address</code></td><td>—</td></tr>
+  <tr><td>Restore suspended user</td><td>Restores the user from suspended state</td><td><code>zendesk_id</code> or <code>email_address</code></td><td>—</td></tr>
+  <tr><td>Assign all existing tickets to a group</td><td>Assigns all tickets created by the user to a group</td><td><code>zendesk_id</code> or <code>email_address</code></td><td>Select the group on the prompt screen. Manage groups under <strong>Admin &gt; People &gt; Groups</strong> in Zendesk dashboard</td></tr>
+  <tr><td>Delete all tickets</td><td>Deletes all tickets created by the user</td><td><code>zendesk_id</code> or <code>email_address</code></td><td>—</td></tr>
+  <tr><td>Set status of all existing tickets</td><td>Sets status of all tickets created by the user</td><td><code>zendesk_id</code> or <code>email_address</code></td><td>Select the status on the prompt screen</td></tr>
+  <tr><td>Delete and spam all existing tickets</td><td>Marks all tickets created by the user as spam</td><td><code>zendesk_id</code> or <code>email_address</code></td><td>—</td></tr>
+</table>
 
 ## Additional resources
 
-[Zendesk API token](https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-)
+<ul class="rp-list">
+  <li><a href="https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-" target="_blank">Zendesk API token</a></li>
+</ul>
