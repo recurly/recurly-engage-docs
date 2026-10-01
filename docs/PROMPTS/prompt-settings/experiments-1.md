@@ -221,8 +221,6 @@ Experiment reporting lets you download a comma-separated values (CSV) file with 
   <li><strong>Data content</strong>: The exported CSV file includes only experiment-specific data, not general prompt data. For completed experiments, the export provides the total stats for the entire experiment run. For running experiments, the stats are scoped to the specified time frame.</li>
 </ul>
 
-***
+<br />
 
-📋 TODO before publishing:
-
-- [ ] Confirm the "We plan to support Bayesian methods in the future" note is still accurate before publishing.
+<br />
