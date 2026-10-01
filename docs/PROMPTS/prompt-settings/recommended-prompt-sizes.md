@@ -9,171 +9,113 @@ hidden: false
 metadata:
   robots: index
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">Recurly Engage supports Liquid, an open-source template language. Use it to pull data from your Recurly accounts directly into prompt text and create personalized messages, such as addressing a customer by name, referencing their current subscription plan, or reminding them of their renewal date.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-Recommended prompt sizes is a technical specification guide that outlines the supported parameters for creative assets. It details which prompt styles (e.g., Horizontal, Tile, Popup) and prompt types (Inline, Overlay) are available on specific platforms (Web, native iOS, Android TV, ROKU, etc.), and provides the recommended width and height (in pixels) and supported image file types (png, jpg, gif) required for production.
+# Definition
+
+<div class="rp-definition">A Liquid variable is a placeholder in your prompt text that Recurly Engage replaces with data for each user, so every user sees a personalized message.</div>
 
 # Key benefits
 
-* **Accuracy in production:** Provides the exact pixel dimensions for every supported prompt, eliminating guesswork and preventing the creation of assets that are improperly sized or scaled.
-* **Streamlined creative workflow:** Confirms the required aspect ratios and accepted file formats (png, jpg, gif) upfront, allowing teams to set up design templates correctly from the start.
+<div class="rp-benefits rp-benefits-2x2">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-user-pen" aria-hidden="true"></i></div>
+    <strong>Personalized messaging</strong>
+    <span>Move beyond generic prompts by dynamically inserting user-specific data, such as first names, subscription details, or renewal dates, for a more relevant and engaging experience.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></div>
+    <strong>Increased relevance</strong>
+    <span>Prompts that speak directly to a user's situation are more likely to be acted on. A prompt that mentions a customer's billing amount or plan name is more effective than a generic one.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
+    <strong>Fewer prompts to manage</strong>
+    <span>Instead of creating multiple prompts for different user segments, use a single prompt with Liquid variables to show unique content to each user. This saves time and reduces management overhead.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i></div>
+    <strong>Better engagement</strong>
+    <span>Timely, personalized information improves user interaction and drives better outcomes, whether you're encouraging a plan upgrade or preventing involuntary churn.</span>
+  </div>
+</div>
 
 # Key details
 
-## Supported prompt styles
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Open Prompts</h4><p>Go to the <span style={{fontWeight: "bold"}}>Prompts</span> section in Pulse, the Recurly Engage management console.</p></div>
+  </div>
+</div>
 
-The following tables show which prompt styles are supported across various platforms for Inline, Overlay, and other prompt types.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Create or select a prompt</h4><p>Create a new prompt, or select an existing one you want to edit.</p></div>
+  </div>
+</div>
 
-### Inline prompt styles
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Edit the prompt design</h4><p>Click into the text field you want to personalize.</p></div>
+  </div>
+</div>
 
-<a href="https://docs.recurly.com/recurly-engage/docs/inlines#/">Learn more about inline prompts.</a>
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">4</div>
+    <div><h4>Insert Liquid variables</h4><p>Add Liquid variables to the text field using the delimiters described below.</p></div>
+  </div>
+</div>
 
-| Platform                                                                                 | Horizontal | Vertical | Tile | Text Only | Slider |
-| ---------------------------------------------------------------------------------------- | ---------- | -------- | ---- | --------- | ------ |
-| Web (desktop browser)                                                                    | TRUE       | TRUE     | TRUE | TRUE      | TRUE   |
-| Web (mobile browser)                                                                     | TRUE       | TRUE     | TRUE | TRUE      | TRUE   |
-| HTML5 TV devices (Comcast, Cox, Vizio, Vidaa, Xbox, PS4, PS5, Xbox, Samsung, LG devices) | TRUE       | TRUE     | TRUE | TRUE      |        |
-| native iOS (iPhone)                                                                      | TRUE       | TRUE     | TRUE |           |        |
-| native iOS (iPad)                                                                        | TRUE       | TRUE     | TRUE |           |        |
-| native Apple TV                                                                          | TRUE       | TRUE     | TRUE |           |        |
-| native Android (phone)                                                                   | TRUE       | TRUE     | TRUE |           |        |
-| native Android (tablet)                                                                  | TRUE       | TRUE     | TRUE |           |        |
-| native Android TV                                                                        | TRUE       | TRUE     | TRUE |           |        |
-| native Amazon Fire TV                                                                    | TRUE       | TRUE     | TRUE |           |        |
-| ROKU                                                                                     | TRUE       | TRUE     | TRUE |           |        |
-| hybrid iOS (iPhone)                                                                      | TRUE       | TRUE     | TRUE |           |        |
-| hybrid iOS (iPad)                                                                        | TRUE       | TRUE     | TRUE |           |        |
-| hybrid Apple TV                                                                          | TRUE       | TRUE     | TRUE |           |        |
-| hybrid Android (phone)                                                                   | TRUE       | TRUE     | TRUE |           |        |
-| hybrid Android (tablet)                                                                  | TRUE       | TRUE     | TRUE |           |        |
-| hybrid Android TV                                                                        | TRUE       | TRUE     | TRUE |           |        |
+Insert Liquid variables using the `{{ }}` delimiters. The system automatically suggests available variables from your Recurly account data as you type. All Liquid functionality is supported, including control flow, iterators (loops), and assignments.
 
-### Overlay prompt sizes
+## Variable types
 
-<a href="https://docs.recurly.com/recurly-engage/docs/overlays#/">Learn more about overlay prompts.</a>
+There are two primary types of Liquid variables you can use:
 
-| Platform                                                                                 | Interstitial | Popup | Video | Bottom banner | Notification |
-| ---------------------------------------------------------------------------------------- | ------------ | ----- | ----- | ------------- | ------------ |
-| Web (desktop browser)                                                                    | TRUE         | TRUE  | TRUE  | TRUE          | TRUE         |
-| Web (mobile browser)                                                                     | TRUE         | TRUE  | TRUE  | TRUE          | TRUE         |
-| HTML5 TV devices (Comcast, Cox, Vizio, Vidaa, Xbox, PS4, PS5, Xbox, Samsung, LG devices) |              | TRUE  |       | TRUE          |              |
-| native iOS (iPhone)                                                                      | TRUE         | TRUE  | TRUE  | TRUE          | TRUE         |
-| native iOS (iPad)                                                                        |              | TRUE  | TRUE  | TRUE          | TRUE         |
-| native Apple TV                                                                          | TRUE         | TRUE  | TRUE  | TRUE          | TRUE         |
-| native Android (phone)                                                                   | TRUE         | TRUE  | TRUE  | TRUE          | TRUE         |
-| native Android (tablet)                                                                  |              | TRUE  | TRUE  | TRUE          | TRUE         |
-| native Android TV                                                                        | TRUE         | TRUE  | TRUE  | TRUE          | TRUE         |
-| native Amazon Fire TV                                                                    | TRUE         | TRUE  | TRUE  | TRUE          | TRUE         |
-| ROKU                                                                                     | TRUE         | TRUE  | TRUE  | TRUE          |              |
-| hybrid iOS (iPhone)                                                                      | TRUE         | TRUE  | TRUE  | TRUE          |              |
-| hybrid iOS (iPad)                                                                        |              | TRUE  | TRUE  | TRUE          |              |
-| hybrid Apple TV                                                                          | TRUE         | TRUE  | TRUE  | TRUE          |              |
-| hybrid Android (phone)                                                                   | TRUE         | TRUE  | TRUE  | TRUE          |              |
-| hybrid Android (tablet)                                                                  |              | TRUE  | TRUE  | TRUE          |              |
-| hybrid Android TV                                                                        | TRUE         | TRUE  | TRUE  | TRUE          |              |
+* **User trait variables**: These variables come from user data you have imported. Use the `user.` prefix, such as `{{user.first_name}}`.
+* **Data source variables**: These variables are available if you have connected your Recurly account as a data source.
 
-### Other prompt types
+For more information on connecting data sources, see the <a href="https://docs.recurly.com/recurly-engage/docs/data-sources" target="_blank">Data Sources documentation</a>.
 
-<a href="https://docs.recurly.com/recurly-engage/docs/invisible#/">Learn more about invisible prompts.</a>
+## Example: personalize a renewal message
 
-| Platform                                                                                 | Invisible | Email |
-| ---------------------------------------------------------------------------------------- | --------- | ----- |
-| Web (desktop browser)                                                                    | TRUE      | TRUE  |
-| Web (mobile browser)                                                                     | TRUE      | TRUE  |
-| HTML5 TV devices (Comcast, Cox, Vizio, Vidaa, Xbox, PS4, PS5, Xbox, Samsung, LG devices) |           |       |
-| native iOS (iPhone)                                                                      |           |       |
-| native iOS (iPad)                                                                        |           |       |
-| native Apple TV                                                                          |           |       |
-| native Android (phone)                                                                   |           |       |
-| native Android (tablet)                                                                  |           |       |
-| native Android TV                                                                        |           |       |
-| native Amazon Fire TV                                                                    |           |       |
-| ROKU                                                                                     |           |       |
-| hybrid iOS (iPhone)                                                                      |           |       |
-| hybrid iOS (iPad)                                                                        |           |       |
-| hybrid Apple TV                                                                          |           |       |
-| hybrid Android (phone)                                                                   |           |       |
-| hybrid Android (tablet)                                                                  |           |       |
-| hybrid Android TV                                                                        |           |       |
+You can create a prompt that displays a customer's name and current plan with the following code:
 
-## Recommended prompt sizes
+Hello `{{ user.first_name }}`, your `{{ subscription.plan.name }}` plan is set to renew on `{{ subscription.renews_at }}`.
 
-The following tables show the recommended prompt sizes for all of the available Recurly Engage SDKs.
+This renders a personalized message for each user, such as:
 
-| SDK                  | Prompt Type | Prompt Style  | Supported Aspect Ratios  | Recommended Width × Height                 | Supported Image Types |
-| -------------------- | ----------- | ------------- | ------------------------ | ------------------------------------------ | --------------------- |
-| Web (desktop)        | Inline      | Horizontal    | 2:1, 4:1, 6:1, 8x1, 10x1 | 960 x 300 px                               | png, jpg, gif         |
-| Web (desktop)        | Inline      | Vertical      | 1:2, 1:3, 1:4            | 250 x 500 px                               | png, jpg, gif         |
-| Web (desktop)        | Inline      | Tile          | 1:1, 1:2                 | 250 x 500 px                               | png, jpg, gif         |
-| Web (desktop)        | Inline      | Text Only     | 6:1, 8:1, 10:1           | 100% x auto                                | png, jpg, gif         |
-| Web (desktop)        | Overlay     | Interstitial  |                          | 1200 x 800 px                              | png, jpg, gif         |
-| Web (desktop)        | Overlay     | Popup         |                          | 1200 x 800 px, 960 x 640 px, 750 x 500 px  | png, jpg, gif         |
-| Web (desktop)        | Overlay     | Video         |                          | 1200 x 619 px ; 960 x 619 px, 750 x 619 px | png, jpg, gif         |
-| Web (desktop)        | Overlay     | Bottom banner |                          | 1000 x 100 px                              | png, jpg, gif         |
-| Web (desktop)        | Overlay     | Notification  |                          | 450 x 180 px                               | png, jpg, gif         |
-| Web (mobile browser) | Inline      | Horizontal    | 2:1, 4:1, 6:1, 8x1, 10x1 | 300 x 200 px                               | png, jpg, gif         |
-| Web (mobile browser) | Inline      | Vertical      | 1:2, 1:3, 1:4            | 200 x 300 px                               | png, jpg, gif         |
-| Web (mobile browser) | Inline      | Tile          | 1:1, 1:2                 | 375 x 205 px                               | png, jpg, gif         |
-| Web (mobile browser) | Inline      | Text Only     | 6:1, 8:1, 10:1           | 100% x auto                                | png, jpg, gif         |
-| Web (mobile browser) | Overlay     | Interstitial  |                          | 337.5 x 479.5 px                           | png, jpg, gif         |
-| Web (mobile browser) | Overlay     | Popup         |                          | 500 x 800                                  | png, jpg, gif         |
-| Web (mobile browser) | Overlay     | Video         |                          | 337.5 x 470.13 px                          | png, jpg, gif         |
-| Web (mobile browser) | Overlay     | Bottom banner |                          | 100% x 120 px                              | png, jpg, gif         |
-| Web (mobile browser) | Overlay     | Notification  |                          | 100% x 120 px                              | png, jpg, gif         |
-| HTML5 TV devices     | Inline      | Horizontal    | 2:1, 4:1, 6:1, 8x1, 10x1 | 960 x 300 px                               | png, jpg, gif         |
-| HTML5 TV devices     | Inline      | Vertical      | 1:2, 1:3, 1:4            | 250 x 500 px                               | png, jpg, gif         |
-| HTML5 TV devices     | Inline      | Tile          | 1:1, 1:2                 | 250 x 500 px                               | png, jpg, gif         |
-| HTML5 TV devices     | Inline      | Text Only     | 6:1, 8:1, 10:1           | 100% x auto                                | png, jpg, gif         |
-| HTML5 TV devices     | Overlay     | Popup         |                          | 1200 x 800 px, 960 x 640 px, 750 x 500 px  | png, jpg, gif         |
-| HTML5 TV devices     | Overlay     | Bottom banner |                          | 1000 x 100 px                              | png, jpg, gif         |
-| iOS (iPhone)         | Inline      | Horizontal    | 2:1, 4:1, 6:1, 8x1, 10x1 | 1000x200px                                 | png, jpg              |
-| iOS (iPhone)         | Inline      | Vertical      | 1:2, 1:3, 1:4            | 300x1400px                                 | png, jpg              |
-| iOS (iPhone)         | Inline      | Tile          | 1:1, 1:2                 | 320x180px                                  | png, jpg              |
-| iOS (iPhone)         | Inline      | Text Only     | 6:1, 8:1, 10:1           | 1000x200px                                 | png, jpg              |
-| iOS (iPhone)         | Overlay     | Interstitial  |                          | 1200 x 2400 px                             | png, jpg              |
-| iOS (iPhone)         | Overlay     | Bottom banner |                          | 900x200px                                  | png, jpg              |
-| iOS (iPad)           | Inline      | Horizontal    | 2:1, 4:1, 6:1, 8x1, 10x1 | 1500x300px                                 | png, jpg              |
-| iOS (iPad)           | Inline      | Vertical      | 1:2, 1:3, 1:4            | 300x1500px                                 | png, jpg              |
-| iOS (iPad)           | Inline      | Tile          | 1:1, 1:2                 | 360x200px                                  | png, jpg              |
-| iOS (iPad)           | Inline      | Text Only     | 6:1, 8:1, 10:1           | 1400x200px                                 | png, jpg              |
-| iOS (iPad)           | Overlay     | Popup         |                          | 1024 x 1024 px                             | png, jpg              |
-| iOS (iPad)           | Overlay     | Bottom banner |                          | 1300x300px                                 | png, jpg              |
-| Apple TV             | Inline      | Horizontal    | 2:1, 4:1, 6:1, 8x1, 10x1 | 1400x200px                                 | png, jpg              |
-| Apple TV             | Inline      | Vertical      | 1:2, 1:3, 1:4            | 300x1000px                                 | png, jpg              |
-| Apple TV             | Inline      | Tile          | 1:1, 1:2                 | 320x180px                                  | png, jpg              |
-| Apple TV             | Inline      | Text Only     | 6:1, 8:1, 10:1           | 1720x150px                                 | png, jpg              |
-| Apple TV             | Overlay     | Popup         |                          | 1600x1200 px                               | png, jpg              |
-| Apple TV             | Overlay     | Interstitial  |                          | 1920x1080 or 3840x2160 px                  | png, jpg              |
-| Apple TV             | Overlay     | Bottom banner |                          | 1200x200px                                 | png, jpg              |
-| Android (phone)      | Inline      | Horizontal    | 2:1, 4:1, 6:1, 8x1, 10x1 | 1000x200px                                 | png, jpg              |
-| Android (phone)      | Inline      | Vertical      | 1:2, 1:3, 1:4            | 300x1400px                                 | png, jpg              |
-| Android (phone)      | Inline      | Tile          | 1:1, 1:2                 | 320x180px                                  | png, jpg              |
-| Android (phone)      | Inline      | Text Only     | 6:1, 8:1, 10:1           | 1000x200px                                 | png, jpg              |
-| Android (phone)      | Overlay     | Interstitial  |                          | 1200 x 2400 px                             | png, jpg              |
-| Android (phone)      | Overlay     | Bottom banner |                          | 900x200px                                  | png, jpg              |
-| Android (tablet)     | Inline      | Horizontal    | 2:1, 4:1, 6:1, 8x1, 10x1 | 1500x300px                                 | png, jpg              |
-| Android (tablet)     | Inline      | Vertical      | 1:2, 1:3, 1:4            | 300x1500px                                 | png, jpg              |
-| Android (tablet)     | Inline      | Tile          | 1:1, 1:2                 | 360x200px                                  | png, jpg              |
-| Android (tablet)     | Inline      | Text Only     | 6:1, 8:1, 10:1           | 1400x200px                                 | png, jpg              |
-| Android (tablet)     | Overlay     | Popup         |                          | 1024 x 1024 px                             | png, jpg              |
-| Android (tablet)     | Overlay     | Bottom banner |                          | 1300x300px                                 | png, jpg              |
-| Android TV           | Inline      | Horizontal    | 2:1, 4:1, 6:1, 8x1, 10x1 | 1400x200px                                 | png, jpg              |
-| Android TV           | Inline      | Vertical      | 1:2, 1:3, 1:4            | 300x1000px                                 | png, jpg              |
-| Android TV           | Inline      | Tile          | 1:1, 1:2                 | 320x180px                                  | png, jpg              |
-| Android TV           | Inline      | Text Only     | 6:1, 8:1, 10:1           | 1720x150px                                 | png, jpg              |
-| Android TV           | Overlay     | Popup         |                          | 1600x1200 px                               | png, jpg              |
-| AndroidTV            | Overlay     | Interstitial  |                          | 1920x1080 or 3840x2160 px                  | png, jpg              |
-| Android TV           | Overlay     | Bottom banner |                          | 1200x200px                                 | png, jpg              |
-| ROKU                 | Inline      | Horizontal    | 2:1, 4:1, 6:1, 8x1, 10x1 | 1400x200px                                 | png, jpg              |
-| ROKU                 | Inline      | Vertical      | 1:2, 1:3, 1:4            | 300x1000px                                 | png, jpg              |
-| ROKU                 | Inline      | Tile          | 1:1, 1:2                 | 320x180px                                  | png, jpg              |
-| ROKU                 | Inline      | Text Only     | 6:1, 8:1, 10:1           | 1720x150px                                 | png, jpg              |
-| ROKU                 | Overlay     | Interstitial  |                          | 1920x1080 or 3840x2160 px                  | png, jpg              |
-| ROKU                 | Overlay     | Popup         |                          | 1400 x 790 px or 1920x1080 px              | png, jpg              |
-| ROKU                 | Overlay     | Bottom banner |                          | 1200x200px                                 | png, jpg              |
+`Hello Jane, your Pro plan is set to renew on 09/30/2025.`
 
-<br />
+<div class="rp-callout rp-callout-note">
+  <div><strong><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Note</strong>The system shows only the variables available for the targeted user. If a variable, such as <code>user.first_name</code>, isn't available for a specific user, the field appears blank.</div>
+</div>
 
-<br />
+## Set default values
 
-<br />
+When you use Liquid variables, the data field you're referencing (for example, a customer's plan type) might not be available for a specific user. By default, the field appears blank.
+
+To keep your messages clean and professional, use the default filter to specify a fallback value. Apply the filter with a vertical pipe (`|`) followed by `default: 'Your Fallback Value'`.
+
+**Example:**
+
+`Hello {{ user.first_name | default: 'there' }}, your {{ subscription.plan.name }} plan is set to renew on {{ subscription.renews_at }}.`
+
+***
+
+📋 TODO before publishing:
+
+- [ ] Confirm the title. The draft had none, so I used "Personalize prompts with Liquid".
+- [ ] Confirm plan availability. The draft had no "Required plan" section, so I used the standard "Available on all Recurly plans" pill.
