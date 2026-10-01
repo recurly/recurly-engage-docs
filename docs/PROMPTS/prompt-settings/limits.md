@@ -13,7 +13,7 @@ next:
   description: ''
 ---
 <div class="rp-page">
-  <div class="rp-overview">Limits let you control how often, and to how many users, a prompt can be shown. Apply limits to an individual prompt, or use <a href="/docs/global-limits" target="_blank">Global limits</a> for account-wide caps.</div>
+  <div class="rp-overview">Limits let you control how often, and to how many users, a prompt can be shown. Apply limits to an individual prompt, or use <a href="/recurly-engage/docs/global-limits" target="_blank">Global limits</a> for account-wide caps.</div>
   <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage subscription plans</div>
   <div class="rp-toc">
     <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
@@ -101,4 +101,4 @@ A delivery limit restricts the number of unique deliveries — instances when a 
 <Image src="https://files.readme.io/9a7bf89-image.png" align="center" width="75%" border={true} />
 
 
-<div class="rp-card">Want to set account-wide caps? Learn more in <a href="/docs/global-limits" target="_blank">Global limits</a>.</div>
+<div class="rp-card">Want to set account-wide caps? Learn more in <a href="/recurly-engage/docs/global-limits" target="_blank">Global limits</a>.</div>
