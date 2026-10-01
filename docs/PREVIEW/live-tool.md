@@ -12,11 +12,6 @@ metadata:
 next:
   description: ''
 ---
-Title: Live
-Metadata description: Learn how to use the Live view in Recurly Engage to monitor near-real-time prompt interactions and action errors, and what each event type means.
-
-\---PASTE INTO EDITOR BELOW---
-
 <div class="rp-page">
   <div class="rp-overview">The Live view displays near-real-time prompt interactions and exceptions for the prompts you currently have active. Use it to filter, search, and troubleshoot your live prompts.</div>
   <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage subscription plans</div>
