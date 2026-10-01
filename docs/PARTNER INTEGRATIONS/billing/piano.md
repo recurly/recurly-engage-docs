@@ -12,124 +12,106 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">The Evergent integration lets you synchronize subscriber data and trigger subscription management actions from Recurly Engage prompts by connecting to your Evergent REST API.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage subscription plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-### Required plan
+### Prerequisites
 
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
+<ul class="rp-list">
+  <li>You must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.</li>
+</ul>
 
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
-        </p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          Access to your Piano account with permissions to export subscription reports or use the Piano Export API.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          Recurly Engage users must have the <code>subscription_id</code> trait set from Piano for action targeting.
-        </p>
-      </div>
-    </div>
-  );
-};
+### Limitations
 
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>The connector uses the Evergent REST API. Legacy SOAP-only setups may require assistance from Customer Success. Contact your Customer Success team or <a href="mailto:support@recurly.com">support@recurly.com</a>.</li>
+</ul>
 
 # Definition
 
-**Piano integration** synchronizes subscriber logs and traits into Recurly Engage and enables 1‑Click subscription actions via Piano’s Publisher APIs.
+<div class="rp-definition">The Evergent connector for Recurly Engage synchronizes subscriber traits from Evergent and enables prompt-driven subscription workflows, such as coupon redemption, service changes, pauses, and resumes.</div>
 
 # Key benefits
 
-* **Automated data sync**: Periodically import subscription logs for real‑time segment targeting.
-* **In‑prompt workflows**: Use 1‑Click actions to resume or upgrade subscriptions without leaving the UI.
-* **Flexible integrations**: Leverage both Piano Console exports and Piano’s REST APIs for custom sync schedules.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+    <strong>Real-time subscriber data</strong>
+    <span>Import detailed subscription traits for precise segment targeting.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-sliders" aria-hidden="true"></i></div>
+    <strong>Direct subscription control</strong>
+    <span>Run subscription actions (pause, resume, and change service) directly from prompts.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></div>
+    <strong>Customizable workflows</strong>
+    <span>Tailor actions to your Evergent instance and business logic.</span>
+  </div>
+</div>
 
 # Key details
 
-## Sync subscriber info
+## Activation
 
-### Using piano console
+To enable the Evergent connector, go to **Settings > Connectors** and provide:
 
-1. **Log in** to your Piano account.
-2. **Navigate** to **Reports → Logs → Subscriptions**.
-3. **Click** **Export**.
-4. **Download** the completed file from the **Download Center**.
+* **Domain**: Your Evergent API domain.
+* `apiKey`: Your Evergent REST API key.
+* `channelPartnerID`: Your channel partner identifier.
 
-> **Note:** Steps may vary by Piano version. **See** Piano’s docs for details: [Subscription Log Report](https://docs.piano.io/subscription-log-report/).
+## Data integration
 
-### Using piano API
+Schedule a daily comma-separated values (CSV) export from Evergent into Recurly Engage through Amazon S3. The CSV should include the following subscriber traits for audience targeting:
 
-Use the **Piano Export API** to schedule subscription log exports programmatically.
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Trait name</td><td>Description</td></tr>
+  <tr><td><code>customer_id</code></td><td>Customer/User ID</td></tr>
+  <tr><td><code>business_unit</code></td><td>Business unit owning subscription</td></tr>
+  <tr><td><code>country</code></td><td>Billing country</td></tr>
+  <tr><td><code>current_payment_method</code></td><td>[Google Wallet, App Store Billing, Credit Card, Roku Payment, Coupon, etc]</td></tr>
+  <tr><td><code>pack_id</code></td><td>Package ID</td></tr>
+  <tr><td><code>package</code></td><td>Package Name</td></tr>
+  <tr><td><code>pack_price</code></td><td>Package Price</td></tr>
+  <tr><td><code>pack_type</code></td><td>Package Type</td></tr>
+  <tr><td><code>currency_code</code></td><td>Three-character currency code</td></tr>
+  <tr><td><code>valid_from_date</code></td><td>Billing period start</td></tr>
+  <tr><td><code>valid_to_date</code></td><td>Billing period end</td></tr>
+  <tr><td><code>payment_status</code></td><td>[Declined, Posted]</td></tr>
+  <tr><td><code>payment_type</code></td><td>[Renewal, Purchase]</td></tr>
+  <tr><td><code>payment_date</code></td><td>Date of most recent payment</td></tr>
+  <tr><td><code>declined_reason</code></td><td>Reason for payment decline</td></tr>
+  <tr><td><code>promotion_amount</code></td><td>Promotion amount (if applicable)</td></tr>
+  <tr><td><code>promotion_code</code></td><td>Promotion code (if applicable)</td></tr>
+  <tr><td><code>coupon_code</code></td><td>Coupon code (if applicable)</td></tr>
+  <tr><td><code>cancellation_requested_date</code></td><td>Date of cancellation request (if applicable)</td></tr>
+  <tr><td><code>classification</code></td><td>Subscription classification status ([Paid, Free Trial, Retail, etc])</td></tr>
+</table>
 
-See the API spec here: [Subscription Log Export API](https://docs.piano.io/api/?endpoint=post~2F~2Fexport~2Fschedule~2Fvx~2FsubscriptionLog).
+## Supported actions
 
-Coordinate with your Customer Success Manager for automation assistance.
+<div class="rp-callout rp-callout-important">
+  <div><strong><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> Important</strong>Evergent configurations can vary. Verify which APIs your instance supports.</div>
+</div>
 
-### Information synced
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Action</td><td>Description</td><td>API method</td></tr>
+  <tr><td>Redeem Coupon</td><td>Apply a coupon code to an existing package/product</td><td><code>redeemCoupon</code></td></tr>
+  <tr><td>Change Service</td><td>Upgrade or downgrade an existing service (specify from and to services)</td><td><code>changeService</code></td></tr>
+  <tr><td>Pause Subscription</td><td>Pause an active subscription for up to 90 days</td><td><code>pauseSubscription</code></td></tr>
+  <tr><td>Resume Subscription</td><td>Resume a previously paused subscription</td><td><code>resumeSubscription</code></td></tr>
+  <tr><td>Reactivate Subscription</td><td>Reactivate a subscription marked for cancellation (subject to package terms)</td><td><code>reactivateSubscription</code></td></tr>
+  <tr><td>Remove Subscription</td><td>Remove (cancel) a subscription at period end</td><td><code>removeSubscription</code></td></tr>
+</table>
 
-Include these traits in your CSV export for targeting in Recurly Engage:
+<br />
 
-```
-Subscription ID
-Create date
-Start date
-End date
-Days subscribed
-Subscription status
-Upgrade status
-Trial status
-Trial period end date
-Auto-renew
-Auto-renew disablement date
-Billing period
-Total charged
-Next billing date
-Renewed
-Currently in grace period
-Grace period start date
-Grace period extended to
-User ID (UID)
-Access expiration date
-Resource ID (RID)
-Resource name
-Term ID
-Term name
-Term type
-Template ID
-Template name
-Offer ID
-Offer name
-Promo code
-```
-
-## 1‑click actions
-
-Configure these actions under your Piano connector settings in Recurly Engage (provide the Publisher API Token and `aid` Application ID).
-
-### Resubscribe
-
-Invokes Piano’s **Resume Subscription API** to cancel a pending cancellation and resume service. If `subscription_id` isn’t provided, Recurly Engage will discover it via the List Subscriptions API.
-
-### Upgrade subscription
-
-Calls Piano’s **Upgrade Subscription API** to change the subscription term. You must select the “from” and “to” term IDs in the prompt editor. The API will return availability status before proceeding; include messaging to indicate processing time to users.
-
-## Promo codes
-
-Although Piano lacks a direct API for coupon redemption, you can support promo workflows by:
-
-* Listing and selecting available promo codes in prompt configurations
-* Creating segments for promo‑eligible audiences
-* Auto‑filling the promo code during your checkout process
-* Tracking conversion post‑checkout
-* A/B testing different promo codes for performance analysis
-
-Use these capabilities together to deliver seamless subscription management experiences within your in‑app or in‑site prompts.
+<br />
