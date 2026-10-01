@@ -14,51 +14,110 @@ metadata:
     experience.
   robots: index
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">Recurly Engage supports Liquid, an open-source template language. Use it to pull data from your Recurly accounts directly into prompt text and create personalized messages, such as addressing a customer by name, referencing their current subscription plan, or reminding them of their renewal date.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-Recurly Engage now supports Liquid, a powerful and flexible open-source template language. With this new feature, you can easily pull and insert data from your Recurly accounts directly into the text of your prompts. This allows you to create highly personalized messages, such as addressing a customer by name, referencing their current subscription plan, or reminding them of their renewal date.
+# Definition
+
+<div class="rp-definition">A Liquid variable is a placeholder in your prompt text that Recurly Engage replaces with data for each user, so every user sees a personalized message.</div>
 
 # Key benefits
 
-* **Personalized Messaging**: Move beyond generic prompts by dynamically injecting user-specific data, such as first names, subscription details, or renewal dates. This creates a more relevant and engaging experience for your audience.
-* **Increased Relevance**: Prompts that speak directly to the user's situation are more likely to be acted upon. For example, a prompt that mentions a customer's specific billing amount or plan name will be more effective than a generic one.
-* **Streamlined Workflows**: Instead of creating multiple prompts for different user segments, you can now use a single prompt with Liquid variables to display unique content to each user. This saves time and reduces management overhead.
-* **Enhanced Engagement:** By providing timely and personalized information, you can improve user interaction and drive better outcomes, whether it's encouraging a plan upgrade or preventing involuntary churn.
+<div class="rp-benefits rp-benefits-2x2">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-user-pen" aria-hidden="true"></i></div>
+    <strong>Personalized messaging</strong>
+    <span>Move beyond generic prompts by dynamically inserting user-specific data, such as first names, subscription details, or renewal dates, for a more relevant and engaging experience.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></div>
+    <strong>Increased relevance</strong>
+    <span>Prompts that speak directly to a user's situation are more likely to be acted on. A prompt that mentions a customer's billing amount or plan name is more effective than a generic one.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
+    <strong>Fewer prompts to manage</strong>
+    <span>Instead of creating multiple prompts for different user segments, use a single prompt with Liquid variables to show unique content to each user. This saves time and reduces management overhead.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i></div>
+    <strong>Better engagement</strong>
+    <span>Timely, personalized information improves user interaction and drives better outcomes, whether you're encouraging a plan upgrade or preventing involuntary churn.</span>
+  </div>
+</div>
 
 # Key details
 
-1. **Go to the Prompts** section in Pulse, the Recurly Engage management console.
-2. **Create a new prompt** or select an existing one you wish to edit.
-3. **Edit the prompt design** by clicking into the text field you want to personalize.
-4. **Insert Liquid variables** using the `{{ }}` delimiters. The system will automatically suggest available variables from your Recurly account data as you type. All liquid functionality is supported including control flow, iterators (loops), and assignments.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Open Prompts</h4><p>Go to the <span style={{fontWeight: "bold"}}>Prompts</span> section in Pulse, the Recurly Engage management console.</p></div>
+  </div>
+</div>
+
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Create or select a prompt</h4><p>Create a new prompt, or select an existing one you want to edit.</p></div>
+  </div>
+</div>
+
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Edit the prompt design</h4><p>Click into the text field you want to personalize.</p></div>
+  </div>
+</div>
+
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">4</div>
+    <div><h4>Insert Liquid variables</h4><p>Add Liquid variables to the text field using the delimiters described below.</p></div>
+  </div>
+</div>
+
+Insert Liquid variables using the `{{ }}` delimiters. The system automatically suggests available variables from your Recurly account data as you type. All Liquid functionality is supported, including control flow, iterators (loops), and assignments.
+
+## Variable types
 
 There are two primary types of Liquid variables you can use:
 
-* **User trait variables:** These variables come from user data you have imported. Use the `user.`prefix, such as `{{user.first_name}}`.
-* **Data source variables:** These variables are available if you have connected your Recurly account as a data source.
+* **User trait variables**: These variables come from user data you have imported. Use the `user.` prefix, such as `{{user.first_name}}`.
+* **Data source variables**: These variables are available if you have connected your Recurly account as a data source.
 
-For more information on connecting data sources, refer to our [Data Sources documentation](https://docs.recurly.com/recurly-engage/docs/data-sources).
+For more information on connecting data sources, see the <a href="https://docs.recurly.com/recurly-engage/docs/data-sources" target="_blank">Data Sources documentation</a>.
 
-**Example:**
+## Example: personalize a renewal message
 
 You can create a prompt that displays a customer's name and current plan with the following code:
 
 Hello `{{ user.first_name }}`, your `{{ subscription.plan.name }}` plan is set to renew on `{{ subscription.renews_at }}`.
 
-This will render a personalized message for each user, such as:
+This renders a personalized message for each user, such as:
 
 `Hello Jane, your Pro plan is set to renew on 09/30/2025.`
 
-> **Note:** The system will only show variables available for the targeted user. If a variable, such as `user.first_name`, is not available for a specific user, the field will simply appear blank.
+<div class="rp-callout rp-callout-note">
+  <div><strong><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Note</strong>The system shows only the variables available for the targeted user. If a variable, such as <code>user.first_name</code>, isn't available for a specific user, the field appears blank.</div>
+</div>
 
-<br />
+## Set default values
 
-## Setting default values
+When you use Liquid variables, the data field you're referencing (for example, a customer's plan type) might not be available for a specific user. By default, the field appears blank.
 
-When using Liquid variables, it's possible that the data field you are referencing (e.g., a customer's plan type) is not available for a specific user. By default, the field will simply appear blank.
-
-To ensure your messages always look clean and professional, you can use the default filter to specify a fallback value. This filter is applied using a vertical pipe (|) followed by default: 'Your Fallback Value'.
+To keep your messages clean and professional, use the default filter to specify a fallback value. Apply the filter with a vertical pipe (`|`) followed by `default: 'Your Fallback Value'`.
 
 **Example:**
 
 `Hello {{ user.first_name | default: 'there' }}, your {{ subscription.plan.name }} plan is set to renew on {{ subscription.renews_at }}.`
+
+<br />
+
+<br />
