@@ -1,14 +1,14 @@
 ---
-title: Sendgrid
+title: SendGrid
 excerpt: Connect Recurly Engage to SendGrid for dynamic emails and list management
 deprecated: false
 hidden: false
+link:
+  new_tab: false
 metadata:
   title: ''
   description: ''
   robots: index
-next:
-  description: ''
 ---
 # Overview
 
@@ -49,6 +49,9 @@ Use these actions within prompt configurations to drive SendGrid workflows:
 
 Learn more about SendGrid lists in the official docs: <a href="https://www.twilio.com/docs/sendgrid/api-reference/lists/create-list" target="_blank">SendGrid Lists API Reference</a>
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/b2d12bf-sendgrid-lists-1.png" />
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/ea49a4a-sendgrid-dynamic-templates-2.png" />
+<Image src="https://files.readme.io/b2d12bf-sendgrid-lists-1.png" align="center" width="80% " border={true} />
+
+
+
+<Image src="https://files.readme.io/ea49a4a-sendgrid-dynamic-templates-2.png" align="center" width="80% " border={true} />
