@@ -5,6 +5,8 @@ excerpt: >-
   configuration to ensure accurate success rate tracking and reporting.
 deprecated: false
 hidden: false
+link:
+  new_tab: false
 metadata:
   robots: index
 ---
@@ -86,4 +88,3 @@ If a prompt is associated with a guide, categorization follows strict inheritanc
 * **Adding to a guide**: When you add a prompt to a guide, the prompt automatically inherits the guide's category, overriding any previous selection.
 * **Inherited status**: While a prompt is part of a guide, its category is inherited and you can't change it manually. It must match the guide.
 * **Removing from a guide**: When you remove a prompt from a guide, it keeps the category it inherited from that guide. You can then update it manually if necessary.
-*
