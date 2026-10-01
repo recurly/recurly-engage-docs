@@ -12,81 +12,129 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">Configure Recurly Engage prompts to start native in-app purchase flows on Roku, Apple, and Google Play devices. Users can buy, upgrade, or downgrade without leaving your app or the prompt.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage subscription plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-### Required plan
+### Prerequisites
 
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
+<ul class="rp-list">
+  <li>You must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.</li>
+  <li>Your app must integrate the Recurly Engage software development kit (SDK) on the target platform.</li>
+</ul>
 
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
-        </p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          App must integrate the Recurly Engage SDK on the target platform.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          Supported on Android devices and web browsers with FCM support.
-        </p>
-      </div>
-    </div>
-  );
-};
+### Limitations
 
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>Supported on Android devices and web browsers with FCM support.</li>
+</ul>
 
 # Definition
 
-The **In-App Purchase** feature enables direct purchase or upgrade/downgrade flows from within prompts, leveraging native store dialogs and validation.
+<div class="rp-definition">The In-App Purchase feature enables direct purchase, upgrade, and downgrade flows from within prompts, using native store dialogs and validation.</div>
 
 # Key benefits
 
-* **Streamlined UX**: Let users complete purchases without leaving your app or prompt.
-* **Consistent integration**: Use the same prompt UI across platforms while invoking native purchase flows.
-* **Flexibility**: Support upgrades, downgrades, and one-time purchases natively.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i></div>
+    <strong>Streamlined UX</strong>
+    <span>Let users complete purchases without leaving your app or prompt.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
+    <strong>Consistent integration</strong>
+    <span>Use the same prompt UI across platforms while invoking native purchase flows.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-sliders" aria-hidden="true"></i></div>
+    <strong>Flexibility</strong>
+    <span>Support upgrades, downgrades, and one-time purchases natively.</span>
+  </div>
+</div>
 
 # Key details
 
-Configure your prompt’s main CTA to trigger the in‑app purchase flow for a specific product identifier. Steps vary by platform below.
+Configure your prompt's main call-to-action (CTA) to trigger the in-app purchase flow for a specific product identifier. The steps vary by platform.
 
 ## Roku App Store
 
-1. **Open** the **Prompt Edit** screen in Pulse.
-2. In the **In‑App Purchase** section, **enter** the **Product ID** matching your Roku In‑Channel Product Identifier.
-3. **Choose** **Upgrade** or **Downgrade** from the dropdown to specify the purchase type.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Open the prompt</h4><p>Open the <span style={{fontWeight: "bold"}}>Prompt Edit</span> screen in Pulse.</p></div>
+  </div>
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Enter the product ID</h4><p>In the <span style={{fontWeight: "bold"}}>In-App Purchase</span> section, enter the <span style={{fontWeight: "bold"}}>Product ID</span> that matches your Roku In-Channel Product Identifier.</p></div>
+  </div>
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Choose the purchase type</h4><p>Choose <span style={{fontWeight: "bold"}}>Upgrade</span> or <span style={{fontWeight: "bold"}}>Downgrade</span> from the dropdown to specify the purchase type.</p></div>
+  </div>
+</div>
 
-<Image align="center" className="border" border={true} width="50% " src="https://files.readme.io/a4de93b-roku-inapp.png" />
 
-4. When the user taps the CTA, the Roku SDK will initiate the appropriate purchase flow.
+<Image src="https://files.readme.io/a4de93b-roku-inapp.png" align="center" width="40%" border={true} />
+
+
+When the user taps the CTA, the Roku SDK starts the appropriate purchase flow.
 
 ## Apple App Store
 
-### Add In‑App Product IDs
+### Add in-app product IDs
 
-1. **Navigate** to **Settings → Actions → Apple** in Pulse.
-2. **Define** one or more **Product IDs** matching those in App Store Connect.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Open Apple actions</h4><p>Navigate to <span style={{fontWeight: "bold"}}>Settings → Actions → Apple</span> in Pulse.</p></div>
+  </div>
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Define your product IDs</h4><p>Define one or more <span style={{fontWeight: "bold"}}>Product IDs</span> that match those in App Store Connect.</p></div>
+  </div>
+</div>
 
-<Image align="center" className="border" border={true} width="600px" src="https://files.readme.io/d01be52-apple-add-inapp-product.png" />
 
-### Attach to Prompt
+<Image src="https://files.readme.io/d01be52-apple-add-inapp-product.png" align="center" width="75%" border={true} />
 
-1. **Open** the **Prompt Edit** screen and **select** the desired **Product ID** under **In‑App Purchase**.
 
-<Image align="center" className="border" border={true} width="500px" src="https://files.readme.io/f500c36-appstore-select-inapp.png" />
+### Attach a product ID to a prompt
 
-4. The Recurly Engage SDK will handle the native purchase dialog when the CTA is clicked.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Select the product ID</h4><p>Open the <span style={{fontWeight: "bold"}}>Prompt Edit</span> screen and select the product ID you want under <span style={{fontWeight: "bold"}}>In-App Purchase</span>.</p></div>
+  </div>
+</div>
+
+
+<Image src="https://files.readme.io/f500c36-appstore-select-inapp.png" align="center" width="40%" border={true} />
+
+
+When the user selects the CTA, the Recurly Engage SDK handles the native purchase dialog.
 
 ## Google Play Store
 
-1. **Open** the **Prompt Edit** screen in Pulse.
-2. **Enter** your **Product ID** under **In‑App Purchase**.
-3. **User** clicks the CTA and the SDK triggers the Google Play purchase flow.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Open the prompt</h4><p>Open the <span style={{fontWeight: "bold"}}>Prompt Edit</span> screen in Pulse.</p></div>
+  </div>
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Enter the product ID</h4><p>Enter your <span style={{fontWeight: "bold"}}>Product ID</span> under <span style={{fontWeight: "bold"}}>In-App Purchase</span>.</p></div>
+  </div>
+</div>
 
-Use these settings to seamlessly integrate native in-app purchase experiences into your Recurly Engage prompts across Roku, iOS, and Android platforms.
+When the user selects the CTA, the SDK triggers the Google Play purchase flow.
+
+Use these settings to add native in-app purchase experiences to your Recurly Engage prompts across Roku, iOS, and Android.
+
+<br />
