@@ -12,49 +12,56 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">Recurly Engage needs a consistent <span style={{fontWeight: "bold"}}>User ID</span> to tell authenticated visitors apart, personalize prompts, and attribute downstream reporting. This page walks you through configuring User ID matching.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+    <a class="rp-toc-pill" href="#fetchuserid-examples"><span class="rp-toc-num">4</span>fetchUserId examples</a>
+  </div>
+</div>
 
-Recurly Engage requires a consistent **User ID** to differentiate authenticated visitors, personalize prompts, and attribute downstream reporting. This page explains how to configure User ID matching.
+### Prerequisites
 
-### Required plan
+<ul class="rp-list">
+  <li>You must have <span style={{fontWeight: "bold"}}>Company</span> or <span style={{fontWeight: "bold"}}>App Administrator</span> permissions in Engage.</li>
+</ul>
 
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
+### Limitations
 
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          You must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          Developer assistance may be required for custom storage or decoding logic.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>Developer assistance may be required for custom storage or decoding logic.</li>
+</ul>
 
 # Definition
 
-**User ID Matching** tells the Recurly Engage client how to retrieve and normalize a unique user identifier from browser storage or global objects.
+<div class="rp-definition">The <span style={{fontWeight: "bold"}}>User ID Matching</span> settings tell the Engage client how to retrieve and normalize a unique user identifier from browser storage or global objects.</div>
 
 # Key benefits
 
-* **Accurate personalization**: Ensures prompts target the correct authenticated user.
-* **Reliable reporting**: Associates prompt interactions with user profiles for analytics.
-* **Flexible storage**: Supports cookies, localStorage, sessionStorage, dataLayer, or custom JS logic.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Accurate personalization</strong>
+    <span>Ensures prompts target the correct authenticated user.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Reliable reporting</strong>
+    <span>Associates prompt interactions with user profiles for analytics.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Flexible storage</strong>
+    <span>Supports cookies, localStorage, sessionStorage, dataLayer, or custom JS logic.</span>
+  </div>
+</div>
 
 # Key details
 
-***
-
-When authenticated users visit your site, their unique **User ID** is stored in the browser. Configure Recurly Engage to read this value from one of the following sources:
+When authenticated users visit your site, their unique **User ID** is stored in the browser. Configure Engage to read this value from one of the following sources:
 
 * **localStorage** item
 * **sessionStorage** item
@@ -63,31 +70,35 @@ When authenticated users visit your site, their unique **User ID** is stored in 
 
 Specify the storage location and key in the **User ID Matching** form:
 
-<Image align="center" className="border" border={true} src="https://files.readme.io/997b754b9eca52a38e829bfb135e3a944f21ae3abdcb7736520990b6561e118c-image.png" />
 
-If the value is encoded (e.g. Base64), select the appropriate decode option:
+<Image src="https://files.readme.io/997b754b9eca52a38e829bfb135e3a944f21ae3abdcb7736520990b6561e118c-image.png" align="center" width="75%" border={true} />
 
-<Image align="center" className="border" border={true} src="https://files.readme.io/a10af0c7a355927ec26e1db6537ebf1727b49ac6d90a2486d9fb6a5b52d4213a-image.png" />
+
+If the value is encoded (such as Base64), select the appropriate decode option:
+
+
+<Image src="https://files.readme.io/a10af0c7a355927ec26e1db6537ebf1727b49ac6d90a2486d9fb6a5b52d4213a-image.png" align="center" width="75%" border={true} />
+
 
 If the decoded value is a JSON object, provide a property path to extract the final ID:
 
-<Image align="center" className="border" border={true} src="https://files.readme.io/40644c7db538ade718d1542656d22f4a71f2330860e791905b935daa6ea1c894-image.png" />
 
-Once configured, scroll to the bottom and click **Save**:
+<Image src="https://files.readme.io/40644c7db538ade718d1542656d22f4a71f2330860e791905b935daa6ea1c894-image.png" align="center" width="75%" border={true} />
 
-<Image align="center" src="https://files.readme.io/935237ece01241309498a59cc33773274673fd51a06cf21dee221983a34202ce-image.png" />
 
-For assistance, please contact Recurly Engage Support.
+Once you've configured everything, scroll to the bottom and click **Save**:
 
-***
+
+<Image src="https://files.readme.io/935237ece01241309498a59cc33773274673fd51a06cf21dee221983a34202ce-image.png" align="center" width="75%" border={true} />
+
+
+For assistance, contact <a href="mailto:support@recurly.com">[support@recurly.com](mailto:support@recurly.com)</a>.
 
 # `fetchUserId` examples
 
-For complex cases, choose **Custom JS Snippet** and implement a `fetchUserId` function in **Settings → Custom JS Snippet**. Below are examples using built-in `RFHelpers`:
+For complex cases, choose **Custom JS Snippet** and implement a `fetchUserId` function in **Settings → Custom JS Snippet**. The examples below use the built-in `RFHelpers`. You can view all helper functions in <a href="https://gist.github.com/peter-redfast/24555da8e489a0278bda2c29f8092f3c" target="_blank">RFHelpers on GitHub</a>.
 
-You can view all helper functions here: [RFHelpers on GitHub](https://gist.github.com/peter-redfast/24555da8e489a0278bda2c29f8092f3c)
-
-### Basic example
+## Basic example
 
 Retrieve a JSON-wrapped ID from localStorage (common with Twilio Segment):
 
@@ -103,7 +114,7 @@ static fetchUserId() {
 
 ## Cookies and decoding
 
-Read a Base64-encoded ID from a cookie and decode:
+Read a Base64-encoded ID from a cookie and decode it:
 
 ```javascript
 static fetchUserId() {
