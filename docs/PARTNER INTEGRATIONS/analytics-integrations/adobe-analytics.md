@@ -8,75 +8,91 @@ hidden: false
 metadata:
   robots: index
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">The Adobe Analytics connector uses the existing Alloy.js instance on your site to report prompt interaction events (impressions, clicks, and dismissals) in the same session context as your page analytics.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage subscription plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-The **Adobe Analytics** connector uses the existing Alloy.js instance on your site to report prompt interaction events—impressions, clicks, dismissals—in the same session context as page analytics.
+### Prerequisites
 
-### Required plan
-
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
-
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
-        </p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          An Adobe Experience Platform Web SDK (<a className="text-blue-500! dark:text-blue-300!" href="https://github.com/adobe/alloy?tab=readme-ov-file" target="_blank">Alloy.js</a>) setup on your web property.
-        </p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          Access to <strong>Recurly Engage → Settings → Integrations → External → Adobe Analytics</strong>.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>You must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.</li>
+  <li>You must have an Adobe Experience Platform Web software development kit (SDK) (<a href="https://github.com/adobe/alloy?tab=readme-ov-file" target="_blank">Alloy.js</a>) set up on your web property.</li>
+  <li>You must have access to <strong>Recurly Engage → Settings → Integrations → External → Adobe Analytics</strong>.</li>
+</ul>
 
 # Definition
 
-The **Adobe Analytics** integration fires custom events for Recurly Engage prompt interactions directly through Alloy.js, preserving user and session data in your Adobe Analytics reports.
+<div class="rp-definition">The Adobe Analytics integration fires custom events for Recurly Engage prompt interactions directly through Alloy.js, preserving user and session data in your Adobe Analytics reports.</div>
 
 # Key benefits
 
-* **Consistent session data**: Events emit using the same Alloy session context as your other Analytics events.
-* **Built-in tracking**: No additional SDKs required—leverages your existing Alloy.js configuration.
-* **Full interaction visibility**: Capture all prompt lifecycle events in Adobe Analytics.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-link" aria-hidden="true"></i></div>
+    <strong>Consistent session data</strong>
+    <span>Events emit using the same Alloy session context as your other Analytics events.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-plug" aria-hidden="true"></i></div>
+    <strong>Built-in tracking</strong>
+    <span>No additional SDKs are required. The integration uses your existing Alloy.js configuration.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-eye" aria-hidden="true"></i></div>
+    <strong>Full interaction visibility</strong>
+    <span>Capture all prompt lifecycle events in Adobe Analytics.</span>
+  </div>
+</div>
 
 # Key details
 
-**Event Details**
+## Event details
 
-| Activity                         | Description                                                                            |
-| -------------------------------- | -------------------------------------------------------------------------------------- |
-| Recurly Engage Prompt Impression | A user has seen the prompt                                                             |
-| Recurly Engage Prompt Dismiss    | A user has dismissed the prompt by clicking the ‘X’ or outside the prompt (if enabled) |
-| Recurly Engage Prompt Timeout    | The prompt has closed automatically due to a timer                                     |
-| Recurly Engage Prompt Decline    | A user has declined the prompt by clicking the decline button                          |
-| Recurly Engage Prompt Click      | A user has accepted the prompt via the primary CTA button                              |
-| Recurly Engage Prompt Holdout    | A holdout user has been served the prompt but not exposed                              |
-| Recurly Engage Prompt Click 2    | A user has accepted the prompt via the secondary CTA button                            |
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Activity</td><td>Description</td></tr>
+  <tr><td>Recurly Engage Prompt Impression</td><td>A user has seen the prompt</td></tr>
+  <tr><td>Recurly Engage Prompt Dismiss</td><td>A user has dismissed the prompt by clicking the 'X' or outside the prompt (if enabled)</td></tr>
+  <tr><td>Recurly Engage Prompt Timeout</td><td>The prompt has closed automatically due to a timer</td></tr>
+  <tr><td>Recurly Engage Prompt Decline</td><td>A user has declined the prompt by clicking the decline button</td></tr>
+  <tr><td>Recurly Engage Prompt Click</td><td>A user has accepted the prompt using the primary call-to-action (CTA) button</td></tr>
+  <tr><td>Recurly Engage Prompt Holdout</td><td>A holdout user has been served the prompt but not exposed</td></tr>
+  <tr><td>Recurly Engage Prompt Click 2</td><td>A user has accepted the prompt using the secondary CTA button</td></tr>
+</table>
 
 Each event includes these attributes when available:
 
-| Event Property    | Description                                                       |
-| ----------------- | ----------------------------------------------------------------- |
-| `promo_id`        | Unique prompt identifier (from the Prompt ID field under Details) |
-| `promo_name`      | The name of the prompt                                            |
-| `variation_id`    | Identifier of the experiment variation (if any)                   |
-| `variation_name`  | Name of the experiment variation (if any)                         |
-| `event_timestamp` | Timestamp of when the interaction occurred                        |
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Event property</td><td>Description</td></tr>
+  <tr><td><code>promo_id</code></td><td>Unique prompt identifier (from the Prompt ID field under Details)</td></tr>
+  <tr><td><code>promo_name</code></td><td>The name of the prompt</td></tr>
+  <tr><td><code>variation_id</code></td><td>Identifier of the experiment variation (if any)</td></tr>
+  <tr><td><code>variation_name</code></td><td>Name of the experiment variation (if any)</td></tr>
+  <tr><td><code>event_timestamp</code></td><td>Timestamp of when the interaction occurred</td></tr>
+</table>
 
 ## Setup
 
-1. In Adobe Experience Platform, create or select a **Data Stream**. Ensure you have an associated schema, report suite, and field group configured to accept custom event fields.
-2. In **Recurly Engage**, navigate to **Settings → Integrations → External → Adobe Analytics**.
-3. Enter your **Data Stream ID** and **Adobe Org ID** (see [Org ID docs](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/orgid)).
-4. Save your integration settings. Prompt events will now be sent via Alloy.js to Adobe Analytics under your Data Stream.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Create or select a Data Stream</h4><p>In Adobe Experience Platform, create or select a <span style={{fontWeight: "bold"}}>Data Stream</span>. Make sure you have an associated schema, report suite, and field group configured to accept custom event fields.</p></div>
+  </div>
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Open the Adobe Analytics settings</h4><p>In <span style={{fontWeight: "bold"}}>Recurly Engage</span>, navigate to <span style={{fontWeight: "bold"}}>Settings → Integrations → External → Adobe Analytics</span>.</p></div>
+  </div>
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Enter your IDs</h4><p>Enter your <span style={{fontWeight: "bold"}}>Data Stream ID</span> and <span style={{fontWeight: "bold"}}>Adobe Org ID</span>. See the <a href="https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/orgid" target="_blank">Org ID docs</a>.</p></div>
+  </div>
+  <div class="rp-step">
+    <div class="rp-step-num">4</div>
+    <div><h4>Save your settings</h4><p>Save your integration settings. Prompt events are now sent through Alloy.js to Adobe Analytics under your Data Stream.</p></div>
+  </div>
+</div>
