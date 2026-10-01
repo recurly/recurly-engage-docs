@@ -12,36 +12,57 @@ metadata:
 next:
   description: ''
 ---
-# Overview
-
-The **JavaScript SDK** enables prompt delivery and tracking in standard web browsers as well as HTML5-based connected TV (CTV) platforms.
+<div class="rp-page">
+  <div class="rp-overview">The JavaScript software development kit (SDK) enables prompt delivery and tracking in standard web browsers as well as HTML5-based connected TV (CTV) platforms.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">1</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">2</span>Key details</a>
+  </div>
+</div>
 
 # Key benefits
 
-* **Cross-platform support**: Use a single SDK for both web and CTV environments.
-* **Custom device targeting**: Deliver prompts selectively to named CTV devices.
-* **Consistent user ID fetching**: Ensure correct user identification across different app contexts.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-laptop-mobile" aria-hidden="true"></i></div>
+    <strong>Cross-platform support</strong>
+    <span>Use a single SDK for both web and CTV environments.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-tv" aria-hidden="true"></i></div>
+    <strong>Custom device targeting</strong>
+    <span>Deliver prompts selectively to named CTV devices.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-user-check" aria-hidden="true"></i></div>
+    <strong>Consistent user ID fetching</strong>
+    <span>Ensure correct user identification across different app contexts.</span>
+  </div>
+</div>
 
 # Key details
 
-The JavaScript SDK supports web browsers as well as HTML5-based CTV devices. To install the JavaScript SDK, please visit this [article](add-the-redfast-tag).
+The JavaScript SDK supports web browsers as well as HTML5-based CTV devices. To install it, see the <a href="/recurly-engage/docs/add-the-redfast-tag" target="_blank">Recurly Engage JavaScript tag</a> article.
 
 ## CTV considerations
 
-We recommend the following when integrating the JS SDK on CTV apps:
+We recommend the following when you integrate the JavaScript SDK on CTV apps:
 
-* Create a Custom Devices within Settings > Custom Devices. Multiple entries may be defined, e.g. `SamsungTV`, `LGTV`, `Vidaa`.
-* Prompts should be created for the Custom Device(s). This allows for control over exactly which prompts are delivered to the various CTV platforms.
-* The JS tag should specify the Custom Device representing the CTV platform. For example: `<script src="..." data-rf-device-type="SamsungTV" />`
-* Ensure that the fetchUserId() functionality is integrated as this is often different than the normal Desktop/mobile web-app.
-* As CTV apps are normall implemented as Single Page Apps, using prompts to navigate to specific screens may require a discussion with your dev team.
-* Reach out to your Customer Success Manager if you have any questions!
+* Create a custom device in **Settings > Custom Devices**. You can define multiple entries, for example `SamsungTV`, `LGTV`, and `Vidaa`.
+* Create prompts for the custom devices. This gives you control over exactly which prompts are delivered to each CTV platform.
+* Specify the custom device that represents the CTV platform in the JavaScript tag. For example: `<script src="..." data-rf-device-type="SamsungTV" />`
+* Make sure `fetchUserId()` is integrated, because user ID retrieval on CTV is often different from a normal desktop or mobile web app.
+* CTV apps are normally implemented as single-page apps, so using prompts to navigate to specific screens may require a discussion with your development team.
+* If you have any questions, contact your Customer Success Manager or <a href="mailto:support@recurly.com">[support@recurly.com](mailto:support@recurly.com)</a>.
 
 ## Analytics
 
-While there are a number of built in integrations with Analytics services, you may want to generate a custom analytics payload to report all events relating to user interactions against Recurly Engage prompts. You may implement a callback function that is invoked whenever a user interaction occurs within Settings > Custom JS Snippet.
+Recurly Engage has built-in integrations with several analytics services. To report all prompt interaction events in a custom analytics payload instead, implement a callback function in **Settings > Custom JS Snippet**. The callback is invoked whenever a user interaction occurs.
 
-**Example:**
+### Callback function example
+
+\[TODO: Dev/PO review — possible issue: in the example below, `case "dismiss"` has no colon, and `static` appears on a standalone function. Left verbatim.]
 
 ```javascript
 /*
@@ -71,7 +92,7 @@ static onPromptInteraction(eventName, payload) {
 }
 ```
 
-### Google Analytics (GA4) Example:
+### Google Analytics (GA4) example
 
 ```javascript
 static onPromptInteraction(eventName, payload) {
@@ -119,7 +140,7 @@ static onPromptInteraction(eventName, payload) {
 
 ```
 
-### **Segment example:**
+### Segment example
 
 ```javascript
 static onPromptInteraction(eventName, payload) {
@@ -166,48 +187,47 @@ static onPromptInteraction(eventName, payload) {
 
 ```
 
-<br />
+## Implementation best practices
 
-## Implementation Best Practices
-
-Below are implementation strategies to ensure the Recurly Engage JavaScript snippet begins execution as quickly as possible, minimizing delay on your site as needed.
+These implementation strategies help the Recurly Engage JavaScript snippet start executing as quickly as possible, which minimizes delay on your site.
 
 ### Load type comparison
 
-The choice of implementation method directly impacts the execution speed and subsequent availability on the page.
+The implementation method you choose directly affects execution speed and how soon the script is available on the page.
 
-<br />
-
-| Implementation Method | Load Type      | Primary Benefit                                                                                | Use Case                                                                                                                                                            |
-| --------------------- | -------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Minimal Latency       | Synchronous    | Fastest execution time. The script starts loading and executing immediately, minimizing delay. | Critical: Required when the Engage script must execute before or during initial page rendering (e.g., to prevent content flicker or ensure immediate availability). |
-| Standard              | Deferred/Async | Minimal impact on initial page rendering time (Time to First Paint).                           | Non-Critical: Acceptable when the Engage script can wait for the page content to load before running.                                                               |
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Implementation method</td><td>Load type</td><td>Primary benefit</td><td>Use case</td></tr>
+  <tr><td>Minimal Latency</td><td>Synchronous</td><td>Fastest execution time. The script starts loading and executing immediately, minimizing delay.</td><td>Critical: Required when the Engage script must execute before or during initial page rendering (for example, to prevent content flicker or ensure immediate availability).</td></tr>
+  <tr><td>Standard</td><td>Deferred/Async</td><td>Minimal impact on initial page rendering time (Time to First Paint).</td><td>Non-Critical: Acceptable when the Engage script can wait for the page content to load before running.</td></tr>
+</table>
 
 ### Minimal latency implementation
 
-To achieve the fastest script execution time, we recommend a three-step approach that prioritizes immediate script loading and execution by the browser.
+To get the fastest script execution time, we recommend a three-step approach that prioritizes immediate script loading and execution by the browser.
 
-#### Step 1: Synchronous script loading
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Load the script synchronously</h4><p>Synchronous loading means scripts load sequentially, one after another, starting with the <code>&lt;head&gt;</code> tag. Don't include the <code>async</code> or <code>defer</code> attributes on the script tag. This forces the browser to pause HTML parsing, fetch the resource, and execute the Recurly Engage script immediately, which is essential for rapid feature initiation.</p></div>
+  </div>
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Place the snippet in the head</h4><p>Place the synchronous snippet in the <code>&lt;head&gt;</code> of the HTML document, immediately after critical meta and CSS elements. Placing it high up ensures it's discovered and executed early in the parsing process.</p></div>
+  </div>
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Add preload and preconnect resource hints</h4><p>To further accelerate the network phase, include the following resource hints at the very top of your <code>&lt;head&gt;</code>.</p></div>
+  </div>
+</div>
 
-Synchronous loading means scripts are loaded sequentially, one after another, starting with the `<head>` tag. The script tag should not  include the `async` or `defer` attributes. This forces the browser to pause HTML parsing, fetch the resource, and execute the Recurly Engage script immediately, which is essential for rapid feature initiation.
+* **preconnect**: Initiates an early connection handshake with the Recurly Engage
+* **preload**: Instructs the browser to fetch the script resource immediately with high priority
 
-#### Step 2: Snippet placement in the `<head>`
-
-The synchronous snippet **should** be placed in the `<head>` of the HTML document, immediately following critical meta and CSS elements. Placing it high up ensures it is discovered and executed early in the parsing process.
-
-#### Step 3: Use preload and preconnect resource hints
-
-To further accelerate the network phase, include the following resource hints at the very top of your `<head>`:
-
-* **preconnect:** Initiates an early connection handshake with the Recurly Engage
-
-* **preload:** Instructs the browser to fetch the script resource immediately with high priority
-
-#### Example
+### Example
 
 Replace `YOUR_TAG_URL` with your specific Recurly Engage script URL.
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -228,5 +248,7 @@ Replace `YOUR_TAG_URL` with your specific Recurly Engage script URL.
 </html>
 
 ```
+
+<br />
 
 <br />
