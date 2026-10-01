@@ -12,121 +12,172 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">Actions define what happens when a user interacts with a prompt. Attach built-in, connector, API, or website actions to personalize the experience and connect Recurly Engage to your other systems.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage subscription plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-### Required plan
+### Prerequisites
 
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
+<ul class="rp-list">
+  <li>You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.</li>
+</ul>
 
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          For connector actions, you must supply third-party credentials.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          Website actions require custom JavaScript knowledge.
-        </p>
-      </div>
-    </div>
-  );
-};
+### Limitations
 
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>For connector actions, you must supply third-party credentials.</li>
+  <li>Website actions require custom JavaScript knowledge.</li>
+</ul>
 
 # Definition
 
-An **action** is a task executed when a user interacts with a prompt (Accept, Decline, Secondary Accept, Dismiss, or Timeout), enabling personalized flows and integrations.
+<div class="rp-definition">An action is a task that runs when a user interacts with a prompt: Accept, Decline, Secondary Accept, Dismiss, or Timeout. Actions enable personalized flows and integrations.</div>
 
 # Key benefits
 
-* **Custom workflows**: Chain multiple actions—redirects, emails, API calls—on a single interaction.
-* **Seamless integrations**: Connect to billing, marketing, or support systems with prebuilt connectors.
-* **Immediate responses**: Trigger website JS actions for in-app behavior without page reloads.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-link" aria-hidden="true"></i></div>
+    <strong>Custom workflows</strong>
+    <span>Chain multiple actions, such as redirects, emails, and API calls, on a single interaction.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-plug" aria-hidden="true"></i></div>
+    <strong>Prebuilt integrations</strong>
+    <span>Connect to billing, marketing, or support systems with prebuilt connectors.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+    <strong>Immediate responses</strong>
+    <span>Trigger website JavaScript actions for in-app behavior without page reloads.</span>
+  </div>
+</div>
 
 # Key details
 
 ## User interactions
 
-Actions can be tied to any of these five prompt events:
+You can tie actions to any of these five prompt events:
 
-1. **Accept**: User clicks the primary button.
-2. **Secondary Accept**: User clicks the secondary button (if configured).
-3. **Decline**: User clicks a Decline option.
-4. **Dismiss**: User closes the prompt via the X icon.
-5. **Timeout**: Prompt auto-closes after a timer.
+<ul class="rp-list">
+  <li><strong>Accept</strong>: User clicks the primary button.</li>
+  <li><strong>Secondary Accept</strong>: User clicks the secondary button (if configured).</li>
+  <li><strong>Decline</strong>: User clicks a Decline option.</li>
+  <li><strong>Dismiss</strong>: User closes the prompt with the X icon.</li>
+  <li><strong>Timeout</strong>: Prompt closes automatically after a timer.</li>
+</ul>
 
-Use the two buttons (Accept/Decline) for complementary actions, such as “Sign me up” on Accept and “Add to watchlist” on Decline.
+Use the two buttons (Accept and Decline) for complementary actions, such as "Sign me up" on Accept and "Add to watchlist" on Decline.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/dbba980-image.png" />
 
-<br />
+<Image src="https://files.readme.io/dbba980-image.png" align="center" width="75%" border={true} />
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/ae7b5ec-image.png" />
 
-***
+
+<Image src="https://files.readme.io/ae7b5ec-image.png" align="center" width="75%" border={true} />
+
 
 ## Configure actions on a prompt
 
-One or more actions can be attached to each interaction. For example, you might apply a discount via API and then send a confirmation email upon Accept.
+You can attach one or more actions to each interaction. For example, you might apply a discount through an API call and then send a confirmation email on Accept.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/48dd9f9-image.png" />
+
+<Image src="https://files.readme.io/48dd9f9-image.png" align="center" width="75%" border={true} />
+
 
 ### Built-in actions
 
-Available by default on every prompt:
+These actions are available by default on every prompt:
 
-* **Send an email**: Dispatch an email to a specified address on Accept.
-* **Send an SMS**: Send an SMS to a specified number on Accept.
-* **Redirect the user**: Navigate the user to a URL when they accept.
-
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/48dd9f9-image.png" />
+<ul class="rp-list">
+  <li><strong>Send an email</strong>: Dispatch an email to a specified address on Accept.</li>
+  <li><strong>Send an SMS</strong>: Send an SMS to a specified number on Accept.</li>
+  <li><strong>Redirect the user</strong>: Navigate the user to a URL when they accept.</li>
+</ul>
 
 ### Connector actions
 
-Integrate with external systems—billing, CRM, support—using prebuilt connectors. Supply credentials in **Settings > Connectors** before use.
+Integrate with external systems, such as billing, CRM, and support, using prebuilt connectors. Supply your credentials in <span style={{fontWeight: "bold"}}>Settings &gt; Connectors</span> before you use one.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/87d7647-image.png" />
 
-#### Step-by-step: Adding a connector action
+<Image src="https://files.readme.io/87d7647-image.png" align="center" width="75%" border={true} />
 
-1. **Open** your prompt under **Prompts**.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/aace646-image.png" />
+#### Add a connector action
 
-2. **Click** **Add action** next to the desired interaction (e.g., Accept).
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Open your prompt</h4><p>Open your prompt under <span style={{fontWeight: "bold"}}>Prompts</span>.</p></div>
+  </div>
+</div>
 
-<Image align="center" width="80% " src="https://files.readme.io/d186553-image.png" />
 
-3. In the action modal, **select** **Connector Actions**, **choose** a connector (e.g., Zuora) and action (e.g., Subscribe a user to a plan), **set** **Error Behavior** (Stop or Continue), then **click** **Add Action**.
+<Image src="https://files.readme.io/aace646-image.png" align="center" width="75%" border={true} />
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/4b6e880-image.png" />
 
-4. **Reorder** actions by dragging; **configure** multiple actions per interaction as needed.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Add an action</h4><p>Select <span style={{fontWeight: "bold"}}>Add action</span> next to the interaction you want (for example, Accept).</p></div>
+  </div>
+</div>
 
-<Image align="center" width="80% " src="https://files.readme.io/09969e8-image.png" />
 
-> **Error behavior**:
->
-> * **Stop**: Halt downstream actions if this action fails.
-> * **Continue**: Proceed to next actions even if this one errors.
+<Image src="https://files.readme.io/d186553-image.png" align="center" width="75%" border={true} />
 
-***
+
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Configure the connector action</h4><p>In the action modal, select <span style={{fontWeight: "bold"}}>Connector Actions</span>, choose a connector (for example, Zuora) and an action (for example, Subscribe a user to a plan), set <span style={{fontWeight: "bold"}}>Error Behavior</span> to Stop or Continue, and then select <span style={{fontWeight: "bold"}}>Add Action</span>.</p></div>
+  </div>
+</div>
+
+
+<Image src="https://files.readme.io/4b6e880-image.png" align="center" width="75%" border={true} />
+
+
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">4</div>
+    <div><h4>Reorder your actions</h4><p>Drag actions to reorder them. Add multiple actions per interaction as needed.</p></div>
+  </div>
+</div>
+
+
+<Image src="https://files.readme.io/09969e8-image.png" align="center" width="75%" border={true} />
+
+
+<div class="rp-callout rp-callout-note">
+  <div><strong><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Error behavior</strong><ul><li><span style={{fontWeight: "bold"}}>Stop</span>: Halts downstream actions if this action fails.</li><li><span style={{fontWeight: "bold"}}>Continue</span>: Proceeds to the next actions even if this one errors.</li></ul></div>
+</div>
 
 ## Custom actions
 
 Build your own actions for advanced scenarios:
 
-1. **Connector Actions**: Integrate additional business systems. [More info](connector-actions)
-2. **API Actions**: Call your custom endpoints. [More info](api-actions)
-3. **Website Actions**: Run custom JavaScript in the user’s browser. [More info](website-actions)
+<div class="rp-nav-grid">
 
-For complex setups—like “1-click save offers”—our technical team can assist. Reach out on Slack for hands-on support.
+<Cards>
+  <Card title="Connector actions" href="/docs/connector-actions" target="_blank">
+    Integrate additional business systems.
+  </Card>
+  <Card title="API actions" href="/docs/api-actions" target="_blank">
+    Call your custom endpoints.
+  </Card>
+  <Card title="Website actions" href="/docs/website-actions" target="_blank">
+    Run custom JavaScript in the user's browser.
+  </Card>
+</Cards>
+</div>
+
+For complex setups, like 1-click save offers, our technical team can help. Reach out on Slack or contact <a href="mailto:support@recurly.com">[support@recurly.com](mailto:support@recurly.com)</a> for hands-on support.
+
+<br />
