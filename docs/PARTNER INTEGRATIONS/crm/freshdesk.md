@@ -12,45 +12,52 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">The Freshdesk integration lets you create and update support tickets and manage contacts directly from Recurly Engage prompts.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage subscription plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-### Required plan
+### Prerequisites
 
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
+<ul class="rp-list">
+  <li>You must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.</li>
+  <li>You must have a Freshdesk account with API access and a valid API key.</li>
+</ul>
 
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
-        </p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          A Freshdesk account with API access and valid API key.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          Freshdesk plan must support API-based ticket and contact management.
-        </p>
-      </div>
-    </div>
-  );
-};
+### Limitations
 
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>Your Freshdesk plan must support API-based ticket and contact management.</li>
+</ul>
 
 # Definition
 
-The **Freshdesk** connector lets you automate customer support workflows—creating tickets upon promo acceptance, updating ticket fields in bulk, and managing contacts—through prompt-driven 1-Click actions.
+<div class="rp-definition">The Freshdesk connector lets you automate customer support workflows (creating tickets when a user accepts a promo, updating ticket fields in bulk, and managing contacts) through prompt-driven 1-Click actions.</div>
 
 # Key benefits
 
-* **Automated support**: Instantly generate support tickets from user interactions without manual intervention.
-* **Bulk ticket updates**: Adjust priority, status, group, or responder for all tickets tied to a user with one action.
-* **Contact lifecycle management**: Soft-delete or restore contacts and purge related tickets on demand.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-headset" aria-hidden="true"></i></div>
+    <strong>Automated support</strong>
+    <span>Instantly generate support tickets from user interactions without manual intervention.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-list-check" aria-hidden="true"></i></div>
+    <strong>Bulk ticket updates</strong>
+    <span>Adjust priority, status, group, or responder for all tickets tied to a user with one action.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-address-book" aria-hidden="true"></i></div>
+    <strong>Contact lifecycle management</strong>
+    <span>Soft-delete or restore contacts and purge related tickets on demand.</span>
+  </div>
+</div>
 
 # Key details
 
@@ -58,26 +65,23 @@ The **Freshdesk** connector lets you automate customer support workflows—creat
 
 Under **Settings > Connectors > Freshdesk**, provide:
 
-* **Domain**: Your Freshdesk subdomain (e.g., `yourcompany.freshdesk.com`).
-* **API Key**: Your Freshdesk API token (see [How to find your API key](https://support.freshdesk.com/support/solutions/articles/215517-how-to-find-your-api-key)).
+* **Domain**: Your Freshdesk subdomain (for example, `yourcompany.freshdesk.com`).
+* **API Key**: Your Freshdesk API token. See <a href="https://support.freshdesk.com/support/solutions/articles/215517-how-to-find-your-api-key" target="_blank">How to find your API key</a>.
 
 ## Supported actions
 
 Use these actions in prompt configurations to handle tickets and contacts:
 
-| Action                                                          | Description                                                   | User Dependencies                 | Additional Instructions                       |
-| :-------------------------------------------------------------- | :------------------------------------------------------------ | :-------------------------------- | :-------------------------------------------- |
-| **Create support ticket with notification of offer acceptance** | Creates a ticket including user details and promo information | None                              | n/a                                           |
-| **Update existing tickets priority**                            | Bulk-update priority for all tickets created by the user      | `freshdesk_id` or `email_address` | Configure new priority level on prompt screen |
-| **Update existing tickets status**                              | Bulk-update status for all user tickets                       | `freshdesk_id` or `email_address` | Configure new status on prompt screen         |
-| **Update existing tickets responder**                           | Bulk-update ticket responder for all user tickets             | `freshdesk_id` or `email_address` | Select responder on prompt screen             |
-| **Update existing tickets group**                               | Bulk-update group assignment for all user tickets             | `freshdesk_id` or `email_address` | Select group on prompt screen                 |
-| **Update existing tickets source**                              | Bulk-update ticket source for all user tickets                | `freshdesk_id` or `email_address` | Select source on prompt screen                |
-| **Soft delete a contact**                                       | Mark the contact as deleted in Freshdesk                      | `freshdesk_id` or `email_address` | n/a                                           |
-| **Restore a contact**                                           | Restore a previously soft-deleted contact                     | `freshdesk_id` or `email_address` | n/a                                           |
-| **Delete all tickets**                                          | Permanently delete all tickets associated with the contact    | `freshdesk_id` or `email_address` | n/a                                           |
-| **Spam all existing tickets**                                   | Mark all tickets created by the user as spam                  | `freshdesk_id` or `email_address` | n/a                                           |
-
-## Additional resources
-
-* Retrieve your Freshdesk API Key: [How to find your API key](https://support.freshdesk.com/support/solutions/articles/215517-how-to-find-your-api-key)
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Action</td><td>Description</td><td>User dependencies</td><td>Additional instructions</td></tr>
+  <tr><td><strong>Create support ticket with notification of offer acceptance</strong></td><td>Creates a ticket including user details and promo information</td><td>None</td><td>n/a</td></tr>
+  <tr><td><strong>Update existing tickets priority</strong></td><td>Bulk-update priority for all tickets created by the user</td><td><code>freshdesk_id</code> or <code>email_address</code></td><td>Configure new priority level on prompt screen</td></tr>
+  <tr><td><strong>Update existing tickets status</strong></td><td>Bulk-update status for all user tickets</td><td><code>freshdesk_id</code> or <code>email_address</code></td><td>Configure new status on prompt screen</td></tr>
+  <tr><td><strong>Update existing tickets responder</strong></td><td>Bulk-update ticket responder for all user tickets</td><td><code>freshdesk_id</code> or <code>email_address</code></td><td>Select responder on prompt screen</td></tr>
+  <tr><td><strong>Update existing tickets group</strong></td><td>Bulk-update group assignment for all user tickets</td><td><code>freshdesk_id</code> or <code>email_address</code></td><td>Select group on prompt screen</td></tr>
+  <tr><td><strong>Update existing tickets source</strong></td><td>Bulk-update ticket source for all user tickets</td><td><code>freshdesk_id</code> or <code>email_address</code></td><td>Select source on prompt screen</td></tr>
+  <tr><td><strong>Soft delete a contact</strong></td><td>Mark the contact as deleted in Freshdesk</td><td><code>freshdesk_id</code> or <code>email_address</code></td><td>n/a</td></tr>
+  <tr><td><strong>Restore a contact</strong></td><td>Restore a previously soft-deleted contact</td><td><code>freshdesk_id</code> or <code>email_address</code></td><td>n/a</td></tr>
+  <tr><td><strong>Delete all tickets</strong></td><td>Permanently delete all tickets associated with the contact</td><td><code>freshdesk_id</code> or <code>email_address</code></td><td>n/a</td></tr>
+  <tr><td><strong>Spam all existing tickets</strong></td><td>Mark all tickets created by the user as spam</td><td><code>freshdesk_id</code> or <code>email_address</code></td><td>n/a</td></tr>
+</table>
