@@ -12,13 +12,20 @@ metadata:
 next:
   description: ''
 ---
-# Overview
-
-Recurly Engage integrates with a variety of CRM, marketing automation, and support platforms to synchronize user data, trigger campaigns, and manage contacts and tickets directly from in-app or web prompts.
+<div class="rp-page">
+  <div class="rp-overview">Recurly Engage integrates with a variety of Customer Relationship Management (CRM), marketing automation, and support platforms. Use them to synchronize user data, trigger campaigns, and manage contacts and tickets directly from in-app or web prompts.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">2</span>Key details</a>
+  </div>
+</div>
 
 # Definition
 
-**CRM Integrations** are pre-built connectors that enable you to:
+<div class="rp-definition">CRM integrations are prebuilt connectors between Recurly Engage and external CRM, marketing, and support platforms.</div>
+
+With CRM integrations, you can:
 
 * Synchronize user profiles and traits with external CRM or marketing platforms.
 * Send email, SMS, or in-app messaging workflows based on prompt interactions.
@@ -26,13 +33,40 @@ Recurly Engage integrates with a variety of CRM, marketing automation, and suppo
 
 # Key details
 
-* **ActiveCampaign**: Add or update contacts, subscribe to lists, and enroll users in automations. ([Learn more](activecampaign))
-* **Adobe**: Stream prompt events into Experience Platform, trigger Journey Optimizer actions, and send web events to Analytics. ([Learn more](adobe-aep-ajo))
-* **Iterable**: Sync user events and trigger Iterable campaigns directly from prompts.
-* **Naviga**: Check subscription status and manage subscriptions for news/publishing platforms via Naviga Subscribe API. ([Learn more](naviga))
-* **Freshdesk**: Create and bulk-update support tickets and manage contacts in Zendesk Support. ([Learn more](freshdesk))
-* **Salesforce**: Integrate with Support Cloud for case management and Marketing Cloud for email sends and subscriber lists. ([Learn more](salesforce-marketing-cloud))
-* **Segment**: Ingest Segment events (Page, Screen, Track) as usage traits for real-time targeting. ([Learn more](segmentio-twilio))
-* **Braze**: Create or update user records and aliases in Braze for personalized engagement campaigns. ([Learn more](braze-rf))
-* **SendGrid**: Send dynamic templated emails and manage mailing lists via prompts. ([Learn more](sendgrid))
-* **Zendesk**: Automate ticket creation, bulk-ticket updates, and user suspension/restoration in Zendesk Support. ([Learn more](zendesk-rf))
+Select an integration to see its setup details.
+
+<div class="rp-nav-grid">
+
+<Cards>
+  <Card title="ActiveCampaign" href="/recurly-engage/docs/activecampaign" target="_blank">
+    Add or update contacts, subscribe users to lists, and enroll users in automations.
+  </Card>
+  <Card title="Adobe" href="/recurly-engage/docs/adobe-aep-ajo" target="_blank">
+    Stream prompt events into Experience Platform, trigger Journey Optimizer actions, and send web events to Analytics.
+  </Card>
+  <Card title="Iterable">
+    Sync user events and trigger Iterable campaigns directly from prompts.
+  </Card>
+  <Card title="Naviga" href="/recurly-engage/docs/naviga" target="_blank">
+    Check subscription status and manage subscriptions for news and publishing platforms through the Naviga Subscribe API.
+  </Card>
+  <Card title="Freshdesk" href="/recurly-engage/docs/freshdesk" target="_blank">
+    Create and bulk-update support tickets and manage contacts in Zendesk Support.
+  </Card>
+  <Card title="Salesforce" href="/recurly-engage/docs/salesforce-marketing-cloud" target="_blank">
+    Integrate with Support Cloud for case management and Marketing Cloud for email sends and subscriber lists.
+  </Card>
+  <Card title="Segment" href="/recurly-engage/docs/segmentio-twilio" target="_blank">
+    Ingest Segment events (Page, Screen, and Track) as usage traits for real-time targeting.
+  </Card>
+  <Card title="Braze" href="/recurly-engage/docs/braze-rf" target="_blank">
+    Create or update user records and aliases in Braze for personalized engagement campaigns.
+  </Card>
+  <Card title="SendGrid" href="/recurly-engage/docs/sendgrid" target="_blank">
+    Send dynamic templated emails and manage mailing lists through prompts.
+  </Card>
+  <Card title="Zendesk" href="/recurly-engage/docs/zendesk-rf" target="_blank">
+    Automate ticket creation, bulk ticket updates, and user suspension and restoration in Zendesk Support.
+  </Card>
+</Cards>
+</div>
