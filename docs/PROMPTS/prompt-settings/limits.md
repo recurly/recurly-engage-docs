@@ -12,78 +12,93 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">Limits let you control how often, and to how many users, a prompt can be shown. Apply limits to an individual prompt, or use <a href="/docs/global-limits" target="_blank">Global limits</a> for account-wide caps.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage subscription plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-Limits let you control how often and to how many users a prompt can be shown. Apply limits per prompt or use [Global limits](global-limits) for account-wide caps.
+### Prerequisites
 
-### Required plan
+<ul class="rp-list">
+  <li>To create or update prompt limits, you must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage.</li>
+  <li>To update Global limits, you must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.</li>
+</ul>
 
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
+### Limitations
 
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          You must have <strong>Company</strong>, <strong>App Administrator</strong>, or <strong>App Member</strong> permissions in Recurly Engage in order to create or update Prompt limits.
-        </p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          You must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage in order to update Global Limits.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          Global limits affect all prompts and require appropriate application-level configuration.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>Global limits affect all prompts and require appropriate application-level configuration.</li>
+</ul>
 
 # Definition
 
-A **limit** restricts prompt exposures based on impressions, user frequency, spendable budget, or user and delivery caps, ensuring controlled rollout and budget adherence.
+<div class="rp-definition">A limit restricts prompt exposures based on impressions, user frequency, spendable budget, or user and delivery caps. Limits keep rollouts controlled and spending within budget.</div>
 
 # Key benefits
 
-* **Cost control**: Prevent overspending by capping impressions or budget.
-* **Audience management**: Avoid overexposure by limiting frequency per user or total deliveries.
-* **Scalable governance**: Use global limits for consistent thresholds across all prompts.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-sack-dollar" aria-hidden="true"></i></div>
+    <strong>Cost control</strong>
+    <span>Prevent overspending by capping impressions or budget.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></div>
+    <strong>Audience management</strong>
+    <span>Avoid overexposure by limiting frequency per user or total deliveries.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></div>
+    <strong>Scalable governance</strong>
+    <span>Use Global limits for consistent thresholds across all prompts.</span>
+  </div>
+</div>
 
 # Key details
 
 ## Impression limit
 
-Restricts the total number of times a prompt is shown to the targeted segment, regardless of user. Once the impression count is reached, the prompt stops displaying.
+An impression limit restricts the total number of times a prompt is shown to the targeted segment, regardless of user. Once the impression count is reached, the prompt stops displaying.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/a7d13f1-image.png" />
+
+<Image src="https://files.readme.io/a7d13f1-image.png" align="center" width="75%" border={true} />
+
 
 ## Frequency cap
 
-Limits how many times an individual user can see the prompt within a defined period. For example, 2 impressions over 30 days means each user can view the prompt twice in a rolling 30-day window starting from their first impression.
+A frequency cap limits how many times an individual user can see the prompt within a defined period. For example, two impressions over 30 days means each user can view the prompt twice in a rolling 30-day window that starts from their first impression.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/fb6c9f7-image.png" />
+
+<Image src="https://files.readme.io/fb6c9f7-image.png" align="center" width="75%" border={true} />
+
 
 ## Budget limit
 
-Sets a consumable budget that decreases each time a user takes the prompted action. Configure a total budget and decrement value—for instance, a $10,000 budget with a decrement of $10 charges $10 per user interaction until funds are exhausted.
+A budget limit sets a consumable budget that decreases each time a user takes the prompted action. Configure a total budget and a decrement value. For instance, a $10,000 budget with a decrement of $10 charges $10 per user interaction until funds are exhausted.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/42214b6-image.png" />
+
+<Image src="https://files.readme.io/42214b6-image.png" align="center" width="75%" border={true} />
+
 
 ## User limit
 
-Caps the total number of unique users who can receive or act on the prompt. For example, a user limit of 1,000 ensures that only the first 1,000 eligible users see the prompt.
+A user limit caps the total number of unique users who can receive or act on the prompt. For example, a user limit of 1,000 ensures that only the first 1,000 eligible users see the prompt.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/b726d62-image.png" />
+
+<Image src="https://files.readme.io/b726d62-image.png" align="center" width="75%" border={true} />
+
 
 ## Delivery limit
 
-Restricts the number of unique deliveries—instances when a user meets trigger conditions and is eligible to see the prompt. A delivery limit of 1,000 delivers to the first 1,000 unique users matching the trigger, then stops.
+A delivery limit restricts the number of unique deliveries — instances when a user meets the trigger conditions and is eligible to see the prompt. A delivery limit of 1,000 delivers to the first 1,000 unique users who match the trigger, then stops.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/9a7bf89-image.png" />
 
-Learn more about account-wide limits in [Global limits](global-limits).
+<Image src="https://files.readme.io/9a7bf89-image.png" align="center" width="75%" border={true} />
+
+
+<div class="rp-card">Want to set account-wide caps? Learn more in <a href="/docs/global-limits" target="_blank">Global limits</a>.</div>
