@@ -9,28 +9,52 @@ hidden: false
 metadata:
   robots: index
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">Use the Recurly Engage React Native software development kit (SDK) to render prompts and handle user interaction events in your React Native app on iOS and Android.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
 ### Prerequisites
 
-* A Recurly Engage account with a valid App ID
-* A React Native project targeting iOS and/or Android
+<ul class="rp-list">
+  <li>A Recurly Engage account with a valid App ID</li>
+  <li>A React Native project targeting iOS and/or Android</li>
+</ul>
 
 ### Limitations
 
-* Inline prompts scale to fit within their container — size your container accordingly
+* Inline prompts scale to fit within their container, so size your container accordingly
 * It may take several seconds for prompts to refresh after calling `setUserId()`
 * `<PromptOverlay />` must be placed at the bottom of your app node to ensure correct Z-order
 
 # Definition
 
-The Recurly Engage React Native SDK provides components and APIs to render configured prompts — modals (popups, bottom banners, interstitials) and inline views — and handle related user interaction events in React Native apps.
+<div class="rp-definition">The Recurly Engage React Native SDK provides components and APIs to render configured prompts, including modals (popups, bottom banners, and interstitials) and inline views, and to handle related user interaction events in React Native apps.</div>
 
 # Key benefits
 
-* **Cross-platform UI**: Display modals and inline prompts on both iOS and Android via React Native with a single integration.
-* **Built-in interaction handling**: Automatically track impressions, clicks, dismissals, and other user events without manual wiring.
-* **Customizable rendering**: Use prebuilt components or implement your own views based on prompt metadata.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></div>
+    <strong>Cross-platform UI</strong>
+    <span>Display modals and inline prompts on both iOS and Android through React Native with a single integration.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-hand-pointer" aria-hidden="true"></i></div>
+    <strong>Built-in interaction handling</strong>
+    <span>Automatically track impressions, clicks, dismissals, and other user events without manual wiring.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-paintbrush" aria-hidden="true"></i></div>
+    <strong>Customizable rendering</strong>
+    <span>Use prebuilt components, or implement your own views based on prompt metadata.</span>
+  </div>
+</div>
 
 # Key details
 
@@ -42,39 +66,52 @@ The Recurly Engage React Native SDK provides:
 
 ## Install the SDK
 
-Published on the public npm registry — no registry configuration or authentication token required.
+The SDK is published on the public npm registry. No registry configuration or authentication token is required.
 
-Using npm:
+**npm**
 
 ```bash
 npm install @recurly/engage-core
 npm install @recurly/engage-react-native
 ```
 
-Or yarn:
+**Yarn**
 
 ```bash
 yarn add @recurly/engage-core
 yarn add @recurly/engage-react-native
 ```
 
-> 📘 Also install `@react-native-async-storage/async-storage`
->
-> `@recurly/engage-react-native` depends on `@react-native-async-storage/async-storage`, but React Native's autolinking only picks up native modules declared directly in your app's `package.json` — not transitive dependencies. Add it to your own `package.json` as well (matching the version range `@recurly/engage-react-native` depends on), or you'll see `NativeModule: AsyncStorage is null` at runtime:
->
-> ```bash
-> npm install @react-native-async-storage/async-storage
-> ```
+<div class="rp-callout rp-callout-important">
+  <div><strong><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> Important</strong>Also install <code>@react-native-async-storage/async-storage</code>. <code>@recurly/engage-react-native</code> depends on it, but React Native's autolinking only picks up native modules declared directly in your app's <code>package.json</code>, not transitive dependencies. Add it to your own <code>package.json</code> as well (matching the version range <code>@recurly/engage-react-native</code> depends on), or you'll see <code>NativeModule: AsyncStorage is null</code> at runtime.</div>
+</div>
 
-***
+```bash
+npm install @react-native-async-storage/async-storage
+```
 
 ## Initialize Engage
 
-Initialize the SDK in your AppRoot using the `<PromptProvider>` component at the top of your app node.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Add the PromptProvider</h4><p>Initialize the SDK in your AppRoot using the <code>&lt;PromptProvider&gt;</code> component at the top of your app node.</p></div>
+  </div>
+</div>
 
-Then, pull the SDK to check it has been initialized using the `usePrompt` hook and the `promptMgr.isInitialized()` method.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Check that the SDK is initialized</h4><p>Pull the SDK to check it has been initialized, using the <code>usePrompt</code> hook and the <code>promptMgr.isInitialized()</code> method.</p></div>
+  </div>
+</div>
 
-Finally, place a `<PromptOverlay />` component at the bottom of your app node. This will render any modal (interstitial, popup, bottom banner) prompts that are triggered. Since it is at the bottom of your app node, it will have the highest Z-order to show itself.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Add the PromptOverlay</h4><p>Place a <code>&lt;PromptOverlay /&gt;</code> component at the bottom of your app node. It renders any modal (interstitial, popup, bottom banner) prompts that are triggered. Because it's at the bottom of your app node, it has the highest Z-order to show itself.</p></div>
+  </div>
+</div>
 
 ```javascript
 // Initialize the SDK at the top of your app node
@@ -158,21 +195,17 @@ const AppRoot: React.FC = () => {
 }
 ```
 
-***
+## Set the user ID
 
-## Set user ID
-
-You may change the user ID after the SDK has been initialized — for example, when the user authenticates mid-session. Note that it may take several seconds for the user's prompts to refresh.
+You can change the user ID after the SDK has been initialized, for example, when the user authenticates mid-session. It may take several seconds for the user's prompts to refresh.
 
 ```javascript
 promptMgr.setUserId(userId);
 ```
 
-***
-
 ## Privacy consent categories
 
-If your app gates data collection behind a consent banner or preference center, you can restrict which prompts are eligible to show based on the consent categories the user has granted. Prompts configured in Pulse with `consent_categories` will only be shown once the categories you set match exactly.
+If your app gates data collection behind a consent banner or preference center, you can restrict which prompts are eligible to show based on the consent categories the user has granted. Prompts configured in Pulse with `consent_categories` are only shown once the categories you set match exactly.
 
 ```javascript
 import { PrivacyConsentCategory } from '@recurly/engage-core';
@@ -197,20 +230,18 @@ Available categories:
 
 Matching behavior:
 
-* Before `setPrivacyConsentCategories` is called, no filtering is applied — all prompts remain eligible regardless of their `consent_categories`.
-* Once set, a prompt is only eligible when its `consent_categories` are an exact match (same categories, order doesn't matter) to the categories you set. A prompt configured without `consent_categories` will never match once any categories have been set.
+* Before `setPrivacyConsentCategories` is called, no filtering is applied. All prompts remain eligible regardless of their `consent_categories`.
+* Once the categories are set, a prompt is only eligible when its `consent_categories` are an exact match (same categories, order doesn't matter) to the categories you set. A prompt configured without `consent_categories` never matches once any categories have been set.
 * The filter applies everywhere prompts are resolved: `screenChanged` / `buttonClicked` triggering, inline zones (`getInlines` / `<RecurlyInline>`), and custom rendering (`getPrompts`, `getTriggerablePrompts`).
-* Whenever consent changes (e.g. the user updates their preferences), call `setPrivacyConsentCategories` again and re-trigger the current screen (`promptMgr.screenChanged(currentScreen)`) so eligibility is re-evaluated.
-
-***
+* Whenever consent changes (for example, the user updates their preferences), call `setPrivacyConsentCategories` again and re-trigger the current screen (`promptMgr.screenChanged(currentScreen)`) so eligibility is re-evaluated.
 
 ## Render modal prompts
 
-Interstitial, Popup, and Bottom Banner modals may be triggered upon entering a screen and/or the user registering a click on an element. Add the following code to screens that are eligible to show a modal.
+Interstitial, Popup, and Bottom Banner modals can be triggered when the user enters a screen and/or registers a click on an element. Add the following code to screens that are eligible to show a modal.
 
-Use the `promptMgr.screenChanged('home')` method for entering a screen with a screen name (customer-defined string; example: `"home"`).
+Use the `promptMgr.screenChanged('home')` method for entering a screen with a screen name (a customer-defined string, for example, `"home"`).
 
-Use the `promptMgr.buttonClicked('clickId')` method for registering a click on an element (customer-defined string; example: a button with an id of `"clickId"`).
+Use the `promptMgr.buttonClicked('clickId')` method for registering a click on an element (a customer-defined string, for example, a button with an id of `"clickId"`).
 
 ```javascript
 // Example a screen
@@ -244,11 +275,9 @@ export default function HomeScreen() {
 }
 ```
 
-***
-
 ## Render inline prompts
 
-Use the `RecurlyInline` view to render an inline prompt if one is available for the current user. Note that the inline prompt will scale to fit within its container.
+Use the `RecurlyInline` view to render an inline prompt if one is available for the current user. The inline prompt scales to fit within its container.
 
 ```javascript
 <RecurlyInline
@@ -267,13 +296,13 @@ Use the `RecurlyInline` view to render an inline prompt if one is available for 
 />
 ```
 
-***
-
 ## Custom prompt rendering
 
-You may opt to render prompts using the prompt metadata when the desired rendering differs from what the SDK produces by default.
+If you want to render prompts differently from what the SDK produces by default, you can render them using the prompt metadata.
 
-The app should report prompt interactions via the provided functions on the prompt object.
+Your app should report prompt interactions through the provided functions on the prompt object.
+
+\[TODO: Dev/PO review — possible issue: the example below uses `promot.deeplink` and `promot.holdout()` ("promot" instead of "prompt"), and its comments mention `homeScreen` while the code uses `'home_screen'`. Left verbatim.]
 
 ```javascript
 
@@ -369,13 +398,11 @@ interface ModalButton {
 */
 ```
 
-***
-
 ## Actions
 
-When a user interacts with the primary prompt CTA, a result callback includes various metadata associated with the prompt to determine the client-side action that should take place.
+When a user interacts with the primary prompt call-to-action (CTA), a result callback includes various metadata associated with the prompt. Use it to determine the client-side action that should take place.
 
-```javaScript
+```javascript
 // Data schema of the result callback
 interface PromptResult {
   code: PromptResultCode;
@@ -392,8 +419,6 @@ interface PromptResult {
   };
 }
 ```
-
-***
 
 ## Analytics callback example
 
@@ -465,11 +490,9 @@ interface PromptResult {
 />
 ```
 
-***
-
 ## Deep link
 
-You can add a deep link to a prompt within Pulse. When the user invokes the CTA, you can use the deep link to send the user to a specific location within the app.
+You can add a deep link to a prompt in Pulse. When the user selects the CTA, you can use the deep link to send the user to a specific location within the app.
 
 ```javascript
 {
@@ -481,11 +504,9 @@ You can add a deep link to a prompt within Pulse. When the user invokes the CTA,
 }
 ```
 
-***
-
 ## Custom metadata
 
-Custom key-value pairs can be added to an item via Pulse. These values may be used to perform an action that is not the typical media asset deep link, such as sending the user to a registration screen or performing an operation on behalf of the user.
+You can add custom key-value pairs to an item in Pulse. You can use these values to perform an action other than the typical media asset deep link, such as sending the user to a registration screen or performing an operation on behalf of the user.
 
 ```javascript
 {
@@ -500,43 +521,38 @@ Custom key-value pairs can be added to an item via Pulse. These values may be us
 }
 ```
 
-***
+## Send a usage tracking event
 
-## Send usage tracking event
-
-Your app can send custom track events using the SDK. If configured as a tracker within Pulse, these custom events can be used to target prompts at specific sets of users.
+Your app can send custom track events using the SDK. If you configure a tracker in Pulse, you can use these custom events to target prompts at specific sets of users.
 
 ```javascript
 promptMgr.customTrack(customFieldId);
 ```
 
-***
-
 ## Debugging
 
-You may reset the current user's prompt status so that previously suppressed prompts become available again.
+You can reset the current user's prompt status so that previously suppressed prompts become available again.
 
 ```javascript
 promptMgr.resetGoal();
 ```
 
-***
-
-## Migrating from the redfast-scoped packages
+## Migrate from the redfast-scoped packages
 
 If you integrated this SDK before it moved to public npm, update the following:
 
-| Before                                 | After                            |
-| --------------------------------------- | -------------------------------- |
-| `@recurly/react-native-redfast`         | `@recurly/engage-react-native`   |
-| `@recurly/redfast-core`                 | `@recurly/engage-core`           |
-| `RedfastInline`                         | `RecurlyInline`                  |
-| `.npmrc`/`.yarnrc.yml` with an AUTHTOKEN for `npm.pkg.github.com` | Remove entirely — no registry config needed |
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Before</td><td>After</td></tr>
+  <tr><td><code>@recurly/react-native-redfast</code></td><td><code>@recurly/engage-react-native</code></td></tr>
+  <tr><td><code>@recurly/redfast-core</code></td><td><code>@recurly/engage-core</code></td></tr>
+  <tr><td><code>RedfastInline</code></td><td><code>RecurlyInline</code></td></tr>
+  <tr><td><code>.npmrc</code>/<code>.yarnrc.yml</code> with an AUTHTOKEN for <code>npm.pkg.github.com</code></td><td>Remove entirely. No registry config needed</td></tr>
+</table>
 
-You'll also need to add `@react-native-async-storage/async-storage` as a direct dependency in your own `package.json` if you haven't already — see the note under **Install the SDK** above.
-
-***
+You also need to add `@react-native-async-storage/async-storage` as a direct dependency in your own `package.json` if you haven't already. See the note under **Install the SDK** above.
 
 ## Claude skill
 
-A Claude skill for this SDK is available for download at [SKILL.md](https://github.com/recurly/recurly-engage-react-native-sdk-build/blob/main/docs/SKILL.md). This skill enables Claude to assist with SDK integration, prompt configuration, and event handling in your React Native application.
+A Claude skill for this SDK is available for download at <a href="https://github.com/recurly/recurly-engage-react-native-sdk-build/blob/main/docs/SKILL.md" target="_blank">SKILL.md</a>. This skill enables Claude to assist with SDK integration, prompt configuration, and event handling in your React Native application.
+
+<br />
