@@ -12,11 +12,6 @@ metadata:
 next:
   description: ''
 ---
-Title: Testing tips
-Metadata description: Learn how to test Recurly Engage prompts reliably with the Test Users segment, including how to reset test users and allow for propagation delays.
-
-\---PASTE INTO EDITOR BELOW---
-
 <div class="rp-page">
   <div class="rp-overview">These recommendations help you test prompts accurately and reliably using the Test Users segment. They also cover reset and propagation considerations.</div>
   <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly plans</div>
