@@ -92,13 +92,3 @@ In December 2020, Apple introduced new requirements for app developers to outlin
 
 * **Identifiers**: Recurly Engage does not create a user identifier. A User ID created by your system is passed to the Recurly Engage software development kit (SDK). Your system may be using Apple's IDFV identifier and passing that to the SDK. Consult your engineer for specific details.
 * **Usage data**: Session-related information, and optionally any additional user events that you choose to track using Recurly Engage.
-
-***
-
-📋 TODO before publishing:
-
-- [ ] Confirm the title. The draft had none, so I used "Data privacy and security".
-- [ ] Confirm plan availability. The draft had no "Required plan" section, so I used the standard "Available on all Recurly plans" pill.
-- [ ] Compliance review: the "Regulatory compliance" benefit lists HIPAA, but nothing else on the page covers HIPAA. Left as written. Confirm with the appropriate owner.
-- [ ] Confirm the Privacy Policy URL. It still points to the `redfast.com` domain: `https://www.redfast.com/privacy`.
-- [ ] Confirm the User traits link destination. The source used the relative slug `user-traits`; I rendered it as `/recurly-engage/docs/user-traits`.
