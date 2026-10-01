@@ -127,11 +127,3 @@ The remaining setup steps follow the same flow as <a href="/docs/prompts" target
 
 
 <Image src="https://files.readme.io/05d43d1-Screenshot_2024-04-30_at_7.00.32_PM.png" align="center" width="75%" border={true} />
-
-
-***
-
-📋 TODO before publishing:
-
-- [ ] Confirm the "creating a prompt" link destination. The source used the relative slug `prompts`; I rendered it as `/docs/prompts`.
-- [ ] Confirm the third lifecycle pipeline name. The source spells it "E-commerce Pipeline"; I wrote "Ecommerce pipeline" to follow the brand word bank. Revert if that's the exact name shown in Pulse.
