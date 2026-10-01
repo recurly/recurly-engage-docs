@@ -9,80 +9,157 @@ hidden: false
 metadata:
   robots: noindex
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">The Recurly Engage Apple software development kit (SDK) lets you display prompts and track user events in native iOS and tvOS apps.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
 ### Prerequisites
 
-* A Recurly Engage account with a valid App ID (found in **Settings → Application**)
-* Xcode with an iOS 15+ or tvOS 15+ deployment target
-* Swift Package Manager or access to the `RedFast.xcframework` file for legacy installation
+<ul class="rp-list">
+  <li>A Recurly Engage account with a valid App ID (found in <strong>Settings → Application</strong>)</li>
+  <li>Xcode with an iOS 15+ or tvOS 15+ deployment target</li>
+  <li>Swift Package Manager or access to the <code>RedFast.xcframework</code> file for legacy installation</li>
+</ul>
 
 ### Limitations
 
-* Push notification support is available on iOS only — not tvOS
-* In-app purchase support is available on iOS only
-* `PromptManager` is a `@MainActor`-isolated singleton — all public methods must be called from the main thread
-* Requires iOS 15+ or tvOS 15+
+<ul class="rp-list">
+  <li>Push notification support is available on iOS only, not tvOS</li>
+  <li>In-app purchase support is available on iOS only</li>
+  <li><code>PromptManager</code> is a <code>@MainActor</code>-isolated singleton, so all public methods must be called from the main thread</li>
+  <li>Requires iOS 15+ or tvOS 15+</li>
+</ul>
 
 # Definition
 
-The Recurly Engage Apple SDK is a native library for iOS and tvOS apps that handles prompt rendering and user event tracking automatically. It provides built-in SwiftUI components for modals, banners, interstitials, and inline prompts, and gives you full control over deep linking, custom metadata, push notifications, and in-app purchases.
+<div class="rp-definition">The Recurly Engage Apple SDK is a native library for iOS and tvOS apps that handles prompt rendering and user event tracking automatically. It provides built-in SwiftUI components for modals, banners, interstitials, and inline prompts, and gives you full control over deep linking, custom metadata, push notifications, and in-app purchases.</div>
 
 # Key benefits
 
-* **SDK integration**: Embed prompts and track user events directly in native iOS and tvOS applications — no web views or workarounds needed.
-* **Automatic UI handling**: Built-in SwiftUI components for modals, banners, interstitials, and inline prompts take care of rendering so you can focus on your app logic.
-* **Deep links and custom metadata**: Leverage custom metadata and deep links for tailored in-app navigation configured directly from Recurly Engage.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></div>
+    <strong>SDK integration</strong>
+    <span>Embed prompts and track user events directly in native iOS and tvOS applications, with no web views or workarounds needed.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></div>
+    <strong>Automatic UI handling</strong>
+    <span>Built-in SwiftUI components for modals, banners, interstitials, and inline prompts take care of rendering so you can focus on your app logic.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-link" aria-hidden="true"></i></div>
+    <strong>Deep links and custom metadata</strong>
+    <span>Use custom metadata and deep links for tailored in-app navigation configured directly from Recurly Engage.</span>
+  </div>
+</div>
 
 # Key details
 
 ## Install the SDK
 
-The Recurly Engage Apple SDK supports iOS 15+ and tvOS 15+. The latest SDK version and a sample app are available at [github.com/redfast/redfast-sdk-apple/releases](https://github.com/redfast/redfast-sdk-apple/releases).
+The Recurly Engage Apple SDK supports iOS 15+ and tvOS 15+. The latest SDK version and a sample app are available at <a href="https://github.com/redfast/redfast-sdk-apple/releases" target="_blank">github.com/redfast/redfast-sdk-apple/releases</a>.
 
 ### Swift Package Manager
 
-Add the SDK from the public GitHub [repository](https://github.com/redfast/redfast-sdk-apple).
+Add the SDK from the public GitHub <a href="https://github.com/redfast/redfast-sdk-apple" target="_blank">repository</a>.
 
-1. Add a new Package Dependency to your existing project.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Add a package dependency</h4><p>Add a new Package Dependency to your existing project.</p></div>
+  </div>
+</div>
 
-<Image align="center" border={true} width="75%" src="https://files.readme.io/b69fc2ebde28f7ca810e40ffcc781d6eb0838fe6c859fe97c482ca0f1cd8cbac-Screenshot_2024-11-20_at_19.55.49.png" className="border" />
 
-2. Paste the GitHub repo URL and select the appropriate Dependency Rule.
+<Image src="https://files.readme.io/b69fc2ebde28f7ca810e40ffcc781d6eb0838fe6c859fe97c482ca0f1cd8cbac-Screenshot_2024-11-20_at_19.55.49.png" align="center" width="75%" border={true} />
 
-<Image align="center" border={true} width="75%" src="https://files.readme.io/fa893cbcac4f982e312da89be3b511bec8b321c4c8f4fc7f53f660f30157edd8-Screenshot_2024-11-20_at_19.58.25.png" className="border" />
 
-3. Complete adding the package.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Paste the repository URL</h4><p>Paste the GitHub repo URL and select the appropriate Dependency Rule.</p></div>
+  </div>
+</div>
 
-<Image align="center" border={true} width="75%" src="https://files.readme.io/76fdc54ab8b032fd78e26a3b5e14d80593d14279d6707f81b9e69747926936cf-Screenshot_2024-11-20_at_19.59.52.png" className="border" />
 
-4. Confirm successful package installation.
+<Image src="https://files.readme.io/fa893cbcac4f982e312da89be3b511bec8b321c4c8f4fc7f53f660f30157edd8-Screenshot_2024-11-20_at_19.58.25.png" align="center" width="75%" border={true} />
 
-<Image align="center" border={true} width="75%" src="https://files.readme.io/9dcc3755e04a1a6daa30fd8f890f99fe420cc12675e2f918e70c2dce8fd88b6e-Screenshot_2024-11-20_at_20.02.19.png" className="border" />
 
-The SDK ships three products — add only what your target needs:
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Complete adding the package</h4><p>Complete adding the package.</p></div>
+  </div>
+</div>
 
-| Product           | Contents                                                           |
-| ----------------- | ------------------------------------------------------------------ |
-| `redfast-ui`      | Core + SwiftUI components (modals, banners, interstitials, inline) |
-| `redfast-ui-iap`  | `redfast-ui` + StoreKit 2 in-app purchase support                  |
-| `redfast-ui-push` | `redfast-ui` + push notification support (iOS only)                |
+
+<Image src="https://files.readme.io/76fdc54ab8b032fd78e26a3b5e14d80593d14279d6707f81b9e69747926936cf-Screenshot_2024-11-20_at_19.59.52.png" align="center" width="75%" border={true} />
+
+
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">4</div>
+    <div><h4>Confirm the installation</h4><p>Confirm successful package installation.</p></div>
+  </div>
+</div>
+
+
+<Image src="https://files.readme.io/9dcc3755e04a1a6daa30fd8f890f99fe420cc12675e2f918e70c2dce8fd88b6e-Screenshot_2024-11-20_at_20.02.19.png" align="center" width="75%" border={true} />
+
+
+The SDK ships three products. Add only what your target needs:
+
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Product</td><td>Contents</td></tr>
+  <tr><td><code>redfast-ui</code></td><td>Core + SwiftUI components (modals, banners, interstitials, inline)</td></tr>
+  <tr><td><code>redfast-ui-iap</code></td><td><code>redfast-ui</code> + StoreKit 2 in-app purchase support</td></tr>
+  <tr><td><code>redfast-ui-push</code></td><td><code>redfast-ui</code> + push notification support (iOS only)</td></tr>
+</table>
 
 ### Legacy installation via local SDK
 
-1. In Xcode, select **Target → General → Frameworks, Libraries, and Embedded Content** and click **+**.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Open the frameworks list</h4><p>In Xcode, select <span style={{fontWeight: "bold"}}>Target → General → Frameworks, Libraries, and Embedded Content</span> and select <span style={{fontWeight: "bold"}}>+</span>.</p></div>
+  </div>
+</div>
 
-2. Select **Add Other → Add Files** and open the `RedFast.xcframework` file.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Add the framework file</h4><p>Select <span style={{fontWeight: "bold"}}>Add Other → Add Files</span> and open the <code>RedFast.xcframework</code> file.</p></div>
+  </div>
+</div>
 
-<Image align="center" border={true} width="75%" src="https://files.readme.io/0824267-Screenshot_2024-05-23_at_3.19.28_PM.png" className="border" />
 
-3. Set the embed option to **Embed & Sign**.
+<Image src="https://files.readme.io/0824267-Screenshot_2024-05-23_at_3.19.28_PM.png" align="center" width="75%" border={true} />
 
-<Image align="center" border={true} width="75%" src="https://files.readme.io/ff07460-Screenshot_2024-05-23_at_3.22.56_PM.png" className="border" />
 
-4. Initialize the SDK per the instructions below.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Set the embed option</h4><p>Set the embed option to <span style={{fontWeight: "bold"}}>Embed &amp; Sign</span>.</p></div>
+  </div>
+</div>
 
-***
+
+<Image src="https://files.readme.io/ff07460-Screenshot_2024-05-23_at_3.22.56_PM.png" align="center" width="75%" border={true} />
+
+
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">4</div>
+    <div><h4>Initialize the SDK</h4><p>Initialize the SDK per the instructions below.</p></div>
+  </div>
+</div>
 
 ## Initialize the SDK
 
@@ -127,9 +204,7 @@ func application(
 
 `PromptManager` is a `@MainActor`-isolated singleton. All public methods must be called from the main thread.
 
-***
-
-## Display prompts — SwiftUI (recommended)
+## Display prompts with SwiftUI (recommended)
 
 The `.promptOverlay` view modifier is the simplest way to display prompts. It resolves the trigger, respects any configured delay, and renders the appropriate component (`PromptPopup`, `PromptBanner`, or `PromptInterstitial`) automatically.
 
@@ -160,19 +235,18 @@ struct HomeView: View {
 
 ### PromptOverlayTrigger
 
-| Case               | When to use                                     |
-| ------------------ | ----------------------------------------------- |
-| `.screen(String)`  | User navigated to a screen                      |
-| `.button(String)`  | User tapped a button with a configured click ID |
-| `.prompt(Prompt?)` | Display a specific `Prompt` object directly     |
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Case</td><td>When to use</td></tr>
+  <tr><td><code>.screen(String)</code></td><td>User navigated to a screen</td></tr>
+  <tr><td><code>.button(String)</code></td><td>User tapped a button with a configured click ID</td></tr>
+  <tr><td><code>.prompt(Prompt?)</code></td><td>Display a specific <code>Prompt</code> object directly</td></tr>
+</table>
 
 Setting `trigger` to `nil` hides any active prompt.
 
-***
+## Manually trigger by screen name
 
-## Manual trigger — screen name
-
-Call `onScreenChanged` when a new screen becomes active. Returns a `CandidatePathItem` with the matched path and any configured display delay.
+Call `onScreenChanged` when a new screen becomes active. It returns a `CandidatePathItem` with the matched path and any configured display delay.
 
 ```swift
 let candidate = PromptManager.shared.onScreenChanged(screenName: "HomeScreen")
@@ -190,11 +264,9 @@ if let path = candidate.path {
 // .DISABLED       — prompts are disabled via enablePrompt(false)
 ```
 
-***
+## Manually trigger by button click
 
-## Manual trigger — button click
-
-Call `onButtonClicked` in a button's action handler. May be used alongside `onScreenChanged` when a trigger requires both a screen name and a click ID.
+Call `onButtonClicked` in a button's action handler. You can use it alongside `onScreenChanged` when a trigger requires both a screen name and a click ID.
 
 ```swift
 @IBAction func cancelButtonTapped(_ sender: Any) {
@@ -207,13 +279,11 @@ Call `onButtonClicked` in a button's action handler. May be used alongside `onSc
 }
 ```
 
-***
-
 ## Inline prompts
 
 ### SwiftUI component
 
-`PromptInline` is a drop-in SwiftUI view that fetches and renders a zone-based inline prompt automatically. Impression and dismiss tracking are handled internally.
+`PromptInline` is a drop-in SwiftUI view that fetches and renders a zone-based inline prompt automatically. It handles impression and dismiss tracking internally.
 
 ```swift
 import redfast_ui
@@ -236,7 +306,7 @@ struct HomeView: View {
 
 ### Fetch inline prompts manually
 
-Use `getTriggerablePrompts` when you need to render inline prompts in a custom UI. Pass the current screen name and/or click ID; use `type` to filter by prompt type and `zoneId` to filter by placement zone.
+Use `getTriggerablePrompts` when you need to render inline prompts in a custom UI. Pass the current screen name and/or click ID. Use `type` to filter by prompt type and `zoneId` to filter by placement zone.
 
 ```swift
 let prompts = PromptManager.shared.getTriggerablePrompts(
@@ -271,22 +341,21 @@ for prompt in prompts {
 
 ### Available PathType values
 
-| Value            | Display name                 |
-| ---------------- | ---------------------------- |
-| `.MODAL`         | Popup prompt                 |
-| `.INTERSTITIAL`  | Full-screen interstitial     |
-| `.BOTTOM_BANNER` | Bottom banner                |
-| `.HORIZONTAL`    | Horizontal banner            |
-| `.VERTICAL`      | Vertical banner              |
-| `.TILE`          | Tile                         |
-| `.VIDEO`         | Video popup                  |
-| `.INVISIBLE`     | No UI — metadata/config only |
-
-***
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Value</td><td>Display name</td></tr>
+  <tr><td><code>.MODAL</code></td><td>Popup prompt</td></tr>
+  <tr><td><code>.INTERSTITIAL</code></td><td>Full-screen interstitial</td></tr>
+  <tr><td><code>.BOTTOM_BANNER</code></td><td>Bottom banner</td></tr>
+  <tr><td><code>.HORIZONTAL</code></td><td>Horizontal banner</td></tr>
+  <tr><td><code>.VERTICAL</code></td><td>Vertical banner</td></tr>
+  <tr><td><code>.TILE</code></td><td>Tile</td></tr>
+  <tr><td><code>.VIDEO</code></td><td>Video popup</td></tr>
+  <tr><td><code>.INVISIBLE</code></td><td>No UI — metadata/config only</td></tr>
+</table>
 
 ## Manual tracking
 
-Use these methods when you are rendering prompts in a custom UI instead of the built-in components. All methods return a `PromptResult`.
+Use these methods when you render prompts in a custom UI instead of the built-in components. All methods return a `PromptResult`.
 
 ```swift
 // Record an impression
@@ -317,8 +386,6 @@ PromptManager.shared.onInlineViewed(pathId: prompt.id, actionGroupId: prompt.act
 PromptManager.shared.onInlineClicked(pathId: prompt.id, actionGroupId: prompt.actionGroupId)
 ```
 
-***
-
 ## PromptResult
 
 Every tracking call returns a `PromptResult`:
@@ -335,33 +402,35 @@ public struct PromptResult {
 
 `promptMeta` contains:
 
-| Key                    | Description                         |
-| ---------------------- | ----------------------------------- |
-| `promptName`           | Prompt name                         |
-| `promptID`             | Prompt ID                           |
-| `promptVariationName`  | Variation name                      |
-| `promptVariationID`    | Variation ID                        |
-| `promptExperimentName` | Experiment name                     |
-| `promptExperimentID`   | Experiment ID                       |
-| `promptType`           | Numeric path type                   |
-| `buttonLabel`          | Label of the button that was tapped |
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Key</td><td>Description</td></tr>
+  <tr><td><code>promptName</code></td><td>Prompt name</td></tr>
+  <tr><td><code>promptID</code></td><td>Prompt ID</td></tr>
+  <tr><td><code>promptVariationName</code></td><td>Variation name</td></tr>
+  <tr><td><code>promptVariationID</code></td><td>Variation ID</td></tr>
+  <tr><td><code>promptExperimentName</code></td><td>Experiment name</td></tr>
+  <tr><td><code>promptExperimentID</code></td><td>Experiment ID</td></tr>
+  <tr><td><code>promptType</code></td><td>Numeric path type</td></tr>
+  <tr><td><code>buttonLabel</code></td><td>Label of the button that was tapped</td></tr>
+</table>
 
 ### PromptResultCode values
 
-| Code              | Meaning                                    |
-| ----------------- | ------------------------------------------ |
-| `.OK`             | SDK initialized successfully               |
-| `.IMPRESSION`     | Impression recorded                        |
-| `.BUTTON1`        | User accepted (button 1)                   |
-| `.BUTTON2`        | User accepted (button 2)                   |
-| `.BUTTON3`        | User declined (button 3)                   |
-| `.DISMISS`        | User dismissed                             |
-| `.TIMEOUT`        | Auto-dismiss timer expired                 |
-| `.HOLDOUT`        | User is in holdout group                   |
-| `.NOT_APPLICABLE` | No matching trigger                        |
-| `.SUPPRESSED`     | Matched but suppressed                     |
-| `.DISABLED`       | Prompts disabled via `enablePrompt(false)` |
-| `.ERROR`          | SDK error                                  |
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Code</td><td>Meaning</td></tr>
+  <tr><td><code>.OK</code></td><td>SDK initialized successfully</td></tr>
+  <tr><td><code>.IMPRESSION</code></td><td>Impression recorded</td></tr>
+  <tr><td><code>.BUTTON1</code></td><td>User accepted (button 1)</td></tr>
+  <tr><td><code>.BUTTON2</code></td><td>User accepted (button 2)</td></tr>
+  <tr><td><code>.BUTTON3</code></td><td>User declined (button 3)</td></tr>
+  <tr><td><code>.DISMISS</code></td><td>User dismissed</td></tr>
+  <tr><td><code>.TIMEOUT</code></td><td>Auto-dismiss timer expired</td></tr>
+  <tr><td><code>.HOLDOUT</code></td><td>User is in holdout group</td></tr>
+  <tr><td><code>.NOT_APPLICABLE</code></td><td>No matching trigger</td></tr>
+  <tr><td><code>.SUPPRESSED</code></td><td>Matched but suppressed</td></tr>
+  <tr><td><code>.DISABLED</code></td><td>Prompts disabled via <code>enablePrompt(false)</code></td></tr>
+  <tr><td><code>.ERROR</code></td><td>SDK error</td></tr>
+</table>
 
 ### PromptEvent enum
 
@@ -377,11 +446,9 @@ case .dismissed(let result):  // user dismissed
 }
 ```
 
-***
-
 ## Deep links and custom metadata
 
-Deep link key-value pairs and custom metadata are configured in Recurly Engage.
+You configure deep link key-value pairs and custom metadata in Recurly Engage.
 
 ```swift
 // From a Prompt object (inline)
@@ -393,17 +460,13 @@ let deeplink   = result.value       // [String: Any?]?
 let customMeta = result.meta        // [String: Any?]?
 ```
 
-***
+## Invisible prompts (metadata only)
 
-## Invisible prompts — metadata only
-
-Prompts of type `.INVISIBLE` carry no UI; they deliver metadata visible across all screens. Use `getMeta()` to read the merged metadata from all active invisible prompts.
+Prompts of type `.INVISIBLE` carry no UI. They deliver metadata that's visible across all screens. Use `getMeta()` to read the merged metadata from all active invisible prompts.
 
 ```swift
 let meta = PromptManager.shared.getMeta() // [String: Any]
 ```
-
-***
 
 ## Send a custom tracking event
 
@@ -411,9 +474,7 @@ let meta = PromptManager.shared.getMeta() // [String: Any]
 PromptManager.shared.customTrack(customFieldId: "YOUR_CUSTOM_TRACK_ID")
 ```
 
-***
-
-## Update user ID
+## Update the user ID
 
 Change the user ID after initialization, for example when a user authenticates mid-session. Prompts refresh automatically within a few seconds.
 
@@ -421,9 +482,7 @@ Change the user ID after initialization, for example when a user authenticates m
 PromptManager.shared.setUserId("NEW_USER_ID")
 ```
 
-***
-
-## Enable/disable prompts
+## Enable or disable prompts
 
 Pause and resume all prompt display without re-initializing the SDK.
 
@@ -432,25 +491,21 @@ PromptManager.shared.enablePrompt(enabled: false) // pause
 PromptManager.shared.enablePrompt(enabled: true)  // resume
 ```
 
-***
-
 ## Reset suppression
 
-Clear all suppressed prompt state and report a goal reset to Recurly Engage. Useful for QA or when a user's subscription state changes.
+Clear all suppressed prompt state and report a goal reset to Recurly Engage. This is useful for QA or when a user's subscription state changes.
 
 ```swift
 PromptManager.shared.resetGoal()
 ```
 
-***
-
 ## Push notifications (iOS only)
 
-Add the `redfast-ui-push` product to your target. Integration order:
+Add the `redfast-ui-push` product to your target. Integrate in this order:
 
-1. `FirebaseApp.configure()` — optional, only if using FCM
-2. `PromptManager.initPrompt(...)` — must come before the push manager
-3. `RedfastPushManager.shared.configure()` — requests permission, registers for remote notifications
+1. `FirebaseApp.configure()`: optional, only if you use Firebase Cloud Messaging (FCM)
+2. `PromptManager.initPrompt(...)`: must come before the push manager
+3. `RedfastPushManager.shared.configure()`: requests permission and registers for remote notifications
 
 ```swift
 import redfast_ui
@@ -473,8 +528,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 `RedfastPushManager` handles the full push lifecycle automatically:
 
 * Requests user permission and registers for remote notifications
-* Swizzles `UIApplicationDelegate` push callbacks — no manual forwarding needed
-* Posts the APNs/FCM token to Recurly Engage
+* Swizzles `UIApplicationDelegate` push callbacks, so no manual forwarding is needed
+* Posts the Apple Push Notification service (APNs) or FCM token to Recurly Engage
 * Tracks push impression and goal events
 
 Firebase/FCM support is enabled automatically when `FirebaseMessaging` is present in the host app.
@@ -487,7 +542,7 @@ See `Redflix/Redflix/redflixApp.swift` for a SwiftUI integration example using `
 RedfastPushManager.shared.setCustomButton("Remind me later")
 ```
 
-### Read notification payload
+### Read the notification payload
 
 These helpers parse the notification `userInfo` dictionary regardless of whether the payload uses a flat, nested, or APNs `aps.alert` structure:
 
@@ -501,8 +556,6 @@ let deeplink    = manager.getActionDeeplink(userInfo) // deep link on tap
 let images      = manager.getImageUrls(userInfo)
 // images.iconUrl, images.smallIconUrl, images.imageUrl
 ```
-
-***
 
 ## In-app purchases (iOS only)
 
@@ -523,10 +576,12 @@ if case .clicked(let result) = event, let sku = result.inAppProductId {
 }
 ```
 
-On a successful purchase the conversion goal is automatically reported to Recurly Engage.
+On a successful purchase, the conversion goal is automatically reported to Recurly Engage.
 
-**Local testing:** Redflix ships a `configurations.storekit` file. Use Xcode's StoreKit test environment to test purchases without hitting App Store servers.
+**Local testing**: Redflix ships a `configurations.storekit` file. Use Xcode's StoreKit test environment to test purchases without hitting App Store servers.
 
 ## Claude skill
 
-A Claude skill for this SDK is available for download at [SKILL.md](https://github.com/redfast/redfast-sdk-android/blob/main/SKILL.md). This skill enables Claude to assist with SDK integration, prompt configuration, and event handling in your Android application.
+A Claude skill for this SDK is available for download at <a href="https://github.com/redfast/redfast-sdk-android/blob/main/SKILL.md" target="_blank">SKILL.md</a>. This skill enables Claude to assist with SDK integration, prompt configuration, and event handling in your Android application.
+
+<br />
