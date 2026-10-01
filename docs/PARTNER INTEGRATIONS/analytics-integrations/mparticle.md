@@ -12,113 +12,139 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">The mParticle connector lets you export prompt events and attributes from Recurly Engage to your mParticle workspace, so you can track user activity across platforms in one place.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage subscription plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-The **mParticle** connector lets you export prompt events and attributes from Recurly Engage to your mParticle workspace, enabling unified user activity tracking across platforms.
+### Prerequisites
 
-### Required plan
-
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
-
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
-        </p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          An mParticle account with permissions to create Custom Feeds.
-        </p>
-        <p>
-          <i className="fa-solid fa-exclamation-triangle mr-4" />
-          Access to your mParticle workspace’s Server Key and Secret.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>You must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.</li>
+  <li>You must have an mParticle account with permissions to create Custom Feeds.</li>
+  <li>You must have access to your mParticle workspace's Server Key and Secret.</li>
+</ul>
 
 # Definition
 
-Using mParticle’s Custom Feed integration, Recurly Engage will send prompt interaction events and related attributes to mParticle for real-time analytics and segmentation.
+<div class="rp-definition">Using mParticle's Custom Feed integration, Recurly Engage sends prompt interaction events and related attributes to mParticle for real-time analytics and segmentation.</div>
 
 # Key benefits
 
-* **Streamlined event export**: Automatically push Recurly Engage events into mParticle without custom coding.
-* **Unified user data**: Leverage mParticle’s identity resolution and data pipeline for prompt events.
-* **Real-time insights**: View prompt impressions, clicks, and custom goals alongside all other mParticle-tracked events.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-file-export" aria-hidden="true"></i></div>
+    <strong>Streamlined event export</strong>
+    <span>Automatically push Recurly Engage events into mParticle without custom coding.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-id-card" aria-hidden="true"></i></div>
+    <strong>Unified user data</strong>
+    <span>Use mParticle's identity resolution and data pipeline for prompt events.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+    <strong>Real-time insights</strong>
+    <span>View prompt impressions, clicks, and custom goals alongside all other mParticle-tracked events.</span>
+  </div>
+</div>
 
 # Key details
 
-## Activation
+## Activate the integration
 
-1. In **mParticle**, **navigate** to **Setup → Inputs**.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Open Inputs</h4><p>In <span style={{fontWeight: "bold"}}>mParticle</span>, navigate to <span style={{fontWeight: "bold"}}>Setup → Inputs</span>.</p></div>
+  </div>
+</div>
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/d0f22ee-mParticle_add_new_custom_feed.png" />
 
-2. **Click** on the **Feeds** tab and **add** a **Custom Feed** by clicking the **+** icon.
+<Image src="https://files.readme.io/d0f22ee-mParticle_add_new_custom_feed.png" align="center" width="75%" border={true} />
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/9b94f9b-mParticle_add_new_custom_feed_1.png" />
 
-3. Provide a **Configuration Name**, then share the **Server Key**, **Server Secret**, and **API Endpoint** with your Recurly Engage Customer Success Manager.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Add a Custom Feed</h4><p>Select the <span style={{fontWeight: "bold"}}>Feeds</span> tab and add a <span style={{fontWeight: "bold"}}>Custom Feed</span> by selecting the <span style={{fontWeight: "bold"}}>+</span> icon.</p></div>
+  </div>
+</div>
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/27a2abc-mParticle_add_new_custom_feed_2.png" />
 
-### Required settings
+<Image src="https://files.readme.io/9b94f9b-mParticle_add_new_custom_feed_1.png" align="center" width="75%" border={true} />
+
+
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Share the feed details</h4><p>Provide a <span style={{fontWeight: "bold"}}>Configuration Name</span>, and then share the <span style={{fontWeight: "bold"}}>Server Key</span>, <span style={{fontWeight: "bold"}}>Server Secret</span>, and <span style={{fontWeight: "bold"}}>API Endpoint</span> with your Recurly Engage Customer Success Manager or <a href="mailto:support@recurly.com">support@recurly.com</a>.</p></div>
+  </div>
+</div>
+
+
+<Image src="https://files.readme.io/27a2abc-mParticle_add_new_custom_feed_2.png" align="center" width="75%" border={true} />
+
+
+## Required settings
 
 Under **Settings → Integrations → External → mParticle** in Recurly Engage, configure:
 
-* **Base API Endpoint** (including mParticle Pod)
+* **Base API Endpoint** (including the mParticle Pod)
 * **Server Key**
 * **Server Secret**
 * **Mode**: Production or Development
 
-### Supported actions
+## Supported actions
 
-| Action            | Description                                                                 |
-| ----------------- | --------------------------------------------------------------------------- |
-| **Export Events** | Reports custom events with user-specific prompt interactions and attributes |
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Action</td><td>Description</td></tr>
+  <tr><td><strong>Export Events</strong></td><td>Reports custom events with user-specific prompt interactions and attributes</td></tr>
+</table>
 
 ## Custom events and attributes
 
-After activation, mParticle will receive the following custom events tagged to the user’s identity, visible in the User Activity screen:
+After activation, mParticle receives the following custom events, tagged to the user's identity and visible in the User Activity screen:
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/b504573-mparticle-user-activity-4.png" />
 
-<br />
+<Image src="https://files.readme.io/b504573-mparticle-user-activity-4.png" align="center" width="75%" border={true} />
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/e006d0a-mparticle-custom-event-5.png" />
 
-| Custom Event                          | Description                                                               |
-| ------------------------------------- | ------------------------------------------------------------------------- |
-| **Recurly Engage Prompt Impression**  | A user has seen the prompt                                                |
-| **Recurly Engage Prompt Dismiss**     | A user has dismissed the prompt by clicking close or outside (if enabled) |
-| **Recurly Engage Prompt Timeout**     | The prompt closed automatically due to a timer                            |
-| **Recurly Engage Prompt Decline**     | A user declined the prompt by clicking the decline button                 |
-| **Recurly Engage Prompt Click**       | A user accepted the prompt via the primary CTA                            |
-| **Recurly Engage Prompt Custom Goal** | A user completed the custom goal action defined for the prompt            |
 
-**Attributes** sent with each event (when available):
+<Image src="https://files.readme.io/e006d0a-mparticle-custom-event-5.png" align="center" width="75%" border={true} />
 
-| Custom Attribute  | Description                                                          |
-| ----------------- | -------------------------------------------------------------------- |
-| `app_name`        | The name of your Recurly Engage instance in Pulse                    |
-| `prompt_id`       | Unique prompt identifier (from Details)                              |
-| `prompt_name`     | The name of the prompt                                               |
-| `experiment_id`   | Unique experiment identifier (if the prompt is part of an A/B test)  |
-| `experiment_name` | Name of the running experiment                                       |
-| `variation_id`    | Identifier for the specific prompt variation                         |
-| `variation_name`  | Name of that prompt variation                                        |
-| `survey_value`    | Value of selected survey option (if survey is enabled on the prompt) |
 
-***
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Custom event</td><td>Description</td></tr>
+  <tr><td><strong>Recurly Engage Prompt Impression</strong></td><td>A user has seen the prompt</td></tr>
+  <tr><td><strong>Recurly Engage Prompt Dismiss</strong></td><td>A user has dismissed the prompt by clicking close or outside (if enabled)</td></tr>
+  <tr><td><strong>Recurly Engage Prompt Timeout</strong></td><td>The prompt closed automatically due to a timer</td></tr>
+  <tr><td><strong>Recurly Engage Prompt Decline</strong></td><td>A user declined the prompt by clicking the decline button</td></tr>
+  <tr><td><strong>Recurly Engage Prompt Click</strong></td><td>A user accepted the prompt using the primary call-to-action (CTA)</td></tr>
+  <tr><td><strong>Recurly Engage Prompt Custom Goal</strong></td><td>A user completed the custom goal action defined for the prompt</td></tr>
+</table>
+
+These attributes are sent with each event (when available):
+
+<table class="rp-gw-table">
+  <tr class="rp-thead-row"><td>Custom attribute</td><td>Description</td></tr>
+  <tr><td><code>app_name</code></td><td>The name of your Recurly Engage instance in Pulse</td></tr>
+  <tr><td><code>prompt_id</code></td><td>Unique prompt identifier (from Details)</td></tr>
+  <tr><td><code>prompt_name</code></td><td>The name of the prompt</td></tr>
+  <tr><td><code>experiment_id</code></td><td>Unique experiment identifier (if the prompt is part of an A/B test)</td></tr>
+  <tr><td><code>experiment_name</code></td><td>Name of the running experiment</td></tr>
+  <tr><td><code>variation_id</code></td><td>Identifier for the specific prompt variation</td></tr>
+  <tr><td><code>variation_name</code></td><td>Name of that prompt variation</td></tr>
+  <tr><td><code>survey_value</code></td><td>Value of selected survey option (if survey is enabled on the prompt)</td></tr>
+</table>
 
 ## Additional resources
 
-* [mParticle Custom Feed Reference](https://docs.mparticle.com/integrations/custom-feed/feed/)
+<ul class="rp-list">
+  <li><a href="https://docs.mparticle.com/integrations/custom-feed/feed/" target="_blank">mParticle Custom Feed Reference</a></li>
+</ul>
