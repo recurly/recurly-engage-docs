@@ -42,7 +42,7 @@ Select an integration to see its setup details.
   <Card title="mParticle" href="/recurly-engage/docs/mparticle" target="_blank">
     Export prompt events and attributes to mParticle through a Custom Feed integration.
   </Card>
-  <Card title="Heap" href="/recurly-engage/docs/heap" target="_blank">
+  <Card title="Heap">
     Capture prompt interactions using Heap's JavaScript SDK for automatic event capture.
   </Card>
   <Card title="Adobe Analytics" href="/recurly-engage/docs/adobe-analytics" target="_blank">
