@@ -156,6 +156,10 @@ Automated exports sync on a nightly basis, and each run imports the subscription
 <tr><td><code>past_due_invoice_date</code></td><td>The date of the subscriber's most recent past-due invoice. Set when a <code>past_due</code> webhook event is received. <em>(webhook)</em></td></tr>
 </table>
 
+<div class="rp-callout rp-callout-note">
+<div><strong><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Note</strong>Traits marked <em>(webhook)</em> require Recurly webhooks to be configured and active. The nightly CSV export does not populate these traits.</div>
+</div>
+
 ## Supported actions
 
 Once your connector is active and data is synced, you can attach these 1-Click actions to prompt interactions.
