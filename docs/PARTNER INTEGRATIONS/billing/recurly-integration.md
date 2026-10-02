@@ -9,13 +9,14 @@ metadata:
   robots: index
 ---
 <div class="rp-page">
-<div class="rp-overview">The Recurly connector integrates your Recurly account with Recurly Engage, enabling nightly subscription data synchronization and real-time billing management from the prompt interface. Once connected, subscription data becomes available as user traits for segmentation, and subscribers can take billing actions — like applying coupons, switching plans, or pausing — directly from a prompt without leaving your site.</div>
-<div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available to Recurly Engage customers</div>
-<div class="rp-toc">
-<a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
-<a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
-<a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
-</div>
+  <div class="rp-overview">The Recurly connector links your Recurly account to Recurly Engage, so you can sync subscription data and run billing actions right from your prompts. Apply coupons, switch plans, pause or resume subscriptions, and more — without leaving the prompt interface.</div>
+  <div style={{position: "relative", paddingTop: "56.25%", marginBottom: "28px", borderRadius: "10px", overflow: "hidden"}}><iframe src="https://www.loom.com/embed/46bc074c2ae84fcd8fd55d7b342859d2" title="Recurly connector overview" allow="autoplay; fullscreen" allowtransparency="true" frameBorder="0" scrolling="no" allowFullScreen style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none"}}></iframe></div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
 </div>
 
 ### Prerequisites
