@@ -12,50 +12,74 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">Something off with what one user is seeing? Use Lookup in Recurly Engage to check their traits, see which prompts they're eligible for, and impersonate them to replicate their experience.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-### Required plan
+### Prerequisites
 
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
-
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          You must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>You must have <span style={{fontWeight: "bold"}}>Company</span> or <span style={{fontWeight: "bold"}}>App Administrator</span> permissions in Engage.</li>
+</ul>
 
 # Definition
 
-The **Lookup** tool allows you to check a specific user's traits and view the prompts they are eligible to see, streamlining troubleshooting.
+<div class="rp-definition">The <span style={{fontWeight: "bold"}}>Lookup</span> tool lets you check a specific user's traits and see which prompts they're eligible to see, which makes troubleshooting faster.</div>
 
 # Key benefits
 
-* **Quick troubleshooting**: Instantly view a user’s attributes and active prompts to diagnose issues swiftly.
-* **Live emulation**: Impersonate any user in your environment to replicate their experience in real time.
-* **Improved support**: Provide targeted assistance by understanding exactly which prompts a user sees and why.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Quick troubleshooting</strong>
+    <span>Instantly view a user’s attributes and active prompts to diagnose issues fast.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Live emulation</strong>
+    <span>Impersonate any user in your environment to replicate their experience in real time.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Improved support</strong>
+    <span>Provide targeted assistance by understanding exactly which prompts a user sees and why.</span>
+  </div>
+</div>
 
 # Key details
 
-The Lookup tool allows you to effectively troubleshoot your users' experience with the prompts by checking a specific user's traits and prompts they are eligible to see.
+The Lookup tool lets you troubleshoot your users' experience with prompts by checking a specific user's traits and the prompts they're eligible to see.
 
-<Image align="center" className="border" border={true} src="https://files.readme.io/d111e0b-image.png" />
 
-To look up a specific user, enter their user ID into the search field. User IDs can sometimes be a long alpha-numeric or hex string so make sure you copy the user ID correctly from your source reference before entering it here.
+<Image src="https://files.readme.io/d111e0b-image.png" align="center" width="75%" border={true} />
 
-Then, hit **View** to load the user's data or **Impersonate** to open your site using our Live tool and emulate your selected user.
 
-<Image align="center" className="border" border={true} src="https://files.readme.io/ff03aac-image.png" />
+## Look up a user
 
-<Image align="center" className="border" border={true} src="https://files.readme.io/858e875-image.png" />
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Enter the user ID</h4><p>Enter the user ID into the search field. User IDs can sometimes be long alphanumeric or hexadecimal strings, so copy the user ID carefully from your source reference before entering it here.</p></div>
+  </div>
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>View or impersonate the user</h4><p>Click <span style={{fontWeight: "bold"}}>View</span> to load the user's data, or <span style={{fontWeight: "bold"}}>Impersonate</span> to open your site using our Live tool and emulate the selected user.</p></div>
+  </div>
+</div>
 
-<Image align="center" className="border" border={true} src="https://files.readme.io/c24d259-image.png" />
+
+<Image src="https://files.readme.io/ff03aac-image.png" align="center" width="75%" border={true} />
+
+
+
+<Image src="https://files.readme.io/858e875-image.png" align="center" width="75%" border={true} />
+
+
+
+<Image src="https://files.readme.io/c24d259-image.png" align="center" width="75%" border={true} />
