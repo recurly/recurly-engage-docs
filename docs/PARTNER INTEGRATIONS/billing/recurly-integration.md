@@ -217,23 +217,6 @@ Custom field mapping is configured per app in **Pulse → Settings → Integrati
 
 Contact <a href="mailto:support@recurly.com">[support@recurly.com](mailto:support@recurly.com)</a> or your CSM to enable this feature.
 
-## Available 1-Click actions
-
-Once connected, the following actions can be triggered directly from a prompt without the subscriber leaving your site:
-
-<ul class="rp-list">
-<li>Apply Coupon Code</li>
-<li>Pause Subscription</li>
-<li>Resume Subscription</li>
-<li>Switch Plan</li>
-<li>Create Subscription</li>
-<li>Reactivate Subscription</li>
-<li>Cancel Subscription</li>
-<li>Update Pricing</li>
-<li>Convert Trial</li>
-<li>Record Usage</li>
-</ul>
-
 ## Supported actions
 
 Once your connector is active and data is synced, you can attach these 1-Click actions to prompt interactions.
