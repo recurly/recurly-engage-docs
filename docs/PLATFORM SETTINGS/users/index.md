@@ -12,43 +12,62 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">The Users settings section brings together every tool for managing who can access your Pulse app, previewing prompts in production, troubleshooting individual users, and enforcing global exposure limits.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#key-details"><span class="rp-toc-num">3</span>Key details</a>
+  </div>
+</div>
 
-The **Users** settings section consolidates all tools for managing who can access your Pulse app, preview prompts in production, troubleshoot individual users, and enforce global exposure limits.
+### Prerequisites
 
-### Required plan
-
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
-
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          You must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>You must have <span style={{fontWeight: "bold"}}>Company</span> or <span style={{fontWeight: "bold"}}>App Administrator</span> permissions in Recurly Engage.</li>
+</ul>
 
 # Definition
 
-The **Users** section groups four core management tools—Pulse Users, Test Users, User Lookup, and Global Limits—into a single navigational area for streamlined configuration and support.
+<div class="rp-definition">The <span style={{fontWeight: "bold"}}>Users</span> section groups four management tools — Pulse users, Test users, User lookup, and Global limits — in a single area for configuration and support.</div>
 
 # Key benefits
 
-* **Centralized access control**: Manage all user-related settings from one unified interface.
-* **Efficient QA workflows**: Quickly whitelist, lookup, or emulate users without leaving the dashboard.
-* **Consistent user experience**: Apply global limits and holdouts to ensure controlled prompt exposure across your entire audience.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Centralized access control</strong>
+    <span>Manage all user-related settings from one interface.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Efficient QA workflows</strong>
+    <span>Quickly whitelist, look up, or emulate users for quality assurance (QA) without leaving the dashboard.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Consistent user experience</strong>
+    <span>Apply global limits and holdouts to ensure controlled prompt exposure across your entire audience.</span>
+  </div>
+</div>
 
 # Key details
 
-* Manage team permissions and invite new members with [Pulse Users](pulse-users).
-* Whitelist specific accounts to preview prompts in production via [Test Users](test-users).
-* Troubleshoot individual accounts by viewing traits, segments, and eligible prompts in [User Lookup](user-lookup).
-* Control overall prompt exposure using global holdout percentage, impression limits, and frequency caps in [Global Limits](global-limits).
+<div class="rp-nav-grid">
+
+<Cards>
+  <Card title="Pulse users" href="pulse-users" target="_blank">
+    Manage team permissions and invite new members.
+  </Card>
+  <Card title="Test users" href="test-users" target="_blank">
+    Whitelist specific accounts to preview prompts in production.
+  </Card>
+  <Card title="User lookup" href="user-lookup" target="_blank">
+    Troubleshoot individual accounts by viewing traits, segments, and eligible prompts.
+  </Card>
+  <Card title="Global limits" href="global-limits" target="_blank">
+    Control overall prompt exposure using global holdout percentage, impression limits, and frequency caps.
+  </Card>
+</Cards>
+</div>
