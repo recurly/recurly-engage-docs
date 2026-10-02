@@ -160,6 +160,80 @@ Automated exports sync on a nightly basis, and each run imports the subscription
 <div><strong><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Note</strong>Traits marked <em>(webhook)</em> require Recurly webhooks to be configured and active. The nightly CSV export does not populate these traits.</div>
 </div>
 
+## Subscription add-ons
+
+The `subscription_add_ons` trait contains a list of all add-ons currently attached to the subscriber's subscription. It can be used to segment users based on which add-ons they have active.
+
+Each item in the list is an object with the following fields:
+
+<table class="rp-gw-table">
+<tr class="rp-thead-row"><td>Field</td><td>Description</td></tr>
+<tr><td><code>add_on_code</code></td><td>The unique code identifying the add-on.</td></tr>
+<tr><td><code>add_on_name</code></td><td>The display name of the add-on.</td></tr>
+<tr><td><code>quantity</code></td><td>How many units of the add-on the subscriber has.</td></tr>
+<tr><td><code>unit_amount</code></td><td>The per-unit price of the add-on.</td></tr>
+<tr><td><code>created_at</code></td><td>Date and time the add-on was added to the subscription.</td></tr>
+<tr><td><code>expired_at</code></td><td>Date and time the add-on expired, if applicable.</td></tr>
+</table>
+
+<div class="rp-callout rp-callout-note">
+<div><strong><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Note</strong><code>subscription_add_ons</code> is updated via Recurly webhooks. Ensure webhooks are active for this trait to stay current.</div>
+</div>
+
+## External subscription traits
+
+For merchants using Recurly's App Management feature — subscriptions sold through the Apple App Store or Google Play — an additional set of traits is synced nightly from the External Subscriptions export.
+
+<table class="rp-gw-table">
+<tr class="rp-thead-row"><td>Trait</td><td>Description</td></tr>
+<tr><td><code>external_product_reference_code</code></td><td>The reference code for the external product.</td></tr>
+<tr><td><code>external_product_reference_source</code></td><td>The source of the external subscription. Common values: <code>apple_app_store</code>, <code>google_play_store</code>.</td></tr>
+<tr><td><code>external_product_name</code></td><td>The display name of the external product.</td></tr>
+<tr><td><code>external_product_activated_at</code></td><td>Date and time the external subscription was activated.</td></tr>
+<tr><td><code>external_product_expires_at</code></td><td>Date and time the external subscription expires.</td></tr>
+<tr><td><code>external_product_state</code></td><td>Current state of the external subscription.</td></tr>
+</table>
+
+<div class="rp-callout rp-callout-warning">
+<div><strong><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Warning</strong>External subscription traits require the <span style={{fontWeight: "bold"}}>External Subscriptions (v5)</span> export to be enabled in Recurly Subscription Management. If you're not using Recurly App Management, this section doesn't apply.</div>
+</div>
+
+## 1-Click actions — required traits
+
+To use 1-Click subscription actions in prompts — such as Apply Coupon, Switch Plan, or Cancel Subscription — Recurly Engage needs to look up the subscriber's account in Recurly. Depending on your integration configuration, one of the following traits must be present on the user's profile:
+
+<table class="rp-gw-table">
+<tr class="rp-thead-row"><td>Trait</td><td>When to use</td></tr>
+<tr><td><code>account_code</code></td><td>Used when <span style={{fontWeight: "bold"}}>Use Account Code</span> is enabled in the integration settings. Recurly Engage assumes the user's ID matches their Recurly account code — no separate trait is needed.</td></tr>
+<tr><td><code>recurly_account_code</code></td><td>Used when <span style={{fontWeight: "bold"}}>Use Account Code</span> is <em>not</em> enabled and your Engage user IDs differ from Recurly account codes. Set this trait to the subscriber's Recurly account code so Engage can look up their account.</td></tr>
+<tr><td><code>recurly_subscription_id</code></td><td>Optional. When set, Recurly Engage targets this specific subscription rather than looking up the subscriber's active subscription automatically. Useful for multi-subscription accounts.</td></tr>
+</table>
+
+## Custom subscription fields
+
+If you use Recurly's custom subscription fields feature, Recurly Engage can sync those field values as additional user traits. This lets you use any custom data stored on subscriptions in Recurly for segmentation and targeting in Engage.
+
+Custom field mapping is configured per app in **Pulse → Settings → Integrations → Recurly**. For each custom field, you define the Recurly field name and, optionally, a different trait name to use in Engage. Trait names are app-specific and will vary by merchant.
+
+Contact <a href="mailto:support@recurly.com">[support@recurly.com](mailto:support@recurly.com)</a> or your CSM to enable this feature.
+
+## Available 1-Click actions
+
+Once connected, the following actions can be triggered directly from a prompt without the subscriber leaving your site:
+
+<ul class="rp-list">
+<li>Apply Coupon Code</li>
+<li>Pause Subscription</li>
+<li>Resume Subscription</li>
+<li>Switch Plan</li>
+<li>Create Subscription</li>
+<li>Reactivate Subscription</li>
+<li>Cancel Subscription</li>
+<li>Update Pricing</li>
+<li>Convert Trial</li>
+<li>Record Usage</li>
+</ul>
+
 ## Supported actions
 
 Once your connector is active and data is synced, you can attach these 1-Click actions to prompt interactions.
