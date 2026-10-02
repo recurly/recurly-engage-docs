@@ -12,73 +12,123 @@ metadata:
 next:
   description: ''
 ---
-# Overview
+<div class="rp-page">
+  <div class="rp-overview">Test users let you preview prompts in production before your real audience sees them. Recurly Engage creates a Test Users segment for every app, and you decide which user IDs belong to it.</div>
+  <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly Engage plans</div>
+  <div class="rp-toc">
+    <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
+    <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">2</span>Key benefits</a>
+    <a class="rp-toc-pill" href="#set-up-test-users"><span class="rp-toc-num">3</span>Set up test users</a>
+    <a class="rp-toc-pill" href="#preview-with-live-preview"><span class="rp-toc-num">4</span>Preview with Live Preview</a>
+  </div>
+</div>
 
-### Required plan
+### Prerequisites
 
-This feature or setting is available to all customers on any Recurly Engage subscription plan.
-
-export const PrerequisitesLimitations = ({ header }) => {
-  return (
-    <div className="flex justify-start">
-      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
-        <p className="text-lg font-bold">{header}</p>
-        <p>
-          <i className="fa-solid fa-check mr-2" />
-          You must have <strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-<PrerequisitesLimitations header="Prerequisites & limitations" />
+<ul class="rp-list">
+  <li>You must have <span style={{fontWeight: "bold"}}>Company</span> or <span style={{fontWeight: "bold"}}>App Administrator</span> permissions in Engage.</li>
+</ul>
 
 # Definition
 
-The **Test Users** segment is an automatically provisioned group that enables you to restrict prompt visibility to a curated list of user IDs for QA and preview purposes.
+<div class="rp-definition">The <span style={{fontWeight: "bold"}}>Test Users</span> segment is an automatically provisioned group that lets you restrict prompt visibility to a curated list of user IDs for quality assurance (QA) and preview purposes.</div>
 
 # Key benefits
 
-* **Safe testing environment**: Preview prompts in production without impacting all users.
-* **Rapid iteration**: Validate creative, triggers, and actions with a controlled audience.
-* **Granular control**: Whitelist or remove specific test accounts on demand.
+<div class="rp-benefits">
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Safe testing environment</strong>
+    <span>Preview prompts in production without impacting all users.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Rapid iteration</strong>
+    <span>Validate creative, triggers, and actions with a controlled audience.</span>
+  </div>
+  <div class="rp-benefit">
+    <div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+    <strong>Granular control</strong>
+    <span>Whitelist or remove specific test accounts on demand.</span>
+  </div>
+</div>
 
-# Key details
+# Set up test users
 
-## Setup Test Users
+Engage automatically creates a **Test Users** segment for each app when you create it. To choose which users belong to this segment:
 
-Recurly Engage automatically creates a **Test Users** segment for each app upon creation. To configure which users belong to this segment:
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Open Test Users</h4><p>Go to <span style={{fontWeight: "bold"}}>Settings &gt; Users &gt; Test Users</span>.</p></div>
+  </div>
+</div>
 
-* **Go** to **Settings > Users > Test Users**.
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/9c4e603-Screenshot_2024-05-22_at_15.20.44.png" />
+<Image src="https://files.readme.io/9c4e603-Screenshot_2024-05-22_at_15.20.44.png" align="center" width="75%" border={true} />
 
-* **Enter** the **User ID** of a test account. User IDs can be long alphanumeric or GUID strings—ensure you copy the exact value from your source system.
 
-* Click **Add**.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Enter a User ID</h4><p>Enter the <span style={{fontWeight: "bold"}}>User ID</span> of a test account. User IDs can be long alphanumeric or globally unique identifier (GUID) strings, so make sure you copy the exact value from your source system.</p></div>
+  </div>
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Add the user</h4><p>Click <span style={{fontWeight: "bold"}}>Add</span>.</p></div>
+  </div>
+</div>
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/85a7cff-Screenshot_2024-05-22_at_15.22.28.png" />
 
-Once added, this user will see all active prompts targeted to **Test Users** when they log in.
+<Image src="https://files.readme.io/85a7cff-Screenshot_2024-05-22_at_15.22.28.png" align="center" width="75%" border={true} />
 
-## Preview via Live tool
 
-You can also simulate a Test User using the Live Preview feature:
+Once added, this user sees all active prompts targeted to **Test Users** when they log in.
 
-* Click the **Live Preview** button in the console. This opens your site and impersonates the selected Test User.
+# Preview with Live Preview
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/2714f17-Screenshot_2024-05-22_at_15.23.56.png" />
+You can also simulate a test user using the Live Preview feature:
 
-* Open the **Recurly Engage Preview** tool on your site.
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">1</div>
+    <div><h4>Start Live Preview</h4><p>Click the <span style={{fontWeight: "bold"}}>Live Preview</span> button in the console. This opens your site and impersonates the selected test user.</p></div>
+  </div>
+</div>
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/0543e15-Screenshot_2024-05-22_at_15.25.01.png" />
 
-* The **User ID** field will auto-populate with your Test User’s ID.
-* If the prompt status is **Inactive**, navigate to the page where the prompt should appear.
+<Image src="https://files.readme.io/2714f17-Screenshot_2024-05-22_at_15.23.56.png" align="center" width="75%" border={true} />
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/5deb9c6-Screenshot_2024-05-22_at_15.35.23.png" />
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/a7583fa-Screenshot_2024-05-22_at_15.39.40.png" />
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">2</div>
+    <div><h4>Open the Preview tool</h4><p>Open the <span style={{fontWeight: "bold"}}>Recurly Engage Preview</span> tool on your site.</p></div>
+  </div>
+</div>
 
-<Image align="center" className="border" border={true} width="80% " src="https://files.readme.io/0eb2ab1-Screenshot_2024-05-22_at_15.40.24.png" />
+
+<Image src="https://files.readme.io/0543e15-Screenshot_2024-05-22_at_15.25.01.png" align="center" width="75%" border={true} />
+
+
+<div class="rp-steps">
+  <div class="rp-step">
+    <div class="rp-step-num">3</div>
+    <div><h4>Confirm the User ID</h4><p>Check that the <span style={{fontWeight: "bold"}}>User ID</span> field auto-populates with your test user’s ID.</p></div>
+  </div>
+  <div class="rp-step">
+    <div class="rp-step-num">4</div>
+    <div><h4>Go to the prompt's page</h4><p>If the prompt status is <span style={{fontWeight: "bold"}}>Inactive</span>, navigate to the page where the prompt should appear.</p></div>
+  </div>
+</div>
+
+
+<Image src="https://files.readme.io/5deb9c6-Screenshot_2024-05-22_at_15.35.23.png" align="center" width="75%" border={true} />
+
+
+
+<Image src="https://files.readme.io/a7583fa-Screenshot_2024-05-22_at_15.39.40.png" align="center" width="75%" border={true} />
+
+
+
+<Image src="https://files.readme.io/0eb2ab1-Screenshot_2024-05-22_at_15.40.24.png" align="center" width="75%" border={true} />
