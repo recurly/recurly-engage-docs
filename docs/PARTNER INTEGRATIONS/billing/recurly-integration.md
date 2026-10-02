@@ -22,10 +22,14 @@ metadata:
 ### Prerequisites
 
 <ul class="rp-list">
-<li>Company or App Administrator permissions in Recurly Engage</li>
-<li>A valid Recurly API key with account access</li>
-<li>Integrations role in Recurly Subscription Management (Admin role required for some exports)</li>
+  <li><strong>Company</strong> or <strong>App Administrator</strong> permissions in Recurly Engage</li>
+  <li>A Recurly account with API access and a valid API key</li>
+  <li>The <strong>Integrations</strong> role in Recurly Subscription Management to configure Automated Exports — some exports also require the <strong>Admin</strong> role</li>
 </ul>
+
+<div class="rp-callout rp-callout-note">
+  <div><strong><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Note</strong>If your application uses custom user IDs (Account Codes), turn on "Use Account Code" in the connector settings.</div>
+</div>
 
 # Definition
 
