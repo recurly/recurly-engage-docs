@@ -114,8 +114,6 @@ Target churned users visiting your site in real time with a re-activation prompt
   </div>
 </div>
 
-## Example
-
 {/*
 <div style={{position: "relative", paddingTop: "62.5%", marginBottom: "28px", borderRadius: "10px", overflow: "hidden"}}>
   <iframe src="https://www.loom.com/embed/42ea0c623c0e48b98d77e1d992ed0686?sid=fb0b44f8-127c-4072-a45a-8e0fa757f6a2"
