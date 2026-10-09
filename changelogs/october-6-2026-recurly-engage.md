@@ -1,7 +1,7 @@
 ---
 title: October 6, 2026 - Recurly Engage
 author: Alex Molter
-hidden: true
+hidden: false
 published_at: '2026-10-09T18:30:32.471Z'
 ---
 October 6, 2026 Release: This release adds more control over subscription-level coupon targeting and redirect timing in Engage Actions, a device type filter in the all-prompts metrics view, and a fix for experiment winners not updating the baseline prompt — alongside an updated Payment Failure segment default for newly onboarded merchants.
