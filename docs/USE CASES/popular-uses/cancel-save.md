@@ -248,19 +248,6 @@ In the **Form** section, configure the form to show and hide your survey options
 
 Once you're satisfied with your flow, remember to update your segments to target live users instead of test users, then set your guide's status to **Live**.
 
-## Example
-
-<div style={{position: "relative", paddingTop: "62.5%", marginBottom: "28px", borderRadius: "10px", overflow: "hidden"}}>
-  <iframe src="https://www.loom.com/embed/3a55570da3084432bf8516b442ab5590?sid=80617f1e-c3be-4bc3-b322-99d6ad886dee"
-    title="Cancel Save example walkthrough"
-    allow="autoplay; fullscreen"
-    allowtransparency="true"
-    frameBorder="0"
-    scrolling="no"
-    allowFullScreen
-    style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none"}}></iframe>
-</div>
-
 ## Estimate your savings
 
 <div class="rp-card">
