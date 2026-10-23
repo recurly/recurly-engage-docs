@@ -13,7 +13,7 @@ next:
   description: ''
 ---
 <div class="rp-page">
-  <div class="rp-overview">Recurly Engage is an always-on, low-code platform that helps business teams deliver targeted in-app and web prompts, guides, and notifications — driving user actions they might not otherwise take. Use cases range from trial-to-paid conversion and feature adoption to churn prevention and cross-sell campaigns. Explore our <a href="/docs/popular-uses" target="_blank">Popular use cases</a> to see it in action</div>
+  <div class="rp-overview">Recurly Engage is an always-on, low-code platform that helps business teams deliver targeted in-app and web prompts, guides, and notifications — driving user actions they might not otherwise take. Use cases range from trial-to-paid conversion and feature adoption to churn prevention and cross-sell campaigns. Explore our <a href="/docs/popular-uses" target="_blank">Popular use cases</a> to see it in action.</div>
   <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available to Recurly Engage customers — contact <a href="mailto:support@recurly.com">support@recurly.com</a> or your CSM for details</div>
   <div class="rp-toc">
     <a class="rp-toc-pill" href="#key-benefits"><span class="rp-toc-num">1</span>Key benefits</a>
