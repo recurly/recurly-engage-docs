@@ -1,5 +1,5 @@
 ---
-title: AI CSS Assistant
+title: AI Style Studio
 excerpt: Placeholder page for the new AI CSS Asisstant
 deprecated: false
 hidden: true
