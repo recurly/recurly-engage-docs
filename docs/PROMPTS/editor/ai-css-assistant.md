@@ -25,7 +25,7 @@ metadata:
 # Key benefits
 
 <div class="rp-benefits">
-<div class="rp-benefit"><div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div><strong>No CSS required</strong><span>Describe the change you want in plain language and the assistant writes the styles for you.</span></div>
+<div class="rp-benefit"><div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div><strong>No CSS knowledge required</strong><span>Describe the change you want in plain language and the assistant writes the styles for you.</span></div>
 <div class="rp-benefit"><div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div><strong>Live preview</strong><span>Every request is applied to your prompt as the assistant works, so you see results immediately.</span></div>
 <div class="rp-benefit"><div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div><strong>Desktop and mobile</strong><span>Changes apply to both surfaces by default, or target one with a single phrase.</span></div>
 <div class="rp-benefit"><div class="rp-benefit-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div><strong>Safe to experiment</strong><span>Undo a change, reset the session, or revert all changes from the session in one click.</span></div>
