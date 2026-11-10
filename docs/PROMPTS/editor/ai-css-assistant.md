@@ -9,7 +9,7 @@ metadata:
   robots: index
 ---
 <div class="rp-page">
-<div class="rp-overview">AI Style Studio is a chat assistant in the Recurly Engage prompt editor. Describe the change you want — "make the primary button larger", "change the header color to #CC0000" — and it writes the CSS and updates the live preview as it works. Changes apply to desktop and mobile by default, and every session is undoable, so you can experiment freely.</div>
+<div class="rp-overview">AI Style Studio is a chat assistant in the Recurly Engage prompt editor. Describe the change you want — "make the primary button larger", "change the header color to #FFD706" — and it writes the CSS and updates the live preview as it works. Changes apply to desktop and mobile by default, and every session is undoable, so you can experiment freely.</div>
 <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> AI Style Studio is available as part of testing period. Access and usage limits may vary.</div>
 <div class="rp-toc">
 <a class="rp-toc-pill" href="#definition"><span class="rp-toc-num">1</span>Definition</a>
