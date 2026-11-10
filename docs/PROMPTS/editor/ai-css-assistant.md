@@ -34,7 +34,7 @@ metadata:
 # Step-by-step guide
 
 <div class="rp-steps">
-<div class="rp-step"><div class="rp-step-num">1</div><div><h4>Enable it for your app</h4><p>In the <strong>Admin</strong> tab, under <strong>Prompts & Guides</strong>, switch on <strong>Enable AI Style Studio</strong>. You need company admin permissions to see this toggle.</p></div></div>
+<div class="rp-step"><div class="rp-step-num">1</div><div><h4>Navigate to your prompt</h4><p>Create a new prompt or go to an existing prompt.</p></div></div>
 </div>
 
 <div class="rp-steps">
@@ -51,5 +51,8 @@ metadata:
 
 Once the prompt looks right, click <strong>Save & Exit</strong> to apply your changes.
 
+![](https://files.readme.io/df666b1404b5df10726abb6f090487c9ac8e8479e1788c86749277750e67c1d5-Screenshot_2026-11-10_at_1.19.48_PM.png)
+
+<br />
 
 <Image src="ADD_IMAGE_URL" align="center" width="75%" border={true} />
