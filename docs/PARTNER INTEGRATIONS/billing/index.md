@@ -6,12 +6,13 @@ excerpt: >-
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: ""
+  description: ""
   robots: index
 next:
-  description: ''
+  description: ""
 ---
+
 <div class="rp-page">
   <div class="rp-overview">Connect Recurly Engage to your billing, commerce, app store, and push notification systems to sync subscriber data and trigger actions from your prompts.</div>
   <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available on all Recurly plans</div>
@@ -40,9 +41,6 @@ Select an integration to see its setup details.
   </Card>
   <Card title="Evergent" href="/recurly-engage/docs/evergent" target="_blank">
     Import subscriber traits from Evergent and run coupon redemption, service changes, pauses, resumes, and more.
-  </Card>
-  <Card title="Piano" href="/recurly-engage/docs/piano" target="_blank">
-    Sync Piano subscription logs for segment targeting and enable in-prompt resubscribe or upgrade actions.
   </Card>
   <Card title="Zuora" href="/recurly-engage/docs/zuora" target="_blank">
     Ingest Zuora account and subscription traits, and manage rate plans, suspensions, resumes, and term changes from your prompts.
