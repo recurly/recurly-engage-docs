@@ -1,17 +1,18 @@
 ---
-title: 'Overview: Recurly Engage'
+title: "Overview: Recurly Engage"
 excerpt: >-
   High-level architecture and integration overview of the Recurly Engage
   platform—SDKs, console, core processor, and supported third-party connectors.
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: ""
+  description: ""
   robots: index
 next:
-  description: ''
+  description: ""
 ---
+
 <div class="rp-page">
   <div class="rp-overview">Recurly Engage is an always-on, low-code platform that helps business teams deliver targeted in-app and web prompts, guides, and notifications — driving user actions they might not otherwise take. Use cases range from trial-to-paid conversion and feature adoption to churn prevention and cross-sell campaigns. Explore our <a href="/docs/popular-uses" target="_blank">Popular use cases</a> to see it in action.</div>
   <div class="rp-plan"><i class="fa-solid fa-key" aria-hidden="true"></i> Available to Recurly Engage customers — contact <a href="mailto:support@recurly.com">support@recurly.com</a> or your CSM for details</div>
@@ -47,9 +48,7 @@ next:
 
 Recurly Engage combines lightweight client SDKs, a central management console, and a real-time data processor to get the right message to the right subscriber. The diagram below shows how these pieces fit together.
 
-
 <Image src="https://files.readme.io/2a163da-image.png" align="center" width="75%" caption="The Recurly Engage platform" />
-
 
 ## Client SDKs
 
@@ -73,7 +72,7 @@ A real-time engine segments incoming events into cohorts using rule-based or mac
 
 Recurly Engage connects to a broad ecosystem of one-click connectors across business domains:
 
-- **Billing and subscription**: <a href="/docs/recurly-integration" target="_blank">Recurly</a>, <a href="/docs/zuora" target="_blank">Zuora</a>, <a href="/docs/stripe-rf" target="_blank">Stripe</a>, <a href="/docs/vindicia-rf" target="_blank">Vindicia</a>, <a href="/docs/braintree-rf" target="_blank">Braintree</a>, and <a href="/docs/piano" target="_blank">Piano</a>
+- **Billing and subscription**: <a href="/docs/recurly-integration" target="_blank">Recurly</a>, <a href="/docs/zuora" target="_blank">Zuora</a>, <a href="/docs/stripe-rf" target="_blank">Stripe</a>, <a href="/docs/vindicia-rf" target="_blank">Vindicia</a>,and <a href="/docs/braintree-rf" target="_blank">Braintree</a>
 - **Support and CRM**: <a href="/docs/zendesk-rf" target="_blank">Zendesk</a>, <a href="/docs/freshdesk" target="_blank">Freshdesk</a>, <a href="/docs/salesforce-marketing-cloud" target="_blank">Salesforce</a>, <a href="/docs/activecampaign" target="_blank">ActiveCampaign</a>, <a href="/docs/braze" target="_blank">Braze</a>, <a href="/docs/sendgrid" target="_blank">SendGrid</a>, and <a href="/docs/segment" target="_blank">Segment</a>
 - **Marketing automation**: <a href="/docs/salesforce-marketing-cloud" target="_blank">Salesforce Marketing Cloud</a>, <a href="/docs/iterable" target="_blank">Iterable</a>, and <a href="/docs/adobe-aep-ajo" target="_blank">Adobe Campaign</a>
 - **Ecommerce**: <a href="/docs/shopify" target="_blank">Shopify</a>, <a href="/docs/cleeng" target="_blank">Cleeng</a>, and <a href="/docs/chargify" target="_blank">Chargify</a>
