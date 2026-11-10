@@ -4,7 +4,7 @@ excerpt: >-
   How to connect and sync subscriber data from Piano to Recurly Engage, plus
   configure 1‑Click subscription actions.
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''
