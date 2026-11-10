@@ -4,7 +4,7 @@ excerpt: >-
   Restyle your Recurly Engage prompts by describing changes in plain language.  
   AI Style Studio writes the CSS for you and updates a live preview as it works.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
