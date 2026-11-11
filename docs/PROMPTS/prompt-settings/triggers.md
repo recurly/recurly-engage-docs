@@ -2,7 +2,8 @@
 title: Triggers
 excerpt: >-
   Instructions for configuring when and where your prompts should appear using
-  page, event, and advanced triggers—all within a single, comprehensive guide.
+  page, click, page views, and advanced triggers—all within a single,
+  comprehensive guide.
 deprecated: false
 hidden: false
 metadata:
@@ -31,7 +32,7 @@ next:
 
 # Definition
 
-<div class="rp-definition">A trigger is a rule that opens a prompt when a visitor views a specified page, clicks a designated element, or meets custom criteria you define with JavaScript. Triggers control when and where a prompt appears.</div>
+<div class="rp-definition">A trigger is a rule that opens a prompt when a visitor views a specified page, clicks a designated element, reaches a session milestone—time spent browsing or a number of pages viewed—or meets custom criteria you define with JavaScript. Triggers control when and where a prompt appears.</div>
 
 # Key benefits
 
@@ -184,6 +185,14 @@ Validate sample paths against your regular expression.
 
 <Image src="https://files.readme.io/ddfd19c-Screenshot_2024-04-29_at_18.06.00.png" align="center" width="75%" border={true} />
 
+<br />
+
+### Delay timer
+
+Choose whether the delay timer counts time on the current page or time in the visitor's session:
+
+* **Time on this page** (default) — the timer starts when the visitor opens the page and resets when they navigate elsewhere. Use this for prompts tied to the current page.
+* **Time in session** — the timer starts when the visitor's session begins and keeps counting across page navigations. Use this to reach visitors who have been browsing your site for a while, such as a subscription offer after five minutes of shopping around.
 
 ## Click trigger
 
@@ -202,6 +211,21 @@ A click trigger displays a prompt after a set number of clicks on a specific ele
 
 <Image src="https://files.readme.io/001f9ed-Screenshot_2024-04-29_at_18.10.37.png" align="center" width="75%" border={true} />
 
+<br />
+
+## Page views trigger
+
+A page views trigger displays a prompt after a visitor views a set number of pages within their current session.
+
+**Example:**
+
+* Show a subscription offer on the ninth page viewed in one visit.
+
+The page views trigger can't be combined with delay or click triggers on the same prompt.
+
+<div class="rp-callout rp-callout-important">
+  <div><strong><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> Important</strong>A session lasts as long as the browser tab stays open. It survives page reloads within the tab and ends when the visitor closes it. Page views count each navigation to a different URL: reloading the current page doesn't add a view, but returning to a page visited earlier in the same session does (visiting A, then B, then A again counts as three page views).</div>
+</div>
 
 ## Advanced trigger
 
