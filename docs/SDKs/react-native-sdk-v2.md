@@ -302,8 +302,6 @@ If you want to render prompts differently from what the SDK produces by default,
 
 Your app should report prompt interactions through the provided functions on the prompt object.
 
-\[TODO: Dev/PO review — possible issue: the example below uses `promot.deeplink` and `promot.holdout()` ("promot" instead of "prompt"), and its comments mention `homeScreen` while the code uses `'home_screen'`. Left verbatim.]
-
 ```javascript
 
 // Example: Retrieve all available prompts of specified type. See PathType values below. Use this if trigger criteria is to be ignored.
