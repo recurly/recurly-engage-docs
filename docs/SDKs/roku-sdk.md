@@ -69,8 +69,6 @@ To build a project using the Recurly Engage SDK for Roku, your project must have
   </div>
 </div>
 
-\[TODO: Dev/PO review — possible issue: the `initPromotion` call below uses the key `annonymousUserId` (double n). Left verbatim.]
-
 ```brightscript
 sub init()
   ' other app initialization code here
@@ -154,8 +152,6 @@ categories = m.promoMgr.callFunc("getPrivacyConsentCategories")
 You can use the SDK to display a modal on a specified screen. If the prompt also requires a button click, the trigger doesn't occur until the associated `onButtonClicked` function is called.
 
 Add the following lines in the screen `init` function:
-
-\[TODO: Dev/PO review — possible issue: the example below uses `//` comments and the typo "registed", and BrightScript comments normally start with an apostrophe. Left verbatim.]
 
 ```brightscript
 sub init()
