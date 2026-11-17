@@ -57,8 +57,6 @@ next:
 
 ## Create an action
 
-\[TODO: Dev/PO review — possible issue: the endpoint and the `tid` (Tracking ID) parameter follow the Universal Analytics Measurement Protocol, which Google has retired. Confirm this still works with Google Analytics 4.]
-
 Follow the steps to create an API action. The action must be a POST request to the Google Analytics Measurement Protocol endpoint: `https://www.google-analytics.com/collect`.
 
 
