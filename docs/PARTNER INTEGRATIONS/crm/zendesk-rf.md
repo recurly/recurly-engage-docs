@@ -69,7 +69,7 @@ The connection uses OAuth: you approve access once, and Recurly Engage receives 
 * An admin account in Recurly Engage
 * The **Redirect URL** for your Engage app, provided by your Recurly onboarding contact
 
-### Path A — New setup (recommended for all new connections)
+### Path A — New OAuth setup
 
 **Step 1 — Create an OAuth client in your Zendesk Admin Center**
 
@@ -78,7 +78,7 @@ The connection uses OAuth: you approve access once, and Recurly Engage receives 
 3. Fill in the client details:
    * **Client name:** Recurly Engage (any name works — this is a display label)
    * **Unique identifier:** choose an identifier such as `recurly_engage` (must be unique within your Zendesk instance — you will paste this into Recurly Engage later)
-   * **Redirect URL:** enter the Redirect URL provided by your Recurly contact, exactly as given (it looks like `https://pulse.redfast.com/apps/<your-app-id>/zendesk/auth`)
+   * **Redirect URL:** enter the Redirect URL provided by your Recurly contact, exactly as given (it looks like `https://sapi.redfast.com/apps/<your-app-id>/zendesk/auth`)
    * If your Zendesk shows a **Client kind** option, select **Confidential**.
    * If the form lets you restrict **Allowed scopes**, either leave scopes unrestricted or include `read` and `write`.
 4. Save the client. Zendesk shows a **client secret** — copy it now and keep it handy (you will paste it into Recurly Engage in Step 2). Also note the **Unique identifier** you chose.
@@ -86,7 +86,7 @@ The connection uses OAuth: you approve access once, and Recurly Engage receives 
 **Step 2 — Enter the credentials in Recurly Engage**
 
 1. Sign in to Recurly Engage and go to **Settings → Connectors → Zendesk**.
-2. Enter your Zendesk **domain** (for example, `acme.zendesk.com`).
+2. Enter your Zendesk **domain** (for example, `yourcompany.zendesk.com`).
 3. Paste the OAuth client's **Unique identifier** into **OAuth Client ID** and the **client secret** into **OAuth Client Secret**.
 4. Click **Save**.
 
@@ -138,7 +138,7 @@ Provide the following settings (existing connections only):
 ## Managing or removing access
 
 <ul class="rp-list">
-  <li>To disconnect from the Recurly Engage side: <strong>Settings → Connectors → Zendesk → Disconnect</strong>.</li>
+  <li>To disconnect from the Recurly Engage side: open <strong>Settings → Connectors → Zendesk</strong>, turn off the connection and clear the saved OAuth client credentials, then click <strong>Save</strong>.</li>
   <li>To revoke access from the Zendesk side: <strong>Admin Center → Apps and integrations → APIs → Zendesk API → OAuth Clients</strong> → select the Recurly Engage client and revoke it.</li>
   <li>Disconnecting keeps the OAuth client registration, so you can reconnect later without repeating the setup.</li>
 </ul>
