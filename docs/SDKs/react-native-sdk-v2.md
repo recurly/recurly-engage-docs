@@ -153,7 +153,7 @@ const AppRoot: React.FC = () => {
       )}
       <PromptOverlay
         onEvent={(result: PromptResult) => {
-          // TODO: handle the result
+          // handle the result
         }}
       />
     </NavigationContainer>
