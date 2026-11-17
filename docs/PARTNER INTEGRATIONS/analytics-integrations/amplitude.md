@@ -127,8 +127,4 @@ Download one-off reports from Amplitude (make sure **User ID** is the first colu
 
 For automated exports, work with your Customer Success team to schedule jobs using the Amplitude <a href="https://developers.amplitude.com/docs/export-api" target="_blank">Export API</a>. Provide an API key with appropriate permissions, and configure the schedule to sync data into Recurly Engage automatically.
 
-***
-
-📋 TODO before publishing:
-
-- [ ] Confirm the title. The draft had none, so I used "Amplitude".
+<br />
