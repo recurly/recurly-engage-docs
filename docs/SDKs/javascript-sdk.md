@@ -62,8 +62,6 @@ Recurly Engage has built-in integrations with several analytics services. To rep
 
 ### Callback function example
 
-\[TODO: Dev/PO review — possible issue: in the example below, `case "dismiss"` has no colon, and `static` appears on a standalone function. Left verbatim.]
-
 ```javascript
 /*
   This function is called whenever a prompt event occurs, for custom analytics purposes
