@@ -71,8 +71,6 @@ This can be a one-time initial load. To keep endpoints up to date, choose one of
 
 ## Registration API
 
-\[TODO: Dev/PO review — possible issue: the example uses "channel_type": "GCM", while the CSV ChannelType values listed above are FCM, ADM, and APNS.]
-
 ```
 POST <base_url>/ingest/update_push_endpoint
 Headers:
